@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdaf1324-233c-4adb-b79d-299465f777a3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/card-info.html" beforeDir="false" afterPath="$PROJECT_DIR$/card-info.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cart-paymentmethod.html" beforeDir="false" afterPath="$PROJECT_DIR$/cart-paymentmethod.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cart-success.html" beforeDir="false" afterPath="$PROJECT_DIR$/cart-success.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/detail-sun-moon.html" beforeDir="false" afterPath="$PROJECT_DIR$/detail-sun-moon.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/trangsuc-01/webroot/js/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/trangsuc-01/webroot/js/cart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/trangsuc-01/webroot/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/trangsuc-01/webroot/js/common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/trangsuc-01/webroot/js/member.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/trangsuc-01/webroot/js/member.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,9 +26,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="476" column="26" lean-forward="true" selection-start-line="476" selection-start-column="26" selection-end-line="476" selection-end-column="26" />
+            <state relative-caret-position="359">
+              <caret line="282" column="4" selection-start-line="282" selection-start-column="4" selection-end-line="287" selection-end-column="13" />
               <folding>
+                <element signature="n#li#1;n#ul#0;n#nav#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" />
@@ -34,8 +39,8 @@
                 <element signature="n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#div#5;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#6;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#6;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
@@ -43,50 +48,68 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/card-info.html">
+        <entry file="file://$PROJECT_DIR$/template/trangsuc-01/webroot/js/cart.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1003">
-              <caret line="59" column="95" selection-start-line="59" selection-start-column="95" selection-end-line="59" selection-end-column="95" />
+            <state relative-caret-position="355">
+              <caret line="29" column="33" lean-forward="true" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/detail-sun-moon.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="158">
+              <caret line="309" column="96" selection-start-line="309" selection-start-column="96" selection-end-line="309" selection-end-column="96" />
               <folding>
-                <element signature="n#script#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="e#38177#40655#0" />
+                <element signature="n#style#0;n#span#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#0;n#nav#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#body#0;n#html#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#29842#29850#0" expanded="true" />
+                <element signature="e#29874#29882#0" expanded="true" />
+                <element signature="e#29894#29902#0" expanded="true" />
+                <element signature="e#29959#29967#0" expanded="true" />
+                <element signature="e#29971#29979#0" expanded="true" />
+                <element signature="e#29986#29994#0" expanded="true" />
+                <element signature="e#29996#30004#0" expanded="true" />
+                <element signature="e#30014#30021#0" expanded="true" />
+                <element signature="e#30028#30035#0" expanded="true" />
+                <element signature="e#30082#30090#0" expanded="true" />
+                <element signature="e#30141#30149#0" expanded="true" />
+                <element signature="e#30157#30165#0" expanded="true" />
+                <element signature="e#30174#30182#0" expanded="true" />
+                <element signature="e#30185#30193#0" expanded="true" />
+                <element signature="e#30196#30204#0" expanded="true" />
+                <element signature="e#30273#30281#0" expanded="true" />
+                <element signature="e#30291#30298#0" expanded="true" />
+                <element signature="e#30302#30310#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cart-paymentmethod.html">
+        <entry file="file://$PROJECT_DIR$/template/trangsuc-01/webroot/js/common.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="543" column="61" selection-start-line="543" selection-start-column="61" selection-end-line="543" selection-end-column="61" />
+            <state relative-caret-position="270">
+              <caret line="232" column="16" selection-start-line="232" selection-start-column="16" selection-end-line="232" selection-end-column="16" />
               <folding>
-                <element signature="n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cart-success.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="70">
-              <caret line="399" column="22" lean-forward="true" selection-start-line="399" selection-start-column="22" selection-end-line="399" selection-end-column="22" />
-              <folding>
-                <element signature="n#style#0;n#table#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#tbody#0;n#table#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#i#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/detail-sun-moon.html">
+        <entry file="file://$PROJECT_DIR$/card-info.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="498" column="61" lean-forward="true" selection-start-line="498" selection-start-column="61" selection-end-line="498" selection-end-column="61" />
+            <state relative-caret-position="270">
+              <caret line="563" column="37" lean-forward="true" selection-start-line="563" selection-start-column="37" selection-end-line="563" selection-end-column="37" />
+              <folding>
+                <element signature="n#li#1;n#ul#0;n#nav#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -102,36 +125,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>fl</find>
-      <find>fa fa-search</find>
-      <find>check-coupon</find>
-      <find>TIN TỨC MỚI</find>
-      <find>payment-success</find>
-      <find>Hoàn thành</find>
-      <find>list-product-item-order</find>
-      <find>common</find>
-      <find>load</find>
-      <find>list-product-item-cat1</find>
-      <find>class=&quot;row&quot;</find>
-      <find>commom</find>
-      <find>list-item col-md-4 col-sm-4 col-xs-12</find>
-      <find>box-cart-right-cont</find>
-      <find>nh_functions</find>
-      <find>price</find>
-      <find>Giỏ hàng</find>
-      <find>cart.js</find>
-      <find>&lt;scr</find>
+      <find>promotion_functions</find>
+      <find>main.</find>
+      <find>call addToCart</find>
+      <find>navtext</find>
+      <find>btn-process-payment</find>
+      <find>Tiếp tục</find>
+      <find>Không có sản phẩm nào trong giỏ hàn</find>
       <find>compare-product-title</find>
-      <find>trang-s-c-logo</find>
-      <find>footeraDDRES</find>
+      <find>list clearfix force-overfl</find>
+      <find>c</find>
+      <find>comm</find>
+      <find>loadCar</find>
+      <find>mem</find>
+      <find>Về chúng</find>
+      <find>common</find>
+      <find>listProduct.forEach</find>
+      <find>breadcrumb</find>
       <find>https://trangsuc-01.web4s.vn/</find>
-      <find>ĐĂNG KÝ NHẬN TIN</find>
-      <find>font-awesome</find>
-      <find>facebook-jssdk</find>
-      <find>sliderGallery</find>
-      <find>data-act</find>
-      <find>g</find>
-      <find>data-ac</find>
+      <find>html</find>
+      <find>light-gallery</find>
+      <find>&lt;scr</find>
+      <find>$(document).ready(function () {</find>
+      <find>col-md-6 col-sm-6 col-xs-12</find>
+      <find>Xem giỏ</find>
+      <find>Thêm vào giỏ hàng</find>
+      <find>todo</find>
+      <find>firestoreDB</find>
+      <find>ajax.googleapi</find>
+      <find>jquery</find>
+      <find>jquery.min.js</find>
     </findStrings>
     <replaceStrings>
       <replace>template</replace>
@@ -152,19 +175,21 @@
         <option value="$PROJECT_DIR$/template/trangsuc-01/webroot/js/districts.js" />
         <option value="$PROJECT_DIR$/template/trangsuc-01/webroot/js/page.js" />
         <option value="$PROJECT_DIR$/template/trangsuc-01/webroot/js/common.js" />
-        <option value="$PROJECT_DIR$/template/trangsuc-01/webroot/js/cart.js" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/card-info.html" />
         <option value="$PROJECT_DIR$/cart-paymentmethod.html" />
         <option value="$PROJECT_DIR$/cart-success.html" />
+        <option value="$PROJECT_DIR$/template/trangsuc-01/webroot/js/member.js" />
+        <option value="$PROJECT_DIR$/detail-1.html" />
         <option value="$PROJECT_DIR$/detail-sun-moon.html" />
+        <option value="$PROJECT_DIR$/template/trangsuc-01/webroot/js/cart.js" />
+        <option value="$PROJECT_DIR$/card-info.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
     <option name="y" value="35" />
-    <option name="width" value="1364" />
+    <option name="width" value="1356" />
     <option name="height" value="686" />
   </component>
   <component name="ProjectId" id="1p1RXDNZJEDXDG0yHvalDsIlgHP" />
@@ -185,7 +210,39 @@
             <path>
               <item name="demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="template" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="template" type="462c0819:PsiDirectoryNode" />
+              <item name="trangsuc-01" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="template" type="462c0819:PsiDirectoryNode" />
+              <item name="trangsuc-01" type="462c0819:PsiDirectoryNode" />
+              <item name="webroot" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="template" type="462c0819:PsiDirectoryNode" />
+              <item name="trangsuc-01" type="462c0819:PsiDirectoryNode" />
+              <item name="webroot" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
               <item name="uploads" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="uploads" type="462c0819:PsiDirectoryNode" />
+              <item name="plugin" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -201,9 +258,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\ProjectCc\Web\trangsuc-01.web4s.vn\demo" />
       <recent name="F:\ProjectCc\Web\trangsuc-01.web4s.vn\demo\template\trangsuc-01\webroot\images" />
       <recent name="F:\ProjectCc\Web\trangsuc-01.web4s.vn\demo\template\trangsuc-01\webroot\js" />
-      <recent name="F:\ProjectCc\Web\trangsuc-01.web4s.vn\demo" />
       <recent name="F:\ProjectCc\Web\trangsuc-01.web4s.vn\demo\uploads\tiny_uploads" />
     </key>
   </component>
@@ -231,20 +288,21 @@
       <updated>1614325074381</updated>
       <workItem from="1614325075825" duration="8994000" />
       <workItem from="1614567100055" duration="25817000" />
-      <workItem from="1614651817776" duration="8483000" />
+      <workItem from="1614651817776" duration="21115000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51466000" />
+    <option name="totallyTimeSpent" value="64098000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="35" width="1364" height="686" extended-state="0" />
+    <frame x="-7" y="35" width="1356" height="686" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16365008" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20561457" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -382,49 +440,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/template/trangsuc-01/webroot/js/member.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="74" column="16" selection-start-line="74" selection-start-column="16" selection-end-line="74" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/trangsuc-01/webroot/js/page.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="28" lean-forward="true" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/trangsuc-01/webroot/js/common.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="254" column="49" selection-start-line="254" selection-start-column="41" selection-end-line="254" selection-end-column="49" />
-          <folding>
-            <element signature="n#!!block;n#loadCart#0" />
-            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/trangsuc-01/webroot/js/cart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="96" column="62" lean-forward="true" selection-start-line="96" selection-start-column="62" selection-end-line="96" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/template/trangsuc-01/webroot/assets/css/font-awesome.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-867" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/template/trangsuc-01/webroot/assets/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2227">
+          <caret line="164" column="38" selection-start-line="164" selection-start-column="38" selection-end-line="164" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cart-paymentmethod.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="136" column="37" selection-start-line="136" selection-start-column="37" selection-end-line="136" selection-end-column="37" />
+          <folding>
+            <element signature="n#li#1;n#ul#0;n#nav#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cart-success.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="99" column="37" selection-start-line="99" selection-start-column="37" selection-end-line="99" selection-end-column="37" />
+          <folding>
+            <element signature="n#li#1;n#ul#0;n#nav#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#table#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tbody#0;n#table#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/trangsuc-01/webroot/js/js_custom.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/trangsuc-01/webroot/js/member.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/trangsuc-01/webroot/js/page.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5129">
+          <caret line="66" column="26" selection-start-line="66" selection-start-column="26" selection-end-line="66" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="476" column="26" lean-forward="true" selection-start-line="476" selection-start-column="26" selection-end-line="476" selection-end-column="26" />
+        <state relative-caret-position="359">
+          <caret line="282" column="4" selection-start-line="282" selection-start-column="4" selection-end-line="287" selection-end-column="13" />
           <folding>
+            <element signature="n#li#1;n#ul#0;n#nav#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" />
@@ -434,51 +509,76 @@
             <element signature="n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#div#5;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#6;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#6;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/card-info.html">
+    <entry file="file://$PROJECT_DIR$/detail-1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1003">
-          <caret line="59" column="95" selection-start-line="59" selection-start-column="95" selection-end-line="59" selection-end-column="95" />
-          <folding>
-            <element signature="n#script#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="e#38177#40655#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cart-paymentmethod.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="543" column="61" selection-start-line="543" selection-start-column="61" selection-end-line="543" selection-end-column="61" />
-          <folding>
-            <element signature="n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cart-success.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="399" column="22" lean-forward="true" selection-start-line="399" selection-start-column="22" selection-end-line="399" selection-end-column="22" />
-          <folding>
-            <element signature="n#style#0;n#table#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#tbody#0;n#table#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="253">
+          <caret line="192" column="56" selection-start-line="179" selection-start-column="48" selection-end-line="192" selection-end-column="56" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/detail-sun-moon.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="498" column="61" lean-forward="true" selection-start-line="498" selection-start-column="61" selection-end-line="498" selection-end-column="61" />
+        <state relative-caret-position="158">
+          <caret line="309" column="96" selection-start-line="309" selection-start-column="96" selection-end-line="309" selection-end-column="96" />
+          <folding>
+            <element signature="n#style#0;n#span#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#0;n#nav#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#body#0;n#html#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#29842#29850#0" expanded="true" />
+            <element signature="e#29874#29882#0" expanded="true" />
+            <element signature="e#29894#29902#0" expanded="true" />
+            <element signature="e#29959#29967#0" expanded="true" />
+            <element signature="e#29971#29979#0" expanded="true" />
+            <element signature="e#29986#29994#0" expanded="true" />
+            <element signature="e#29996#30004#0" expanded="true" />
+            <element signature="e#30014#30021#0" expanded="true" />
+            <element signature="e#30028#30035#0" expanded="true" />
+            <element signature="e#30082#30090#0" expanded="true" />
+            <element signature="e#30141#30149#0" expanded="true" />
+            <element signature="e#30157#30165#0" expanded="true" />
+            <element signature="e#30174#30182#0" expanded="true" />
+            <element signature="e#30185#30193#0" expanded="true" />
+            <element signature="e#30196#30204#0" expanded="true" />
+            <element signature="e#30273#30281#0" expanded="true" />
+            <element signature="e#30291#30298#0" expanded="true" />
+            <element signature="e#30302#30310#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/trangsuc-01/webroot/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="232" column="16" selection-start-line="232" selection-start-column="16" selection-end-line="232" selection-end-column="16" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/trangsuc-01/webroot/js/cart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="29" column="33" lean-forward="true" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/card-info.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="563" column="37" lean-forward="true" selection-start-line="563" selection-start-column="37" selection-end-line="563" selection-end-column="37" />
+          <folding>
+            <element signature="n#li#1;n#ul#0;n#nav#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>

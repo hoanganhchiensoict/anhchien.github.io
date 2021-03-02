@@ -165,20 +165,22 @@ var listProduct = [
 ]
 
 function loadCart() {
-
     var cart = window.localStorage.getItem("cart");
     if (cart != undefined && cart != null) {
-        var cartJson = JSON.parse(cart)
-        console.log('load cart ', cartJson)
-        $('.mini-cart-order .number').text(cartJson.length);
+        var cartJson = JSON.parse(cart);
+        console.log('load cart ', cartJson);
 
         if (cartJson.length == 0) {
             $('.card-empty').show();
             $('#list-product-item-order').empty();
+            $('.mini-cart-order .number').text(nh_functions.formatMoney(0));
+            $("#total_price_final").text(nh_functions.formatMoney(0));
         } else {
             $('.card-empty').hide();
             $('#list-product-item-order').empty();
 
+            let totalAmount = 0;
+            let totalQuantiry = 0;
             cartJson.forEach(function (item) {
                 //lấy detail product
                 let productDetail = null
@@ -189,6 +191,9 @@ function loadCart() {
                 }
 
                 if (productDetail != null) {
+                    totalAmount += item.quantity * productDetail.price;
+                    totalQuantiry += item.quantity;
+
                     var html = '<div class="media position-relative product-item-order">'
                     html += '<a class="product-item-info delete-order pull-right" title="Xóa" product-id="' + productDetail.id + '" item-id="' + productDetail.id + '" style="cursor: pointer;"> <i class="fa fa-times"></i> </a>';
                     html += '<div class="media-left">';
@@ -214,8 +219,32 @@ function loadCart() {
 
             var htmlAll = ''
             $('.box-cart-right-cont').append(htmlAll);
+
+            $('.mini-cart-order .number').text(nh_functions.formatMoney(totalQuantiry));
+            $("#total_price_final").text(nh_functions.formatMoney(totalAmount));
+
+        }
+    }else {
+        $('.mini-cart-order .number').text(nh_functions.formatMoney(0));
+        $("#total_price_final").text(nh_functions.formatMoney(0));
+    }
+}
+
+function loadCartNumber() {
+    let totalQuantiry = 0;
+
+    var cart = window.localStorage.getItem("cart");
+    if (cart != undefined && cart != null) {
+        var cartJson = JSON.parse(cart);
+
+        if(cartJson.length > 0){
+            cartJson.forEach(function (item) {
+                totalQuantiry += item.quantity;
+            })
         }
     }
+
+    $('.mini-cart-order .number').text(nh_functions.formatMoney(totalQuantiry));
 }
 
 function loadProduct(category) {

@@ -58,6 +58,33 @@
     <script type="text/javascript" src="template/trangsuc-01/webroot/js/districts.js"></script>
     <script type="text/javascript" src="template/trangsuc-01/webroot/js/page.js"></script>
     <script type="text/javascript" src="template/trangsuc-01/webroot/js/js_custom.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-analytics.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>-->
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        // const firebase = require("firebase");
+        // import Firebase from 'firebase';
+        // require('firebase/firestore')
+
+        var firebaseConfig = {
+            apiKey: "AIzaSyCd2JHBJfNnSu9zpikslpQ9b15SCjsX_a0",
+            authDomain: "qua-tang-yeu-thuong-vn.firebaseapp.com",
+            projectId: "qua-tang-yeu-thuong-vn",
+            storageBucket: "qua-tang-yeu-thuong-vn.appspot.com",
+            messagingSenderId: "898332444455",
+            appId: "1:898332444455:web:491612909eaeabb4cc4b02",
+            measurementId: "G-GZ1SERB3LB"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        var firestoreDB = firebase.firestore();
+    </script>
 </head>
 <body>
 <div id="header" class="nh-row">
@@ -79,64 +106,34 @@
                         <div class="wsmain">
                             <nav class="wsmenu clearfix">
                                 <ul class="mobile-sub wsmenu-list">
-                                    <li><a class="navtext" href="../index.html"> Trang chủ </a></li>
+                                    <li><a class="navtext" href="index.html">Trang chủ </a></li>
                                     <li>
                                         <span class="wsmenu-click"><i class="wsmenu-arrow fa fa-angle-down"></i></span>
-                                        <a class="navtext" href="../san-pham.html"> Sản phẩm <i class="fa fa-angle-down"
-                                                                                                aria-hidden="true"></i>
-                                        </a>
+                                        <a class="navtext" href="#"> Sản phẩm <i class="fa fa-angle-down"
+                                                                                 aria-hidden="true"></i> </a>
                                         <div class="megamenu clearfix">
                                             <ul class="wstliststy05">
-                                                <li class="wstheading"><a href="../nhn.html">Nhẫn</a></li>
-                                                <li><a href="../nhn/nhn-vang.html"> Nhẫn vàng </a></li>
-                                                <li><a href="../nhn/nhn-bach-kim.html"> Nhẫn bạch kim </a></li>
-                                                <li><a href="../nhn/nhn-bac.html"> Nhẫn bạc </a></li>
-                                                <li><a href="../nhn/nhn-sapphire.html"> Nhẫn Sapphire </a></li>
-                                                <li><a href="../nhn/nhn-ngoc-luc-bao.html"> Nhẫn ngọc lục bảo </a></li>
-                                                <li><a href="../nhn/nhn-hong-ngoc.html"> Nhẫn hồng ngọc </a></li>
-                                            </ul>
-                                            <ul class="wstliststy05">
-                                                <li class="wstheading"><a href="../day-chuyen.html">Dây chuyền</a></li>
-                                                <li><a href="../day-chuyen/day-chuyen-kim-cuong.html"> Dây chuyền kim
-                                                    cương </a></li>
-                                                <li><a href="../day-chuyen/day-chuyen-da-quy.html"> Dây chuyền đá
-                                                    quý </a></li>
-                                                <li><a href="../day-chuyen/day-chuyen-ngoc-trai.html"> Dây chuyền ngọc
-                                                    trai </a></li>
-                                            </ul>
-                                            <ul class="wstliststy05">
-                                                <li class="wstheading"><a href="../bong-tai.html">Bông tai</a></li>
-                                                <li><a href="../bong-tai/bong-tai-kim-cuong.html"> Bông tai kim
-                                                    cương </a></li>
-                                                <li><a href="../bong-tai/bong-tai-da-quy.html"> Bông tai đá quý </a>
+                                                <li class="wstheading"><a href="index.html#content-row-1">Vòng tay tương
+                                                    tác</a>
                                                 </li>
-                                                <li><a href="../bong-tai/bong-tai-ngoc-trai.html"> Bông tai ngọc
-                                                    trai </a></li>
+                                                <li><a href="index.html#content-row-1"> Vòng tay</a></li>
+                                            </ul>
+                                            <ul class="wstliststy05">
+                                                <li class="wstheading"><a href="index.html#content-row-2">Trang sức
+                                                    vàng, bạc</a>
+                                                </li>
+                                                <li><a href="index.html#content-row-2"> Dây chuyền </a></li>
+                                                <li><a href="index.html#content-row-2"> Vòng tay </a></li>
+                                                <li><a href="index.html#content-row-2"> Khuyên tai </a></li>
+                                            </ul>
+                                            <ul class="wstliststy05">
+                                                <li class="wstheading"><a href="index.html#content-row-3">Mỹ phẩm</a>
+                                                </li>
+                                                <li><a href="index.html#content-row-3"> Mỹ phẩm </a></li>
                                             </ul>
                                         </div>
                                     </li>
-                                    <li><a class="navtext" href="../gioi-thieu.html"> Giới thiệu </a></li>
-                                    <li>
-                                        <span class="wsmenu-click"><i class="wsmenu-arrow fa fa-angle-down"></i></span>
-                                        <a class="navtext" href="../tin-tuc.html"> <i class="dfs"></i> Tin tức <i
-                                                class="fa fa-angle-down" aria-hidden="true"></i> </a>
-                                        <ul class="wsmenu-submenu">
-                                            <li><a class="" href="../kinh-nghiem-chon-trang-suc.html">Kinh nghiệm chọn
-                                                trang sức</a></li>
-                                            <li><a class="" href="../tin-khuyen-mai.html">Tin khuyến mãi</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a class="navtext" href="../lien-he.html"> Liên hệ </a></li>
-                                    <li>
-                                        <span class="wsmenu-click"><i class="wsmenu-arrow fa fa-angle-down"></i></span>
-                                        <a class="navtext" href="../index.html#"> Khác <i class="fa fa-angle-down"
-                                                                                          aria-hidden="true"></i> </a>
-                                        <ul class="wsmenu-submenu">
-                                            <li><a class="" href="../tuyen-dung.html">Tuyển dụng</a></li>
-                                            <li><a class="" href="../thu-vien-anh.html">Ảnh</a></li>
-                                            <li><a class="" href="../video-vn.html">Video</a></li>
-                                        </ul>
-                                    </li>
+                                    <li><a class="navtext" href="lien-he.html"> Liên hệ </a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -362,18 +359,18 @@
                                                             <option value="63">Cà Mau</option>
                                                         </select>
                                                         <!--<div class="chosen-container chosen-container-single" title=""-->
-                                                             <!--id="city_id_chosen" style="width: 100%;">-->
-                                                            <!--<a class="chosen-single">-->
-                                                                <!--<span>&#45;&#45; Tỉnh thành &#45;&#45;</span>-->
-                                                                <!--<div><b></b></div>-->
-                                                            <!--</a>-->
-                                                            <!--<div class="chosen-drop">-->
-                                                                <!--<div class="chosen-search">-->
-                                                                    <!--<input class="chosen-search-input" type="text"-->
-                                                                           <!--autocomplete="off"/>-->
-                                                                <!--</div>-->
-                                                                <!--<ul class="chosen-results"></ul>-->
-                                                            <!--</div>-->
+                                                        <!--id="city_id_chosen" style="width: 100%;">-->
+                                                        <!--<a class="chosen-single">-->
+                                                        <!--<span>&#45;&#45; Tỉnh thành &#45;&#45;</span>-->
+                                                        <!--<div><b></b></div>-->
+                                                        <!--</a>-->
+                                                        <!--<div class="chosen-drop">-->
+                                                        <!--<div class="chosen-search">-->
+                                                        <!--<input class="chosen-search-input" type="text"-->
+                                                        <!--autocomplete="off"/>-->
+                                                        <!--</div>-->
+                                                        <!--<ul class="chosen-results"></ul>-->
+                                                        <!--</div>-->
                                                         <!--</div>-->
                                                     </div>
                                                     <input type="hidden" id="country_id" name="country_id" value="1"/>
@@ -389,18 +386,18 @@
                                                             <option value="">-- Quận huyện --</option>
                                                         </select>
                                                         <!--<div class="chosen-container chosen-container-single" title=""-->
-                                                             <!--id="district_id_chosen" style="width: 100%;">-->
-                                                            <!--<a class="chosen-single">-->
-                                                                <!--<span>&#45;&#45; Quận huyện &#45;&#45;</span>-->
-                                                                <!--<div><b></b></div>-->
-                                                            <!--</a>-->
-                                                            <!--<div class="chosen-drop">-->
-                                                                <!--<div class="chosen-search">-->
-                                                                    <!--<input class="chosen-search-input" type="text"-->
-                                                                           <!--autocomplete="off"/>-->
-                                                                <!--</div>-->
-                                                                <!--<ul class="chosen-results"></ul>-->
-                                                            <!--</div>-->
+                                                        <!--id="district_id_chosen" style="width: 100%;">-->
+                                                        <!--<a class="chosen-single">-->
+                                                        <!--<span>&#45;&#45; Quận huyện &#45;&#45;</span>-->
+                                                        <!--<div><b></b></div>-->
+                                                        <!--</a>-->
+                                                        <!--<div class="chosen-drop">-->
+                                                        <!--<div class="chosen-search">-->
+                                                        <!--<input class="chosen-search-input" type="text"-->
+                                                        <!--autocomplete="off"/>-->
+                                                        <!--</div>-->
+                                                        <!--<ul class="chosen-results"></ul>-->
+                                                        <!--</div>-->
                                                         <!--</div>-->
                                                     </div>
                                                 </div>
@@ -421,43 +418,6 @@
                                                         class="btn-continue-pay btn btn-main txt-upper">&nbsp; Tiếp tục
                                                     Thanh toán <i class="fa fa-arrow-right" aria-hidden="true"></i>
                                                 </button>
-                                            </div>
-                                            <div class="clearfix"></div>
-                                        </div>
-                                        <div role="tabpanel" class="tab-pane" id="login-cart">
-                                            <div class="col-md-6 col-md-offset-3 col-xs-12 cart-right">
-                                                <div class="form-group"><label class="hidden">Tên đăng nhập</label>
-                                                    <input
-                                                            class="form-control" name="username" type="text"
-                                                            placeholder="Tên đăng nhập hoặc email"/></div>
-                                                <div class="form-group"><label class="hidden">Mật khẩu</label> <input
-                                                        class="form-control" name="password" type="password"
-                                                        placeholder="Mật khẩu"/></div>
-                                                <div class="form-group text-center">
-                                                    <button type="button" id="btn-login-order"
-                                                            class="btn-login bt btn-primary"><span
-                                                            class="fa fa-sign-in"></span> Đăng nhập
-                                                    </button>
-                                                </div>
-                                                <div class="form-group text-center"><span
-                                                        class="txt-upper"> Hoặc </span>
-                                                </div>
-                                                <div class="form-group">
-                                                        <span id="login-facebook"
-                                                              onclick="nh_member.FB_login($('#login-modal'),'popup');"
-                                                              style="color: #fff;"
-                                                              class="btn btn-block btn-social btn-facebook">
-                                                            <span class="fa fa-facebook"></span> Đăng nhập bằng facebook
-                                                        </span>
-                                                </div>
-                                                <div class="form-group">
-                                                        <span id="login-google"
-                                                              onclick="nh_member.GOOGLE_login($('#login-modal'),'popup');"
-                                                              style="color: #fff;"
-                                                              class="btn btn-block btn-social btn-google">
-                                                            <span class="fa fa-google"></span> Đăng nhập bằng google
-                                                        </span>
-                                                </div>
                                             </div>
                                             <div class="clearfix"></div>
                                         </div>
@@ -540,7 +500,7 @@
 
                 $("#btn-process-payment").on("click", function (e) {
                     e.preventDefault();
-                    console.log('btn-process-payment clicked');
+
 
                     var member_id = "";
                     var shipping_address = $("input[name=shipping_address]:checked").val();
@@ -560,7 +520,6 @@
                         var data_send = {
                             city_id: $("#frm-order select[name='city_id']").val(),
                             district_id: $("#frm-order select[name='district_id']").val(),
-                            ward_id: $("#frm-order select[name='ward_id']").val(),
                             full_name: $("#frm-order input[name='full_name']").val(),
                             phone: $("#frm-order input[name='phone']").val(),
                             email: $("#frm-order input[name='email']").val(),
@@ -574,37 +533,44 @@
                         };
                     }
 
-                    var installment = "";
                     nh_functions.showLoadingPage();
-                    console.log('~~~~~~~~~~~~~dataa send~~~~', data_send)
+                    // console.log('~~~~~~~~~~~~~dataa send~~~~', data_send)
+
                     //todo save to firebase or docfile
-
-                    window.location = "cart-paymentmethod.html";
-
-                    // $.ajax({
-                    //     url: "https://trangsuc-01.web4s.vn/orders/Orders/nextToPayment",
-                    //     type: "POST",
-                    //     data: data_send,
-                    //     dataType: "json",
-                    //     success: function (response) {
-                    //         if (response.code == "error") {
-                    //             nh_functions.hiddenLoadingPage();
-                    //             nh_functions.showAlertGritter("error", response.messages);
-                    //         } else {
-                    //             setTimeout(function () {
-                    //                 var router = "/order/payment-method";
-                    //                 if (installment != "") {
-                    //                     router += "?installment=1";
-                    //                 }
-                    //                 window.location = router;
-                    //             }, 500);
-                    //         }
-                    //     },
-                    //     error: function (response, json, errorThrown) {
-                    //         nh_functions.hiddenLoadingPage();
-                    //         nh_functions.showAlertGritter("error", response.messages);
-                    //     },
+                    // firestoreDB.collection("orders").add({
+                    //     date: "02/03/2021",
+                    //     ...data_send,
+                    // }).then((docRef) => {
+                    //     console.log("Document written with ID: ", docRef.id);
+                    //
+                    //     window.location = "cart-paymentmethod.html";
+                    // }).catch((error) => {
+                    //     console.error("Error adding document: ", error);
                     // });
+
+                    //Xử lý gửi dữ liệu lên form
+                    $.ajax({
+                        //Chỉ định đích gửi dữ liệu đến: là form response đã tạo ở trên
+                        url: "https://docs.google.com/forms/d/e/1FAIpQLSdfJXkOlWldOumtinXAaFwZAjPd9qaVXoL3ZkUr6TYaGufzqg/formResponse?",
+                        data: { //gán các giá trị tương ứng vào các Input name tương ứng đã lấy ở trên
+                            "entry.1656109496": data_send.name,
+                            "entry.649436017": data_send.phone,
+                            "entry.1125309137": data_send.email,
+                            "entry.1119768243": data_send.city_id,
+                            "entry.319025078": data_send.district_id,
+                            "entry.930282275": data_send.address,
+                            "entry.1139114048": data_send.note,
+                        },
+                        type: "POST",
+                        dataType: "jsonp", //các bạn có thể để xml, nhưng khi bật console lên sẽ thấy báo đỏ lòm vì ko cho cross, còn cái này nó vẫn cảnh báo nhưng màu xám thôi, ko đỏ :v
+                        success: function(d)
+                        {}, //do đã bảo ở trên là nó ko cho cross đâu, nên khi gửi data xong ko trả về success được, ko cần điền cái này nhé
+                        error: function(x, y, z) {
+                            console.log('errrrrrrrrrrrrrrr')
+                            // $('#success-msg').show(); //hiện ra cái mess báo thành công khi gửi xong
+                        }
+                    });
+                    // window.location = "cart-paymentmethod.html";
                 });
 
                 // select address shipping
