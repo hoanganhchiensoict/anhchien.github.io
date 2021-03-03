@@ -526,6 +526,11 @@
                             address: $("#frm-order input[name='address']").val(),
                             note: $("#frm-order textarea[name='note']").val(),
                         };
+
+                        const objCity = districtList[data_send.city_id]
+                        data_send.city_name = objCity.name
+                        data_send.district_name = objCity.districts[data_send.district_id]
+
                     } else {
                         // id of shipping address of member
                         var data_send = {
@@ -536,17 +541,20 @@
                     nh_functions.showLoadingPage();
                     // console.log('~~~~~~~~~~~~~dataa send~~~~', data_send)
 
-                    //todo save to firebase or docfile
-                    // firestoreDB.collection("orders").add({
-                    //     date: "02/03/2021",
-                    //     ...data_send,
-                    // }).then((docRef) => {
-                    //     console.log("Document written with ID: ", docRef.id);
-                    //
-                    //     window.location = "cart-paymentmethod.html";
-                    // }).catch((error) => {
-                    //     console.error("Error adding document: ", error);
-                    // });
+                    //save to firebase or docfile
+                    firestoreDB.collection("orders").add({
+                        date: "02/03/2021",
+                        ...data_send,
+                    }).then((docRef) => {
+                        console.log("Document written with ID: ", docRef.id);
+
+                        data_send.order_id = docRef.id
+                        window.localStorage.setItem("address_info", JSON.stringify(data_send));
+
+                        window.location = "cart-paymentmethod.html";
+                    }).catch((error) => {
+                        console.error("Error adding document: ", error);
+                    });
 
                     //Xử lý gửi dữ liệu lên form
                     $.ajax({
@@ -556,16 +564,16 @@
                             "entry.1656109496": data_send.name,
                             "entry.649436017": data_send.phone,
                             "entry.1125309137": data_send.email,
-                            "entry.1119768243": data_send.city_id,
-                            "entry.319025078": data_send.district_id,
+                            "entry.1119768243": data_send.city_name,
+                            "entry.319025078": data_send.district_name,
                             "entry.930282275": data_send.address,
                             "entry.1139114048": data_send.note,
                         },
                         type: "POST",
                         dataType: "jsonp", //các bạn có thể để xml, nhưng khi bật console lên sẽ thấy báo đỏ lòm vì ko cho cross, còn cái này nó vẫn cảnh báo nhưng màu xám thôi, ko đỏ :v
-                        success: function(d)
-                        {}, //do đã bảo ở trên là nó ko cho cross đâu, nên khi gửi data xong ko trả về success được, ko cần điền cái này nhé
-                        error: function(x, y, z) {
+                        success: function (d) {
+                        }, //do đã bảo ở trên là nó ko cho cross đâu, nên khi gửi data xong ko trả về success được, ko cần điền cái này nhé
+                        error: function (x, y, z) {
                             console.log('errrrrrrrrrrrrrrr')
                             // $('#success-msg').show(); //hiện ra cái mess báo thành công khi gửi xong
                         }

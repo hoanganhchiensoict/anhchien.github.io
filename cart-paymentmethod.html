@@ -116,19 +116,22 @@
                                                                                  aria-hidden="true"></i> </a>
                                         <div class="megamenu clearfix">
                                             <ul class="wstliststy05">
-                                                <li class="wstheading"><a href="index.html#content-row-1">Vòng tay tương tác</a>
+                                                <li class="wstheading"><a href="index.html#content-row-1">Vòng tay tương
+                                                    tác</a>
                                                 </li>
                                                 <li><a href="index.html#content-row-1"> Vòng tay</a></li>
                                             </ul>
                                             <ul class="wstliststy05">
-                                                <li class="wstheading"><a href="index.html#content-row-2">Trang sức vàng, bạc</a>
+                                                <li class="wstheading"><a href="index.html#content-row-2">Trang sức
+                                                    vàng, bạc</a>
                                                 </li>
                                                 <li><a href="index.html#content-row-2"> Dây chuyền </a></li>
                                                 <li><a href="index.html#content-row-2"> Vòng tay </a></li>
                                                 <li><a href="index.html#content-row-2"> Khuyên tai </a></li>
                                             </ul>
                                             <ul class="wstliststy05">
-                                                <li class="wstheading"><a href="index.html#content-row-3">Mỹ phẩm</a></li>
+                                                <li class="wstheading"><a href="index.html#content-row-3">Mỹ phẩm</a>
+                                                </li>
                                                 <li><a href="index.html#content-row-3"> Mỹ phẩm </a></li>
                                             </ul>
                                         </div>
@@ -262,31 +265,26 @@
                             <div class="box-cart-right margin-b-10">
                                 <div class="title_style4">
                                     <h3 class="no-margin">Địa chỉ giao hàng <a href="card-info.html"
-                                                                               style="font-size: 12px; text-decoration: none; font-weight: normal; text-transform: none;">
-                                        (Thay đổi) </a></h3>
+                                                                               style="font-size: 12px; text-decoration: none; font-weight: normal; text-transform: none;">(Thay
+                                        đổi) </a></h3>
                                 </div>
                                 <div class="box-cart-right-cont">
                                     <div class="checkout-address">
-                                        <p>
-                                            <span class="icon-list-address"> <i class="fa fa-user-o"
-                                                                                aria-hidden="true"></i> </span> <b>Mystery
-                                            CC</b>
-                                        </p>
-                                        <p>
-                                            <span class="icon-list-address"> <i class="fa fa-map-marker"
-                                                                                aria-hidden="true"></i> </span> Tang 3,
-                                            102 Thai Thinh, Dong Da, Ha Noi
-                                        </p>
-                                        <p>
-                                            <span class="icon-list-address"> <i class="fa fa-map-o"
-                                                                                aria-hidden="true"></i> </span> Hà Nội
-                                            ,Quận Ba Đình ,Phường Trúc Bạch
-                                        </p>
-                                        <p>
-                                            <span class="icon-list-address"> <i class="fa fa-mobile"
-                                                                                aria-hidden="true"></i> </span>
-                                            0974477451
-                                        </p>
+                                        <script type="text/javascript">
+                                            const addressStorage = window.localStorage.getItem("address_info");
+                                            if (addressStorage != undefined && addressStorage != null) {
+                                                const addressStorageJson = JSON.parse(addressStorage)
+
+                                                let html_address = '<p><span class="icon-list-address"> <i class="fa fa-user-o" aria-hidden="true"></i> </span> <b>' + addressStorageJson.full_name + '</b></p>'
+                                                html_address += '<p><span class="icon-list-address"> <i class="fa fa-user-o" aria-hidden="true"></i> </span> <span>' + addressStorageJson.email + '</span></p>'
+                                                html_address += '<p><span class="icon-list-address"> <i class="fa fa-map-marker" aria-hidden="true"></i> </span> <span>' + addressStorageJson.district_name + ', ' + addressStorageJson.city_name + '</span></p>'
+                                                html_address += '<p><span class="icon-list-address"> <i class="fa fa-map-o" aria-hidden="true"></i> </span> <span>' + addressStorageJson.address + '</span></p>'
+                                                html_address += '<p><span class="icon-list-address"> <i class="fa fa-mobile" aria-hidden="true"></i> </span> <span>' + addressStorageJson.phone + '</span></p>'
+
+                                                $('.checkout-address').append(html_address);
+                                            }
+
+                                        </script>
                                     </div>
                                 </div>
                             </div>
@@ -297,6 +295,14 @@
                                         <ul class="nav nav-tabs" role="tablist">
                                             <li class="payment_method_item">
                                                 <a href="javascript://">
+                                                    <img src="template/trangsuc-01/webroot/images/ATM.png"/>
+                                                    <input id="item-2" data-id="2" type="radio" value="ATM" name="pay"
+                                                           data-sub="" class=""/>
+                                                    <span for="item-2" class="name-tabs txt-upper"> Thanh toán chuyển khoản </span>
+                                                </a>
+                                            </li>
+                                            <li class="payment_method_item">
+                                                <a href="javascript://">
                                                     <img src="template/trangsuc-01/webroot/images/COD.png"/>
                                                     <input id="item-1" data-id="1" type="radio" value="COD" checked=""
                                                            name="pay" data-sub="" class=""/>
@@ -304,22 +310,10 @@
                                                           class="name-tabs txt-upper"> thanh toán trực tiếp </span>
                                                 </a>
                                             </li>
-                                            <li class="payment_method_item">
-                                                <a href="javascript://">
-                                                    <img src="template/trangsuc-01/webroot/images/ATM.png"/>
-                                                    <input id="item-2" data-id="2" type="radio" value="ATM" name="pay"
-                                                           data-sub="" class=""/>
-                                                    <span for="item-2" class="name-tabs txt-upper"> Thanh toán chuyển khoản </span>
-                                                </a>
-                                            </li>
                                         </ul>
                                     </div>
                                     <div class="choose-bank col-sm-8 col-xs-12">
-                                        <div class="config-payment" pay-code="COD" data-sub="">
-                                            <div class="note-payment"><p>Quý khách vui lòng thanh toán khi nhận được sản
-                                                phẩm.</p></div>
-                                        </div>
-                                        <div class="config-payment hidden" pay-code="ATM" data-sub="">
+                                        <div class="config-payment" pay-code="ATM" data-sub="">
                                             <ul class="list-bank clearfix">
                                                 <div class="form-group" style="margin: 15px;">
                                                     <div class="row">
@@ -329,7 +323,7 @@
                                                                 <tbody>
                                                                 <tr>
                                                                     <td>Tên ngân hàng</td>
-                                                                    <td>Agribank</td>
+                                                                    <td>VPBank</td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>Chi nhánh</td>
@@ -337,45 +331,49 @@
                                                                 </tr>
                                                                 <tr>
                                                                     <td>Tên chủ tài khoản</td>
-                                                                    <td>Đặng Văn Trường</td>
+                                                                    <td>Hoang Anh Chien</td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>Số tài khoản</td>
-                                                                    <td>1313231313465464</td>
+                                                                    <td>98317147</td>
                                                                 </tr>
                                                                 </tbody>
                                                             </table>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="form-group" style="margin: 15px;">
-                                                    <div class="row">
-                                                        <div class="col-xs-12 text-left">
-                                                            <table class="table table-bordered" border="0"
-                                                                   style="width: 100%; margin-bottom: 30px;">
-                                                                <tbody>
-                                                                <tr>
-                                                                    <td>Tên ngân hàng</td>
-                                                                    <td>Viettin Bank</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>Chi nhánh</td>
-                                                                    <td>Ha Dong</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>Tên chủ tài khoản</td>
-                                                                    <td>Dang Van Truong</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>Số tài khoản</td>
-                                                                    <td>1222555123131</td>
-                                                                </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                <!--<div class="form-group" style="margin: 15px;">-->
+                                                    <!--<div class="row">-->
+                                                        <!--<div class="col-xs-12 text-left">-->
+                                                            <!--<table class="table table-bordered" border="0"-->
+                                                                   <!--style="width: 100%; margin-bottom: 30px;">-->
+                                                                <!--<tbody>-->
+                                                                <!--<tr>-->
+                                                                    <!--<td>Tên ngân hàng</td>-->
+                                                                    <!--<td>Viettin Bank</td>-->
+                                                                <!--</tr>-->
+                                                                <!--<tr>-->
+                                                                    <!--<td>Chi nhánh</td>-->
+                                                                    <!--<td>Ha Dong</td>-->
+                                                                <!--</tr>-->
+                                                                <!--<tr>-->
+                                                                    <!--<td>Tên chủ tài khoản</td>-->
+                                                                    <!--<td>Dang Van Truong</td>-->
+                                                                <!--</tr>-->
+                                                                <!--<tr>-->
+                                                                    <!--<td>Số tài khoản</td>-->
+                                                                    <!--<td>1222555123131</td>-->
+                                                                <!--</tr>-->
+                                                                <!--</tbody>-->
+                                                            <!--</table>-->
+                                                        <!--</div>-->
+                                                    <!--</div>-->
+                                                <!--</div>-->
                                             </ul>
+                                        </div>
+                                        <div class="config-payment hidden" pay-code="COD" data-sub="">
+                                            <div class="note-payment"><p>Quý khách vui lòng thanh toán khi nhận được sản
+                                                phẩm.</p></div>
                                         </div>
                                     </div>
                                 </div>
@@ -459,7 +457,7 @@
                     </div>
                 </div>
                 <div class="col-sm-3">
-                    <div class="item_block clearfix" style="" >
+                    <div class="item_block clearfix" style="">
                         <div class="menu-footer-vertical box-ft">
                             <h4 class="title-menu-ft">Fanpage</h4>
                             <ul class="list-fan-page">
