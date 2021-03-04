@@ -291,9 +291,9 @@
                                                 <div class="col-md-6 col-xs-12">
                                                     <div class="form-group">
                                                         <select name="city_id"
-                                                                class="chosen-select form-control required"
+                                                                class="form-control required"
                                                                 id="city_id" aria-required="true"
-                                                                style="display: none;">
+                                                        >
                                                             <option value="">-- Tỉnh thành --</option>
                                                             <option value="1">Hà Nội</option>
                                                             <option value="2">Hồ Chí Minh</option>
@@ -359,47 +359,19 @@
                                                             <option value="62">Bạc Liêu</option>
                                                             <option value="63">Cà Mau</option>
                                                         </select>
-                                                        <!--<div class="chosen-container chosen-container-single" title=""-->
-                                                        <!--id="city_id_chosen" style="width: 100%;">-->
-                                                        <!--<a class="chosen-single">-->
-                                                        <!--<span>&#45;&#45; Tỉnh thành &#45;&#45;</span>-->
-                                                        <!--<div><b></b></div>-->
-                                                        <!--</a>-->
-                                                        <!--<div class="chosen-drop">-->
-                                                        <!--<div class="chosen-search">-->
-                                                        <!--<input class="chosen-search-input" type="text"-->
-                                                        <!--autocomplete="off"/>-->
-                                                        <!--</div>-->
-                                                        <!--<ul class="chosen-results"></ul>-->
-                                                        <!--</div>-->
-                                                        <!--</div>-->
+
                                                     </div>
-                                                    <input type="hidden" id="country_id" name="country_id" value="1"/>
-                                                    <input type="hidden" name="country_id" id="country_id" value="1"/>
                                                 </div>
 
                                                 <div class="col-md-6 col-xs-12">
                                                     <div class="form-group">
                                                         <select name="district_id"
-                                                                class="chosen-select form-control required"
+                                                                class="form-control required"
                                                                 id="district_id"
-                                                                aria-required="true" style="display: none;">
+                                                                aria-required="true">
                                                             <option value="">-- Quận huyện --</option>
                                                         </select>
-                                                        <!--<div class="chosen-container chosen-container-single" title=""-->
-                                                        <!--id="district_id_chosen" style="width: 100%;">-->
-                                                        <!--<a class="chosen-single">-->
-                                                        <!--<span>&#45;&#45; Quận huyện &#45;&#45;</span>-->
-                                                        <!--<div><b></b></div>-->
-                                                        <!--</a>-->
-                                                        <!--<div class="chosen-drop">-->
-                                                        <!--<div class="chosen-search">-->
-                                                        <!--<input class="chosen-search-input" type="text"-->
-                                                        <!--autocomplete="off"/>-->
-                                                        <!--</div>-->
-                                                        <!--<ul class="chosen-results"></ul>-->
-                                                        <!--</div>-->
-                                                        <!--</div>-->
+
                                                     </div>
                                                 </div>
                                                 <div class="col-md-12 col-xs-12">
@@ -565,15 +537,23 @@
                     //Xử lý gửi dữ liệu lên form
                     $.ajax({
                         //Chỉ định đích gửi dữ liệu đến: là form response đã tạo ở trên
-                        url: "https://docs.google.com/forms/d/e/1FAIpQLSdfJXkOlWldOumtinXAaFwZAjPd9qaVXoL3ZkUr6TYaGufzqg/formResponse?",
+                        //url: "https://docs.google.com/forms/d/e/1FAIpQLSdfJXkOlWldOumtinXAaFwZAjPd9qaVXoL3ZkUr6TYaGufzqg/formResponse",
+                        url: 'https://docs.google.com/forms/u/1/d/e/1FAIpQLSdfJXkOlWldOumtinXAaFwZAjPd9qaVXoL3ZkUr6TYaGufzqg/formResponse',
+
                         data: { //gán các giá trị tương ứng vào các Input name tương ứng đã lấy ở trên
-                            "entry.1656109496": data_send.name,
-                            "entry.649436017": data_send.phone,
-                            "entry.1125309137": data_send.email,
-                            "entry.1119768243": data_send.city_name,
-                            "entry.319025078": data_send.district_name,
-                            "entry.930282275": data_send.address,
-                            "entry.1139114048": data_send.note,
+                            "entry.1656109496": '"' + data_send.full_name + '"',
+                            "entry.649436017": '"' + data_send.phone + '"',
+                            "entry.1125309137": '"' + data_send.email + '"',
+                            "entry.1119768243": '"' + data_send.city_name + '"',
+                            "entry.319025078": '"' + data_send.district_name + '"',
+                            "entry.930282275": '"' + data_send.address + '"',
+                            "entry.1139114048": '"' + data_send.note + '"',
+
+                            'entry.256868780_sentinel': '', fvv: 1,
+                            draftResponse: [null, null, "-7937775690686473364"],
+                            pageHistory: 0,
+                            fbzx: -7937775690686473364,
+
                         },
                         type: "POST",
                         dataType: "jsonp", //các bạn có thể để xml, nhưng khi bật console lên sẽ thấy báo đỏ lòm vì ko cho cross, còn cái này nó vẫn cảnh báo nhưng màu xám thôi, ko đỏ :v
@@ -705,7 +685,8 @@
                         <div class="col-sm-10">
                             <div class="item_block clearfix" style="">
                                 <div class="menu-top">
-                                    <a href="#" class="btn-toggle visible-xs"><i class="fa fa-bars" aria-hidden="true"></i></a>
+                                    <a href="#" class="btn-toggle visible-xs"><i class="fa fa-bars"
+                                                                                 aria-hidden="true"></i></a>
                                     <ul class="content-toggle hidden-mobile clearfix">
                                         <li>
                                             <a href=""> Chính sách bảo mật </a>

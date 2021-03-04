@@ -66,11 +66,11 @@ nh_functions = {
             for (const [key, value] of Object.entries(listDistrictOfCity)) {
                 nh_member.appendOptionSelect(wrap_id + " select[name='district_id']", listDistrictOfCity);
                 // add option default
-                var default_option = "<option value=''>" + value + "</option>";
-                $(wrap_id + " select[name='district_id']").prepend(default_option);
-                $(wrap_id + " select[name='district_id'] option[value='']").attr('selected', 'selected');
-                // update select by chosen
-                $(wrap_id + " select[name='district_id']").trigger('chosen:updated');
+                // var default_option = "<option value=''>" + value + "</option>";
+                // $(wrap_id + " select[name='district_id']").prepend(default_option);
+                // $(wrap_id + " select[name='district_id'] option[value='']").attr('selected', 'selected');
+                // // update select by chosen
+                // $(wrap_id + " select[name='district_id']").trigger('chosen:updated');
             }
 
         });
