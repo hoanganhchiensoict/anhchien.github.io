@@ -252,8 +252,8 @@ function loadProduct(category) {
         //lấy detail product
         if (productDetail.category == category) {
 
-            var htmlProduct = '<div class="list-item col-md-4 col-sm-4 col-xs-12">'
-            htmlProduct += '<div class="item-product hover-action-product style-view-2 clearfix">'
+            var htmlProduct = '<div class="list-item col-md-4 col-sm-4 col-xs-12 cc-product-main">'
+            htmlProduct += '<div class="item-product hover-action-product style-view-2 clearfix cc-product-wrapper" >'
             htmlProduct += '<span class="status-product bg-red">HOT</span>'
             htmlProduct += '<div class="img bg-img-50" title="' + productDetail.name + '">'
             htmlProduct += '<a href="' + productDetail.url + '" title="' + productDetail.name + '">'
@@ -284,6 +284,14 @@ function loadProduct(category) {
             htmlProduct += '<!--Thêm vào giỏ hàng-->'
             htmlProduct += '</a>'
             htmlProduct += '</div>'
+
+            htmlProduct += '<div class="cc-cart-item">'
+            htmlProduct += '<a href="javascript://" class="item-action btn-shop-cart" item-id="' + productDetail.id + '" status-store="">'
+            htmlProduct += '<i class="fa fa-shopping-cart"></i>'
+            htmlProduct += '<!--Thêm vào giỏ hàng-->'
+            htmlProduct += '</a>'
+            htmlProduct += '</div>'
+
             htmlProduct += '<div class="content-attr hidden"></div>'
             htmlProduct += '</div>'
             htmlProduct += '</div>'
