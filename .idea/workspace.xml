@@ -2,68 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdaf1324-233c-4adb-b79d-299465f777a3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/landing_page/mau-ldp-ca-phe/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing_page/mau-ldp-ca-phe/index25c0.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing_page/wp-content/cache/min/1/7b9ccb6c2dcd60fd4325d2f6835e68d4.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing_page/wp-content/cache/min/1/d605f852398b45b2b8878db76f45471b.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing_page/wp-content/plugins/bdthemes-element-pack/assets/css/bdt-uikitcf1b.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing_page/wp-content/plugins/bdthemes-element-pack/assets/css/element-pack-fontbb93.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing_page/wp-content/plugins/bdthemes-element-pack/assets/css/element-pack-sitebb93.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing_page/wp-content/plugins/bdthemes-element-pack/assets/css/ep-advanced-image-gallerybb93.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing_page/wp-content/plugins/bdthemes-element-pack/assets/js/bdt-uikit-icons.min19ce.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing_page/wp-content/plugins/bdthemes-element-pack/assets/js/bdt-uikit.minbb93.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing_page/wp-content/plugins/bdthemes-element-pack/assets/js/element-pack-site.minbb93.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing_page/wp-content/plugins/bdthemes-element-pack/assets/js/widgets/ep-modal.minbb93.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing_page/wp-content/plugins/bdthemes-element-pack/assets/vendor/js/jquery.justifiedGallery.min8a54.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing_page/wp-content/plugins/bdthemes-element-pack/assets/vendor/js/tilt.jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing_page/wp-content/plugins/elementor-pro/assets/css/frontend.min784c.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing_page/wp-content/plugins/elementor-pro/assets/js/frontend.min784c.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing_page/wp-content/plugins/elementor-pro/assets/lib/sticky/jquery.sticky.min784c.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing_page/wp-content/plugins/elementor/assets/css/frontend.min5fac.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing_page/wp-content/plugins/elementor/assets/js/frontend-modules.min5fac.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing_page/wp-content/plugins/elementor/assets/js/frontend.min5fac.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing_page/wp-content/plugins/elementor/assets/lib/animations/animations.min5fac.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing_page/wp-content/plugins/elementor/assets/lib/dialog/dialog.minae9e.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing_page/wp-content/plugins/elementor/assets/lib/e-gallery/css/e-gallery.minc358.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing_page/wp-content/plugins/elementor/assets/lib/e-gallery/js/e-gallery.minc358.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing_page/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min87e8.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing_page/wp-content/plugins/elementor/assets/lib/share-link/share-link.min5fac.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing_page/wp-content/plugins/elementor/assets/lib/swiper/swiper.min48f5.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing_page/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min05da.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing_page/wp-content/plugins/jet-elements/assets/css/jet-elements-skinde92.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing_page/wp-content/plugins/jet-elements/assets/css/jet-elementsde92.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing_page/wp-content/plugins/jet-elements/assets/images/dummy-map.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing_page/wp-content/plugins/jet-elements/assets/js/jet-elements.minde92.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing_page/wp-content/plugins/simpleweb-addon/assets/js/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing_page/wp-content/themes/twentytwenty-child/stylec225.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing_page/wp-content/themes/twentytwenty/assets/fonts/inter/Inter-italic-var.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing_page/wp-content/themes/twentytwenty/assets/fonts/inter/Inter-upright-var.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing_page/wp-content/themes/twentytwenty/assets/js/indexc225.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing_page/wp-content/themes/twentytwenty/printc225.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing_page/wp-content/themes/twentytwenty/stylec225.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing_page/wp-content/uploads/2020/06/cropped-logo-min-blue-1-180x180.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing_page/wp-content/uploads/2020/06/cropped-logo-min-blue-1-192x192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing_page/wp-content/uploads/2020/06/cropped-logo-min-blue-1-32x32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing_page/wp-content/uploads/2020/11/logo-simple-page-1-06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing_page/wp-content/uploads/2021/03/5be213583b93e-d729e8629b59c3ff5bc0fc9fd4984e86.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing_page/wp-content/uploads/2021/03/Screenshot_258.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing_page/wp-content/uploads/2021/03/coffee-paper-bag-green-leaves-on-white-coffee-bags-7c726c37ef76dfe6d89fc9764c2b2813.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing_page/wp-content/uploads/2021/03/cup-coffee-with-pile-coffee-beans-1-scaled.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing_page/wp-content/uploads/2021/03/cup-coffee-with-pile-coffee-beans-scaled.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing_page/wp-content/uploads/2021/03/globe-earth-world-map-world-map-fc3eefaf74830bee5bd59123839e0e56.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing_page/wp-content/uploads/2021/03/hands-that-are-picking-coffee-beans-from-coffee-tree-scaled.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing_page/wp-content/uploads/2021/03/tlo_wenecja-fb63439a44c525eb2e62ee773ad69cca-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing_page/wp-content/uploads/2021/03/tlo_wenecja-fb63439a44c525eb2e62ee773ad69cca.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing_page/wp-content/uploads/2021/03/tải-xuống-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing_page/wp-content/uploads/2021/03/tải-xuống-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing_page/wp-content/uploads/2021/03/tải-xuống-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing_page/wp-content/uploads/2021/03/tải-xuống-4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing_page/wp-content/uploads/2021/03/tải-xuống-5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing_page/wp-content/uploads/2021/03/tải-xuống-6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing_page/wp-content/uploads/2021/03/tải-xuống.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing_page/wp-content/uploads/elementor/css/post-1557035e94.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lading-page/lading-page-product.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lading-page/pictures/banner.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lading-page/pictures/color.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lading-page/pictures/couple-bracelet-necklace.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lading-page/pictures/distant.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lading-page/pictures/flower-leave.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lading-page/pictures/healthy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lading-page/pictures/sun-moon.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ladingpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/ladingpage.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -98,31 +45,23 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ladingpage.html">
+        <entry file="file://$PROJECT_DIR$/lading-page/lading-page-product.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="4144" column="9" lean-forward="true" selection-start-line="4144" selection-start-column="9" selection-end-line="4144" selection-end-column="9" />
+            <state relative-caret-position="141">
+              <caret line="3799" column="125" selection-start-line="3799" selection-start-column="125" selection-end-line="3799" selection-end-column="125" />
               <folding>
-                <element signature="e#65312#65630#2" expanded="true" />
-                <element signature="e#68057#68375#2" expanded="true" />
-                <element signature="e#70684#71002#2" expanded="true" />
-                <element signature="e#99678#99983#2" expanded="true" />
-                <element signature="e#102034#102339#2" expanded="true" />
-                <element signature="e#104276#104581#2" expanded="true" />
-                <element signature="e#122283#122288#0" expanded="true" />
-                <element signature="e#127663#127668#0" expanded="true" />
-                <element signature="e#128491#128496#0" expanded="true" />
-                <element signature="e#129329#129334#0" expanded="true" />
+                <element signature="e#65523#65841#2" expanded="true" />
+                <element signature="e#68268#68586#2" expanded="true" />
+                <element signature="e#70895#71213#2" expanded="true" />
+                <element signature="e#100215#100533#2" expanded="true" />
+                <element signature="e#102960#103278#2" expanded="true" />
+                <element signature="e#105591#105909#2" expanded="true" />
+                <element signature="e#124182#124187#0" expanded="true" />
+                <element signature="n#style#0;n#iframe#0;n#div#0;n#div#5;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#129562#129567#0" expanded="true" />
+                <element signature="e#130390#130395#0" expanded="true" />
+                <element signature="e#131228#131233#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/landing_page/mau-ldp-ca-phe/index25c0.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2215">
-              <caret line="981" column="95" selection-start-line="981" selection-start-column="95" selection-end-line="981" selection-end-column="95" />
             </state>
           </provider>
         </entry>
@@ -138,12 +77,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>figure-caption</find>
-      <find>btn-shop-cart</find>
-      <find>Ve</find>
-      <find>box-slide-images-detail mr-b-30</find>
-      <find>item</find>
-      <find>owl</find>
       <find>css_cu</find>
       <find>class=&quot;item</find>
       <find>cc-image-detail-thumb</find>
@@ -167,7 +100,13 @@
       <find>&lt;scrio</find>
       <find>bdt-avdg-dbaacf0</find>
       <find>script_lazyload</find>
+      <find>background-image</find>
+      <find>icdn.com/s750x600/603a032…/</find>
+      <find>ladi-image-background</find>
+      <find>SECTION157</find>
+      <find>ladicdn.com/uploads/im</find>
       <find>SECTION127</find>
+      <find>ladi-video</find>
     </findStrings>
     <replaceStrings>
       <replace>template</replace>
@@ -205,6 +144,9 @@
         <option value="$PROJECT_DIR$/landing_page/mau-ldp-ca-phe/index.html" />
         <option value="$PROJECT_DIR$/landing_page/mau-ldp-ca-phe/index25c0.html" />
         <option value="$PROJECT_DIR$/ladingpage.html" />
+        <option value="$PROJECT_DIR$/lading-page.html" />
+        <option value="$PROJECT_DIR$/lading-page-product.html" />
+        <option value="$PROJECT_DIR$/lading-page/lading-page-product.html" />
       </list>
     </option>
   </component>
@@ -232,13 +174,7 @@
             <path>
               <item name="demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="landing_page" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="landing_page" type="462c0819:PsiDirectoryNode" />
-              <item name="mau-ldp-ca-phe" type="462c0819:PsiDirectoryNode" />
+              <item name="lading-page" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -253,12 +189,15 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\ProjectCc\Web\trangsuc-01.web4s.vn\demo\lading-page" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\ProjectCc\Web\trangsuc-01.web4s.vn\demo\landing_page" />
+      <recent name="F:\ProjectCc\Web\trangsuc-01.web4s.vn\demo\lading-page\pictures" />
       <recent name="F:\ProjectCc\Web\trangsuc-01.web4s.vn\demo" />
+      <recent name="F:\ProjectCc\Web\trangsuc-01.web4s.vn\demo\landing_page" />
       <recent name="F:\ProjectCc\Web\trangsuc-01.web4s.vn\demo\uploads\tiny_uploads" />
       <recent name="F:\ProjectCc\Web\trangsuc-01.web4s.vn\demo\template\trangsuc-01\webroot\css" />
-      <recent name="F:\ProjectCc\Web\trangsuc-01.web4s.vn\demo\template\trangsuc-01\webroot\images" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -288,12 +227,12 @@
       <workItem from="1614651817776" duration="21858000" />
       <workItem from="1614737985271" duration="2889000" />
       <workItem from="1614741021560" duration="8853000" />
-      <workItem from="1614825545519" duration="19454000" />
+      <workItem from="1614825545519" duration="22239000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96037000" />
+    <option name="totallyTimeSpent" value="98822000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="35" width="1356" height="686" extended-state="0" />
@@ -685,6 +624,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ladingpage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1851">
+          <caret line="4144" column="9" lean-forward="true" selection-start-line="4144" selection-start-column="9" selection-end-line="4144" selection-end-column="9" />
+          <folding>
+            <element signature="e#65312#65630#2" expanded="true" />
+            <element signature="e#68057#68375#2" expanded="true" />
+            <element signature="e#70684#71002#2" expanded="true" />
+            <element signature="e#99678#99983#2" expanded="true" />
+            <element signature="e#102034#102339#2" expanded="true" />
+            <element signature="e#104276#104581#2" expanded="true" />
+            <element signature="e#122283#122288#0" expanded="true" />
+            <element signature="e#127663#127668#0" expanded="true" />
+            <element signature="e#128491#128496#0" expanded="true" />
+            <element signature="e#129329#129334#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lading-page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="4122" column="36" lean-forward="true" selection-start-line="4122" selection-start-column="36" selection-end-line="4122" selection-end-column="36" />
+          <folding>
+            <element signature="e#65616#65934#2" expanded="true" />
+            <element signature="e#68361#68679#2" expanded="true" />
+            <element signature="e#70988#71306#2" expanded="true" />
+            <element signature="e#100308#100626#2" expanded="true" />
+            <element signature="e#103053#103371#2" expanded="true" />
+            <element signature="e#105684#106002#2" expanded="true" />
+            <element signature="e#123707#123712#0" expanded="true" />
+            <element signature="e#129213#129218#0" expanded="true" />
+            <element signature="e#130097#130102#0" expanded="true" />
+            <element signature="e#130991#130996#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="274">
@@ -704,21 +681,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ladingpage.html">
+    <entry file="file://$PROJECT_DIR$/lading-page/lading-page-product.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="4144" column="9" lean-forward="true" selection-start-line="4144" selection-start-column="9" selection-end-line="4144" selection-end-column="9" />
+        <state relative-caret-position="141">
+          <caret line="3799" column="125" selection-start-line="3799" selection-start-column="125" selection-end-line="3799" selection-end-column="125" />
           <folding>
-            <element signature="e#65312#65630#2" expanded="true" />
-            <element signature="e#68057#68375#2" expanded="true" />
-            <element signature="e#70684#71002#2" expanded="true" />
-            <element signature="e#99678#99983#2" expanded="true" />
-            <element signature="e#102034#102339#2" expanded="true" />
-            <element signature="e#104276#104581#2" expanded="true" />
-            <element signature="e#122283#122288#0" expanded="true" />
-            <element signature="e#127663#127668#0" expanded="true" />
-            <element signature="e#128491#128496#0" expanded="true" />
-            <element signature="e#129329#129334#0" expanded="true" />
+            <element signature="e#65523#65841#2" expanded="true" />
+            <element signature="e#68268#68586#2" expanded="true" />
+            <element signature="e#70895#71213#2" expanded="true" />
+            <element signature="e#100215#100533#2" expanded="true" />
+            <element signature="e#102960#103278#2" expanded="true" />
+            <element signature="e#105591#105909#2" expanded="true" />
+            <element signature="e#124182#124187#0" expanded="true" />
+            <element signature="n#style#0;n#iframe#0;n#div#0;n#div#5;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#129562#129567#0" expanded="true" />
+            <element signature="e#130390#130395#0" expanded="true" />
+            <element signature="e#131228#131233#0" expanded="true" />
           </folding>
         </state>
       </provider>
