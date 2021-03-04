@@ -210,6 +210,7 @@
                 </div>
             </div>
         </div>
+
         <div class="container">
             <div class="box-payment bottom">
                 <div class="box-payment bottom">
@@ -540,11 +541,16 @@
 
                     nh_functions.showLoadingPage();
                     // console.log('~~~~~~~~~~~~~dataa send~~~~', data_send)
-
+                    var cart = window.localStorage.getItem("cart");
+                    var cartJson = {}
+                    if (cart != undefined && cart != null) {
+                        cartJson = JSON.parse(cart);
+                    }
                     //save to firebase or docfile
                     firestoreDB.collection("orders").add({
                         date: "02/03/2021",
                         ...data_send,
+                        cart: cartJson
                     }).then((docRef) => {
                         console.log("Document written with ID: ", docRef.id);
 
@@ -652,36 +658,35 @@
                 }); /*]]>*/
             </script>
         </div>
+
         <div id="footer" class="nh-row">
-            <div id="footer-row-18" class="nh-row footer-top fadeInUp animated">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-2"></div>
-                        <div class="col-sm-8">
-                            <div class="item_block clearfix" style="display: none;"></div>
-                        </div>
-                        <div class="col-sm-2"></div>
-                    </div>
-                </div>
-            </div>
             <div id="footer-row-42" class="nh-row footer-mid">
                 <div class="container">
                     <div class="row">
-                        <div class="col-sm-3">
-                            <div class="item_block clearfix" style="display: none;"></div>
+                        <div class="col-sm-5">
+                            <div class="item_block clearfix" style="">
+                                <div class="menu-footer-vertical box-ft">
+                                    <h4 class="title-menu-ft">VỀ CHÚNG TÔI</h4>
+                                    <div class="address-ft">
+                                        <p><i class="pe7-icon pe-7s-home"></i>40 Cự Lộc, Thanh Xuân, Hà Nội</p>
+                                        <p><i class="pe7-icon pe-7s-phone"></i>(84)96 919 0880</p>
+                                        <p><i class="pe7-icon pe-7s-mail"></i>quatangyeuthuongvn.01@gmail.com</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-sm-3">
-                            <div class="item_block clearfix" style="display: none;"></div>
-                        </div>
-                        <div class="col-sm-3">
-                            <div class="item_block clearfix" style="display: none;"></div>
-                        </div>
-                        <div class="col-sm-3">
-                            <div class="item_block clearfix" style="display: none;"></div>
-                            <div class="menu-footer-vertical box-ft">
-                                <h4 class="title-menu-ft">Phương thức thanh toán</h4>
-                                <div class="list-menu-fy"><img
-                                        src="../uploads/plugin/custom_img/2018-06-25/custom-payment-icons.png"/></div>
+                        <div class="col-sm-5">
+                            <div class="item_block clearfix" style="">
+                                <div class="menu-footer-vertical box-ft">
+                                    <h4 class="title-menu-ft">Fanpage</h4>
+                                    <ul class="list-fan-page">
+                                        <li>
+                                            <a href="https://www.facebook.com/quatangyeuthuong.198/" target="_blank">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -691,10 +696,32 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-2">
-                            <div class="item_block clearfix" style="display: none;"></div>
+                            <div class="item_block clearfix" style="">
+                                <div class="copyright-box">
+                                    <p class="coppyright">Copyright by Qua Tang Yeu Thuong</p>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-sm-10">
-                            <div class="item_block clearfix" style="display: none;"></div>
+                            <div class="item_block clearfix" style="">
+                                <div class="menu-top">
+                                    <a href="#" class="btn-toggle visible-xs"><i class="fa fa-bars" aria-hidden="true"></i></a>
+                                    <ul class="content-toggle hidden-mobile clearfix">
+                                        <li>
+                                            <a href=""> Chính sách bảo mật </a>
+                                        </li>
+                                        <li>
+                                            <a href=""> Chính sách vận chuyển </a>
+                                        </li>
+                                        <li>
+                                            <a href=""> Chính sách bảo hành </a>
+                                        </li>
+                                        <li>
+                                            <a href=""> Chính sách đổi hàng </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

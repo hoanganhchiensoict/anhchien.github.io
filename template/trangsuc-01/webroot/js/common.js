@@ -1,46 +1,97 @@
-var city = [{
-    id: "1",
-    name: "Hà nội"
-}];
-
 var listProduct = [
     //cat 1
     {
-        id: 1,
-        name: 'Sun & Moon',
+        id: 100,
+        name: 'Sun / Moon (1 sp)',
         trademark: 'TotWoo', //thương hiệu
-        price: 12345,
-        price_sale: 12345,
+        price: 1645000,
+        price_sale: 1845000,
+        color: '',
+        material: 'Hàng chính hãng', //chất liệu
+        thumb: 'uploads/tiny_uploads/totwoo_sun1.png',
+        pictures: [
+            "uploads/tiny_uploads/totwoo_sun1.png",
+            "uploads/tiny_uploads/totwoo_moon1.png",
+            "uploads/tiny_uploads/totwoo_sun.png",
+            "uploads/tiny_uploads/totwoo_moon.png",
+            "uploads/tiny_uploads/totwoo_sun_moon.png"
+        ],
+        category: 1,
+        url: 'detail-sun-or-moon.html'
+    },
+    {
+        id: 101,
+        name: 'Sun & Moon (combo 2sp)',
+        trademark: 'TotWoo', //thương hiệu
+        price: 3000000,
+        price_sale: 3200000,
         color: '',
         material: 'Hàng chính hãng', //chất liệu
         thumb: 'uploads/tiny_uploads/totwoo_sun_moon.png',
         pictures: [
+            "uploads/tiny_uploads/totwoo_sun1.png",
+            "uploads/tiny_uploads/totwoo_moon1.png",
             "uploads/tiny_uploads/totwoo_sun_moon.png",
-            "uploads/tiny_uploads/totwoo_sun_moon.png",
-            "uploads/tiny_uploads/totwoo_sun_moon.png"
+            "uploads/tiny_uploads/totwoo_sun.png",
+            "uploads/tiny_uploads/totwoo_moon.png",
         ],
         category: 1,
         url: 'detail-sun-moon.html'
     },
     {
-        id: 2,
-        name: 'Bộ Vòng tay & Dây chuyền',
+        id: 102,
+        name: 'Lily of the Valley',
         trademark: 'TotWoo', //thương hiệu
-        price: 123456,
-        price_sale: 123645,
+        price: 5150000,
+        price_sale: 5350000,
+        color: '',
+        material: 'Hàng chính hãng', //chất liệu
+        thumb: 'uploads/tiny_uploads/totwoo_lily1.jpg',
+        pictures: [
+            "uploads/tiny_uploads/totwoo_lily1.jpg",
+            "uploads/tiny_uploads/totwoo_lily2.png",
+            "uploads/tiny_uploads/totwoo_lily3.jpg",
+            "uploads/tiny_uploads/totwoo_lily4.jpg"
+        ],
+        category: 1,
+        url: 'detail-lily-of-the-valley.html'
+    },
+    {
+        id: 103,
+        name: 'Couple Bracelet & Necklace',
+        trademark: 'TotWoo', //thương hiệu
+        price: 8700000,
+        price_sale: 9000000,
         color: '',
         material: 'Hàng chính hãng', //chất liệu
         thumb: 'uploads/tiny_uploads/totwoo_vongtay_daychuyen.jpg',
         pictures: [
             "uploads/tiny_uploads/totwoo_vongtay_daychuyen.jpg",
-            "uploads/tiny_uploads/totwoo_sun_moon.png",
-            "uploads/tiny_uploads/totwoo_vongtay_daychuyen.jpg"
+            "uploads/tiny_uploads/totwoo_vongtay_daychuyen2.jpg",
+            "uploads/tiny_uploads/totwoo_daychuyen.jpg",
         ],
         category: 1,
-        url: 'detail-sun-moon.html'
+        url: 'detail-couple-bracelet-necklace.html'
     },
     {
-        id: 3,
+        id: 104,
+        name: 'We Bold',
+        trademark: 'TotWoo', //thương hiệu
+        price: 3150000,
+        price_sale: 3350000,
+        color: '',
+        material: 'Hàng chính hãng', //chất liệu
+        thumb: 'uploads/tiny_uploads/totwoo_we_bold.jpg',
+        pictures: [
+            "uploads/tiny_uploads/totwoo_we_bold.jpg",
+            "uploads/tiny_uploads/totwoo_we_bold2.jpg",
+            "uploads/tiny_uploads/totwoo_we_bold3.jpg",
+        ],
+        category: 1,
+        url: 'detail-we-bold.html'
+    },
+    {
+        id: 105,
         name: 'Flower & Leaves',
         trademark: 'TotWoo', //thương hiệu
         price: 122345,
@@ -50,16 +101,18 @@ var listProduct = [
         thumb: 'uploads/tiny_uploads/totwoo_flower_leaves.jpg',
         pictures: [
             "uploads/tiny_uploads/totwoo_flower_leaves.jpg",
-            "uploads/tiny_uploads/totwoo_flower_leaves.jpg",
-            "uploads/tiny_uploads/totwoo_flower_leaves.jpg"
+            "uploads/tiny_uploads/totwoo_lily1.jpg",
+            "uploads/tiny_uploads/totwoo_lily2.jpg",
+            "uploads/tiny_uploads/totwoo_lily3.jpg",
+            "uploads/tiny_uploads/totwoo_lily4.jpg",
         ],
         category: 1,
-        url: 'detail-sun-moon.html'
+        url: 'detail-flower-leaves.html'
     },
 
     //cat 2
     {
-        id: 4,
+        id: 200,
         name: 'Wing Bling Flower Me Earings',
         trademark: 'Wing Bling', //thương hiệu
         price: 480000,
@@ -76,7 +129,7 @@ var listProduct = [
         url: 'detail-sun-moon.html'
     },
     {
-        id: 5,
+        id: 201,
         name: 'Wing Bling Snowflake Earings',
         trademark: 'Wing Bling', //thương hiệu
         price: 380000,
@@ -93,7 +146,7 @@ var listProduct = [
         url: 'detail-sun-moon.html'
     },
     {
-        id: 6,
+        id: 202,
         name: 'Wing Bling Petite Dress Necklace',
         trademark: 'Wing Bling', //thương hiệu
         price: 450000,
@@ -112,7 +165,7 @@ var listProduct = [
 
     //cat 3
     {
-        id: 7,
+        id: 300,
         name: 'Coach Floral Eau De Parfum 30ml',
         trademark: 'Coach', //thương hiệu
         price: 1399000,
@@ -129,7 +182,7 @@ var listProduct = [
         url: 'detail-sun-moon.html'
     },
     {
-        id: 8,
+        id: 301,
         name: 'Salvatore Ferragamo Signorina In Flore 20ml',
         trademark: 'Salvatore', //thương hiệu
         price: 980000,
@@ -146,7 +199,7 @@ var listProduct = [
         url: 'detail-sun-moon.html'
     },
     {
-        id: 9,
+        id: 302,
         name: 'Guess Girl 30ml',
         trademark: 'Guess', //thương hiệu
         price: 850000,
@@ -202,8 +255,8 @@ function loadCart() {
                     html += '</a>';
                     html += '</div>';
                     html += '<div class="media-body">';
-                    html += '<div class="price-well">' + productDetail.price + '</div>';
-                    html += '<p class="price-before"><span>' + productDetail.price_sale + '</span></p>';
+                    html += '<div class="price-well">' + nh_functions.formatMoney(productDetail.price) + 'đ</div>';
+                    html += '<p class="price-before"><span>' + nh_functions.formatMoney(productDetail.price_sale) + 'đ</span></p>';
                     html += '<h4 class="media-heading"><a href="' + productDetail.url + '"> ' + productDetail.name + ' </a></h4>';
                     html += '<label class="hidden">Số lượng</label>';
                     html += '<div class="order-quantity">';
@@ -221,7 +274,7 @@ function loadCart() {
             $('.box-cart-right-cont').append(htmlAll);
 
             $('.mini-cart-order .number').text(nh_functions.formatMoney(totalQuantiry));
-            $("#total_price_final").text(nh_functions.formatMoney(totalAmount));
+            $("#total_price_final").text(nh_functions.formatMoney(totalAmount) +"đ");
 
         }
     } else {
