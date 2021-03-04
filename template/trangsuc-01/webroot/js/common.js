@@ -33,7 +33,7 @@ var listProduct = [
         thumb: 'uploads/tiny_uploads/totwoo_vongtay_daychuyen.jpg',
         pictures: [
             "uploads/tiny_uploads/totwoo_vongtay_daychuyen.jpg",
-            "uploads/tiny_uploads/totwoo_vongtay_daychuyen.jpg",
+            "uploads/tiny_uploads/totwoo_sun_moon.png",
             "uploads/tiny_uploads/totwoo_vongtay_daychuyen.jpg"
         ],
         category: 1,
@@ -224,7 +224,7 @@ function loadCart() {
             $("#total_price_final").text(nh_functions.formatMoney(totalAmount));
 
         }
-    }else {
+    } else {
         $('.mini-cart-order .number').text(nh_functions.formatMoney(0));
         $("#total_price_final").text(nh_functions.formatMoney(0));
     }
@@ -237,7 +237,7 @@ function loadCartNumber() {
     if (cart != undefined && cart != null) {
         var cartJson = JSON.parse(cart);
 
-        if(cartJson.length > 0){
+        if (cartJson.length > 0) {
             cartJson.forEach(function (item) {
                 totalQuantiry += item.quantity;
             })
@@ -266,11 +266,11 @@ function loadProduct(category) {
             htmlProduct += '</h4>'
             htmlProduct += '<div class="price price-inline">'
             htmlProduct += '<p class="price-well">'
-            htmlProduct += nh_functions.formatMoney(productDetail.price)
+            htmlProduct += nh_functions.formatMoney(productDetail.price) + 'đ'
             htmlProduct += '</p>'
             htmlProduct += '</br>'
             htmlProduct += '<p class="price-before">'
-            htmlProduct += nh_functions.formatMoney(productDetail.price_sale)
+            htmlProduct += nh_functions.formatMoney(productDetail.price_sale) + 'đ'
             htmlProduct += '</p>'
             htmlProduct += '</div>'
             htmlProduct += '<div class="show-list">'

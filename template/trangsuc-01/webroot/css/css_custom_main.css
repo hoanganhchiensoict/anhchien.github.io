@@ -81,6 +81,23 @@
     }
 
     .action-product {
-        display: block !important;
+        pointer-events: none
     }
+
+    .cc-cart-item {
+        padding: 10px;
+        position: absolute;
+        bottom: -20px;
+        right: 5px;
+    }
+
+    .price {
+        width: 80%;
+    }
+
+    .btn-shop-cart {
+        border-right: 0px solid #ddd;
+        border-left: 0px solid #ddd;
+    }
+
 }

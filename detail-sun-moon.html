@@ -176,66 +176,42 @@
                             <div class="row margin-b-50">
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                     <div class="box-slide-images-detail mr-b-30">
-                                        <div class="view-images-large">
-                                            <div id="main_img" class="light-gallery">
-                                                <a class="elevatezoom-gallery"
-                                                   data-image="https://trangsuc-01.web4s.vn/uploads/plugin/product_items/49/bong-tai-glamira-dignity-white-red-pearl-diamond-3.jpg"
-                                                   href="uploads/plugin/product_items/49/bong-tai-glamira-dignity-white-red-pearl-diamond-3.jpg"
-                                                   data-zoom-image="uploads/plugin/product_items/49/bong-tai-glamira-dignity-white-red-pearl-diamond-3.jpg">
+                                        <script type="text/javascript">
 
-                                                    <img title="Bông Tai GLAMIRA Dignity"
-                                                         alt="Bông Tai GLAMIRA Dignity"
-                                                         id="img-main-detail"
-                                                         class="img-main-detail"
-                                                         src="uploads/plugin/product_items/49/bong-tai-glamira-dignity-white-red-pearl-diamond-3.jpg"/>
-                                                </a>
-                                                <a href="uploads/plugin/product_items/49/bong-tai-glamira-dignity-white-red-pearl-diamond-2.jpg"
-                                                   class="hidden">
-                                                    <img title="Bông Tai GLAMIRA Dignity" alt="Bông Tai GLAMIRA Dignity"
-                                                         src="uploads/plugin/product_items/49/bong-tai-glamira-dignity-white-red-pearl-diamond-2.jpg"/>
-                                                </a>
-                                                <a href="uploads/plugin/product_items/49/bong-tai-glamira-dignity-white-red-pearl-diamond-3-3.jpg"
-                                                   class="hidden">
-                                                    <img title="Bông Tai GLAMIRA Dignity" alt="Bông Tai GLAMIRA Dignity"
-                                                         src="uploads/plugin/product_items/49/bong-tai-glamira-dignity-white-red-pearl-diamond-3-3.jpg"/>
-                                                </a>
-                                            </div>
-                                        </div>
+                                            let htmlViewIm = '<div class="view-images-large">'
+                                            htmlViewIm += '<div id="main_img" class="light-gallery">'
 
-                                        <div class="thub-image">
-                                            <div class="slider-thumb">
-                                                <div class="item active"
-                                                     data-original="uploads/plugin/product_items/49/bong-tai-glamira-dignity-white-red-pearl-diamond-3.jpg"
-                                                     item-id="">
-                                                    <img
-                                                            title="Bông Tai GLAMIRA Dignity"
-                                                            alt="Bông Tai GLAMIRA Dignity"
-                                                            src="uploads/plugin/product_items/49/thumb/thumb_150_bong-tai-glamira-dignity-white-red-pearl-diamond-3.jpg"
-                                                            class="img-thumb-product"
-                                                    />
-                                                </div>
-                                                <div class="item"
-                                                     data-original="uploads/plugin/product_items/49/bong-tai-glamira-dignity-white-red-pearl-diamond-2.jpg"
-                                                     item-id="">
-                                                    <img
-                                                            title="Bông Tai GLAMIRA Dignity"
-                                                            alt="Bông Tai GLAMIRA Dignity"
-                                                            src="uploads/plugin/product_items/49/thumb/thumb_150_bong-tai-glamira-dignity-white-red-pearl-diamond-2.jpg"
-                                                            class="img-thumb-product"
-                                                    />
-                                                </div>
-                                                <div class="item"
-                                                     data-original="uploads/plugin/product_items/49/bong-tai-glamira-dignity-white-red-pearl-diamond-3-3.jpg"
-                                                     item-id="">
-                                                    <img
-                                                            title="Bông Tai GLAMIRA Dignity"
-                                                            alt="Bông Tai GLAMIRA Dignity"
-                                                            src="uploads/plugin/product_items/49/thumb/thumb_150_bong-tai-glamira-dignity-white-red-pearl-diamond-3-3.jpg"
-                                                            class="img-thumb-product"
-                                                    />
-                                                </div>
-                                            </div>
-                                        </div>
+                                            htmlViewIm += '<a class="elevatezoom-gallery" data-image="' + productDetail.pictures[0] + '" href="' + productDetail.pictures[0] + '" data-zoom-image="' + productDetail.pictures[0] + '">'
+                                            htmlViewIm += '<img title="' + productDetail.name + '" alt="' + productDetail.name + '" id="img-main-detail" class="img-main-detail" src="' + productDetail.pictures[0] + '"/>'
+                                            htmlViewIm += '</a>'
+
+                                            for (let i = 1; i < productDetail.pictures.length; i++) {
+                                                htmlViewIm += '<a href="' + productDetail.pictures[i] + '" class="hidden">'
+                                                htmlViewIm += '<img title="' + productDetail.name + '" alt="' + productDetail.name + '" src="' + productDetail.pictures[i] + '"/>'
+                                                htmlViewIm += '</a>'
+                                            }
+
+                                            htmlViewIm += '</div>'
+                                            htmlViewIm += '</div>'
+
+                                            htmlViewIm += '<div class="thub-image">'
+                                            htmlViewIm += '<div class="slider-thumb">'
+
+                                            htmlViewIm += '<div class="item active" data-original="' + productDetail.pictures[0] + '" item-id="">'
+                                            htmlViewIm += '<img title="' + productDetail.name + '" alt="' + productDetail.name + '" src="' + productDetail.pictures[0] + '" class="img-thumb-product"/>'
+                                            htmlViewIm += '</div>'
+
+                                            for (let i = 1; i < productDetail.pictures.length; i++) {
+                                                htmlViewIm += '<div class="item" data-original="' + productDetail.pictures[i] + '" item-id="">'
+                                                htmlViewIm += '<img title="' + productDetail.name + '" alt="' + productDetail.name + '" src="' + productDetail.pictures[i] + '" class="img-thumb-product" />'
+                                                htmlViewIm += '</div>'
+                                            }
+
+                                            htmlViewIm += '</div>'
+                                            htmlViewIm += '</div>'
+
+                                            $('.box-slide-images-detail').append(htmlViewIm);
+                                        </script>
                                     </div>
                                     <script type="text/javascript">
                                         $(document).ready(function () {
