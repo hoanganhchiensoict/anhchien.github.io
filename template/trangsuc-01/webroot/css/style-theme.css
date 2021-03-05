@@ -230,7 +230,7 @@
   background: none;
 }
 .price-well {
-  color: #202020;
+  color: #ed1c24;
   margin-bottom: 0;
   font-size: 14px;
   line-height: 1.7em;
@@ -294,8 +294,8 @@
     float:  none !important;
     text-align:  center;
 }
-.nav-tab-right::-webkit-scrollbar { 
-    display: none; 
+.nav-tab-right::-webkit-scrollbar {
+    display: none;
 }
 .nav-tab-right li {
     display: inline-block;
@@ -2985,13 +2985,13 @@
 @media (max-width: 991px) and (min-width: 768px) {
   .col-sm-6:nth-child(2n + 1), .col-sm-4:nth-child(3n + 1), .col-sm-3:nth-child(4n + 1), .col-sm-2:nth-child(6n + 1) {
     clear: both;
-  }  
+  }
 }
 
 @media (max-width: 767px) {
   .col-xs-6:nth-child(2n + 1), .col-xs-4:nth-child(3n + 1), .col-xs-3:nth-child(4n + 1), .col-xs-2:nth-child(6n + 1) {
     clear: both;
-  }  
+  }
 }
 
 .box-detail-post {
@@ -9152,7 +9152,7 @@ Bengin vnsite css-- > img {
 }
 .tab-content:hover .owl-controls .owl-buttons div {
   opacity: 1;
-} 
+}
 .slider-product.owl-theme .owl-controls .owl-buttons div.owl-prev {
   right: 20px;
   left: -15px;
@@ -9578,7 +9578,7 @@ ul.list-bank {
     border: 1px solid #ddd;
 }
 @media (max-width: 767px) {
-  
+
   #list-method {
     width: calc(100% - 30px);
   }
@@ -9596,7 +9596,7 @@ ul.list-bank {
     -moz-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 }
-  
+
 .hover-action-product:hover .img{
   border: none !important;
 }

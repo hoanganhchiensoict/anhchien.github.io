@@ -2,13 +2,399 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdaf1324-233c-4adb-b79d-299465f777a3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/template/trangsuc-01/webroot/css/style-content.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/card-info.html" beforeDir="false" afterPath="$PROJECT_DIR$/card-info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart-paymentmethod.html" beforeDir="false" afterPath="$PROJECT_DIR$/cart-paymentmethod.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart-success.html" beforeDir="false" afterPath="$PROJECT_DIR$/cart-success.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/detail-couple-bracelet-necklace.html" beforeDir="false" afterPath="$PROJECT_DIR$/detail-couple-bracelet-necklace.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/detail-flower-leaves.html" beforeDir="false" afterPath="$PROJECT_DIR$/detail-flower-leaves.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/detail-lily-of-the-valley.html" beforeDir="false" afterPath="$PROJECT_DIR$/detail-lily-of-the-valley.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/detail-sun-moon.html" beforeDir="false" afterPath="$PROJECT_DIR$/detail-sun-moon.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/detail-sun-or-moon.html" beforeDir="false" afterPath="$PROJECT_DIR$/detail-sun-or-moon.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/detail-we-bold.html" beforeDir="false" afterPath="$PROJECT_DIR$/detail-we-bold.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/trangsuc-01/webroot/css/css_custom_main.css" beforeDir="false" afterPath="$PROJECT_DIR$/template/trangsuc-01/webroot/css/css_custom_main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/trangsuc-01/webroot/css/style-theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/template/trangsuc-01/webroot/css/style-theme.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/category/381/kinh-nghi-m-ch-n-trang-s-c-y-nghia-trang-suc-kim-cuong-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/category/382/tin-khuy-n-mai-khuyen-mai.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/custom_img/2018-06-25/custom-payment-icons.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/custom_img/2018-06-27/custom-about-us1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/custom_img/2018-08-21/custom-about-1-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/custom_img/2018-08-21/custom-about-2-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/custom_img/2018-08-21/custom-about-3-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/custom_img/2018-09-10/1536550103-544068867-custom.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/custom_img/2018-09-10/1536550168-1924843918-custom.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/custom_img/2018-09-10/1536550241-865378700-custom.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/gallery/111/slide-1-banner-top.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/gallery/114/electronic01-1-trang-suc-kim-cuong.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/gallery/115/may-nh-olympus-trang-suc-platinum-queen-duoi-goc-nhin-chuyen-gia-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/gallery/14/nh-bia-1-0-nhan-cuoi-dep-245-fileminimizer.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/gallery/20/nh-i-di-n-2-maxresdefault-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/gallery/21/slide-2-banner86220.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/gallery/49/nh-bia-3-maxresdefault.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/gallery/73/cong-ngh-1-phan-biet-vang-trang-bach-kim-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/gallery/99/uhd-tv-banner86220.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/language/4/viet-nam-flag-vi.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/news/1/6-l-u-y-quan-tr-ng-khi-ch-n-mua-trang-s-c-dsc3536.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/news/2/5-i-u-quan-tr-ng-khi-ch-n-nh-n-c-i-one-pink-rose-with-two-wedding-rings-2k-wallpaper.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/news/3/7-i-u-c-n-bi-t-khi-mua-trang-s-c-kim-c-ng-maxresdefault.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/news/4/thang-6-s-n-voucher-mua-nh-n-c-i-t-wedding-land-khuyen-mai.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/news/5/kinh-nghi-m-vang-khi-ch-n-nh-n-va-trang-s-c-c-i-t-chuyen-gia-t-v-n-chon-nhan-cuoi-day-hay-mong-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/news/6/kinh-nghi-m-ch-n-mua-nh-n-c-i-05-klk-photography-ritz-carlton-2016-1199x800.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/news/7/he-r-c-r-cung-ch-ng-trinh-qua-t-ng-c-a-jewelry-banner.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/1/thumb/thumb_350_nh-n-glamira-fresa-yellow-garnet-1-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/10/thumb/thumb_350_nh-n-glamira-gratia-white-diamond-1-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/11/thumb/thumb_350_nh-n-b-c-glamira-fresa-white-garnet-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/12/thumb/thumb_350_nh-n-b-c-glamira-markina-white.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/13/nh-n-sapphire-glamira-bridal-rise-white-sapphire-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/13/nh-n-sapphire-glamira-bridal-rise-white-sapphire-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/13/nh-n-sapphire-glamira-bridal-rise-white-sapphire-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/13/nh-n-sapphire-glamira-bridal-rise-white-sapphire-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/13/thumb/thumb_150_nh-n-sapphire-glamira-bridal-rise-white-sapphire-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/13/thumb/thumb_150_nh-n-sapphire-glamira-bridal-rise-white-sapphire-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/13/thumb/thumb_150_nh-n-sapphire-glamira-bridal-rise-white-sapphire-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/13/thumb/thumb_150_nh-n-sapphire-glamira-bridal-rise-white-sapphire-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/13/thumb/thumb_350_nh-n-sapphire-glamira-bridal-rise-white-sapphire-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/14/nh-n-sapphire-glamira-fresa-yellow-sapphire-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/14/nh-n-sapphire-glamira-fresa-yellow-sapphire-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/14/nh-n-sapphire-glamira-fresa-yellow-sapphire-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/14/nh-n-sapphire-glamira-fresa-yellow-sapphire-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/14/thumb/thumb_150_nh-n-sapphire-glamira-fresa-yellow-sapphire-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/14/thumb/thumb_150_nh-n-sapphire-glamira-fresa-yellow-sapphire-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/14/thumb/thumb_150_nh-n-sapphire-glamira-fresa-yellow-sapphire-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/14/thumb/thumb_150_nh-n-sapphire-glamira-fresa-yellow-sapphire-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/14/thumb/thumb_350_nh-n-sapphire-glamira-fresa-yellow-sapphire-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/15/nh-n-sapphire-manoella-white-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/15/nh-n-sapphire-manoella-white-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/15/nh-n-sapphire-manoella-white-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/15/nh-n-sapphire-manoella-white.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/15/thumb/thumb_150_nh-n-sapphire-manoella-white-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/15/thumb/thumb_150_nh-n-sapphire-manoella-white-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/15/thumb/thumb_150_nh-n-sapphire-manoella-white-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/15/thumb/thumb_150_nh-n-sapphire-manoella-white.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/15/thumb/thumb_350_nh-n-sapphire-manoella-white.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/16/nh-n-sapphire-ebonie-white-1-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/16/nh-n-sapphire-ebonie-white-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/16/nh-n-sapphire-ebonie-white-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/16/nh-n-sapphire-ebonie-white.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/16/thumb/thumb_150_nh-n-sapphire-ebonie-white-1-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/16/thumb/thumb_150_nh-n-sapphire-ebonie-white-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/16/thumb/thumb_150_nh-n-sapphire-ebonie-white-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/16/thumb/thumb_150_nh-n-sapphire-ebonie-white.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/16/thumb/thumb_350_nh-n-sapphire-ebonie-white.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/17/nh-n-h-ng-ng-c-glamira-linderoth-white-ruby-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/17/nh-n-h-ng-ng-c-glamira-linderoth-white-ruby-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/17/nh-n-h-ng-ng-c-glamira-linderoth-white-ruby-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/17/nh-n-h-ng-ng-c-glamira-linderoth-white-ruby-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/17/thumb/thumb_150_nh-n-h-ng-ng-c-glamira-linderoth-white-ruby-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/17/thumb/thumb_150_nh-n-h-ng-ng-c-glamira-linderoth-white-ruby-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/17/thumb/thumb_150_nh-n-h-ng-ng-c-glamira-linderoth-white-ruby-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/17/thumb/thumb_150_nh-n-h-ng-ng-c-glamira-linderoth-white-ruby-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/17/thumb/thumb_350_nh-n-h-ng-ng-c-glamira-linderoth-white-ruby-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/18/nh-n-h-ng-ng-c-glamira-begonia-white-red-ruby-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/18/nh-n-h-ng-ng-c-glamira-begonia-white-red-ruby-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/18/nh-n-h-ng-ng-c-glamira-begonia-white-red-ruby-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/18/nh-n-h-ng-ng-c-glamira-begonia-white-red-ruby-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/18/thumb/thumb_150_nh-n-h-ng-ng-c-glamira-begonia-white-red-ruby-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/18/thumb/thumb_150_nh-n-h-ng-ng-c-glamira-begonia-white-red-ruby-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/18/thumb/thumb_150_nh-n-h-ng-ng-c-glamira-begonia-white-red-ruby-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/18/thumb/thumb_150_nh-n-h-ng-ng-c-glamira-begonia-white-red-ruby-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/18/thumb/thumb_350_nh-n-h-ng-ng-c-glamira-begonia-white-red-ruby-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/19/nh-n-h-ng-ng-c-glamira-empire-white-ruby-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/19/nh-n-h-ng-ng-c-glamira-empire-white-ruby-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/19/nh-n-h-ng-ng-c-glamira-empire-white-ruby-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/19/nh-n-h-ng-ng-c-glamira-empire-white-ruby-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/19/thumb/thumb_150_nh-n-h-ng-ng-c-glamira-empire-white-ruby-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/19/thumb/thumb_150_nh-n-h-ng-ng-c-glamira-empire-white-ruby-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/19/thumb/thumb_150_nh-n-h-ng-ng-c-glamira-empire-white-ruby-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/19/thumb/thumb_150_nh-n-h-ng-ng-c-glamira-empire-white-ruby-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/19/thumb/thumb_350_nh-n-h-ng-ng-c-glamira-empire-white-ruby-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/2/thumb/thumb_350_nh-n-kim-c-ng-glamira-bridal-rise-yellow-diamond-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/20/nh-n-h-ng-ng-c-glamira-mindy-red-white-ruby-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/20/nh-n-h-ng-ng-c-glamira-mindy-red-white-ruby-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/20/nh-n-h-ng-ng-c-glamira-mindy-red-white-ruby-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/20/nh-n-h-ng-ng-c-glamira-mindy-red-white-ruby-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/20/thumb/thumb_150_nh-n-h-ng-ng-c-glamira-mindy-red-white-ruby-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/20/thumb/thumb_150_nh-n-h-ng-ng-c-glamira-mindy-red-white-ruby-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/20/thumb/thumb_150_nh-n-h-ng-ng-c-glamira-mindy-red-white-ruby-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/20/thumb/thumb_150_nh-n-h-ng-ng-c-glamira-mindy-red-white-ruby-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/20/thumb/thumb_350_nh-n-h-ng-ng-c-glamira-mindy-red-white-ruby-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/21/nh-n-ng-c-l-c-b-o-glamira-fresa-yellow-emerald-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/21/nh-n-ng-c-l-c-b-o-glamira-fresa-yellow-emerald-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/21/nh-n-ng-c-l-c-b-o-glamira-fresa-yellow-emerald-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/21/nh-n-ng-c-l-c-b-o-glamira-fresa-yellow-emerald-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/21/thumb/thumb_150_nh-n-ng-c-l-c-b-o-glamira-fresa-yellow-emerald-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/21/thumb/thumb_150_nh-n-ng-c-l-c-b-o-glamira-fresa-yellow-emerald-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/21/thumb/thumb_150_nh-n-ng-c-l-c-b-o-glamira-fresa-yellow-emerald-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/21/thumb/thumb_150_nh-n-ng-c-l-c-b-o-glamira-fresa-yellow-emerald-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/21/thumb/thumb_350_nh-n-ng-c-l-c-b-o-glamira-fresa-yellow-emerald-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/22/nh-n-ng-c-l-c-b-o-glamira-erica-white-emerald-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/22/nh-n-ng-c-l-c-b-o-glamira-erica-white-emerald-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/22/nh-n-ng-c-l-c-b-o-glamira-erica-white-emerald-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/22/nh-n-ng-c-l-c-b-o-glamira-erica-white-emerald-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/22/thumb/thumb_150_nh-n-ng-c-l-c-b-o-glamira-erica-white-emerald-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/22/thumb/thumb_150_nh-n-ng-c-l-c-b-o-glamira-erica-white-emerald-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/22/thumb/thumb_150_nh-n-ng-c-l-c-b-o-glamira-erica-white-emerald-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/22/thumb/thumb_150_nh-n-ng-c-l-c-b-o-glamira-erica-white-emerald-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/22/thumb/thumb_350_nh-n-ng-c-l-c-b-o-glamira-erica-white-emerald-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/23/nh-n-ng-c-l-c-b-o-glamira-shulamis-white-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/23/nh-n-ng-c-l-c-b-o-glamira-shulamis-white-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/23/nh-n-ng-c-l-c-b-o-glamira-shulamis-white-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/23/nh-n-ng-c-l-c-b-o-glamira-shulamis-white-6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/23/thumb/thumb_150_nh-n-ng-c-l-c-b-o-glamira-shulamis-white-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/23/thumb/thumb_150_nh-n-ng-c-l-c-b-o-glamira-shulamis-white-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/23/thumb/thumb_150_nh-n-ng-c-l-c-b-o-glamira-shulamis-white-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/23/thumb/thumb_150_nh-n-ng-c-l-c-b-o-glamira-shulamis-white-6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/23/thumb/thumb_350_nh-n-ng-c-l-c-b-o-glamira-shulamis-white-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/24/nh-n-ng-c-l-c-b-o-glamira-mutia-yellow-white-emerald-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/24/nh-n-ng-c-l-c-b-o-glamira-mutia-yellow-white-emerald-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/24/nh-n-ng-c-l-c-b-o-glamira-mutia-yellow-white-emerald-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/24/nh-n-ng-c-l-c-b-o-glamira-mutia-yellow-white-emerald-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/24/thumb/thumb_150_nh-n-ng-c-l-c-b-o-glamira-mutia-yellow-white-emerald-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/24/thumb/thumb_150_nh-n-ng-c-l-c-b-o-glamira-mutia-yellow-white-emerald-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/24/thumb/thumb_150_nh-n-ng-c-l-c-b-o-glamira-mutia-yellow-white-emerald-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/24/thumb/thumb_150_nh-n-ng-c-l-c-b-o-glamira-mutia-yellow-white-emerald-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/24/thumb/thumb_350_nh-n-ng-c-l-c-b-o-glamira-mutia-yellow-white-emerald-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/25/thumb/thumb_350_m-t-day-chuy-n-glamira-chica-white-black-pearl-diamond-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/28/thumb/thumb_350_26-red-white-diamond-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/29/thumb/thumb_350_day-chuy-n-glamira-cassata-yellow-diamond-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/3/nh-n-glamira-linderoth-yellow-diamond-1-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/3/nh-n-glamira-linderoth-yellow-diamond-2-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/3/nh-n-glamira-linderoth-yellow-diamond-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/3/nh-n-glamira-linderoth-yellow-diamond-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/3/thumb/thumb_150_nh-n-glamira-linderoth-yellow-diamond-1-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/3/thumb/thumb_150_nh-n-glamira-linderoth-yellow-diamond-2-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/3/thumb/thumb_150_nh-n-glamira-linderoth-yellow-diamond-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/3/thumb/thumb_150_nh-n-glamira-linderoth-yellow-diamond-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/3/thumb/thumb_350_nh-n-glamira-linderoth-yellow-diamond-1-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/30/thumb/thumb_350_m-t-day-chuy-n-glamira-despina-yellow-white-diamond-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/31/thumb/thumb_350_m-t-day-chuy-n-glamira-angela-white-sapphire-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/32/thumb/thumb_350_m-t-day-chuy-n-glamira-maja-white-aquamarine-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/33/thumb/thumb_350_day-chuy-n-glamira-niger-white-topaz-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/34/thumb/thumb_350_m-t-day-chuy-n-glamira-elvira-white-red-pearl-diamond-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/35/thumb/thumb_350_m-t-day-chuy-n-glamira-kinsey-white-emerald-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/36/thumb/thumb_350_m-t-day-chuy-n-glamira-paiva-yellow-white-pearl-diamond-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/37/thumb/thumb_350_m-t-day-chuy-n-glamira-delmare-white-white-pearl-aquamarine-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/38/thumb/thumb_350_m-t-day-chuy-n-glamira-austere-red-white-pearl-diamond-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/39/bong-tai-glamira-louisa-white-diamond-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/39/bong-tai-glamira-louisa-white-diamond-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/39/bong-tai-glamira-louisa-white-diamond-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/39/thumb/thumb_150_bong-tai-glamira-louisa-white-diamond-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/39/thumb/thumb_150_bong-tai-glamira-louisa-white-diamond-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/39/thumb/thumb_150_bong-tai-glamira-louisa-white-diamond-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/39/thumb/thumb_350_bong-tai-glamira-louisa-white-diamond-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/4/glamira-ring-shizelle-yellow-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/4/glamira-ring-shizelle-yellow-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/4/glamira-ring-shizelle-yellow-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/4/glamira-ring-shizelle-yellow.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/4/thumb/thumb_150_glamira-ring-shizelle-yellow-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/4/thumb/thumb_150_glamira-ring-shizelle-yellow-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/4/thumb/thumb_150_glamira-ring-shizelle-yellow-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/4/thumb/thumb_150_glamira-ring-shizelle-yellow.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/4/thumb/thumb_350_glamira-ring-shizelle-yellow.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/40/bong-tai-glamira-ainsley-yellow-diamond-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/40/bong-tai-glamira-ainsley-yellow-diamond-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/40/bong-tai-glamira-ainsley-yellow-diamond-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/40/thumb/thumb_150_bong-tai-glamira-ainsley-yellow-diamond-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/40/thumb/thumb_150_bong-tai-glamira-ainsley-yellow-diamond-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/40/thumb/thumb_150_bong-tai-glamira-ainsley-yellow-diamond-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/40/thumb/thumb_350_bong-tai-glamira-ainsley-yellow-diamond-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/41/bong-tai-glamira-magali-red-diamond-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/41/bong-tai-glamira-magali-red-diamond-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/41/bong-tai-glamira-magali-red-diamond-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/41/thumb/thumb_150_bong-tai-glamira-magali-red-diamond-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/41/thumb/thumb_150_bong-tai-glamira-magali-red-diamond-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/41/thumb/thumb_150_bong-tai-glamira-magali-red-diamond-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/41/thumb/thumb_350_bong-tai-glamira-magali-red-diamond-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/42/bong-tai-glamira-baemelys-yellow-white-diamond-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/42/bong-tai-glamira-baemelys-yellow-white-diamond-4-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/42/bong-tai-glamira-baemelys-yellow-white-diamond-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/42/thumb/thumb_150_bong-tai-glamira-baemelys-yellow-white-diamond-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/42/thumb/thumb_150_bong-tai-glamira-baemelys-yellow-white-diamond-4-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/42/thumb/thumb_150_bong-tai-glamira-baemelys-yellow-white-diamond-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/42/thumb/thumb_350_bong-tai-glamira-baemelys-yellow-white-diamond-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/43/bong-tai-a-quy-glamira-louisa-white-emerald-2-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/43/bong-tai-a-quy-glamira-louisa-white-emerald-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/43/bong-tai-a-quy-glamira-louisa-white-emerald-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/43/thumb/thumb_150_bong-tai-a-quy-glamira-louisa-white-emerald-2-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/43/thumb/thumb_150_bong-tai-a-quy-glamira-louisa-white-emerald-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/43/thumb/thumb_150_bong-tai-a-quy-glamira-louisa-white-emerald-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/43/thumb/thumb_350_bong-tai-a-quy-glamira-louisa-white-emerald-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/44/bong-tai-glamira-melinda-yellow-white-sapphire-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/44/bong-tai-glamira-melinda-yellow-white-sapphire-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/44/bong-tai-glamira-melinda-yellow-white-sapphire-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/44/thumb/thumb_150_bong-tai-glamira-melinda-yellow-white-sapphire-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/44/thumb/thumb_150_bong-tai-glamira-melinda-yellow-white-sapphire-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/44/thumb/thumb_150_bong-tai-glamira-melinda-yellow-white-sapphire-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/44/thumb/thumb_350_bong-tai-glamira-melinda-yellow-white-sapphire-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/45/bong-tai-glamira-rote-red-sapphire-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/45/bong-tai-glamira-rote-red-sapphire-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/45/bong-tai-glamira-rote-red-sapphire-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/45/thumb/thumb_150_bong-tai-glamira-rote-red-sapphire-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/45/thumb/thumb_150_bong-tai-glamira-rote-red-sapphire-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/45/thumb/thumb_150_bong-tai-glamira-rote-red-sapphire-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/45/thumb/thumb_350_bong-tai-glamira-rote-red-sapphire-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/46/bong-tai-glamira-lucille-white-ruby-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/46/bong-tai-glamira-lucille-white-ruby-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/46/bong-tai-glamira-lucille-white-ruby-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/46/thumb/thumb_150_bong-tai-glamira-lucille-white-ruby-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/46/thumb/thumb_150_bong-tai-glamira-lucille-white-ruby-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/46/thumb/thumb_150_bong-tai-glamira-lucille-white-ruby-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/46/thumb/thumb_350_bong-tai-glamira-lucille-white-ruby-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/47/bong-tai-glamira-riva-yellow-white-pearl-diamond-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/47/bong-tai-glamira-riva-yellow-white-pearl-diamond-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/47/bong-tai-glamira-riva-yellow-white-pearl-diamond-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/47/thumb/thumb_150_bong-tai-glamira-riva-yellow-white-pearl-diamond-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/47/thumb/thumb_150_bong-tai-glamira-riva-yellow-white-pearl-diamond-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/47/thumb/thumb_150_bong-tai-glamira-riva-yellow-white-pearl-diamond-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/47/thumb/thumb_350_bong-tai-glamira-riva-yellow-white-pearl-diamond-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/48/bong-tai-glamira-purisima-white-red-pearl-diamond-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/48/bong-tai-glamira-purisima-white-red-pearl-diamond-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/48/bong-tai-glamira-purisima-white-red-pearl-diamond-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/48/thumb/thumb_150_bong-tai-glamira-purisima-white-red-pearl-diamond-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/48/thumb/thumb_150_bong-tai-glamira-purisima-white-red-pearl-diamond-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/48/thumb/thumb_150_bong-tai-glamira-purisima-white-red-pearl-diamond-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/48/thumb/thumb_350_bong-tai-glamira-purisima-white-red-pearl-diamond-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/49/bong-tai-glamira-dignity-white-red-pearl-diamond-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/49/bong-tai-glamira-dignity-white-red-pearl-diamond-3-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/49/bong-tai-glamira-dignity-white-red-pearl-diamond-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/49/thumb/thumb_150_bong-tai-glamira-dignity-white-red-pearl-diamond-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/49/thumb/thumb_150_bong-tai-glamira-dignity-white-red-pearl-diamond-3-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/49/thumb/thumb_150_bong-tai-glamira-dignity-white-red-pearl-diamond-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/49/thumb/thumb_350_bong-tai-glamira-dignity-white-red-pearl-diamond-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/5/nh-n-b-ch-kim-kim-c-ng-glamira-bridal-rise-white-diamond-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/5/nh-n-b-ch-kim-kim-c-ng-glamira-bridal-rise-white-diamond-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/5/nh-n-b-ch-kim-kim-c-ng-glamira-bridal-rise-white-diamond-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/5/nh-n-b-ch-kim-kim-c-ng-glamira-bridal-rise-white-diamond-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/5/thumb/thumb_150_nh-n-b-ch-kim-kim-c-ng-glamira-bridal-rise-white-diamond-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/5/thumb/thumb_150_nh-n-b-ch-kim-kim-c-ng-glamira-bridal-rise-white-diamond-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/5/thumb/thumb_150_nh-n-b-ch-kim-kim-c-ng-glamira-bridal-rise-white-diamond-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/5/thumb/thumb_150_nh-n-b-ch-kim-kim-c-ng-glamira-bridal-rise-white-diamond-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/5/thumb/thumb_350_nh-n-b-ch-kim-kim-c-ng-glamira-bridal-rise-white-diamond-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/50/bong-tai-glamira-traudel-white-black-pearl-diamond-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/50/bong-tai-glamira-traudel-white-black-pearl-diamond-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/50/bong-tai-glamira-traudel-white-black-pearl-diamond-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/50/thumb/thumb_150_bong-tai-glamira-traudel-white-black-pearl-diamond-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/50/thumb/thumb_150_bong-tai-glamira-traudel-white-black-pearl-diamond-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/50/thumb/thumb_150_bong-tai-glamira-traudel-white-black-pearl-diamond-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/50/thumb/thumb_350_bong-tai-glamira-traudel-white-black-pearl-diamond-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/6/glamira-ring-calmar-1-6-crt-diamond-swarovsky-aaa-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/6/glamira-ring-calmar-1-6-crt-diamond-swarovsky-aaa-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/6/glamira-ring-calmar-1-6-crt-diamond-swarovsky-aaa-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/6/glamira-ring-calmar-1-6-crt-diamond-swarovsky-aaa.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/6/thumb/thumb_150_glamira-ring-calmar-1-6-crt-diamond-swarovsky-aaa-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/6/thumb/thumb_150_glamira-ring-calmar-1-6-crt-diamond-swarovsky-aaa-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/6/thumb/thumb_150_glamira-ring-calmar-1-6-crt-diamond-swarovsky-aaa-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/6/thumb/thumb_150_glamira-ring-calmar-1-6-crt-diamond-swarovsky-aaa.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/6/thumb/thumb_350_glamira-ring-calmar-1-6-crt-diamond-swarovsky-aaa.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/7/thumb/thumb_350_nh-n-b-ch-kim-glamira-fresa-white-garnet-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/8/thumb/thumb_350_glamira-ring-eglontina-1-25-crt-diamond-swarovsky-aaa.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/product_items/9/thumb/thumb_350_nh-n-glamira-verde-white-diamond-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/recruitments/10/1535614833-1337915331-tuy-n-nhan-vien-ban-trang-s-c-cap-c-p-t-i-h-chi-minh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/recruitments/5/tuy-n-nhan-vien-qui-i-2018-1808-baiviet-tuyendung-thang2-seo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/recruitments/6/tuy-n-d-ng-nhan-vien-qui-ii-2018-tuyen-dung-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/recruitments/7/jewelry-shop-tuy-n-d-ng-nhan-vien-ban-hang-t-i-jewelry-store-cua-hang-trang-suc-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/recruitments/8/ace-shop-tuy-n-d-ng-nhan-vien-h-tr-kinh-doanh-sale-support-sales-support-banner.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/recruitments/9/1535614694-1539093178-tuy-n-d-ng-nhan-vien-ban-hang-trang-s-c-ha-n-i.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/video/124/cach-ch-n-trang-s-c-phu-h-p-v-i-khuon-m-t-jew-slider1-1024x785.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/video/125/cach-l-a-ch-n-trang-s-c-kim-c-ng-cho-phai-p-y-nghia-trang-suc-kim-cuong-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/video/126/th-ng-hi-u-trang-s-c-kim-c-ng-cao-c-p-diamond-empire-maxresdefault.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/video/127/kham-pha-v-p-trang-s-c-kim-c-ng-pnj-maxresdefault-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/video/128/v-p-trang-s-c-pnj-tren-n-n-a-swarovski-cubiz-zirconia-maxresdefault-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/plugin/video/129/trang-s-c-kim-c-ng-vinh-danh-v-th-feat-trang-suc-da-quy-10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/tiny_uploads/Bông tai/Bông tai kim cương/DE-011.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/tiny_uploads/Bông tai/Bông tai kim cương/Earring-16.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/tiny_uploads/Bông tai/Bông tai kim cương/Earring-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/tiny_uploads/Bông tai/Bông tai kim cương/G100735.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/tiny_uploads/Bông tai/Bông tai ngọc trai/PER14-6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/tiny_uploads/Bông tai/Bông tai ngọc trai/PER19-6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/tiny_uploads/Bông tai/Bông tai ngọc trai/PER6-6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/tiny_uploads/Bông tai/Bông tai đá quý/Earring-14.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/tiny_uploads/Bông tai/Bông tai đá quý/Earring-26.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/tiny_uploads/Bông tai/Bông tai đá quý/G100735_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/tiny_uploads/Bông tai/Bông tai đá quý/NDE-18.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/tiny_uploads/Nhẫn/Nhẫn Hồng ngọc/EMPIRE.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/tiny_uploads/Nhẫn/Nhẫn Hồng ngọc/GLNR50.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/tiny_uploads/Nhẫn/Nhẫn Hồng ngọc/Linderoth.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/tiny_uploads/Nhẫn/Nhẫn Hồng ngọc/RM6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/tiny_uploads/Nhẫn/Nhẫn Sapphire/D32258-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/tiny_uploads/Nhẫn/Nhẫn Sapphire/Ebonie.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/tiny_uploads/Nhẫn/Nhẫn Sapphire/GLNR170.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/tiny_uploads/Nhẫn/Nhẫn Sapphire/MANOELLA.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/tiny_uploads/Nhẫn/Nhẫn Vàng/Linderoth.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/tiny_uploads/Nhẫn/Nhẫn Vàng/shizelle.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/tiny_uploads/Nhẫn/Nhẫn bạch kim/D32258-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/tiny_uploads/Nhẫn/Nhẫn bạch kim/nlp019.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/tiny_uploads/Nhẫn/Nhẫn ngọc lục bảo/GI00168.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/tiny_uploads/Nhẫn/Nhẫn ngọc lục bảo/GLNR170_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/tiny_uploads/Nhẫn/Nhẫn ngọc lục bảo/shulamis.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/tiny_uploads/Nhẫn/Nhẫn ngọc lục bảo/shulamis_1.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="185">
+              <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/detail-flower-leaves.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" column="105" lean-forward="true" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="105" />
+              <folding>
+                <element signature="n#style#0;n#span#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
+                <element signature="n#html#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#p#0;n#body#0;n#html#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#1;n#body#0;n#html#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#2;n#body#0;n#html#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/template/trangsuc-01/webroot/js/common.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="83" column="55" selection-start-line="83" selection-start-column="16" selection-end-line="83" selection-end-column="55" />
+              <folding>
+                <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/detail-we-bold.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="22" column="27" lean-forward="true" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
+              <folding>
+                <element signature="n#style#0;n#span#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
+                <element signature="n#html#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#p#0;n#body#0;n#html#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#1;n#body#0;n#html#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#2;n#body#0;n#html#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -17,8 +403,49 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>h1</find>
+      <find>45</find>
+      <find>content</find>
+      <find>section45</find>
+      <find>Mô</find>
+      <find>style-content</find>
+      <find>Mô tả</find>
+      <find>loadPr</find>
+      <find>css</find>
+      <find>css_cus</find>
+      <find>sty</find>
+      <find>style_th</find>
+      <find>.price-well</find>
+      <find>style-them</find>
+      <find>comm</find>
+      <find>alternate</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/template/trangsuc-01/webroot/css/css_custom.css" />
+        <option value="$PROJECT_DIR$/template/trangsuc-01/webroot/css/style-content.css" />
+        <option value="$PROJECT_DIR$/lading-page/index.html" />
+        <option value="$PROJECT_DIR$/template/trangsuc-01/webroot/css/style-theme.css" />
+        <option value="$PROJECT_DIR$/template/trangsuc-01/webroot/css/css_custom_main.css" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/card-info.html" />
+        <option value="$PROJECT_DIR$/cart-paymentmethod.html" />
+        <option value="$PROJECT_DIR$/cart-success.html" />
+        <option value="$PROJECT_DIR$/detail-couple-bracelet-necklace.html" />
+        <option value="$PROJECT_DIR$/detail-flower-leaves.html" />
+        <option value="$PROJECT_DIR$/detail-lily-of-the-valley.html" />
+        <option value="$PROJECT_DIR$/detail-sun-moon.html" />
+        <option value="$PROJECT_DIR$/detail-sun-or-moon.html" />
+        <option value="$PROJECT_DIR$/detail-we-bold.html" />
+      </list>
+    </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
@@ -28,6 +455,25 @@
   </component>
   <component name="ProjectId" id="1p1RXDNZJEDXDG0yHvalDsIlgHP" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -35,16 +481,28 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\ProjectCc\Web\trangsuc-01.web4s.vn\demo\lading-page" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\ProjectCc\Web\trangsuc-01.web4s.vn\demo\uploads\plugin\setting\3" />
       <recent name="F:\ProjectCc\Web\trangsuc-01.web4s.vn\demo\lading-page" />
       <recent name="F:\ProjectCc\Web\trangsuc-01.web4s.vn\demo\lading-page\pictures" />
       <recent name="F:\ProjectCc\Web\trangsuc-01.web4s.vn\demo" />
       <recent name="F:\ProjectCc\Web\trangsuc-01.web4s.vn\demo\landing_page" />
-      <recent name="F:\ProjectCc\Web\trangsuc-01.web4s.vn\demo\uploads\tiny_uploads" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\ProjectCc\Web\trangsuc-01.web4s.vn\demo\lading-page" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -66,7 +524,31 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101811000" />
+    <option name="totallyTimeSpent" value="110389000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="35" width="1356" height="686" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24127465" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32911393" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.54068714" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.6347197" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="11" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -76,5 +558,292 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="379" y="96" width="607" height="536" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1614870409420" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/uploads/plugin/video/125/cach-l-a-ch-n-trang-s-c-kim-c-ng-cho-phai-p-y-nghia-trang-suc-kim-cuong-2.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uploads/plugin/video/126/th-ng-hi-u-trang-s-c-kim-c-ng-cao-c-p-diamond-empire-maxresdefault.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uploads/plugin/video/127/kham-pha-v-p-trang-s-c-kim-c-ng-pnj-maxresdefault-1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uploads/plugin/video/128/v-p-trang-s-c-pnj-tren-n-n-a-swarovski-cubiz-zirconia-maxresdefault-2.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uploads/plugin/video/129/trang-s-c-kim-c-ng-vinh-danh-v-th-feat-trang-suc-da-quy-10.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uploads/tiny_uploads/Bông tai/Bông tai kim cương/DE-011.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uploads/tiny_uploads/Bông tai/Bông tai kim cương/Earring-2.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uploads/tiny_uploads/Bông tai/Bông tai kim cương/Earring-16.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uploads/tiny_uploads/Bông tai/Bông tai kim cương/G100735.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uploads/tiny_uploads/Bông tai/Bông tai ngọc trai/PER6-6.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uploads/tiny_uploads/Bông tai/Bông tai ngọc trai/PER14-6.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uploads/tiny_uploads/Bông tai/Bông tai ngọc trai/PER16-8.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uploads/tiny_uploads/Bông tai/Bông tai ngọc trai/PER19-6.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uploads/tiny_uploads/Bông tai/Bông tai đá quý/Earring-14.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uploads/tiny_uploads/Nhẫn/Nhẫn bạch kim/D32258-1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uploads/tiny_uploads/Nhẫn/Nhẫn Hồng ngọc/EMPIRE.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uploads/tiny_uploads/Nhẫn/Nhẫn Hồng ngọc/GLNR50.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uploads/tiny_uploads/Nhẫn/Nhẫn Hồng ngọc/Linderoth.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uploads/tiny_uploads/Nhẫn/Nhẫn ngọc lục bảo/GI00168.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uploads/tiny_uploads/Nhẫn/Nhẫn ngọc lục bảo/GLNR170_1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uploads/tiny_uploads/Nhẫn/Nhẫn Vàng/Linderoth.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uploads/tiny_uploads/Nhẫn/Nhẫn Vàng/shizelle.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uploads/tiny_uploads/Nhẫn/Nhẫn Hồng ngọc/RM6.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uploads/tiny_uploads/Nhẫn/Nhẫn bạch kim/nlp019.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uploads/tiny_uploads/Bông tai/Bông tai đá quý/Earring-26.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/trangsuc-01/webroot/css/payment_installment.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/trangsuc-01/webroot/css/css_custom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lading-page/pictures/banner.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lading-page/pictures/color.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lading-page/pictures/healthy.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lading-page/pictures/sun-moon.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lading-page/pictures/flower-leave.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lading-page/pictures/distant.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lading-page/pictures/couple-bracelet-necklace.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/trangsuc-01/webroot/css/style-content.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gioi-thieu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="54" lean-forward="true" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lading-page/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="4128" column="27" selection-start-line="4128" selection-start-column="27" selection-end-line="4128" selection-end-column="27" />
+          <folding>
+            <element signature="n#style#0;n#iframe#0;n#div#0;n#div#5;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/trangsuc-01/webroot/css/css_custom_main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/trangsuc-01/webroot/css/style-theme.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="233" column="19" lean-forward="true" selection-start-line="233" selection-start-column="19" selection-end-line="233" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uploads/plugin/setting/3/trang-s-c-logo.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cart-paymentmethod.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-952">
+          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/card-info.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="14" column="50" lean-forward="true" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
+          <folding>
+            <element signature="n#li#1;n#ul#0;n#nav#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#1;n#div#3;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cart-success.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-170">
+          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tbody#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/detail-couple-bracelet-necklace.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="20" column="105" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="105" />
+          <folding>
+            <element signature="n#style#0;n#span#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
+            <element signature="n#html#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#p#0;n#body#0;n#html#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#body#0;n#html#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#2;n#body#0;n#html#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/detail-lily-of-the-valley.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
+          <folding>
+            <element signature="n#style#0;n#span#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
+            <element signature="n#html#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#p#0;n#body#0;n#html#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#body#0;n#html#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#2;n#body#0;n#html#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/detail-sun-moon.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="105" lean-forward="true" selection-start-line="25" selection-start-column="105" selection-end-line="25" selection-end-column="105" />
+          <folding>
+            <element signature="n#style#0;n#span#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
+            <element signature="n#html#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#p#0;n#body#0;n#html#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#body#0;n#html#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#2;n#body#0;n#html#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/detail-sun-or-moon.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="21" column="105" selection-start-line="21" selection-start-column="105" selection-end-line="21" selection-end-column="105" />
+          <folding>
+            <element signature="n#style#0;n#span#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
+            <element signature="n#html#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#p#0;n#body#0;n#html#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#body#0;n#html#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#2;n#body#0;n#html#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/trangsuc-01/webroot/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="83" column="55" selection-start-line="83" selection-start-column="16" selection-end-line="83" selection-end-column="55" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/detail-flower-leaves.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="105" lean-forward="true" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="105" />
+          <folding>
+            <element signature="n#style#0;n#span#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
+            <element signature="n#html#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#p#0;n#body#0;n#html#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#body#0;n#html#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#2;n#body#0;n#html#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/detail-we-bold.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="22" column="27" lean-forward="true" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
+          <folding>
+            <element signature="n#style#0;n#span#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
+            <element signature="n#html#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#p#0;n#body#0;n#html#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#body#0;n#html#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#2;n#body#0;n#html#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
