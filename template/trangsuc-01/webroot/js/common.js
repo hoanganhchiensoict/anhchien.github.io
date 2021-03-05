@@ -339,7 +339,7 @@ function loadProduct(category) {
             htmlProduct += '</div>'
 
             htmlProduct += '<div class="cc-cart-item">'
-            htmlProduct += '<a href="javascript://" class="item-action btn-shop-cart" item-id="' + productDetail.id + '" status-store="">'
+            htmlProduct += '<a href="javascript://" class="item-action btn-shop-cart cc-cart-icon-mobile" item-id="' + productDetail.id + '" status-store="">'
             htmlProduct += '<i class="fa fa-shopping-cart"></i>'
             htmlProduct += '<!--Thêm vào giỏ hàng-->'
             htmlProduct += '</a>'
