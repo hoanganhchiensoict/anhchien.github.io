@@ -12,10 +12,10 @@ var listProduct = [
             "uploads/tiny_uploads/totwoo/sun-black.jpg",
         ],
         category: 1,
-        url: 'detail-sun-or-moon.html'
+        url: 'detail-100-sun.html'
     },
     {
-        id: 100,
+        id: 101,
         name: 'Sun - Black/Silver - Silver Metal Chain',
         trademark: 'TotWoo', //thương hiệu
         price: 1450000,
@@ -27,10 +27,10 @@ var listProduct = [
             "uploads/tiny_uploads/totwoo/sun-black-silver-metal-chain.jpg",
         ],
         category: 1,
-        url: 'detail-sun-or-moon.html'
+        url: 'detail-101-sun.html'
     },
     {
-        id: 100,
+        id: 102,
         name: 'Moon - Pink/Silver',
         trademark: 'TotWoo', //thương hiệu
         price: 1100000,
@@ -43,10 +43,10 @@ var listProduct = [
             "uploads/tiny_uploads/totwoo/moon-pink.jpg",
         ],
         category: 1,
-        url: 'detail-sun-or-moon.html'
+        url: 'detail-102-moon.html'
     },
     {
-        id: 100,
+        id: 103,
         name: 'Moon - Pink/Silver - Zircons',
         trademark: 'TotWoo', //thương hiệu
         price: 1350000,
@@ -59,10 +59,10 @@ var listProduct = [
             "uploads/tiny_uploads/totwoo/moon-pink-zircons.jpg",
         ],
         category: 1,
-        url: 'detail-sun-or-moon.html'
+        url: 'detail-103-moon.html'
     },
     {
-        id: 100,
+        id: 104,
         name: 'Moon - Pink/Silver - Zircons - Metal Chain',
         trademark: 'TotWoo', //thương hiệu
         price: 1350000,
@@ -75,10 +75,10 @@ var listProduct = [
             "uploads/tiny_uploads/totwoo/moon-pink-zircons-metal-chain.jpg",
         ],
         category: 1,
-        url: 'detail-sun-or-moon.html'
+        url: 'detail-104-moon.html'
     },
     {
-        id: 100,
+        id: 105,
         name: 'Sun & Moon (Silver-Pink, Silver-Silver, Black-Silver, Black-Pink)',
         trademark: 'TotWoo', //thương hiệu
         price: 2100000,
@@ -93,10 +93,10 @@ var listProduct = [
             "uploads/tiny_uploads/totwoo/sun-moon-black-pink.jpg",
         ],
         category: 1,
-        url: 'detail-sun-or-moon.html'
+        url: 'detail-105-sun-moon.html'
     },
     {
-        id: 100,
+        id: 106,
         name: 'Sun & Moon - Zircons (Silver-Pink, Silver-Silver, Black-Silver, Black-Pink)',
         trademark: 'TotWoo', //thương hiệu
         price: 2100000,
@@ -111,10 +111,10 @@ var listProduct = [
             "uploads/tiny_uploads/totwoo/sun-moon-black-pink-zircons.jpg",
         ],
         category: 1,
-        url: 'detail-sun-or-moon.html'
+        url: 'detail-106-sun-moon.html'
     },
     {
-        id: 100,
+        id: 107,
         name: 'Sun & Moon - Zircons - Metal Chain (Silver-Pink, Silver-Silver, Black-Silver, Black-Pink)',
         trademark: 'TotWoo', //thương hiệu
         price: 2750000,
@@ -127,90 +127,116 @@ var listProduct = [
             "uploads/tiny_uploads/totwoo/sun-moon-silver-silver-zircons-metal-chain.jpg",
         ],
         category: 1,
-        url: 'detail-sun-or-moon.html'
+        url: 'detail-107-sun-moon.html'
+    },
+    {
+        id: 108,
+        name: 'Lily of the Valley - White/Red/Blue',
+        trademark: 'TotWoo', //thương hiệu
+        price: 3550000,
+        price_sale: 5850000,
+        color: 'White/Red/Blue',
+        material: 'Hàng chính hãng', //chất liệu
+        thumb: 'uploads/tiny_uploads/totwoo_lily1.jpg',
+        pictures: [
+            "uploads/tiny_uploads/totwoo_lily1.jpg",
+            "uploads/tiny_uploads/totwoo_lily2.png",
+            "uploads/tiny_uploads/totwoo_lily3.jpg",
+            "uploads/tiny_uploads/totwoo_lily4.jpg"
+        ],
+        category: 1,
+        url: 'detail-108-lily.html'
+    },
+    {
+        id: 109,
+        name: 'Couple Bracelet & Necklace',
+        trademark: 'TotWoo', //thương hiệu
+        price: 6250000,
+        price_sale: 6650000,
+        color: '',
+        material: 'Hàng chính hãng', //chất liệu
+        thumb: 'uploads/tiny_uploads/totwoo_vongtay_daychuyen.jpg',
+        pictures: [
+            "uploads/tiny_uploads/totwoo_vongtay_daychuyen.jpg",
+            "uploads/tiny_uploads/totwoo_vongtay_daychuyen2.jpg",
+            "uploads/tiny_uploads/totwoo_daychuyen.jpg",
+        ],
+        category: 1,
+        url: 'detail-109-bracelet-necklace.html'
+    },
+    {
+        id: 110,
+        name: 'Flower & Leaves',
+        trademark: 'TotWoo', //thương hiệu
+        price: 7300000,
+        price_sale: 8000000,
+        color: '',
+        material: 'Hàng chính hãng', //chất liệu
+        thumb: 'uploads/tiny_uploads/totwoo_flower_leaves.jpg',
+        pictures: [
+            "uploads/tiny_uploads/totwoo_flower_leaves.jpg",
+            "uploads/tiny_uploads/totwoo_lily1.jpg",
+            "uploads/tiny_uploads/totwoo_lily2.jpg",
+            "uploads/tiny_uploads/totwoo_lily3.jpg",
+            "uploads/tiny_uploads/totwoo_lily4.jpg",
+        ],
+        category: 1,
+        url: 'detail-110-flower-leaves.html'
+    },
+
+    //cat day chuyen
+    {
+        id: 200,
+        name: 'Flower Necklet - Gold/Blue/Red',
+        trademark: 'TotWoo', //thương hiệu
+        price: 3500000,
+        price_sale: 3900000,
+        color: 'Gold/Blue/Red',
+        material: 'Hàng chính hãng', //chất liệu
+        thumb: 'uploads/tiny_uploads/totwoo/flower-necklet-red.jpg',
+        pictures: [
+            "uploads/tiny_uploads/totwoo/flower-necklet-red.jpg",
+            "uploads/tiny_uploads/totwoo/flower-necklet-blue.jpg",
+            "uploads/tiny_uploads/totwoo/flower-necklet-gold.jpg",
+        ],
+        category: 2,
+        url: 'detail-200-flower-necklet.html'
+    },
+    {
+        id: 201,
+        name: 'Flower Necklet - Full Gold',
+        trademark: 'TotWoo', //thương hiệu
+        price: 4000000,
+        price_sale: 4500000,
+        color: 'Full Gold',
+        material: 'Hàng chính hãng', //chất liệu
+        thumb: 'uploads/tiny_uploads/totwoo/flower-necklet-gold-full.jpg',
+        pictures: [
+            "uploads/tiny_uploads/totwoo/flower-necklet-gold-full.jpg",
+        ],
+        category: 2,
+        url: 'detail-201-flower-necklet.html'
+    },
+
+//cat phu kien
+    {
+        id: 300,
+        name: 'Necklet item - Silver/Pink',
+        trademark: 'TotWoo', //thương hiệu
+        price: 300000,
+        price_sale: 380000,
+        color: 'Silver/Pink',
+        material: 'Hàng chính hãng', //chất liệu
+        thumb: 'uploads/tiny_uploads/totwoo/necklet-silver.jpg',
+        pictures: [
+            "uploads/tiny_uploads/totwoo/necklet-silver.jpg",
+            "uploads/tiny_uploads/totwoo/necklet-pink.jpg",
+        ],
+        category: 3,
+        url: 'detail-201-flower-necklet.html'
     },
 
 
-
-
-
-
-
-
-//    //cat 1
-//    {
-//        id: 100,
-//        name: 'Sun / Moon (1 sp)',
-//        trademark: 'TotWoo', //thương hiệu
-//        price: 1645000,
-//        price_sale: 1845000,
-//        color: '',
-//        material: 'Hàng chính hãng', //chất liệu
-//        thumb: 'uploads/tiny_uploads/totwoo_sun1.png',
-//        pictures: [
-//            "uploads/tiny_uploads/totwoo_sun1.png",
-//            "uploads/tiny_uploads/totwoo_moon1.png",
-//            "uploads/tiny_uploads/totwoo_sun.png",
-//            "uploads/tiny_uploads/totwoo_moon.png",
-//            "uploads/tiny_uploads/totwoo_sun_moon.png"
-//        ],
-//        category: 1,
-//        url: 'detail-sun-or-moon.html'
-//    },
-//    {
-//        id: 101,
-//        name: 'Sun & Moon (combo 2sp)',
-//        trademark: 'TotWoo', //thương hiệu
-//        price: 3000000,
-//        price_sale: 3200000,
-//        color: '',
-//        material: 'Hàng chính hãng', //chất liệu
-//        thumb: 'uploads/tiny_uploads/totwoo_sun_moon.png',
-//        pictures: [
-//            "uploads/tiny_uploads/totwoo_sun1.png",
-//            "uploads/tiny_uploads/totwoo_moon1.png",
-//            "uploads/tiny_uploads/totwoo_sun_moon.png",
-//            "uploads/tiny_uploads/totwoo_sun.png",
-//            "uploads/tiny_uploads/totwoo_moon.png",
-//        ],
-//        category: 1,
-//        url: 'detail-sun-moon.html'
-//    },
-//    {
-//        id: 102,
-//        name: 'Lily of the Valley',
-//        trademark: 'TotWoo', //thương hiệu
-//        price: 5150000,
-//        price_sale: 5350000,
-//        color: '',
-//        material: 'Hàng chính hãng', //chất liệu
-//        thumb: 'uploads/tiny_uploads/totwoo_lily1.jpg',
-//        pictures: [
-//            "uploads/tiny_uploads/totwoo_lily1.jpg",
-//            "uploads/tiny_uploads/totwoo_lily2.png",
-//            "uploads/tiny_uploads/totwoo_lily3.jpg",
-//            "uploads/tiny_uploads/totwoo_lily4.jpg"
-//        ],
-//        category: 1,
-//        url: 'detail-lily-of-the-valley.html'
-//    },
-//    {
-//        id: 103,
-//        name: 'Couple Bracelet & Necklace',
-//        trademark: 'TotWoo', //thương hiệu
-//        price: 8700000,
-//        price_sale: 9000000,
-//        color: '',
-//        material: 'Hàng chính hãng', //chất liệu
-//        thumb: 'uploads/tiny_uploads/totwoo_vongtay_daychuyen.jpg',
-//        pictures: [
-//            "uploads/tiny_uploads/totwoo_vongtay_daychuyen.jpg",
-//            "uploads/tiny_uploads/totwoo_vongtay_daychuyen2.jpg",
-//            "uploads/tiny_uploads/totwoo_daychuyen.jpg",
-//        ],
-//        category: 1,
-//        url: 'detail-couple-bracelet-necklace.html'
-//    },
 //    {
 //        id: 104,
 //        name: 'We Bold',
@@ -228,25 +254,7 @@ var listProduct = [
 //        category: 1,
 //        url: 'detail-we-bold.html'
 //    },
-//    {
-//        id: 105,
-//        name: 'Flower & Leaves',
-//        trademark: 'TotWoo', //thương hiệu
-//        price: 122345,
-//        price_sale: 121345,
-//        color: '',
-//        material: 'Hàng chính hãng', //chất liệu
-//        thumb: 'uploads/tiny_uploads/totwoo_flower_leaves.jpg',
-//        pictures: [
-//            "uploads/tiny_uploads/totwoo_flower_leaves.jpg",
-//            "uploads/tiny_uploads/totwoo_lily1.jpg",
-//            "uploads/tiny_uploads/totwoo_lily2.jpg",
-//            "uploads/tiny_uploads/totwoo_lily3.jpg",
-//            "uploads/tiny_uploads/totwoo_lily4.jpg",
-//        ],
-//        category: 1,
-//        url: 'detail-flower-leaves.html'
-//    },
+
 //
 //    //cat 2
 //    {

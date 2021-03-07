@@ -2,4 +2,8 @@
     .owl-carousel .owl-item {
         width: 65px !important;
     }
+
+    .wsmobileheader  {
+        display: none !important;
+    }
 }

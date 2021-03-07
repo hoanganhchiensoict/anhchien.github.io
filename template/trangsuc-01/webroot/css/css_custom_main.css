@@ -9,6 +9,10 @@
         height: 120px;
     }
 
+    .wsmobileheader  {
+        display: none !important;
+    }
+
     .cc-category {
         width: 33% !important;
         float: left;
