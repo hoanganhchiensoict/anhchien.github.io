@@ -2,36 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdaf1324-233c-4adb-b79d-299465f777a3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/detail-102-moon.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/detail-103-moon.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/detail-104-moon.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/detail-105-sun-moon.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/detail-106-sun-moon.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/detail-107-sun-moon.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/detail-200-flower-necklet.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/detail-201-flower-necklet.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/detail-300-necklet.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/tiny_uploads/banner.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/tiny_uploads/totwoo/flower-necklet-blue.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/tiny_uploads/totwoo/flower-necklet-gold-full.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/tiny_uploads/totwoo/flower-necklet-gold.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/tiny_uploads/totwoo/flower-necklet-red.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/tiny_uploads/totwoo/necklet-pink.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/tiny_uploads/totwoo/necklet-silver.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/intro-105.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lading-page/css/page-intro.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lading-page/css/page-intro1.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/card-info.html" beforeDir="false" afterPath="$PROJECT_DIR$/card-info.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-paymentmethod.html" beforeDir="false" afterPath="$PROJECT_DIR$/cart-paymentmethod.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-success.html" beforeDir="false" afterPath="$PROJECT_DIR$/cart-success.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-couple-bracelet-necklace.html" beforeDir="false" afterPath="$PROJECT_DIR$/detail-109-bracelet-necklace.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-flower-leaves.html" beforeDir="false" afterPath="$PROJECT_DIR$/detail-110-flower-leaves.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-lily-of-the-valley.html" beforeDir="false" afterPath="$PROJECT_DIR$/detail-108-lily.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-sun-moon.html" beforeDir="false" afterPath="$PROJECT_DIR$/detail-101-sun.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-sun-or-moon.html" beforeDir="false" afterPath="$PROJECT_DIR$/detail-100-sun.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-we-bold.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/trangsuc-01/webroot/css/css_custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/template/trangsuc-01/webroot/css/css_custom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/trangsuc-01/webroot/css/css_custom_main.css" beforeDir="false" afterPath="$PROJECT_DIR$/template/trangsuc-01/webroot/css/css_custom_main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/trangsuc-01/webroot/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/trangsuc-01/webroot/js/common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lading-page/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/lading-page/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lading-page/lading-page-product.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +33,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lading-page/css" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -69,11 +45,11 @@
       <recent name="F:\ProjectCc\Web\trangsuc-01.web4s.vn\demo\lading-page" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Dev\Projects\anhchien.github.io\lading-page\css" />
       <recent name="C:\Dev\Projects\anhchien.github.io" />
       <recent name="C:\Dev\Projects\anhchien.github.io\uploads\tiny_uploads\totwoo" />
       <recent name="C:\Dev\Projects\anhchien.github.io\uploads" />
       <recent name="C:\Dev\Projects\anhchien.github.io\uploads\tiny_uploads" />
-      <recent name="F:\ProjectCc\Web\trangsuc-01.web4s.vn\demo" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -102,13 +78,17 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1615090498598">
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1615127537734">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1615090498598" />
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1615127537734" />
     <state x="379" y="96" width="607" height="536" key="find.popup" timestamp="1615099931876">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="379" y="96" width="607" height="536" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1615099931876" />
+    <state x="338" y="21" width="672" height="676" key="search.everywhere.popup" timestamp="1615137705885">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="338" y="21" width="672" height="676" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1615137705885" />
   </component>
 </project>
