@@ -1,220 +1,358 @@
 var listProduct = [
-    //cat 1
     {
         id: 100,
-        name: 'Sun / Moon (1 sp)',
+        name: 'Sun - Black',
         trademark: 'TotWoo', //thương hiệu
-        price: 1645000,
-        price_sale: 1845000,
-        color: '',
+        price: 1100000,
+        price_sale: 1300000,
+        color: 'Black',
         material: 'Hàng chính hãng', //chất liệu
-        thumb: 'uploads/tiny_uploads/totwoo_sun1.png',
+        thumb: 'uploads/tiny_uploads/totwoo/sun-black.jpg',
         pictures: [
-            "uploads/tiny_uploads/totwoo_sun1.png",
-            "uploads/tiny_uploads/totwoo_moon1.png",
-            "uploads/tiny_uploads/totwoo_sun.png",
-            "uploads/tiny_uploads/totwoo_moon.png",
-            "uploads/tiny_uploads/totwoo_sun_moon.png"
+            "uploads/tiny_uploads/totwoo/sun-black.jpg",
         ],
         category: 1,
         url: 'detail-sun-or-moon.html'
     },
     {
-        id: 101,
-        name: 'Sun & Moon (combo 2sp)',
+        id: 100,
+        name: 'Sun - Black/Silver - Silver Metal Chain',
         trademark: 'TotWoo', //thương hiệu
-        price: 3000000,
-        price_sale: 3200000,
-        color: '',
+        price: 1450000,
+        price_sale: 1650000,
+        color: 'Black/Silver',
         material: 'Hàng chính hãng', //chất liệu
-        thumb: 'uploads/tiny_uploads/totwoo_sun_moon.png',
+        thumb: 'uploads/tiny_uploads/totwoo/sun-black-silver-metal-chain.jpg',
         pictures: [
-            "uploads/tiny_uploads/totwoo_sun1.png",
-            "uploads/tiny_uploads/totwoo_moon1.png",
-            "uploads/tiny_uploads/totwoo_sun_moon.png",
-            "uploads/tiny_uploads/totwoo_sun.png",
-            "uploads/tiny_uploads/totwoo_moon.png",
+            "uploads/tiny_uploads/totwoo/sun-black-silver-metal-chain.jpg",
         ],
         category: 1,
-        url: 'detail-sun-moon.html'
+        url: 'detail-sun-or-moon.html'
     },
     {
-        id: 102,
-        name: 'Lily of the Valley',
+        id: 100,
+        name: 'Moon - Pink/Silver',
         trademark: 'TotWoo', //thương hiệu
-        price: 5150000,
-        price_sale: 5350000,
-        color: '',
+        price: 1100000,
+        price_sale: 1300000,
+        color: 'Pink/Silver',
         material: 'Hàng chính hãng', //chất liệu
-        thumb: 'uploads/tiny_uploads/totwoo_lily1.jpg',
+        thumb: 'uploads/tiny_uploads/totwoo/moon-silver.jpg',
         pictures: [
-            "uploads/tiny_uploads/totwoo_lily1.jpg",
-            "uploads/tiny_uploads/totwoo_lily2.png",
-            "uploads/tiny_uploads/totwoo_lily3.jpg",
-            "uploads/tiny_uploads/totwoo_lily4.jpg"
+            "uploads/tiny_uploads/totwoo/moon-silver.jpg",
+            "uploads/tiny_uploads/totwoo/moon-pink.jpg",
         ],
         category: 1,
-        url: 'detail-lily-of-the-valley.html'
+        url: 'detail-sun-or-moon.html'
     },
     {
-        id: 103,
-        name: 'Couple Bracelet & Necklace',
+        id: 100,
+        name: 'Moon - Pink/Silver - Zircons',
         trademark: 'TotWoo', //thương hiệu
-        price: 8700000,
-        price_sale: 9000000,
-        color: '',
+        price: 1350000,
+        price_sale: 1550000,
+        color: 'Pink/Silver - Zircons',
         material: 'Hàng chính hãng', //chất liệu
-        thumb: 'uploads/tiny_uploads/totwoo_vongtay_daychuyen.jpg',
+        thumb: 'uploads/tiny_uploads/totwoo/moon-pink-zircons.jpg',
         pictures: [
-            "uploads/tiny_uploads/totwoo_vongtay_daychuyen.jpg",
-            "uploads/tiny_uploads/totwoo_vongtay_daychuyen2.jpg",
-            "uploads/tiny_uploads/totwoo_daychuyen.jpg",
+            "uploads/tiny_uploads/totwoo/moon-silver-zircons.jpg",
+            "uploads/tiny_uploads/totwoo/moon-pink-zircons.jpg",
         ],
         category: 1,
-        url: 'detail-couple-bracelet-necklace.html'
+        url: 'detail-sun-or-moon.html'
     },
     {
-        id: 104,
-        name: 'We Bold',
+        id: 100,
+        name: 'Moon - Pink/Silver - Zircons - Metal Chain',
         trademark: 'TotWoo', //thương hiệu
-        price: 3150000,
-        price_sale: 3350000,
-        color: '',
+        price: 1350000,
+        price_sale: 1550000,
+        color: 'Pink/Silver - Zircons - Metal Chain',
         material: 'Hàng chính hãng', //chất liệu
-        thumb: 'uploads/tiny_uploads/totwoo_we_bold.jpg',
+        thumb: 'uploads/tiny_uploads/totwoo/moon-pink-zircons-metal-chain.jpg',
         pictures: [
-            "uploads/tiny_uploads/totwoo_we_bold.jpg",
-            "uploads/tiny_uploads/totwoo_we_bold2.jpg",
-            "uploads/tiny_uploads/totwoo_we_bold3.jpg",
+            "uploads/tiny_uploads/totwoo/moon-silver-zircons-metal-chain.jpg",
+            "uploads/tiny_uploads/totwoo/moon-pink-zircons-metal-chain.jpg",
         ],
         category: 1,
-        url: 'detail-we-bold.html'
+        url: 'detail-sun-or-moon.html'
     },
     {
-        id: 105,
-        name: 'Flower & Leaves',
+        id: 100,
+        name: 'Sun & Moon (Silver-Pink, Silver-Silver, Black-Silver, Black-Pink)',
         trademark: 'TotWoo', //thương hiệu
-        price: 122345,
-        price_sale: 121345,
-        color: '',
+        price: 2100000,
+        price_sale: 2500000,
+        color: 'Silver-Pink, Silver-Silver, Black-Silver, Black-Pink',
         material: 'Hàng chính hãng', //chất liệu
-        thumb: 'uploads/tiny_uploads/totwoo_flower_leaves.jpg',
+        thumb: 'uploads/tiny_uploads/totwoo/sun-moon-silver-pink.jpg',
         pictures: [
-            "uploads/tiny_uploads/totwoo_flower_leaves.jpg",
-            "uploads/tiny_uploads/totwoo_lily1.jpg",
-            "uploads/tiny_uploads/totwoo_lily2.jpg",
-            "uploads/tiny_uploads/totwoo_lily3.jpg",
-            "uploads/tiny_uploads/totwoo_lily4.jpg",
+            "uploads/tiny_uploads/totwoo/sun-moon-silver-pink.jpg",
+            "uploads/tiny_uploads/totwoo/sun-moon-silver-silver.jpg",
+            "uploads/tiny_uploads/totwoo/sun-moon-black-silver.jpg",
+            "uploads/tiny_uploads/totwoo/sun-moon-black-pink.jpg",
         ],
         category: 1,
-        url: 'detail-flower-leaves.html'
+        url: 'detail-sun-or-moon.html'
+    },
+    {
+        id: 100,
+        name: 'Sun & Moon - Zircons (Silver-Pink, Silver-Silver, Black-Silver, Black-Pink)',
+        trademark: 'TotWoo', //thương hiệu
+        price: 2100000,
+        price_sale: 2500000,
+        color: 'Silver-Pink, Silver-Silver, Black-Silver, Black-Pink',
+        material: 'Hàng chính hãng', //chất liệu
+        thumb: 'uploads/tiny_uploads/totwoo/sun-moon-silver-silver-zircons.jpg',
+        pictures: [
+            "uploads/tiny_uploads/totwoo/sun-moon-silver-pink-zircons.jpg",
+            "uploads/tiny_uploads/totwoo/sun-moon-silver-silver-zircons.jpg",
+            "uploads/tiny_uploads/totwoo/sun-moon-black-silver-zircons.jpg",
+            "uploads/tiny_uploads/totwoo/sun-moon-black-pink-zircons.jpg",
+        ],
+        category: 1,
+        url: 'detail-sun-or-moon.html'
+    },
+    {
+        id: 100,
+        name: 'Sun & Moon - Zircons - Metal Chain (Silver-Pink, Silver-Silver, Black-Silver, Black-Pink)',
+        trademark: 'TotWoo', //thương hiệu
+        price: 2750000,
+        price_sale: 3000000,
+        color: 'Silver-Pink, Silver-Silver, Black-Silver, Black-Pink',
+        material: 'Hàng chính hãng', //chất liệu
+        thumb: 'uploads/tiny_uploads/totwoo/sun-moon-black-pink-zircons-metal-chain.jpg',
+        pictures: [
+            "uploads/tiny_uploads/totwoo/sun-moon-black-pink-zircons-metal-chain.jpg",
+            "uploads/tiny_uploads/totwoo/sun-moon-silver-silver-zircons-metal-chain.jpg",
+        ],
+        category: 1,
+        url: 'detail-sun-or-moon.html'
     },
 
-    //cat 2
-    {
-        id: 200,
-        name: 'Wing Bling Flower Me Earings',
-        trademark: 'Wing Bling', //thương hiệu
-        price: 480000,
-        price_sale: 525000,
-        color: 'Hồng / Bạc',
-        material: 'Hàng chính hãng', //chất liệu
-        thumb: 'uploads/tiny_uploads/wing_bling_flower_me_earing.jpg',
-        pictures: [
-            "uploads/tiny_uploads/wing_bling_flower_me_earing.jpg",
-            "uploads/tiny_uploads/wing_bling_flower_me_earing.jpg",
-            "uploads/tiny_uploads/wing_bling_flower_me_earing.jpg"
-        ],
-        category: 2,
-        url: 'detail-sun-moon.html'
-    },
-    {
-        id: 201,
-        name: 'Wing Bling Snowflake Earings',
-        trademark: 'Wing Bling', //thương hiệu
-        price: 380000,
-        price_sale: 480000,
-        color: 'Bạc / Hồng',
-        material: 'Hàng chính hãng', //chất liệu
-        thumb: 'uploads/tiny_uploads/wing_bling_snowflake.jpg',
-        pictures: [
-            "uploads/tiny_uploads/wing_bling_snowflake.jpg",
-            "uploads/tiny_uploads/wing_bling_snowflake.jpg",
-            "uploads/tiny_uploads/wing_bling_snowflake.jpg"
-        ],
-        category: 2,
-        url: 'detail-sun-moon.html'
-    },
-    {
-        id: 202,
-        name: 'Wing Bling Petite Dress Necklace',
-        trademark: 'Wing Bling', //thương hiệu
-        price: 450000,
-        price_sale: 6500000,
-        color: 'Pink',
-        material: 'Hàng chính hãng', //chất liệu
-        thumb: 'uploads/tiny_uploads/wing_bling_petite_dress_necklace.jpg',
-        pictures: [
-            "uploads/tiny_uploads/wing_bling_petite_dress_necklace.jpg",
-            "uploads/tiny_uploads/wing_bling_petite_dress_necklace.jpg",
-            "uploads/tiny_uploads/wing_bling_petite_dress_necklace.jpg"
-        ],
-        category: 2,
-        url: 'detail-sun-moon.html'
-    },
 
-    //cat 3
-    {
-        id: 300,
-        name: 'Coach Floral Eau De Parfum 30ml',
-        trademark: 'Coach', //thương hiệu
-        price: 1399000,
-        price_sale: 190000,
-        color: 'Hồng / Bạc',
-        material: 'Hàng chính hãng', //chất liệu
-        thumb: 'uploads/tiny_uploads/coach_floral_eau.jpg',
-        pictures: [
-            "uploads/tiny_uploads/coach_floral_eau.jpg",
-            "uploads/tiny_uploads/coach_floral_eau.jpg",
-            "uploads/tiny_uploads/coach_floral_eau.jpg"
-        ],
-        category: 3,
-        url: 'detail-sun-moon.html'
-    },
-    {
-        id: 301,
-        name: 'Salvatore Ferragamo Signorina In Flore 20ml',
-        trademark: 'Salvatore', //thương hiệu
-        price: 980000,
-        price_sale: 1600000,
-        color: 'Bạc / Hồng',
-        material: 'Hàng chính hãng', //chất liệu
-        thumb: 'uploads/tiny_uploads/salvatore_ferragamo_signorina_in_flore.jpg',
-        pictures: [
-            "uploads/tiny_uploads/salvatore_ferragamo_signorina_in_flore.jpg",
-            "uploads/tiny_uploads/salvatore_ferragamo_signorina_in_flore.jpg",
-            "uploads/tiny_uploads/salvatore_ferragamo_signorina_in_flore.jpg"
-        ],
-        category: 3,
-        url: 'detail-sun-moon.html'
-    },
-    {
-        id: 302,
-        name: 'Guess Girl 30ml',
-        trademark: 'Guess', //thương hiệu
-        price: 850000,
-        price_sale: 16500000,
-        color: 'Pink',
-        material: 'Hàng chính hãng', //chất liệu
-        thumb: 'uploads/tiny_uploads/guess_girl.jpg',
-        pictures: [
-            "uploads/tiny_uploads/guess_girl.jpg",
-            "uploads/tiny_uploads/guess_girl.jpg",
-            "uploads/tiny_uploads/guess_girl.jpg"
-        ],
-        category: 3,
-        url: 'detail-sun-moon.html'
-    },
+
+
+
+
+
+
+//    //cat 1
+//    {
+//        id: 100,
+//        name: 'Sun / Moon (1 sp)',
+//        trademark: 'TotWoo', //thương hiệu
+//        price: 1645000,
+//        price_sale: 1845000,
+//        color: '',
+//        material: 'Hàng chính hãng', //chất liệu
+//        thumb: 'uploads/tiny_uploads/totwoo_sun1.png',
+//        pictures: [
+//            "uploads/tiny_uploads/totwoo_sun1.png",
+//            "uploads/tiny_uploads/totwoo_moon1.png",
+//            "uploads/tiny_uploads/totwoo_sun.png",
+//            "uploads/tiny_uploads/totwoo_moon.png",
+//            "uploads/tiny_uploads/totwoo_sun_moon.png"
+//        ],
+//        category: 1,
+//        url: 'detail-sun-or-moon.html'
+//    },
+//    {
+//        id: 101,
+//        name: 'Sun & Moon (combo 2sp)',
+//        trademark: 'TotWoo', //thương hiệu
+//        price: 3000000,
+//        price_sale: 3200000,
+//        color: '',
+//        material: 'Hàng chính hãng', //chất liệu
+//        thumb: 'uploads/tiny_uploads/totwoo_sun_moon.png',
+//        pictures: [
+//            "uploads/tiny_uploads/totwoo_sun1.png",
+//            "uploads/tiny_uploads/totwoo_moon1.png",
+//            "uploads/tiny_uploads/totwoo_sun_moon.png",
+//            "uploads/tiny_uploads/totwoo_sun.png",
+//            "uploads/tiny_uploads/totwoo_moon.png",
+//        ],
+//        category: 1,
+//        url: 'detail-sun-moon.html'
+//    },
+//    {
+//        id: 102,
+//        name: 'Lily of the Valley',
+//        trademark: 'TotWoo', //thương hiệu
+//        price: 5150000,
+//        price_sale: 5350000,
+//        color: '',
+//        material: 'Hàng chính hãng', //chất liệu
+//        thumb: 'uploads/tiny_uploads/totwoo_lily1.jpg',
+//        pictures: [
+//            "uploads/tiny_uploads/totwoo_lily1.jpg",
+//            "uploads/tiny_uploads/totwoo_lily2.png",
+//            "uploads/tiny_uploads/totwoo_lily3.jpg",
+//            "uploads/tiny_uploads/totwoo_lily4.jpg"
+//        ],
+//        category: 1,
+//        url: 'detail-lily-of-the-valley.html'
+//    },
+//    {
+//        id: 103,
+//        name: 'Couple Bracelet & Necklace',
+//        trademark: 'TotWoo', //thương hiệu
+//        price: 8700000,
+//        price_sale: 9000000,
+//        color: '',
+//        material: 'Hàng chính hãng', //chất liệu
+//        thumb: 'uploads/tiny_uploads/totwoo_vongtay_daychuyen.jpg',
+//        pictures: [
+//            "uploads/tiny_uploads/totwoo_vongtay_daychuyen.jpg",
+//            "uploads/tiny_uploads/totwoo_vongtay_daychuyen2.jpg",
+//            "uploads/tiny_uploads/totwoo_daychuyen.jpg",
+//        ],
+//        category: 1,
+//        url: 'detail-couple-bracelet-necklace.html'
+//    },
+//    {
+//        id: 104,
+//        name: 'We Bold',
+//        trademark: 'TotWoo', //thương hiệu
+//        price: 3150000,
+//        price_sale: 3350000,
+//        color: '',
+//        material: 'Hàng chính hãng', //chất liệu
+//        thumb: 'uploads/tiny_uploads/totwoo_we_bold.jpg',
+//        pictures: [
+//            "uploads/tiny_uploads/totwoo_we_bold.jpg",
+//            "uploads/tiny_uploads/totwoo_we_bold2.jpg",
+//            "uploads/tiny_uploads/totwoo_we_bold3.jpg",
+//        ],
+//        category: 1,
+//        url: 'detail-we-bold.html'
+//    },
+//    {
+//        id: 105,
+//        name: 'Flower & Leaves',
+//        trademark: 'TotWoo', //thương hiệu
+//        price: 122345,
+//        price_sale: 121345,
+//        color: '',
+//        material: 'Hàng chính hãng', //chất liệu
+//        thumb: 'uploads/tiny_uploads/totwoo_flower_leaves.jpg',
+//        pictures: [
+//            "uploads/tiny_uploads/totwoo_flower_leaves.jpg",
+//            "uploads/tiny_uploads/totwoo_lily1.jpg",
+//            "uploads/tiny_uploads/totwoo_lily2.jpg",
+//            "uploads/tiny_uploads/totwoo_lily3.jpg",
+//            "uploads/tiny_uploads/totwoo_lily4.jpg",
+//        ],
+//        category: 1,
+//        url: 'detail-flower-leaves.html'
+//    },
+//
+//    //cat 2
+//    {
+//        id: 200,
+//        name: 'Wing Bling Flower Me Earings',
+//        trademark: 'Wing Bling', //thương hiệu
+//        price: 480000,
+//        price_sale: 525000,
+//        color: 'Hồng / Bạc',
+//        material: 'Hàng chính hãng', //chất liệu
+//        thumb: 'uploads/tiny_uploads/wing_bling_flower_me_earing.jpg',
+//        pictures: [
+//            "uploads/tiny_uploads/wing_bling_flower_me_earing.jpg",
+//            "uploads/tiny_uploads/wing_bling_flower_me_earing.jpg",
+//            "uploads/tiny_uploads/wing_bling_flower_me_earing.jpg"
+//        ],
+//        category: 2,
+//        url: 'detail-sun-moon.html'
+//    },
+//    {
+//        id: 201,
+//        name: 'Wing Bling Snowflake Earings',
+//        trademark: 'Wing Bling', //thương hiệu
+//        price: 380000,
+//        price_sale: 480000,
+//        color: 'Bạc / Hồng',
+//        material: 'Hàng chính hãng', //chất liệu
+//        thumb: 'uploads/tiny_uploads/wing_bling_snowflake.jpg',
+//        pictures: [
+//            "uploads/tiny_uploads/wing_bling_snowflake.jpg",
+//            "uploads/tiny_uploads/wing_bling_snowflake.jpg",
+//            "uploads/tiny_uploads/wing_bling_snowflake.jpg"
+//        ],
+//        category: 2,
+//        url: 'detail-sun-moon.html'
+//    },
+//    {
+//        id: 202,
+//        name: 'Wing Bling Petite Dress Necklace',
+//        trademark: 'Wing Bling', //thương hiệu
+//        price: 450000,
+//        price_sale: 6500000,
+//        color: 'Pink',
+//        material: 'Hàng chính hãng', //chất liệu
+//        thumb: 'uploads/tiny_uploads/wing_bling_petite_dress_necklace.jpg',
+//        pictures: [
+//            "uploads/tiny_uploads/wing_bling_petite_dress_necklace.jpg",
+//            "uploads/tiny_uploads/wing_bling_petite_dress_necklace.jpg",
+//            "uploads/tiny_uploads/wing_bling_petite_dress_necklace.jpg"
+//        ],
+//        category: 2,
+//        url: 'detail-sun-moon.html'
+//    },
+//
+//    //cat 3
+//    {
+//        id: 300,
+//        name: 'Coach Floral Eau De Parfum 30ml',
+//        trademark: 'Coach', //thương hiệu
+//        price: 1399000,
+//        price_sale: 190000,
+//        color: 'Hồng / Bạc',
+//        material: 'Hàng chính hãng', //chất liệu
+//        thumb: 'uploads/tiny_uploads/coach_floral_eau.jpg',
+//        pictures: [
+//            "uploads/tiny_uploads/coach_floral_eau.jpg",
+//            "uploads/tiny_uploads/coach_floral_eau.jpg",
+//            "uploads/tiny_uploads/coach_floral_eau.jpg"
+//        ],
+//        category: 3,
+//        url: 'detail-sun-moon.html'
+//    },
+//    {
+//        id: 301,
+//        name: 'Salvatore Ferragamo Signorina In Flore 20ml',
+//        trademark: 'Salvatore', //thương hiệu
+//        price: 980000,
+//        price_sale: 1600000,
+//        color: 'Bạc / Hồng',
+//        material: 'Hàng chính hãng', //chất liệu
+//        thumb: 'uploads/tiny_uploads/salvatore_ferragamo_signorina_in_flore.jpg',
+//        pictures: [
+//            "uploads/tiny_uploads/salvatore_ferragamo_signorina_in_flore.jpg",
+//            "uploads/tiny_uploads/salvatore_ferragamo_signorina_in_flore.jpg",
+//            "uploads/tiny_uploads/salvatore_ferragamo_signorina_in_flore.jpg"
+//        ],
+//        category: 3,
+//        url: 'detail-sun-moon.html'
+//    },
+//    {
+//        id: 302,
+//        name: 'Guess Girl 30ml',
+//        trademark: 'Guess', //thương hiệu
+//        price: 850000,
+//        price_sale: 16500000,
+//        color: 'Pink',
+//        material: 'Hàng chính hãng', //chất liệu
+//        thumb: 'uploads/tiny_uploads/guess_girl.jpg',
+//        pictures: [
+//            "uploads/tiny_uploads/guess_girl.jpg",
+//            "uploads/tiny_uploads/guess_girl.jpg",
+//            "uploads/tiny_uploads/guess_girl.jpg"
+//        ],
+//        category: 3,
+//        url: 'detail-sun-moon.html'
+//    },
 ]
 
 function loadCart() {
