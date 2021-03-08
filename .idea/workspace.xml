@@ -2,25 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdaf1324-233c-4adb-b79d-299465f777a3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lading-page/css/page-intro-400px.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-100-sun.html" beforeDir="false" afterPath="$PROJECT_DIR$/detail-100-sun.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-101-sun.html" beforeDir="false" afterPath="$PROJECT_DIR$/detail-101-sun.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-102-moon.html" beforeDir="false" afterPath="$PROJECT_DIR$/detail-102-moon.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-103-moon.html" beforeDir="false" afterPath="$PROJECT_DIR$/detail-103-moon.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-104-moon.html" beforeDir="false" afterPath="$PROJECT_DIR$/detail-104-moon.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-105-sun-moon.html" beforeDir="false" afterPath="$PROJECT_DIR$/detail-105-sun-moon.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-106-sun-moon.html" beforeDir="false" afterPath="$PROJECT_DIR$/detail-106-sun-moon.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-107-sun-moon.html" beforeDir="false" afterPath="$PROJECT_DIR$/detail-107-sun-moon.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-108-lily.html" beforeDir="false" afterPath="$PROJECT_DIR$/detail-108-lily.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-109-bracelet-necklace.html" beforeDir="false" afterPath="$PROJECT_DIR$/detail-109-bracelet-necklace.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-110-flower-leaves.html" beforeDir="false" afterPath="$PROJECT_DIR$/detail-110-flower-leaves.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-200-flower-necklet.html" beforeDir="false" afterPath="$PROJECT_DIR$/detail-200-flower-necklet.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-201-flower-necklet.html" beforeDir="false" afterPath="$PROJECT_DIR$/detail-201-flower-necklet.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-300-necklet.html" beforeDir="false" afterPath="$PROJECT_DIR$/detail-300-necklet.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/intro-105.html" beforeDir="false" afterPath="$PROJECT_DIR$/intro-105.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lading-page/css/page-intro.css" beforeDir="false" afterPath="$PROJECT_DIR$/lading-page/css/page-intro.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/trangsuc-01/webroot/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/trangsuc-01/webroot/js/common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/robots.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sitemap.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,11 +12,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/intro-105.html">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="40" column="85" selection-start-line="40" selection-start-column="85" selection-end-line="40" selection-end-column="85" />
+            <state relative-caret-position="189">
+              <caret line="96" column="78" selection-start-line="96" selection-start-column="72" selection-end-line="96" selection-end-column="78" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/intro-105-sun-moon.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="66">
+              <caret line="198" column="37" selection-start-line="198" selection-start-column="37" selection-end-line="198" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -41,8 +41,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/template/trangsuc-01/webroot/js/common.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="139" column="53" selection-start-line="139" selection-start-column="16" selection-end-line="139" selection-end-column="53" />
+            <state relative-caret-position="51">
+              <caret line="15" column="6" lean-forward="true" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/robots.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="42" lean-forward="true" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sitemap.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="6" lean-forward="true" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -71,6 +89,7 @@
       <find>email</find>
       <find>img-product-other</find>
       <find>Regis</find>
+      <find>a href</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -97,6 +116,7 @@
         <option value="$PROJECT_DIR$/lading-page/css/page-intro-400px.css" />
         <option value="$PROJECT_DIR$/lading-page/css/page-intro.css" />
         <option value="$PROJECT_DIR$/intro-105.html" />
+        <option value="$PROJECT_DIR$/robots.txt" />
       </list>
     </option>
   </component>
@@ -171,11 +191,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\ProjectCc\Web\trangsuc-01.web4s.vn\demo" />
       <recent name="F:\ProjectCc\Web\trangsuc-01.web4s.vn\demo\lading-page\css" />
       <recent name="C:\Dev\Projects\anhchien.github.io\lading-page\css" />
       <recent name="C:\Dev\Projects\anhchien.github.io" />
       <recent name="C:\Dev\Projects\anhchien.github.io\uploads\tiny_uploads\totwoo" />
-      <recent name="C:\Dev\Projects\anhchien.github.io\uploads" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Dev\Projects\anhchien.github.io\uploads\tiny_uploads" />
@@ -212,12 +232,12 @@
       <workItem from="1614737985271" duration="2889000" />
       <workItem from="1614741021560" duration="8853000" />
       <workItem from="1614825545519" duration="25228000" />
-      <workItem from="1615171757284" duration="3795000" />
+      <workItem from="1615171757284" duration="4221000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="123664000" />
+    <option name="totallyTimeSpent" value="124090000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="35" width="1353" height="686" extended-state="0" />
@@ -404,21 +424,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="21" column="76" selection-start-line="21" selection-start-column="76" selection-end-line="21" selection-end-column="76" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/template/trangsuc-01/webroot/css/css_custom.css">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -451,17 +456,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/template/trangsuc-01/webroot/js/common.js">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="139" column="53" selection-start-line="139" selection-start-column="16" selection-end-line="139" selection-end-column="53" />
+        <state relative-caret-position="189">
+          <caret line="96" column="78" selection-start-line="96" selection-start-column="72" selection-end-line="96" selection-end-column="78" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/intro-105.html">
+    <entry file="file://$PROJECT_DIR$/intro-105-sun-moon.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="40" column="85" selection-start-line="40" selection-start-column="85" selection-end-line="40" selection-end-column="85" />
+        <state relative-caret-position="66">
+          <caret line="198" column="37" selection-start-line="198" selection-start-column="37" selection-end-line="198" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/trangsuc-01/webroot/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="15" column="6" lean-forward="true" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sitemap.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="6" lean-forward="true" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robots.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="42" lean-forward="true" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
         </state>
       </provider>
     </entry>
