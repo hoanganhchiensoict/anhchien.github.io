@@ -1,0 +1,56 @@
+@media only screen and (max-width: 600px) {
+    .cc-video-wrapper {
+        width: 100%;
+        float: none;
+    }
+    .cc-title{
+        font-size: 22px;
+    }
+    .cc-title2{
+        font-size: 16px;
+    }
+    .img-distance {
+        float: none;
+        width: 100%;
+        height: auto;
+    }
+    input[type=text]{
+        width: 90%;
+        padding: 10px;
+        margin: 5px 0 10px 0;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+    }
+    .registerbtn {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        width: 60%;
+        margin-left: 20%;
+        opacity: 0.9;
+    }
+    .img-color {
+        float: none;
+        width: 100%;
+        height: auto;
+        margin-left: 0px;
+    }
+    .cc-product-title {
+        font-size: 14px;
+    }
+    .cc-product-price {
+        font-size: 16px;
+    }
+    h4{
+        font-size: 16px;
+    }
+    p {
+        font-size: 14px;
+    }
+    .cc-lienhe{
+        font-size: 20px;
+    }
+}

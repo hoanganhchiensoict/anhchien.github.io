@@ -233,7 +233,7 @@ var listProduct = [
             "uploads/tiny_uploads/totwoo/necklet-pink.jpg",
         ],
         category: 3,
-        url: 'detail-201-flower-necklet.html'
+        url: 'detail-300-necklet.html'
     },
 
 
