@@ -1,27 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+    <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 
-<url>
-  <loc>http://dreamup198.com/</loc>
-  <lastmod>2021-03-07T18:25:19+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>http://dreamup198.com/index.html</loc>
-  <lastmod>2021-03-07T18:25:19+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://dreamup198.com/card-info.html</loc>
-  <lastmod>2021-03-07T18:25:19+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
+    <url>
+        <loc>http://dreamup198.com/</loc>
+        <lastmod>2021-03-07T18:25:19+00:00</lastmod>
+        <priority>1.00</priority>
+    </url>
+    <url>
+        <loc>http://dreamup198.com/index.html</loc>
+        <lastmod>2021-03-07T18:25:19+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>http://dreamup198.com/detail-100-sun.html</loc>
+        <lastmod>2021-03-07T18:25:19+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>http://dreamup198.com/detail-101-sun.html</loc>
+        <lastmod>2021-03-07T18:25:19+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>http://dreamup198.com/detail-102-moon.html</loc>
+        <lastmod>2021-03-07T18:25:19+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>http://dreamup198.com/detail-103-moon.html</loc>
+        <lastmod>2021-03-07T18:25:19+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>http://dreamup198.com/detail-104-moon.html</loc>
+        <lastmod>2021-03-07T18:25:19+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>http://dreamup198.com/detail-105-sun-moon.html</loc>
+        <lastmod>2021-03-07T18:25:19+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>http://dreamup198.com/detail-106-sun-moon.html</loc>
+        <lastmod>2021-03-07T18:25:19+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>http://dreamup198.com/detail-107-sun-moon.html</loc>
+        <lastmod>2021-03-07T18:25:19+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>http://dreamup198.com/detail-108-lily.html</loc>
+        <lastmod>2021-03-07T18:25:19+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>http://dreamup198.com/detail-109-bracelet-necklace.html</loc>
+        <lastmod>2021-03-07T18:25:19+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>http://dreamup198.com/detail-110-flower-leaves.html</loc>
+        <lastmod>2021-03-07T18:25:19+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>http://dreamup198.com/detail-200-flower-necklet.html</loc>
+        <lastmod>2021-03-07T18:25:19+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>http://dreamup198.com/detail-201-flower-necklet.html</loc>
+        <lastmod>2021-03-07T18:25:19+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>http://dreamup198.com/detail-300-necklet.html</loc>
+        <lastmod>2021-03-07T18:25:19+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+
+    <url>
+        <loc>http://dreamup198.com/intro-105-sun-moon.html</loc>
+        <lastmod>2021-03-07T18:25:19+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+
+    <url>
+        <loc>http://dreamup198.com/card-info.html</loc>
+        <lastmod>2021-03-07T18:25:19+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
 
 
 </urlset>
