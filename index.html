@@ -41,7 +41,7 @@
           href="template/trangsuc-01/webroot/assets/css/mightyslider/mightyslider.css"/>
     <script type="text/javascript" src="template/trangsuc-01/webroot/js/common.js"></script>
     <script type="text/javascript" src="template/trangsuc-01/webroot/assets/js/jquery.2.1.1.min.js"></script>
-<!--    <script type="text/javascript" src="template/trangsuc-01/webroot/assets/js/jquery-ui.js"></script>-->
+    <!--    <script type="text/javascript" src="template/trangsuc-01/webroot/assets/js/jquery-ui.js"></script>-->
     <script type="text/javascript" src="template/trangsuc-01/webroot/assets/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="template/trangsuc-01/webroot/assets/js/chosen.jquery.min.js"></script>
     <script type="text/javascript" src="template/trangsuc-01/webroot/assets/js/bootstrap-dialog.min.js"></script>
@@ -289,7 +289,7 @@
                     <div src="uploads/plugin/custom_img/2018-07-07/custom-home-banner-01.jpg"
                          class="container section-company-intro">
                         <div class="company-intro-banner">
-                            <button target="_self" class="company-intro-img" >
+                            <button target="_self" class="company-intro-img">
                                 <img class="vc_single_image-img" alt="single"
                                      src="uploads/plugin/custom_img/2018-07-26/custom-28034814640-4bf9ca94aa-o.png"/>
                             </button>
@@ -382,7 +382,7 @@
     <div id="footer-row-42" class="nh-row footer-mid">
         <div class="container">
             <div class="row">
-                <div class="col-sm-5">
+                <div class="col-sm-6">
                     <div class="item_block clearfix" style="">
                         <div class="menu-footer-vertical box-ft">
                             <h4 class="title-menu-ft">VỀ CHÚNG TÔI</h4>
@@ -394,14 +394,20 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-5">
+                <div class="col-sm-6">
                     <div class="item_block clearfix" style="">
                         <div class="menu-footer-vertical box-ft">
                             <h4 class="title-menu-ft">Fanpage</h4>
                             <ul class="list-fan-page">
                                 <li>
-                                    <a href="https://www.facebook.com/quatangyeuthuong.198/" rel="noreferrer"
-                                       target="_blank"><i class="fa fa-facebook"></i></a>
+                                    <a href="https://www.facebook.com/quatangyeuthuong.198/" target="_blank">
+                                        <i class="fa fa-facebook"></i></a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.youtube.com/channel/UCseqn1kimeCJyaxJgBAzAxQ" target="_blank">
+                                        <i class="fa fa-youtube"></i>
+                                    </a>
                                 </li>
                             </ul>
                         </div>
@@ -416,7 +422,7 @@
                 <div class="col-sm-3">
                     <div class="item_block clearfix" style="">
                         <div class="copyright-box">
-                            <p class="coppyright">Copyright by Qua Tang Yeu Thuong</p>
+                            <p class="coppyright">Copyright by DreamUp198</p>
                         </div>
                     </div>
                 </div>
@@ -523,5 +529,32 @@
         </div>
     </div>
 </div>
+
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>
+    window.fbAsyncInit = function() {
+        FB.init({
+            xfbml            : true,
+            version          : 'v10.0'
+        });
+    };
+
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Your Chat Plugin code -->
+<div class="fb-customerchat"
+     attribution="setup_tool"
+     page_id="100154255482107"
+     logged_in_greeting="Hi! DreamUp198 có thể giúp gì cho bạn?"
+     logged_out_greeting="Hi! DreamUp198 có thể giúp gì cho bạn?">
+</div>
+
 </body>
 </html>
