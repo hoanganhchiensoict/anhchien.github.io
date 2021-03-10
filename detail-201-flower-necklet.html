@@ -520,7 +520,7 @@
     <div id="footer-row-42" class="nh-row footer-mid">
         <div class="container">
             <div class="row">
-                <div class="col-sm-5">
+                <div class="col-sm-6">
                     <div class="item_block clearfix" style="">
                         <div class="menu-footer-vertical box-ft">
                             <h4 class="title-menu-ft">VỀ CHÚNG TÔI</h4>
@@ -532,7 +532,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-5">
+                <div class="col-sm-6">
                     <div class="item_block clearfix" style="">
                         <div class="menu-footer-vertical box-ft">
                             <h4 class="title-menu-ft">Fanpage</h4>
@@ -542,6 +542,11 @@
                                         <i class="fa fa-facebook"></i>
                                     </a>
                                 </li>
+                                <li>
+                                <a href="https://www.youtube.com/channel/UCseqn1kimeCJyaxJgBAzAxQ" target="_blank">
+                                    <i class="fa fa-youtube"></i>
+                                </a>
+                            </li>
                             </ul>
                         </div>
                     </div>
@@ -555,7 +560,7 @@
                 <div class="col-sm-3">
                     <div class="item_block clearfix" style="">
                         <div class="copyright-box">
-                            <p class="coppyright">Copyright by Qua Tang Yeu Thuong</p>
+                            <p class="coppyright">Copyright by DreamUp198</p>
                         </div>
                     </div>
                 </div>
@@ -660,5 +665,49 @@
         </div>
     </div>
 </div>
+
+<div class="hotline-phone-ring-wrap">
+    <div class="hotline-phone-ring">
+        <div class="hotline-phone-ring-circle"></div>
+        <div class="hotline-phone-ring-circle-fill"></div>
+        <div class="hotline-phone-ring-img-circle">
+            <a href="tel:0969190880" class="pps-btn-img">
+                <img src="uploads/tiny_uploads/icon-call-nh.png" alt="Gọi điện thoại" width="50">
+            </a>
+        </div>
+    </div>
+    <div class="hotline-bar">
+        <a href="tel:0987654321">
+            <span class="text-hotline">096.919.0880</span>
+        </a>
+    </div>
+</div>
+
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>
+    window.fbAsyncInit = function() {
+        FB.init({
+            xfbml            : true,
+            version          : 'v10.0'
+        });
+    };
+
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Your Chat Plugin code -->
+<div class="fb-customerchat"
+     attribution="setup_tool"
+     page_id="100154255482107"
+     logged_in_greeting="Hi! DreamUp198 có thể giúp gì cho bạn?"
+     logged_out_greeting="Hi! DreamUp198 có thể giúp gì cho bạn?">
+</div>
+
 </body>
 </html>

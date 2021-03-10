@@ -82,6 +82,7 @@
         firebase.analytics();
     </script>
 </head>
+
 <body class="home" cz-shortcut-listen="true">
 <div id="header" class="nh-row">
     <div id="header-row-41" class="nh-row header-mid lightSpeedIn animated clearfix">
@@ -145,239 +146,126 @@
         </div>
     </div>
 </div>
-<div id="main" class="nh-row">
-    <h1 hidden="true">Quà tặng yêu thương</h1>
-    <h2 hidden="true">Quà tặng yêu thương</h2>
-    <h3 hidden="true">Quà tặng yêu thương</h3>
 
-    <div id="content-row-0" class="nh-row nhslider">
+<div id="main" class="nh-row">
+    <div id="content-row-53" class="nh-row" style="margin-top: 50px">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12 col-xs-12">
-                    <div class="item_block">
-                        <div class="mighty-slider">
-                            <div class="mSCover"
-                                 style="background-image: url('uploads/tiny_uploads/banner.png'); background-size: auto;"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="content-row-25" class="nh-row bg-white">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 col-xs-12">
-                    <div class="row">
-                        <div class="title-block">
-                            <h4 style="text-align: center;" class="heading_title">Bộ sưu tập nổi bật</h4>
-                        </div>
-                        <div class="col-sm-4 collection-hover-img cc-category">
-                            <a href="#content-row-1">
-                                <img alt="image-icon" class="collection-img cc-category-icon"
-                                     src="uploads/plugin/custom_img/2018-07-06/custom-home-cat-02.png"/>
-                                <div class="collection-detail-wrapper">
-                                    <h5 class="collection-icon-title">VÒNG TAY TƯƠNG TÁC</h5>
-                                    <div class="collection-content">
-                                        <br/>
-                                        <p>Xem bộ sưu tập</p>
+                    <div class="box_module bottom box-contacts">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-12 col-xs-12">
+                                    <div class="box">
+                                        <div class="title-block"><h4 style="text-align: center;" class="heading_title">
+                                            Thông tin liên hệ</h4></div>
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <form id="frm-send-contact"
+                                                      class="frm-required form-contact margin-t-10 row"
+                                                      method="GET"
+                                                      action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSd5Z03R-XyDbag9-zrT5mC1M21eaX2DG6MfsJ8UvHKP-AhLWg/formResponse"
+                                                      novalidate="novalidate">
+                                                    <div class="form-group col-sm-6 col-xs-12"><input
+                                                            class="form-control required" type="text"
+                                                            name="entry.1459445742" placeholder="Họ và tên"
+                                                            aria-required="true"/></div>
+                                                    <div class="form-group col-sm-6 col-xs-12"><input
+                                                            class="form-control required" type="text"
+                                                            name="entry.1215366249"
+                                                            placeholder="Số điện thoại" aria-required="true"/></div>
+                                                    <div class="form-group col-sm-12 col-xs-12"><input
+                                                            class="form-control required" type="text"
+                                                            name="entry.1294885981"
+                                                            placeholder="Tiêu đề" aria-required="true"/></div>
+                                                    <div class="form-group col-sm-12 col-xs-12">
+                                                        <textarea id="content_textarea" name="entry.1348785391"
+                                                                  class="form-control required" rows="3"
+                                                                  placeholder="Ghi chú" aria-required="true"></textarea>
+                                                    </div>
+                                                    <div class="form-group col-sm-12 col-xs-12">
+                                                        <button type="submit"
+                                                                class="bt btn-default txt-upper btn-submit"><span
+                                                                class="name">Gửi yêu cầu</span></button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </a>
-                        </div>
-                        <div class="col-sm-4 collection-hover-img cc-category">
-                            <a href="#content-row-2">
-                                <img alt="image-icon" class="collection-img cc-category-icon"
-                                     src="uploads/plugin/custom_img/2018-07-06/custom-home-cat-03.png"/>
-                                <div class="collection-detail-wrapper">
-                                    <h5 class="collection-icon-title">DÂY CHUYỀN</h5>
-                                    <div class="collection-content">
-                                        <br/>
-                                        <p>Xem bộ sưu tập</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-sm-4 collection-hover-img cc-category">
-                            <a href="#content-row-3">
-                                <img alt="image-icon" class="collection-img cc-category-icon"
-                                     src="uploads/plugin/custom_img/2018-07-06/custom-home-cat-03.png"/>
-                                <div class="collection-detail-wrapper">
-                                    <h5 class="collection-icon-title">PHỤ KIỆN</h5>
-                                    <div class="collection-content">
-                                        <br/>
-                                        <p>Xem bộ sưu tập</p>
-                                    </div>
-                                </div>
-                            </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                    <script type="text/javascript">
+                        $.validator.addMethod(
+                            "regex",
+                            function (value, element, regexp) {
+                                var re = new RegExp(regexp);
+                                return this.optional(element) || re.test(value);
+                            },
+                            "regex Mở rộng"
+                        );
 
-    <div id="content-row-1" class="nh-row hot-products">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 col-xs-12">
-                    <div class="item_block">
-                        <div class="box-product">
-                            <div class="title-block">
-                                <h4 style="text-align: center;" class="heading_title">Vòng tay tương tác</h4>
-                            </div>
-                            <div class="box-detail-list-product">
-                                <div class="row list-product-wrapper" id="list-product-item-cat1">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="content-row-2" class="nh-row hot-products">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 col-xs-12">
-                    <div class="item_block">
-                        <div class="box-product">
-                            <div class="title-block">
-                                <h4 style="text-align: center;" class="heading_title">Dây chuyền</h4>
-                            </div>
-                            <div class="box-detail-list-product">
-                                <div class="row list-product-wrapper" id="list-product-item-cat2">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="content-row-3" class="nh-row hot-products">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 col-xs-12">
-                    <div class="item_block">
-                        <div class="box-product">
-                            <div class="title-block">
-                                <h4 style="text-align: center;" class="heading_title">Phụ kiện</h4>
-                            </div>
-                            <div class="box-detail-list-product">
-                                <div class="row list-product-wrapper" id="list-product-item-cat3">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                        $(".box-contacts .captcha-reload").on("click", function (e) {
+                            nh_member.reloadCaptcha($(this));
+                            return false;
+                        });
 
-    <script type="text/javascript">
-        loadProduct(1)
-        loadProduct(2)
-        loadProduct(3)
-        loadCartNumber()
-    </script>
+                        $("#frm-send-contact").validate({
+                            rules: {
+                                full_name: {
+                                    required: true,
+                                },
+                                title: {
+                                    required: true,
+                                },
+                                content: {
+                                    required: true,
+                                },
+                                email: {
+                                    required: true,
+                                    email: true,
+                                },
+                            },
+                            messages: {
+                                full_name: {
+                                    required: "Họ và tên không được rỗng",
+                                },
+                                phone: {
+                                    required: "Số điện thoại không được rỗng",
+                                },
+                                title: {
+                                    required: "Tiêu đề không được rỗng",
+                                },
+                                content: {
+                                    required: "Nội dung không được rỗng",
+                                },
+                                email: {
+                                    required: "Email không đúng định dạng",
+                                    email: "Email không đúng định dạng",
+                                },
+                            },
+                            showErrors: function (errorMap, errorList) {
+                                // Clean up any tooltips for valid elements
+                                $.each(this.validElements(), function (index, element) {
+                                    nh_functions.showTooltipSuccess(element);
+                                });
 
-    <div id="content-row-54" class="nh-row homepage-company-intro">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-12 col-xs-12">
-                    <div src="uploads/plugin/custom_img/2018-07-07/custom-home-banner-01.jpg"
-                         class="container section-company-intro">
-                        <div class="company-intro-banner">
-                            <button target="_self" class="company-intro-img">
-                                <img class="vc_single_image-img" alt="single"
-                                     src="uploads/plugin/custom_img/2018-07-26/custom-28034814640-4bf9ca94aa-o.png"/>
-                            </button>
-                        </div>
-                    </div>
+                                // Create new tooltips for invalid elements
+                                $.each(errorList, function (index, error) {
+                                    nh_functions.showTooltipError(error.element, error.message);
+                                });
+                            },
+
+                        });
+                    </script>
                 </div>
             </div>
         </div>
     </div>
-    <!--<div id="content-row-58" class="nh-row homepage-news bg-white">-->
-    <!--<div class="container">-->
-    <!--<div class="row">-->
-    <!--<div class="col-sm-12 col-xs-12">-->
-    <!--<div class="item_block">-->
-    <!--<div class="block-news">-->
-    <!--<div class="title-block">-->
-    <!--<h4 style="text-align: center;" class="heading_title">Tin tức</h4>-->
-    <!--</div>-->
-    <!--<div class="row">-->
-    <!--<div class="col-sm-6 col-xs-12">-->
-    <!--<div class="homepage-news-img"><img class="single-img" alt="single"-->
-    <!--src="uploads/plugin/custom_img/2018-09-10/1536549900-1163389167-custom.jpg"/>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--<div class="col-sm-6 col-xs-12">-->
-    <!--<div class="row">-->
-    <!--<ul>-->
-    <!--<div class="col-md-4 col-sm-4 col-xs-6 list-item box-blogs view-list">-->
-    <!--<div class="item-blogs clearfix">-->
-    <!--<div class="rb_row_left">-->
-    <!--<span class="rb_month"> Aug </span>-->
-    <!--<span class="rb_day"> 19 </span>-->
-    <!--</div>-->
-    <!--<div class="info rb_row_right">-->
-    <!--<h2 class="title-blogs-item">-->
-    <!--<a href="he-ruc-ro-cung-chuong-trinh-qua-tang-cua-jewelry.html">Hè-->
-    <!--rực rỡ cùng chương trình quà tặng của Jewelry</a>-->
-    <!--</h2>-->
-    <!--<p class="desc-blogs">Xua tan cơn nắng nóng của ngày hè oi bức,-->
-    <!--Jewelry gửi đến các bạn trẻ quà tặng mùa hè cực chất cùng-->
-    <!--BST...</p>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--<div class="col-md-4 col-sm-4 col-xs-6 list-item box-blogs view-list">-->
-    <!--<div class="item-blogs clearfix">-->
-    <!--<div class="rb_row_left">-->
-    <!--<span class="rb_month"> Jul </span>-->
-    <!--<span class="rb_day"> 12 </span>-->
-    <!--</div>-->
-    <!--<div class="info rb_row_right">-->
-    <!--<h2 class="title-blogs-item"><a-->
-    <!--href="kinh-nghiem-chon-mua-nhn-cuoi.html">Kinh-->
-    <!--nghiệm chọn mua nhẫn cưới</a></h2>-->
-    <!--<p class="desc-blogs">Chọn nhẫn cưới là một việc vô cùng quan-->
-    <!--trọng mà hầu hết các bạn trẻ đều mất rất nhiều thời gian để-->
-    <!--lựa chọn....</p>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--<div class="col-md-4 col-sm-4 col-xs-6 list-item box-blogs view-list">-->
-    <!--<div class="item-blogs clearfix">-->
-    <!--<div class="rb_row_left">-->
-    <!--<span class="rb_month"> Jul </span>-->
-    <!--<span class="rb_day"> 12 </span>-->
-    <!--</div>-->
-    <!--<div class="info rb_row_right">-->
-    <!--<h2 class="title-blogs-item">-->
-    <!--<a href="kinh-nghiem-vang-khi-chon-nhn-va-trang-suc-cuoi-tu-chuyen-gia-tu-van.html">Kinh-->
-    <!--nghiệm vàng khi chọn nhẫn và trang sức cưới từ...</a>-->
-    <!--</h2>-->
-    <!--<p class="desc-blogs">Cô dâu chú rể không nên chọn&nbsp;nhẫn-->
-    <!--cưới&nbsp;giống y hệt nhau bởi kiểu dáng nhẫn đôi thường hạn-->
-    <!--chế. Nếu...</p>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</ul>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
 </div>
+
+
 <div id="footer" class="nh-row">
     <div id="footer-row-42" class="nh-row footer-mid">
         <div class="container">
@@ -397,7 +285,7 @@
                 <div class="col-sm-6">
                     <div class="item_block clearfix" style="">
                         <div class="menu-footer-vertical box-ft">
-                            <h4 class="title-menu-ft">FANPAGE</h4>
+                            <h4 class="title-menu-ft">Liên hệ</h4>
                             <ul class="list-fan-page">
                                 <li>
                                     <a href="https://www.facebook.com/quatangyeuthuong.198/" target="_blank">
@@ -410,11 +298,11 @@
                                     </a>
                                 </li>
 
-                                <!--<li>-->
-                                    <!--<a href="tel:+84969190880" target="_blank">-->
-                                        <!--<i class="fa fa-phone"></i>-->
-                                    <!--</a>-->
-                                <!--</li>-->
+                                <li>
+                                    <a href="tel:+84969190880" target="_blank">
+                                        <i class="fa fa-phone"></i>
+                                    </a>
+                                </li>
 
 
                             </ul>
@@ -537,32 +425,6 @@
         </div>
     </div>
 </div>
-
-<!-- Load Facebook SDK for JavaScript -->
-<div id="fb-root"></div>
-<script>
-    window.fbAsyncInit = function() {
-        FB.init({
-            xfbml            : true,
-            version          : 'v10.0'
-        });
-    };
-
-    (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
-
-<!-- Your Chat Plugin code -->
-<div class="fb-customerchat"
-     attribution="setup_tool"
-     page_id="100154255482107"
-     logged_in_greeting="Hi! DreamUp198 có thể giúp gì cho bạn?"
-     logged_out_greeting="Hi! DreamUp198 có thể giúp gì cho bạn?">
-</div>
-
 </body>
+
 </html>

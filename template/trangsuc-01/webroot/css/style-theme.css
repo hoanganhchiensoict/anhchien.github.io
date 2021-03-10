@@ -1047,6 +1047,10 @@
 .menu-footer-vertical > .list-fan-page > li > a > .fa.fa-youtube {
   background-color: #bb0000;
 }
+.menu-footer-vertical > .list-fan-page > li > a > .fa.fa-phone {
+  background-color: #1a7c00;
+  border-radius: 100%;
+}
 
 /*.fa-facebook, .fa-facebook-square { color: #3b5998; }*/
 /*.fa-twitter, .fa-twitter-square { color: #00aced; }*/
