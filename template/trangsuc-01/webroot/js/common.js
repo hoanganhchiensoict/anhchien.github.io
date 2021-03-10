@@ -99,8 +99,8 @@ var listProduct = [
         id: 106,
         name: 'Sun & Moon - Zircons (Silver-Pink, Silver-Silver, Black-Silver, Black-Pink)',
         trademark: 'TotWoo', //thương hiệu
-        price: 2100000,
-        price_sale: 2500000,
+        price: 2350000,
+        price_sale: 2650000,
         color: 'Silver-Pink, Silver-Silver, Black-Silver, Black-Pink',
         material: 'Hàng chính hãng', //chất liệu
         thumb: 'uploads/tiny_uploads/totwoo/sun-moon-silver-silver-zircons.jpg',
