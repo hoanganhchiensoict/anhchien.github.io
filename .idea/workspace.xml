@@ -2,19 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdaf1324-233c-4adb-b79d-299465f777a3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lading-105-sun-moon.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lading-page/css/lading-intro.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lading-page/css/lading-intro12.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lading-page/css/lading-intro13.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lading-page/css/lading-intro14.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lading-page/css/lading-intro15.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lading-page/css/lading-intro17.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lading-page/css/lading-intro18.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lading-page/css/lading-intro19.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lading-page/css/lading-intro7.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lading-page/css/lading-intro8.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lading-page/css/lading-intro9.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lading-105-sun-moon.html" beforeDir="false" afterPath="$PROJECT_DIR$/lading-105-sun-moon.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lading-page/css/lading-intro.css" beforeDir="false" afterPath="$PROJECT_DIR$/lading-page/css/lading-intro.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lading-page/css/lading-intro8.css" beforeDir="false" afterPath="$PROJECT_DIR$/lading-page/css/lading-intro8.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lading-page/css/lading-intro9.css" beforeDir="false" afterPath="$PROJECT_DIR$/lading-page/css/lading-intro9.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -27,42 +19,40 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lading-105-sun-moon.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="27" column="39" lean-forward="true" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
+            <state relative-caret-position="335">
+              <caret line="1756" column="22" lean-forward="true" selection-start-line="1737" selection-start-column="16" selection-end-line="1756" selection-end-column="22" />
               <folding>
                 <element signature="n#script#2;n#head#0;n#html#0;n#!!top" />
-                <element signature="n#style#0;n#span#0;n#h3#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#h3#0;n#div#0;n#div#1;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#0;n#div#4;n#div#1;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#4;n#div#1;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#2;n#div#0;n#div#4;n#div#1;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#h3#0;n#div#1;n#div#1;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#1;n#h3#0;n#div#1;n#div#1;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#svg#0;n#div#0;n#div#2;n#div#0;n#div#6;n#div#1;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#path#0;n#g#0;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#8;n#div#1;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#4;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#span#0;n#h3#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#span#0;n#h3#0;n#div#0;n#div#1;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#0;n#div#4;n#div#1;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#4;n#div#1;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#2;n#div#0;n#div#4;n#div#1;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#span#0;n#h3#0;n#div#1;n#div#1;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#h3#0;n#div#1;n#div#1;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#svg#0;n#div#0;n#div#2;n#div#0;n#div#6;n#div#1;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#path#0;n#g#0;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#8;n#div#1;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lading-page/css/lading-intro17.css">
+        <entry file="file://$PROJECT_DIR$/lading-page/css/lading-intro.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="756" lean-forward="true" selection-start-line="756" selection-end-line="756" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lading-page/css/lading-intro18.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="15" lean-forward="true" selection-end-line="3135" />
+            <state relative-caret-position="165">
+              <caret line="2263" column="24" selection-start-line="2263" selection-start-column="24" selection-end-line="2263" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -70,11 +60,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lading-page/css/lading-intro9.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="2278" lean-forward="true" selection-start-line="2278" selection-end-line="2278" />
-              <folding>
-                <element signature="e#37654#37878#2" expanded="true" />
-              </folding>
+            <state relative-caret-position="4">
+              <caret line="234" column="19" selection-start-line="234" selection-start-column="16" selection-end-line="234" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -90,36 +77,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ladi-collection</find>
-      <find>ladi-form</find>
-      <find>ladi-cart</find>
-      <find>ladi-video</find>
-      <find>ladi-group</find>
-      <find>ladi-checkout</find>
-      <find>ladi-shape</find>
-      <find>ladi-html-code</find>
-      <find>ladi-image</find>
-      <find>ladi-headline</find>
-      <find>lightbox-screen</find>
-      <find>backdrop-popup</find>
-      <find>ladi-animation-hidden</find>
-      <find>ladi-lazyload</find>
-      <find>ladi-list-paragraph</find>
-      <find>intro6</find>
-      <find>ladi-notify-transition</find>
-      <find>ladi-notify</find>
-      <find>builder-container</find>
-      <find>ladi-spin-lucky</find>
-      <find>ladi-fullwidth</find>
-      <find>BOX37</find>
-      <find>PARAGRAPH45</find>
-      <find>@media</find>
-      <find>ladichat-startpage</find>
-      <find>dataTables_wrapper</find>
-      <find>ladi-icon</find>
-      <find>icon-b-preview</find>
-      <find>ladichat-form-popup</find>
-      <find>ladichat-widget</find>
+      <find>lading-intr</find>
+      <find>media</find>
+      <find>GROUP41</find>
+      <find>GROUP40</find>
+      <find>GROUP21</find>
+      <find>#IMAGE93</find>
+      <find>.ladi-section .ladi-container</find>
+      <find>SECTION20</find>
+      <find>ladi-wraper</find>
+      <find>ladi-section</find>
+      <find>SHAPE22</find>
+      <find>GROUP30</find>
+      <find>BUTTON27</find>
+      <find>85%</find>
+      <find>GROUP63</find>
+      <find>PARAGRAPH62</find>
+      <find>GROUP69</find>
+      <find>#SECTION39</find>
+      <find>overflow: auto</find>
+      <find>SECTION39</find>
+      <find>#SECTION67</find>
+      <find>GROUP40</find>
+      <find>IMAGE93</find>
+      <find>HEADLINE100</find>
+      <find>GROUP135</find>
+      <find>PARAGRAPH138</find>
+      <find>BOX268</find>
+      <find>GROUP228</find>
+      <find>FRAME212</find>
+      <find>LIST_PARAGRAPH289</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;link rel=&quot;canonical&quot; href=&quot;dreamup198.com&quot;</replace>
@@ -164,7 +151,6 @@
         <option value="$PROJECT_DIR$/detail-300-necklet.html" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/lien-he.html" />
-        <option value="$PROJECT_DIR$/lading-page/css/lading-intro.css" />
         <option value="$PROJECT_DIR$/lading-page/css/lading-intro14.css" />
         <option value="$PROJECT_DIR$/lading-page/css/lading-intro15.css" />
         <option value="$PROJECT_DIR$/lading-page/css/lading-intro17.css" />
@@ -174,15 +160,16 @@
         <option value="$PROJECT_DIR$/lading-page/css/lading-intro4.css" />
         <option value="$PROJECT_DIR$/lading-page/css/lading-intro5.css" />
         <option value="$PROJECT_DIR$/lading-page/css/lading-intro6.css" />
-        <option value="$PROJECT_DIR$/lading-page/css/lading-intro8.css" />
         <option value="$PROJECT_DIR$/lading-page/css/lading-intro7.css" />
-        <option value="$PROJECT_DIR$/lading-page/css/lading-intro9.css" />
         <option value="$PROJECT_DIR$/lading-page/css/lading-intro11.css" />
         <option value="$PROJECT_DIR$/lading-page/css/lading-intro12.css" />
         <option value="$PROJECT_DIR$/lading-page/css/lading-intro13.css" />
         <option value="$PROJECT_DIR$/lading-page/css/lading-intro16.css" />
-        <option value="$PROJECT_DIR$/lading-105-sun-moon.html" />
         <option value="$PROJECT_DIR$/lading-page/css/lading-intro18.css" />
+        <option value="$PROJECT_DIR$/lading-page/css/lading-intro8.css" />
+        <option value="$PROJECT_DIR$/lading-page/css/lading-intro9.css" />
+        <option value="$PROJECT_DIR$/lading-page/css/lading-intro.css" />
+        <option value="$PROJECT_DIR$/lading-105-sun-moon.html" />
       </list>
     </option>
   </component>
@@ -296,18 +283,18 @@
       <workItem from="1614825545519" duration="25228000" />
       <workItem from="1615171757284" duration="13046000" />
       <workItem from="1615343141350" duration="14950000" />
-      <workItem from="1615427521190" duration="8286000" />
+      <workItem from="1615427521190" duration="16863000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="156151000" />
+    <option name="totallyTimeSpent" value="164728000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="3" y="35" width="1352" height="708" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22526637" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22526637" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -318,7 +305,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.53913045" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.9095652" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.62956524" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" />
@@ -700,16 +687,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lading-page/css/lading-intro.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lading-page/css/lading-intro19.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/lading-page/css/lading-intro1.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -728,20 +705,6 @@
     <entry file="file://$PROJECT_DIR$/lading-page/css/lading-intro6.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/lading-page/css/lading-intro8.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="29" lean-forward="true" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lading-page/css/lading-intro7.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7174">
-          <caret line="422" selection-start-line="422" selection-end-line="422" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lading-page/css/lading-intro10.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -749,16 +712,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="23" lean-forward="true" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lading-page/css/lading-intro9.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="2278" lean-forward="true" selection-start-line="2278" selection-end-line="2278" />
-          <folding>
-            <element signature="e#37654#37878#2" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -782,9 +735,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lading-page/css/lading-intro16.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="31" lean-forward="true" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lading-page/css/lading-intro18.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="15" lean-forward="true" selection-end-line="3135" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lading-page/css/lading-intro19.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/lading-page/css/lading-intro14.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
+        <state relative-caret-position="3978">
           <caret line="234" column="15" lean-forward="true" selection-start-line="234" selection-start-column="15" selection-end-line="234" selection-end-column="15" />
         </state>
       </provider>
@@ -796,44 +766,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lading-page/css/lading-intro16.css">
+    <entry file="file://$PROJECT_DIR$/lading-page/css/lading-intro17.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="31" lean-forward="true" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+        <state relative-caret-position="221">
+          <caret line="740" column="26" lean-forward="true" selection-start-line="740" selection-start-column="26" selection-end-line="740" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lading-page/css/lading-intro17.css">
+    <entry file="file://$PROJECT_DIR$/lading-page/css/lading-intro8.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="756" lean-forward="true" selection-start-line="756" selection-end-line="756" />
+        <state relative-caret-position="85">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lading-page/css/lading-intro7.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-221">
+          <caret line="14" column="15" lean-forward="true" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lading-page/css/lading-intro9.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4">
+          <caret line="234" column="19" selection-start-line="234" selection-start-column="16" selection-end-line="234" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lading-page/css/lading-intro.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="2263" column="24" selection-start-line="2263" selection-start-column="24" selection-end-line="2263" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lading-105-sun-moon.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="27" column="39" lean-forward="true" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
+        <state relative-caret-position="335">
+          <caret line="1756" column="22" lean-forward="true" selection-start-line="1737" selection-start-column="16" selection-end-line="1756" selection-end-column="22" />
           <folding>
             <element signature="n#script#2;n#head#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#span#0;n#h3#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#h3#0;n#div#0;n#div#1;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#0;n#div#4;n#div#1;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#4;n#div#1;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#2;n#div#0;n#div#4;n#div#1;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#h3#0;n#div#1;n#div#1;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#h3#0;n#div#1;n#div#1;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#svg#0;n#div#0;n#div#2;n#div#0;n#div#6;n#div#1;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#path#0;n#g#0;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#8;n#div#1;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#4;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#span#0;n#h3#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#span#0;n#h3#0;n#div#0;n#div#1;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#0;n#div#4;n#div#1;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#4;n#div#1;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#2;n#div#0;n#div#4;n#div#1;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#span#0;n#h3#0;n#div#1;n#div#1;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#h3#0;n#div#1;n#div#1;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#svg#0;n#div#0;n#div#2;n#div#0;n#div#6;n#div#1;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#path#0;n#g#0;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#8;n#div#1;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lading-page/css/lading-intro18.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="15" lean-forward="true" selection-end-line="3135" />
         </state>
       </provider>
     </entry>

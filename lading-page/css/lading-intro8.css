@@ -6,7 +6,7 @@
 
 @media (max-width:767px) {
     .ladi-section .ladi-container {
-        width: 80%;
+        width: 100%;
     }
 
     .ladi-element.ladi-auto-scroll {
