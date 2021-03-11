@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdaf1324-233c-4adb-b79d-299465f777a3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lading-page/pictures/sun-moon-105-p1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lading-page/pictures/sun-moon-p2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lading-page/pictures/sun-moon-p3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lading-page/pictures/sun-moon-p4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lading-page/pictures/sun-moon-p5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lading-page/pictures/sun-moon-p6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lading-page/pictures/sun-moon-p7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lading-page/pictures/sun-moon-p8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lading-page/pictures/sun-moon-p9.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lading-105-sun-moon.html" beforeDir="false" afterPath="$PROJECT_DIR$/lading-105-sun-moon.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lading-page/css/lading-intro.css" beforeDir="false" afterPath="$PROJECT_DIR$/lading-page/css/lading-intro.css" afterDir="false" />
@@ -27,14 +24,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lading-105-sun-moon.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="94">
-              <caret line="125" column="18" lean-forward="true" selection-start-line="125" selection-start-column="18" selection-end-line="125" selection-end-column="18" />
+            <state relative-caret-position="199">
+              <caret line="631" column="100" selection-start-line="631" selection-start-column="100" selection-end-line="631" selection-end-column="100" />
               <folding>
                 <element signature="n#script#2;n#head#0;n#html#0;n#!!top" />
                 <element signature="n#div#4;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#style#0;n#span#0;n#h3#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#style#0;n#span#0;n#h3#0;n#div#0;n#div#1;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#0;n#div#4;n#div#1;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -56,7 +52,7 @@
         <entry file="file://$PROJECT_DIR$/lading-page/css/lading-intro.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
-              <caret line="409" column="42" selection-start-line="409" selection-start-column="31" selection-end-line="409" selection-end-column="42" />
+              <caret line="831" column="61" selection-start-line="831" selection-start-column="61" selection-end-line="831" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -64,8 +60,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lading-page/css/lading-intro9.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="405" column="31" lean-forward="true" selection-start-line="405" selection-start-column="31" selection-end-line="405" selection-end-column="31" />
+            <state relative-caret-position="284">
+              <caret line="860" column="58" selection-start-line="860" selection-start-column="58" selection-end-line="860" selection-end-column="58" />
             </state>
           </provider>
         </entry>
@@ -81,8 +77,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>SECTION20</find>
-      <find>ladi-wraper</find>
       <find>ladi-section</find>
       <find>SHAPE22</find>
       <find>GROUP30</find>
@@ -96,7 +90,6 @@
       <find>SECTION39</find>
       <find>#SECTION67</find>
       <find>GROUP40</find>
-      <find>IMAGE93</find>
       <find>HEADLINE100</find>
       <find>GROUP135</find>
       <find>PARAGRAPH138</find>
@@ -111,6 +104,9 @@
       <find>../pictures</find>
       <find>BOX36</find>
       <find>HEADLINE32</find>
+      <find>IMAGE93</find>
+      <find>IMAGE94</find>
+      <find>#IMAGE94</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;link rel=&quot;canonical&quot; href=&quot;dreamup198.com&quot;</replace>
@@ -171,8 +167,8 @@
         <option value="$PROJECT_DIR$/lading-page/css/lading-intro16.css" />
         <option value="$PROJECT_DIR$/lading-page/css/lading-intro18.css" />
         <option value="$PROJECT_DIR$/lading-page/css/lading-intro8.css" />
-        <option value="$PROJECT_DIR$/lading-page/css/lading-intro.css" />
         <option value="$PROJECT_DIR$/lading-page/css/lading-intro9.css" />
+        <option value="$PROJECT_DIR$/lading-page/css/lading-intro.css" />
         <option value="$PROJECT_DIR$/lading-105-sun-moon.html" />
       </list>
     </option>
@@ -293,12 +289,12 @@
       <workItem from="1614825545519" duration="25228000" />
       <workItem from="1615171757284" duration="13046000" />
       <workItem from="1615343141350" duration="14950000" />
-      <workItem from="1615427521190" duration="20856000" />
+      <workItem from="1615427521190" duration="22353000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="168721000" />
+    <option name="totallyTimeSpent" value="170218000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="3" y="35" width="1352" height="708" extended-state="0" />
@@ -352,13 +348,6 @@
     <state x="338" y="21" width="672" height="676" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1615137705885" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/template/trangsuc-01/webroot/css/style-content.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/template/trangsuc-01/webroot/assets/css/font-awesome.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -797,30 +786,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lading-page/css/lading-intro.css">
+    <entry file="file://$PROJECT_DIR$/lading-page/css/lading-intro9.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="409" column="42" selection-start-line="409" selection-start-column="31" selection-end-line="409" selection-end-column="42" />
+        <state relative-caret-position="284">
+          <caret line="860" column="58" selection-start-line="860" selection-start-column="58" selection-end-line="860" selection-end-column="58" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lading-page/css/lading-intro9.css">
+    <entry file="file://$PROJECT_DIR$/lading-page/pictures/sun-moon-p7.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lading-page/css/lading-intro.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="405" column="31" lean-forward="true" selection-start-line="405" selection-start-column="31" selection-end-line="405" selection-end-column="31" />
+        <state relative-caret-position="165">
+          <caret line="831" column="61" selection-start-line="831" selection-start-column="61" selection-end-line="831" selection-end-column="61" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lading-105-sun-moon.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="125" column="18" lean-forward="true" selection-start-line="125" selection-start-column="18" selection-end-line="125" selection-end-column="18" />
+        <state relative-caret-position="199">
+          <caret line="631" column="100" selection-start-line="631" selection-start-column="100" selection-end-line="631" selection-end-column="100" />
           <folding>
             <element signature="n#script#2;n#head#0;n#html#0;n#!!top" />
             <element signature="n#div#4;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#span#0;n#h3#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#span#0;n#h3#0;n#div#0;n#div#1;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#0;n#div#4;n#div#1;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />

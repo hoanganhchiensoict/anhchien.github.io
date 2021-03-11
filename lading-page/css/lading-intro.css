@@ -829,14 +829,14 @@
         height: 345px;
         top: 0px;
         left: -100px;
-        background-image: url("https://w.ladicdn.com/s850x650/57b167c9ca57d39c18a1c57c/hgcxputz20200324063822.jpg");
+        background-image: url("../pictures/sun-moon-p7.jpg");
     }
     #IMAGE93 > .ladi-image {
         border-color: rgba(242, 67, 13, 0.2);
         border-width: 4px;
     }
     #IMAGE94 {
-        min-width: 200px;
+        min-width: 120px;
         height: 156px;
         top: 516px;
         left: 16px;
@@ -846,7 +846,8 @@
         height: 156px;
         top: 0px;
         left: 0px;
-        background-image: url("https://w.ladicdn.com/s550x500/57b167c9ca57d39c18a1c57c/kk69uzm320200324063849.jpg");
+        background-image: url("../pictures/sun-moon-p8.jpg");
+        background-size: contain;
     }
     #IMAGE94 > .ladi-image {
         border-color: rgba(242, 67, 13, 0.2);
@@ -855,7 +856,7 @@
     #IMAGE95 {
         height: 156px;
         top: 516px;
-        left: 232px;
+        left: 150px;
         right: 16px;
     }
     #IMAGE95 > .ladi-image > .ladi-image-background {
@@ -863,7 +864,8 @@
         height: 156px;
         top: 0px;
         left: -35px;
-        background-image: url("https://w.ladicdn.com/s550x500/57b167c9ca57d39c18a1c57c/uekvaa2j20200324063902.jpg");
+        background-image: url("../pictures/sun-moon-p9.jpg");
+        background-size: contain;
     }
     #IMAGE95 > .ladi-image {
         border-color: rgba(242, 67, 13, 0.2);
