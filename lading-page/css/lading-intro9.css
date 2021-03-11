@@ -801,6 +801,10 @@
     #SECTION91 {
         height: 615.4px;
     }
+    #SECTION91 > .ladi-section-background {
+        background-color: rgba(246, 15, 251, 0.1);
+        /*background-color: rgba(236, 244, 255, 0.5);*/
+    }
     #BOX92 {
         width: 911px;
         height: 446px;
@@ -1449,7 +1453,8 @@
         height: 636.5px;
     }
     #SECTION210 > .ladi-section-background {
-        background-color: rgba(236, 244, 255, 0.5);
+        /*background-color: rgba(246, 15, 251, 0.1);*/
+        /*background-color: rgba(236, 244, 255, 0.5);*/
     }
     #GROUP211 {
         width: 360px;
@@ -1738,7 +1743,7 @@
     #GROUP242 {
         width: 246px;
         height: 44px;
-        top: 65.025px;
+        top: 195px;
         left: 0px;
     }
     #BOX243 {
@@ -1778,7 +1783,7 @@
     #GROUP246 {
         width: 235px;
         height: 44px;
-        top: 130.049px;
+        top: 0px;
         left: 0px;
     }
     #BOX247 {
@@ -1818,7 +1823,7 @@
     #GROUP250 {
         width: 233px;
         height: 44px;
-        top: 0px;
+        top: 130px;
         left: 0px;
     }
     #BOX251 {
@@ -1858,7 +1863,7 @@
     #GROUP254 {
         width: 235px;
         height: 44px;
-        top: 195.074px;
+        top: 65px;
         left: 0px;
     }
     #BOX255 {
@@ -1986,7 +1991,7 @@
         background-size: cover;
         background-attachment: scroll;
         background-origin: content-box;
-        background-image: url("https://w.ladicdn.com/s550x700/57b167c9ca57d39c18a1c57c/k9a2vhth20200324064157.jpg");
+        background-image: url("../pictures/sun-moon-p10.jpg");
         background-position: center top;
         background-repeat: repeat;
     }
@@ -2004,7 +2009,7 @@
         background-size: cover;
         background-attachment: scroll;
         background-origin: content-box;
-        background-image: url("https://w.ladicdn.com/s400x400/57b167c9ca57d39c18a1c57c/phtu5hvb20200324064219.jpg");
+        background-image: url("../pictures/sun-moon-p12.jpg");
         background-position: left bottom;
         background-repeat: repeat;
         border-style: solid;
@@ -2025,7 +2030,7 @@
         background-size: cover;
         background-attachment: scroll;
         background-origin: content-box;
-        background-image: url("https://w.ladicdn.com/s400x400/57b167c9ca57d39c18a1c57c/yn20q4vh20200324064210.jpg");
+        background-image: url("../pictures/sun-moon-p11.png");
         background-position: center top;
         background-repeat: repeat;
         border-style: solid;
