@@ -173,7 +173,7 @@
         background-size: cover;
         background-attachment: scroll;
         background-origin: content-box;
-        background-image: url("https://w.ladicdn.com/s600x600/57b167c9ca57d39c18a1c57c/2s8r-jc720200324062742.jpg");
+        background-image: url("../pictures/sun-moon-105-p1.png");
         background-position: center top;
         background-repeat: repeat;
         border-style: solid;
@@ -196,7 +196,7 @@
         background-size: cover;
         background-attachment: scroll;
         background-origin: content-box;
-        background-image: url("https://w.ladicdn.com/s400x400/57b167c9ca57d39c18a1c57c/xo1lcyrc20200324062749.jpg");
+        background-image: url("../pictures/sun-moon-p3.png");
         background-position: center top;
         background-repeat: repeat;
     }
@@ -216,7 +216,7 @@
         background-size: cover;
         background-attachment: scroll;
         background-origin: content-box;
-        background-image: url("https://w.ladicdn.com/s450x450/57b167c9ca57d39c18a1c57c/1jiep_6720200324062801.jpg");
+        background-image: url("../pictures/sun-moon-p4.png");
         background-position: left center;
         background-repeat: repeat;
     }
@@ -253,7 +253,7 @@
         background-size: cover;
         background-attachment: scroll;
         background-origin: content-box;
-        background-image: url("https://w.ladicdn.com/s650x550/57b167c9ca57d39c18a1c57c/osjtd7ef20200324063623.jpg");
+        background-image: url("../pictures/sun-moon-p5.png");
         background-position: center top;
         background-repeat: repeat;
     }
@@ -387,7 +387,7 @@
         background-size: cover;
         background-attachment: scroll;
         background-origin: content-box;
-        background-image: url("https://w.ladicdn.com/s650x550/57b167c9ca57d39c18a1c57c/tqp7jrmm20200324063643.jpg");
+        background-image: url("../pictures/sun-moon-p6.png");
         background-position: center top;
         background-repeat: repeat;
     }
@@ -407,7 +407,7 @@
         background-size: cover;
         background-attachment: scroll;
         background-origin: content-box;
-        background-image: url("https://w.ladicdn.com/s650x550/57b167c9ca57d39c18a1c57c/ydegbkh720200324063656.jpg");
+        background-image: url("../pictures/color.png");
         background-position: center top;
         background-repeat: repeat;
     }
@@ -1739,11 +1739,16 @@
         line-height: 1.6;
     }
     #GROUP241 {
-        width: 687.5px;
+        width: 100%;
         height: 105px;
         top: 629.887px;
         left: 4.828px;
     }
+
+    #GROUP241 .ladi-group {
+        overflow-x: auto;
+    }
+
     #GROUP242 {
         width: 148px;
         height: 105px;

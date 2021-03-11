@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdaf1324-233c-4adb-b79d-299465f777a3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/lading-page/pictures/sun-moon-105-p1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lading-page/pictures/sun-moon-p2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lading-page/pictures/sun-moon-p3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lading-page/pictures/sun-moon-p4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lading-page/pictures/sun-moon-p5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lading-page/pictures/sun-moon-p6.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lading-105-sun-moon.html" beforeDir="false" afterPath="$PROJECT_DIR$/lading-105-sun-moon.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lading-page/css/lading-intro.css" beforeDir="false" afterPath="$PROJECT_DIR$/lading-page/css/lading-intro.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lading-page/css/lading-intro8.css" beforeDir="false" afterPath="$PROJECT_DIR$/lading-page/css/lading-intro8.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lading-page/css/lading-intro9.css" beforeDir="false" afterPath="$PROJECT_DIR$/lading-page/css/lading-intro9.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -22,12 +27,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lading-105-sun-moon.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="1756" column="22" lean-forward="true" selection-start-line="1737" selection-start-column="16" selection-end-line="1756" selection-end-column="22" />
+            <state relative-caret-position="94">
+              <caret line="125" column="18" lean-forward="true" selection-start-line="125" selection-start-column="18" selection-end-line="125" selection-end-column="18" />
               <folding>
                 <element signature="n#script#2;n#head#0;n#html#0;n#!!top" />
                 <element signature="n#div#4;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#style#0;n#span#0;n#h3#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
@@ -52,7 +56,7 @@
         <entry file="file://$PROJECT_DIR$/lading-page/css/lading-intro.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
-              <caret line="2263" column="24" selection-start-line="2263" selection-start-column="24" selection-end-line="2263" selection-end-column="24" />
+              <caret line="409" column="42" selection-start-line="409" selection-start-column="31" selection-end-line="409" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -60,8 +64,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lading-page/css/lading-intro9.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4">
-              <caret line="234" column="19" selection-start-line="234" selection-start-column="16" selection-end-line="234" selection-end-column="19" />
+            <state relative-caret-position="148">
+              <caret line="405" column="31" lean-forward="true" selection-start-line="405" selection-start-column="31" selection-end-line="405" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -77,13 +81,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>lading-intr</find>
-      <find>media</find>
-      <find>GROUP41</find>
-      <find>GROUP40</find>
-      <find>GROUP21</find>
-      <find>#IMAGE93</find>
-      <find>.ladi-section .ladi-container</find>
       <find>SECTION20</find>
       <find>ladi-wraper</find>
       <find>ladi-section</find>
@@ -107,6 +104,13 @@
       <find>GROUP228</find>
       <find>FRAME212</find>
       <find>LIST_PARAGRAPH289</find>
+      <find>GROUP241</find>
+      <find>FRAME279</find>
+      <find>s600x600/57b167c…/2s8r-jc720200324</find>
+      <find>PARAGRAPH51</find>
+      <find>../pictures</find>
+      <find>BOX36</find>
+      <find>HEADLINE32</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;link rel=&quot;canonical&quot; href=&quot;dreamup198.com&quot;</replace>
@@ -167,8 +171,8 @@
         <option value="$PROJECT_DIR$/lading-page/css/lading-intro16.css" />
         <option value="$PROJECT_DIR$/lading-page/css/lading-intro18.css" />
         <option value="$PROJECT_DIR$/lading-page/css/lading-intro8.css" />
-        <option value="$PROJECT_DIR$/lading-page/css/lading-intro9.css" />
         <option value="$PROJECT_DIR$/lading-page/css/lading-intro.css" />
+        <option value="$PROJECT_DIR$/lading-page/css/lading-intro9.css" />
         <option value="$PROJECT_DIR$/lading-105-sun-moon.html" />
       </list>
     </option>
@@ -207,6 +211,12 @@
             <path>
               <item name="demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="lading-page" type="462c0819:PsiDirectoryNode" />
+              <item name="pictures" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
               <item name="template" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -240,11 +250,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\ProjectCc\Web\trangsuc-01.web4s.vn\demo\lading-page\pictures" />
       <recent name="F:\ProjectCc\Web\trangsuc-01.web4s.vn\demo\lading-page\css" />
       <recent name="F:\ProjectCc\Web\trangsuc-01.web4s.vn\demo" />
       <recent name="F:\ProjectCc\Web\trangsuc-01.web4s.vn\demo\uploads\tiny_uploads" />
       <recent name="C:\Dev\Projects\anhchien.github.io\lading-page\css" />
-      <recent name="C:\Dev\Projects\anhchien.github.io" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Dev\Projects\anhchien.github.io\uploads\tiny_uploads" />
@@ -283,18 +293,18 @@
       <workItem from="1614825545519" duration="25228000" />
       <workItem from="1615171757284" duration="13046000" />
       <workItem from="1615343141350" duration="14950000" />
-      <workItem from="1615427521190" duration="16863000" />
+      <workItem from="1615427521190" duration="20856000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="164728000" />
+    <option name="totallyTimeSpent" value="168721000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="3" y="35" width="1352" height="708" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22526637" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22526637" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -342,9 +352,6 @@
     <state x="338" y="21" width="672" height="676" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1615137705885" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/CNAME">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/template/trangsuc-01/webroot/css/style-content.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -780,35 +787,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lading-page/pictures/sun-moon-p6.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/lading-page/css/lading-intro7.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-221">
+        <state relative-caret-position="17">
           <caret line="14" column="15" lean-forward="true" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lading-page/css/lading-intro9.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4">
-          <caret line="234" column="19" selection-start-line="234" selection-start-column="16" selection-end-line="234" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lading-page/css/lading-intro.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
-          <caret line="2263" column="24" selection-start-line="2263" selection-start-column="24" selection-end-line="2263" selection-end-column="24" />
+          <caret line="409" column="42" selection-start-line="409" selection-start-column="31" selection-end-line="409" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lading-page/css/lading-intro9.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="405" column="31" lean-forward="true" selection-start-line="405" selection-start-column="31" selection-end-line="405" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lading-105-sun-moon.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="1756" column="22" lean-forward="true" selection-start-line="1737" selection-start-column="16" selection-end-line="1756" selection-end-column="22" />
+        <state relative-caret-position="94">
+          <caret line="125" column="18" lean-forward="true" selection-start-line="125" selection-start-column="18" selection-end-line="125" selection-end-column="18" />
           <folding>
             <element signature="n#script#2;n#head#0;n#html#0;n#!!top" />
             <element signature="n#div#4;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#span#0;n#h3#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
