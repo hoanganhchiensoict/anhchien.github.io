@@ -1002,7 +1002,7 @@
     }
     #HEADLINE108 {
         width: 205px;
-        top: 196px;
+        top: 200px;
         left: 45px;
     }
     #HEADLINE108 > .ladi-headline {
@@ -1029,16 +1029,16 @@
     }
     #IMAGE110 {
         width: 302px;
-        height: 180px;
+        height: 202px;
         top: 0px;
         left: 1px;
     }
     #IMAGE110 > .ladi-image > .ladi-image-background {
         width: 303px;
-        height: 377.5px;
-        top: -110px;
+        height: 302px;
+        top: -50px;
         left: 0px;
-        background-image: url("https://w.ladicdn.com/s650x700/57b167c9ca57d39c18a1c57c/ae6nfxi-20200324064020.jpg");
+        background-image: url("../../uploads/tiny_uploads/totwoo/sun-moon-black-pink.jpg");
     }
     #GROUP111 {
         width: 225px;
@@ -1086,7 +1086,7 @@
     }
     #HEADLINE116 {
         width: 205px;
-        top: 196px;
+        top: 202px;
         left: 45px;
     }
     #HEADLINE116 > .ladi-headline {
@@ -1113,16 +1113,16 @@
     }
     #IMAGE118 {
         width: 303px;
-        height: 180px;
+        height: 202px;
         top: 0px;
         left: 0px;
     }
     #IMAGE118 > .ladi-image > .ladi-image-background {
         width: 303px;
-        height: 201.333px;
-        top: -21.333px;
+        height: 303px;
+        top: -50px;
         left: 0px;
-        background-image: url("https://w.ladicdn.com/s650x550/57b167c9ca57d39c18a1c57c/ywy0qkye20200324064050.jpg");
+        background-image: url("../../uploads/tiny_uploads/totwoo/sun-moon-black-pink-zircons-metal-chain.jpg");
     }
     #GROUP119 {
         width: 225px;
@@ -1164,19 +1164,22 @@
         left: 0px;
     }
     #BOX123 > .ladi-box {
-        background: rgba(246, 16, 251, 1.0);
-        background: -webkit-linear-gradient(269deg, rgba(246, 16, 251, 1.0), rgba(35, 86, 218, 1.0));
-        background: linear-gradient(269deg, rgba(246, 16, 251, 1.0), rgba(35, 86, 218, 1.0));
+        /*background: rgba(246, 16, 251, 1.0);*/
+        /*background: -webkit-linear-gradient(269deg, rgba(246, 16, 251, 1.0), rgba(35, 86, 218, 1.0));*/
+        /*background: linear-gradient(269deg, rgba(246, 16, 251, 1.0), rgba(35, 86, 218, 1.0));*/
+        /*box-shadow: 0px 3px 9px 0px rgba(31,31,31,0.16);*/
+        /*-webkit-box-shadow: 0px 3px 9px 0px rgba(31,31,31,0.16);*/
         box-shadow: 0px 3px 9px 0px rgba(31,31,31,0.16);
         -webkit-box-shadow: 0px 3px 9px 0px rgba(31,31,31,0.16);
+        background-color: rgb(255, 255, 255);
     }
     #HEADLINE124 {
         width: 205px;
-        top: 195px;
+        top: 200px;
         left: 50px;
     }
     #HEADLINE124 > .ladi-headline {
-        color: rgb(255, 255, 255);
+        color: rgb(35, 86, 218);
         font-size: 18px;
         font-weight: bold;
         text-align: center;
@@ -1199,16 +1202,16 @@
     }
     #IMAGE126 {
         width: 303px;
-        height: 180px;
+        height: 202px;
         top: 0px;
         left: 0px;
     }
     #IMAGE126 > .ladi-image > .ladi-image-background {
         width: 303px;
-        height: 201.334px;
-        top: -18px;
+        height: 303px;
+        top: -50px;
         left: 0px;
-        background-image: url("https://w.ladicdn.com/s650x550/57b167c9ca57d39c18a1c57c/1dyhov7q20200324064029.jpg");
+        background-image: url("../../uploads/tiny_uploads/totwoo/sun-moon-black-silver-zircons.jpg");
     }
     #GROUP127 {
         width: 225px;
@@ -1222,7 +1225,7 @@
         left: 73px;
     }
     #PARAGRAPH128 > .ladi-paragraph {
-        color: rgb(234, 242, 255);
+        color: rgb(242, 67, 13);
         font-size: 14px;
         text-align: right;
         line-height: 2;
@@ -1233,7 +1236,7 @@
         left: 0px;
     }
     #PARAGRAPH129 > .ladi-paragraph {
-        color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
         font-size: 14px;
         line-height: 2;
     }
@@ -1576,12 +1579,16 @@
         border-radius: 0px;
     }
     #BUTTON_TEXT218 {
-        top: 9px;
-        left: 0px;
-        right: 0px;
+        background-color: black;
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
     }
     #BUTTON_TEXT218 > .ladi-headline {
-        color: rgb(255, 255, 255);
+        color: rgb(0,0,0);
         font-size: 14px;
         font-weight: bold;
         text-align: center;
@@ -2137,7 +2144,8 @@
         line-height: 1.2;
     }
     #SECTION278 {
-        height: 929.78px;
+        /*height: 929.78px;*/
+        height: 300px;
     }
     #SECTION278 > .ladi-overlay {
         background-color: rgba(7, 58, 145, 0.7);
