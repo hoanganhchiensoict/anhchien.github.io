@@ -45,7 +45,7 @@
     #GROUP25 {
         width: 85%;
         height: 123px;
-        top: 628px;
+        top: 600px;
         left: 27px;
         right: 27px;
     }
@@ -84,6 +84,51 @@
         text-align: center;
         line-height: 1.6;
     }
+
+    #BUTTON28 {
+        width: 175px;
+        height: 40px;
+        top: 750px;
+        left: 100px;
+        right: 100px;
+    }
+    #BUTTON28 > .ladi-button > .ladi-button-background {
+        background-color: rgb(154, 60, 245);
+    }
+    #BUTTON28 > .ladi-button {
+        border-radius: 1000px;
+    }
+    #BUTTON_TEXT28 {
+        width: 173px;
+        top: 9px;
+        left: 0px;
+    }
+    #BUTTON_TEXT28 > .ladi-headline {
+        color: rgb(255, 255, 255);
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 1.6;
+    }
+
+    .video-wrapper {
+        position: relative;
+        padding-bottom: 56.25%;
+        padding-top: 0px;
+        height: 0;
+        overflow: hidden;
+    }
+
+    .video-wrapper iframe,
+    .video-wrapper object,
+    .video-wrapper embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
     #IMAGE29 {
         width: 130.145px;
         height: 37.9587px;
@@ -221,7 +266,7 @@
         background-repeat: repeat;
     }
     #SECTION39 {
-        height: 881.5px;
+        height: 830px;
     }
     #SECTION39 > .ladi-section-background {
         background-color: rgba(217, 235, 255, 0.2);
@@ -229,7 +274,7 @@
     #GROUP40 {
         width: 100%;
         height: 498px;
-        top: 332px;
+        top: 230px;
         left: 16.9165px;
     }
 
@@ -480,7 +525,7 @@
     }
     #GROUP63 {
         height: 95px;
-        top: 19px;
+        top: 43px;
         left: 5px;
         right: 5px;
     }
