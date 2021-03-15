@@ -48,7 +48,6 @@
         left: 27px;
         right: 27px;
         min-height: 150px;
-        background-color: red;
     }
     #PARAGRAPH26 {
         width: 100%;
@@ -121,6 +120,7 @@
         overflow: hidden;
         top: 0px;
         left: 0px;
+        background-color: green;
     }
 
     .video-wrapper iframe,

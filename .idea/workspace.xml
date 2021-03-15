@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdaf1324-233c-4adb-b79d-299465f777a3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lading-page/css/lading-intro.css" beforeDir="false" afterPath="$PROJECT_DIR$/lading-page/css/lading-intro.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -40,8 +41,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lading-page/css/lading-intro.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="122" column="18" selection-start-line="122" selection-start-column="18" selection-end-line="122" selection-end-column="18" />
+            <state relative-caret-position="44">
+              <caret line="122" column="32" selection-start-line="122" selection-start-column="32" selection-end-line="122" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -81,12 +82,12 @@
       <find>100.</find>
       <find>#IMAGE134</find>
       <find>video</find>
-      <find>video-wrapper</find>
       <find>#GROUP25</find>
       <find>vi</find>
       <find>GROUP25</find>
       <find>/pictures/sun-moon-p3.png</find>
       <find>lor: red;</find>
+      <find>video-wrapper</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;link rel=&quot;canonical&quot; href=&quot;dreamup198.com&quot;</replace>
@@ -273,12 +274,12 @@
       <workItem from="1615427521190" duration="26842000" />
       <workItem from="1615516318705" duration="5995000" />
       <workItem from="1615611955909" duration="5302000" />
-      <workItem from="1615799271396" duration="6503000" />
+      <workItem from="1615799271396" duration="6586000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="192507000" />
+    <option name="totallyTimeSpent" value="192590000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="3" y="35" width="1352" height="708" extended-state="0" />
@@ -296,7 +297,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.9095652" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.62956524" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.62956524" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -742,8 +743,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lading-page/css/lading-intro.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="122" column="18" selection-start-line="122" selection-start-column="18" selection-end-line="122" selection-end-column="18" />
+        <state relative-caret-position="44">
+          <caret line="122" column="32" selection-start-line="122" selection-start-column="32" selection-end-line="122" selection-end-column="32" />
         </state>
       </provider>
     </entry>
