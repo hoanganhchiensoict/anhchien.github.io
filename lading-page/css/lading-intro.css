@@ -47,6 +47,8 @@
         top: 600px;
         left: 27px;
         right: 27px;
+        min-height: 150px;
+        background-color: red;
     }
     #PARAGRAPH26 {
         width: 100%;
@@ -1944,7 +1946,6 @@
         height: 105px;
         top: 0px;
         left: 377.667px;
-        background-color: red;
     }
     #BOX251 {
         width: 31.25px;

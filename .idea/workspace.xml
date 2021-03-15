@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdaf1324-233c-4adb-b79d-299465f777a3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/lading-105-sun-moon.html" beforeDir="false" afterPath="$PROJECT_DIR$/lading-105-sun-moon.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lading-page/css/lading-intro.css" beforeDir="false" afterPath="$PROJECT_DIR$/lading-page/css/lading-intro.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -18,8 +19,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lading-105-sun-moon.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="105" column="48" selection-start-line="105" selection-start-column="48" selection-end-line="105" selection-end-column="48" />
+            <state relative-caret-position="247">
+              <caret line="111" column="30" selection-start-line="111" selection-start-column="30" selection-end-line="115" selection-end-column="30" />
               <folding>
                 <element signature="n#script#2;n#head#0;n#html#0;n#!!top" />
                 <element signature="n#svg#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
@@ -40,17 +41,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lading-page/css/lading-intro.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="1946" column="30" selection-start-line="1946" selection-start-column="30" selection-end-line="1946" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lading-page/css/lading-intro9.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="250" column="58" selection-start-line="250" selection-start-column="58" selection-end-line="250" selection-end-column="58" />
+            <state relative-caret-position="179">
+              <caret line="49" column="22" selection-start-line="49" selection-start-column="22" selection-end-line="49" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -66,8 +58,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>COUNTDOWN230</find>
-      <find>BUTTON103</find>
       <find>BUTTON104</find>
       <find>href=&quot;#</find>
       <find>IMAGE134</find>
@@ -90,12 +80,14 @@
       <find>PARAGRAPH240</find>
       <find>PARAGRAPH241</find>
       <find>100.</find>
-      <find>/pictures/sun-moon-p3.png</find>
       <find>#IMAGE134</find>
       <find>video</find>
       <find>video-wrapper</find>
       <find>#GROUP25</find>
       <find>vi</find>
+      <find>GROUP25</find>
+      <find>/pictures/sun-moon-p3.png</find>
+      <find>lor: red;</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;link rel=&quot;canonical&quot; href=&quot;dreamup198.com&quot;</replace>
@@ -157,8 +149,8 @@
         <option value="$PROJECT_DIR$/lading-page/css/lading-intro16.css" />
         <option value="$PROJECT_DIR$/lading-page/css/lading-intro18.css" />
         <option value="$PROJECT_DIR$/lading-page/css/lading-intro8.css" />
-        <option value="$PROJECT_DIR$/lading-105-sun-moon.html" />
         <option value="$PROJECT_DIR$/lading-page/css/lading-intro9.css" />
+        <option value="$PROJECT_DIR$/lading-105-sun-moon.html" />
         <option value="$PROJECT_DIR$/lading-page/css/lading-intro.css" />
       </list>
     </option>
@@ -282,12 +274,12 @@
       <workItem from="1615427521190" duration="26842000" />
       <workItem from="1615516318705" duration="5995000" />
       <workItem from="1615611955909" duration="5302000" />
-      <workItem from="1615799271396" duration="6244000" />
+      <workItem from="1615799271396" duration="6376000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="192248000" />
+    <option name="totallyTimeSpent" value="192380000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="3" y="35" width="1352" height="708" extended-state="0" />
@@ -722,17 +714,10 @@
     <entry file="file://$PROJECT_DIR$/lading-page/pictures/sun-moon-p0.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/lading-page/css/lading-intro9.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="250" column="58" selection-start-line="250" selection-start-column="58" selection-end-line="250" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lading-105-sun-moon.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="105" column="48" selection-start-line="105" selection-start-column="48" selection-end-line="105" selection-end-column="48" />
+        <state relative-caret-position="247">
+          <caret line="111" column="30" selection-start-line="111" selection-start-column="30" selection-end-line="115" selection-end-column="30" />
           <folding>
             <element signature="n#script#2;n#head#0;n#html#0;n#!!top" />
             <element signature="n#svg#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
@@ -749,10 +734,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lading-page/css/lading-intro9.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="249" column="39" lean-forward="true" selection-start-line="249" selection-start-column="39" selection-end-line="249" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lading-page/css/lading-intro.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="1946" column="30" selection-start-line="1946" selection-start-column="30" selection-end-line="1946" selection-end-column="30" />
+        <state relative-caret-position="179">
+          <caret line="49" column="22" selection-start-line="49" selection-start-column="22" selection-end-line="49" selection-end-column="22" />
         </state>
       </provider>
     </entry>
