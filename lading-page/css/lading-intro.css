@@ -241,7 +241,7 @@
         background-size: cover;
         background-attachment: scroll;
         background-origin: content-box;
-        background-image: url("../pictures/sun-moon-p3.png");
+        background-image: url("../pictures/sun-moon-p4.png");
         background-position: center top;
         background-repeat: repeat;
     }
@@ -261,7 +261,7 @@
         background-size: cover;
         background-attachment: scroll;
         background-origin: content-box;
-        background-image: url("../pictures/sun-moon-p4.png");
+        background-image: url("../pictures/sun-moon-p0.jpg");
         background-position: left center;
         background-repeat: repeat;
     }
@@ -851,6 +851,11 @@
     #SECTION91 {
         height: 695.91px;
     }
+    #SECTION91 > .ladi-section-background {
+        background-color: rgba(246, 15, 251, 0.1);
+        /*background-color: rgba(236, 244, 255, 0.5);*/
+    }
+
     #BOX92 {
         height: 314.829px;
         top: 307px;
@@ -1018,6 +1023,36 @@
         text-align: center;
         line-height: 1.6;
     }
+
+    #BUTTON104 {
+        width: 189.655px;
+        height: 40px;
+        top: 680px;
+        left: 100px;
+        right: 100px;
+    }
+    #BUTTON104 > .ladi-button > .ladi-button-background {
+        background-color: rgb(154, 60, 245);
+    }
+    #BUTTON104 > .ladi-button {
+        border-radius: 103px;
+        border-color: rgb(255, 94, 47);
+        border-width: 1px;
+    }
+    #BUTTON_TEXT104 {
+        width: 189px;
+        top: 9px;
+        left: 0px;
+    }
+    #BUTTON_TEXT104 > .ladi-headline {
+        color: rgb(255, 255, 255);
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 1.6;
+    }
+
+
     #GROUP105 {
         width: 100%;
         height: 387px;
@@ -1324,17 +1359,19 @@
         line-height: 1.6;
     }
     #IMAGE134 {
-        width: 400px;
+        width: 100%;
         height: 334.255px;
         top: 10px;
         left: 10px;
     }
     #IMAGE134 > .ladi-image > .ladi-image-background {
-        width: 575.525px;
+        /*width: 100%;*/
         height: 383.533px;
-        top: -49.2785px;
-        left: 0px;
-        background-image: url("https://w.ladicdn.com/s900x700/57b167c9ca57d39c18a1c57c/wp3xf1yj20200324064107.jpg");
+        /*top: -49.2785px;*/
+        left: 10px;
+        right: 10px;
+        background-image: url("../../lading-page/pictures/sun-moon-105-p1.png");
+        background-size: auto;
     }
     #GROUP135 {
         width: 42%;
@@ -1674,10 +1711,11 @@
         line-height: 1.6;
     }
     #GROUP225 {
-        width: 408.344px;
+        /*width: 408.344px;*/
         height: 83.344px;
         top: 0px;
         left: 0px;
+        right: 0px;
     }
     #PARAGRAPH226 {
         top: 11.344px;
@@ -1700,10 +1738,11 @@
         fill: rgba(13, 98, 242, 0.3);
     }
     #GROUP228 {
-        width: 212px;
+        /*width: 212px;*/
         height: 83.969px;
-        top: 770.89px;
-        left: 192px;
+        top: 550px;
+        left: 10px;
+        right: 0px;
     }
     #GROUP229 {
         width: 212px;
@@ -1712,7 +1751,7 @@
         left: 0px;
     }
     #COUNTDOWN230 {
-        width: 191.501px;
+        width: 220px;
         height: 39.2647px;
         top: 24.0165px;
         left: 10.1402px;
@@ -1724,7 +1763,7 @@
         text-align: center;
     }
     #COUNTDOWN230 > .ladi-countdown > .ladi-element {
-        width: calc((100% - 10px * 3) / 4);
+        width: calc((100% - 10px * 4) / 5);
         margin-right: 10px;
         height: 100%;
     }
@@ -1746,7 +1785,7 @@
         width: 193.977px;
         height: 19px;
         top: 64.969px;
-        left: 8.543px;
+        left: 20px;
     }
     #PARAGRAPH237 {
         width: 44px;
@@ -1792,6 +1831,19 @@
         text-align: center;
         line-height: 1.6;
     }
+
+    #PARAGRAPH241 {
+        width: 100px;
+        top: 20px;
+        left: 230px;
+    }
+    #PARAGRAPH241 > .ladi-paragraph {
+        color: rgb(5, 30, 77);
+        font-size: 18px;
+        text-align: center;
+        line-height: 1.6;
+    }
+
     #GROUP241 {
         width: 100%;
         height: 105px;

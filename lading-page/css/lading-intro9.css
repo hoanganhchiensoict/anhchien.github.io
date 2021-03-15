@@ -88,6 +88,34 @@
         text-align: center;
         line-height: 1.6;
     }
+
+    #BUTTON28 {
+        width: 175px;
+        height: 40px;
+        top: 830px;
+        left: 380px;
+        right: 100px;
+    }
+    #BUTTON28 > .ladi-button > .ladi-button-background {
+        background-color: rgb(154, 60, 245);
+    }
+    #BUTTON28 > .ladi-button {
+        border-radius: 1000px;
+    }
+    #BUTTON_TEXT28 {
+        width: 173px;
+        top: 9px;
+        left: 0px;
+    }
+    #BUTTON_TEXT28 > .ladi-headline {
+        color: rgb(255, 255, 255);
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 1.6;
+    }
+
+
     #IMAGE29 {
         width: 130.145px;
         height: 37.9587px;
@@ -200,7 +228,7 @@
         background-size: cover;
         background-attachment: scroll;
         background-origin: content-box;
-        background-image: url("../pictures/sun-moon-p3.png");
+        background-image: url("../pictures/sun-moon-p4.png");
         background-position: center top;
         background-repeat: repeat;
     }
@@ -220,12 +248,12 @@
         background-size: cover;
         background-attachment: scroll;
         background-origin: content-box;
-        background-image: url("../pictures/sun-moon-p4.png");
+        background-image: url("../pictures/sun-moon-p0.jpg");
         background-position: left center;
         background-repeat: repeat;
     }
     #SECTION39 {
-        height: 877.47px;
+        height: 940px;
     }
     #SECTION39 > .ladi-section-background {
         background-color: rgba(217, 235, 255, 0.2);
@@ -970,6 +998,34 @@
         text-align: center;
         line-height: 1.6;
     }
+
+    #BUTTON104 {
+        width: 189.655px;
+        height: 40px;
+        top: 325px;
+        left: 480px;
+    }
+    #BUTTON104 > .ladi-button > .ladi-button-background {
+        background-color: rgb(154, 60, 245);
+    }
+    #BUTTON104 > .ladi-button {
+        border-radius: 103px;
+        border-color: rgb(255, 94, 47);
+        border-width: 1px;
+    }
+    #BUTTON_TEXT104 {
+        width: 189px;
+        top: 9px;
+        left: 0px;
+    }
+    #BUTTON_TEXT104 > .ladi-headline {
+        color: rgb(255, 255, 255);
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 1.6;
+    }
+
     #GROUP105 {
         width: 961px;
         height: 387px;
@@ -1281,9 +1337,10 @@
     #IMAGE134 > .ladi-image > .ladi-image-background {
         width: 420.333px;
         height: 630.5px;
-        top: -135px;
+        top: 0px;
         left: 0px;
-        background-image: url("https://w.ladicdn.com/s750x950/57b167c9ca57d39c18a1c57c/wp3xf1yj20200324064107.jpg");
+        background-image: url("../../lading-page/pictures/sun-moon-105-p1.png");
+        background-size: auto;
     }
     #GROUP135 {
         width: 232.5px;
@@ -1654,10 +1711,11 @@
         fill: rgba(13, 98, 242, 0.3);
     }
     #GROUP228 {
-        width: 212px;
+        /*width: 212px;*/
         height: 83.969px;
-        top: 495.531px;
-        left: 733px;
+        top: 200px;
+        left: 480px;
+        right: 0px;
     }
     #GROUP229 {
         width: 212px;
@@ -1666,10 +1724,11 @@
         left: 0px;
     }
     #COUNTDOWN230 {
-        width: 191.501px;
+        width: 220px;
         height: 39.2647px;
         top: 24.0165px;
         left: 10.1402px;
+        /*right: 10px;*/
     }
     #COUNTDOWN230 > .ladi-countdown {
         color: rgb(5, 30, 77);
@@ -1678,7 +1737,7 @@
         text-align: center;
     }
     #COUNTDOWN230 > .ladi-countdown > .ladi-element {
-        width: calc((100% - 10px * 3) / 4);
+        width: calc((100% - 10px * 4) / 5);
         margin-right: 10px;
         height: 100%;
     }
@@ -1700,7 +1759,7 @@
         width: 193.977px;
         height: 19px;
         top: 64.969px;
-        left: 8.543px;
+        left: 25px;
     }
     #PARAGRAPH237 {
         width: 44px;
@@ -1746,6 +1805,19 @@
         text-align: center;
         line-height: 1.6;
     }
+
+    #PARAGRAPH241 {
+        width: 100px;
+        top: 20px;
+        left: 275px;
+    }
+    #PARAGRAPH241 > .ladi-paragraph {
+        color: rgb(5, 30, 77);
+        font-size: 18px;
+        text-align: center;
+        line-height: 1.6;
+    }
+
     #GROUP241 {
         width: 246px;
         height: 239.074px;
@@ -1784,7 +1856,7 @@
     }
     #PARAGRAPH245 {
         width: 202px;
-        top: 0px;
+        top: 11px;
         left: 44px;
     }
     #PARAGRAPH245 > .ladi-paragraph {
@@ -1824,7 +1896,7 @@
     }
     #PARAGRAPH249 {
         width: 191px;
-        top: 0px;
+        top: 11px;
         left: 44px;
     }
     #PARAGRAPH249 > .ladi-paragraph {
@@ -1864,7 +1936,7 @@
     }
     #PARAGRAPH253 {
         width: 189px;
-        top: 0px;
+        top: 11px;
         left: 44px;
     }
     #PARAGRAPH253 > .ladi-paragraph {
@@ -1904,7 +1976,7 @@
     }
     #PARAGRAPH257 {
         width: 191px;
-        top: 0px;
+        top: 11px;
         left: 44px;
     }
     #PARAGRAPH257 > .ladi-paragraph {
