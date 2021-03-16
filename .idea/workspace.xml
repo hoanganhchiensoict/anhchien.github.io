@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdaf1324-233c-4adb-b79d-299465f777a3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lien-he.html" beforeDir="false" afterPath="$PROJECT_DIR$/lien-he.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/trangsuc-01/webroot/assets/css/mightyslider/animate.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/trangsuc-01/webroot/assets/css/mightyslider/mightyslider.animate.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/trangsuc-01/webroot/assets/css/mightyslider/mightyslider.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/trangsuc-01/webroot/assets/css/mightyslider/slider_skins/fullscreen/arrows_horizontal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/trangsuc-01/webroot/assets/css/mightyslider/slider_skins/fullscreen/arrows_vertical.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/trangsuc-01/webroot/assets/css/mightyslider/slider_skins/fullscreen/icon-play.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/trangsuc-01/webroot/assets/css/mightyslider/slider_skins/fullscreen/loader.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/trangsuc-01/webroot/assets/css/mightyslider/slider_skins/fullscreen/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/trangsuc-01/webroot/assets/css/mightyslider/slider_skins/modern/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/trangsuc-01/webroot/assets/css/mightyslider/slider_skins/paper/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/trangsuc-01/webroot/assets/css/mightyslider/slider_skins/windows8/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/trangsuc-01/webroot/css/css_custom_main.css" beforeDir="false" afterPath="$PROJECT_DIR$/template/trangsuc-01/webroot/css/css_custom_main.css" afterDir="false" />
-    </list>
+    <list default="true" id="cdaf1324-233c-4adb-b79d-299465f777a3" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -32,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="30" column="92" selection-start-line="30" selection-start-column="92" selection-end-line="30" selection-end-column="92" />
+            <state relative-caret-position="131">
+              <caret line="31" column="88" selection-start-line="31" selection-start-column="88" selection-end-line="31" selection-end-column="88" />
               <folding>
                 <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -284,18 +268,18 @@
       <workItem from="1615516318705" duration="5995000" />
       <workItem from="1615611955909" duration="5302000" />
       <workItem from="1615799271396" duration="7359000" />
-      <workItem from="1615878090666" duration="4486000" />
+      <workItem from="1615878090666" duration="4572000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="197849000" />
+    <option name="totallyTimeSpent" value="197935000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="3" y="35" width="1352" height="708" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22526637" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22526637" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -727,8 +711,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="30" column="92" selection-start-line="30" selection-start-column="92" selection-end-line="30" selection-end-column="92" />
+        <state relative-caret-position="131">
+          <caret line="31" column="88" selection-start-line="31" selection-start-column="88" selection-end-line="31" selection-end-column="88" />
           <folding>
             <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
