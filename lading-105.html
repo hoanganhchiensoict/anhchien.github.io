@@ -31,7 +31,9 @@
     <link rel="stylesheet" type="text/css" href="template/trangsuc-01/webroot/assets/css/fonts_vnsitecss.css"/>
     <link rel="stylesheet" type="text/css" href="lading-page/css/lading-105-mobile.css"/>
 
-    <!--<link rel="stylesheet" type="text/css" href="template/trangsuc-01/webroot/assets/css/fonts_vnsitecss.css"/>-->
+    <script type="text/javascript" src="template/trangsuc-01/webroot/assets/js/jquery.2.1.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="libs/slick/slick.css"/>
+    <script src="libs/slick/slick.min.js"></script>
 
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-analytics.js"></script>
@@ -64,9 +66,34 @@
 
         <div id="wrapper_carousel">
             <div id="cc-wrapper-carousel">
+                <div class="wrapper-carousel">
+                    <div class="item-carousel" id="item1">
+                        <iframe src="https://www.youtube.com/embed/O6IW5Ej6seg" height="100%"
+                                width="100%" allowfullscreen="" frameborder="0">
+                        </iframe>
+                    </div>
 
+                    <div class="item-carousel" id="item2">
+
+                    </div>
+
+                    <div class="item-carousel" id="item3">
+
+                    </div>
+                </div>
             </div>
         </div>
+
+        <script type="text/javascript">
+            $('.wrapper-carousel').slick({
+                // infinite: true,
+                // slidesToShow: 3,
+                // slidesToScroll: 3
+                autoplay:true,
+                prevArrow:"<button type='button' class='slick-prev pull-left'><i class='fa fa-angle-left' aria-hidden='true'></i></button>",
+                nextArrow:"<button type='button' class='slick-next pull-right'><i class='fa fa-angle-right' aria-hidden='true'></i></button>"
+            });
+        </script>
 
         <div id="wrapper-indicator">
             <div class="item-indicator"></div>
@@ -142,14 +169,14 @@
                 <div class="function-item-content">
                     <div class="item-content-logo"></div>
                     <span class="title-center">Kết nối khoảng cách</span>
-                    <span class="sub-title-center">Nhấn đúp để gửi "Tôi nhớ bạn". Mỗi khi bạn nhận được sự nhớ nhung từ gia đình, tình yêu và bạn bè của tôi, vòng tay sẽ nhấp nháy và rung lên.</span>
+                    <span class="sub-title-center item-content-text">Nhấn đúp để gửi "Tôi nhớ bạn". Mỗi khi bạn nhận được sự nhớ nhung từ gia đình, tình yêu và bạn bè của tôi, vòng tay sẽ nhấp nháy và rung lên.</span>
                 </div>
             </div>
             <div class="wrapper-function-item">
                 <div class="function-item-content">
                     <div class="item-content-logo"></div>
                     <span class="title-center">Kết nối khoảng cách</span>
-                    <span class="sub-title-center">Nhấn đúp để gửi "Tôi nhớ bạn". Mỗi khi bạn nhận được sự nhớ nhung từ gia đình, tình yêu và bạn bè của tôi, vòng tay sẽ nhấp nháy và rung lên.</span>
+                    <span class="sub-title-center item-content-text">Nhấn đúp để gửi "Tôi nhớ bạn". Mỗi khi bạn nhận được sự nhớ nhung từ gia đình, tình yêu và bạn bè của tôi, vòng tay sẽ nhấp nháy và rung lên.</span>
                 </div>
                 <div class="function-item-img"></div>
             </div>
@@ -158,7 +185,7 @@
                 <div class="function-item-content">
                     <div class="item-content-logo"></div>
                     <span class="title-center">Kết nối khoảng cách</span>
-                    <span class="sub-title-center">Nhấn đúp để gửi "Tôi nhớ bạn". Mỗi khi bạn nhận được sự nhớ nhung từ gia đình, tình yêu và bạn bè của tôi, vòng tay sẽ nhấp nháy và rung lên.</span>
+                    <span class="sub-title-center item-content-text">Nhấn đúp để gửi "Tôi nhớ bạn". Mỗi khi bạn nhận được sự nhớ nhung từ gia đình, tình yêu và bạn bè của tôi, vòng tay sẽ nhấp nháy và rung lên.</span>
                 </div>
             </div>
         </div>
@@ -198,6 +225,104 @@
             </div>
         </div>
     </div>
+
+    <div id="section6">
+
+        <div id="wrapper-ship-bg">
+            <div id="ship-bg1"></div>
+            <div id="ship-bg2"></div>
+            <div id="ship-bg3"></div>
+            <div id="ship-bg4"></div>
+            <div id="ship-bg5"></div>
+        </div>
+
+        <div id="s6-wrapper-title">
+            <div id="icon-logo-s6"></div>
+            <h3 class="title-left">Chính sách vận chuyển, bảo hành</h3>
+        </div>
+
+        <div class="wrapper-ship-item">
+            <div class="ship-item-icon"></div>
+            <span class="ship-item-content">Miễn phí vận chuyển</span>
+        </div>
+
+        <div class="wrapper-ship-item">
+            <div class="ship-item-icon"></div>
+            <span class="ship-item-content">Đổi trả trong vòng 7 ngày. Trong trường hợp sản phẩm có lỗi đến từ nhà sản xuất.</span>
+        </div>
+
+        <div class="wrapper-ship-item">
+            <div class="ship-item-icon"></div>
+            <span class="ship-item-content">Bảo hành trong 06 tháng.</span>
+        </div>
+
+        <div class="wrapper-ship-item">
+            <div class="ship-item-icon"></div>
+            <span class="ship-item-content">Hoàn tiền tới 90% giá trị sp.</span>
+        </div>
+
+    </div>
+
+    <div id="section7">
+        <div id="s7-border-bg"></div>
+        <span class="title-center" id="s7-title">Đóng gói sang trọng</span>
+        <div id="s7-main-bg1"></div>
+        <div id="s7-main-bg2"></div>
+        <div id="s7-main-bg3"></div>
+
+        <div class="wapper-btn-buy" id="s3-buy">
+            <div class="wapper-buy-now">
+                <span class="title-buy-now">MUA NGAY</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="section8">
+        <!--<div id="wrapper-bg-s8"></div>-->
+        <span class="title-center" id="s8-title">Nhận thông tin về sản phẩm</span>
+        <span class="sub-title-center" id="s8-title">Bạn quan tâm tới sản phẩm này? Vui lòng để lại thông tin để chúng tôi có thể liên hệ với bạn.</span>
+
+        <form method="GET"
+              style="display: flex; flex-direction: column"
+              action="https://docs.google.com/forms/d/e/1FAIpQLSeM4CN9_t7K594Uy4hNOc_ra7U5SPdt9m1O7JDp5Ku7x_jEaw/formResponse"
+              class="ladi-form">
+
+            <div style="height: 10px"></div>
+
+            <input autocomplete="off" tabindex="1" name="entry.929763958"
+                   required="" type="text" placeholder="Họ và tên" value=""/>
+
+            <input autocomplete="off" tabindex="3" name="entry.605826608"
+                   required="" type="tel" placeholder="Số điện thoại" value=""/>
+
+            <input autocomplete="off" tabindex="2" name="entry.1147158646"
+                   required="" placeholder="Địa chỉ" value=""/>
+
+            <button type="submit" id="btn-submit">GỬI</button>
+        </form>
+    </div>
+
+    <div id="section9">
+        <!--<div id="wrapper-bg-s8"></div>-->
+        <span class="title-left text-white">Về chúng tôi</span>
+
+        <div class="wrapper-ship-item">
+            <div class="ship-item-icon"></div>
+            <span class="ship-item-content text-white"><span class="s5-title">Hotline: <span class="s5-value">+84969190880</span></span></span>
+        </div>
+
+        <div class="wrapper-ship-item">
+            <div class="ship-item-icon"></div>
+            <span class="ship-item-content text-white"><span class="s5-title">Email: <span class="s5-value">quatangyeuthuongvn.01@gmail.com</span></span></span>
+        </div>
+
+        <div class="wrapper-ship-item">
+            <div class="ship-item-icon"></div>
+            <span class="ship-item-content text-white"><span class="s5-title">Website: <span class="s5-value">https://dreamup198.com</span></span></span>
+        </div>
+    </div>
+
+    <div style="height: 100px"></div>
 </div>
 
 </body>

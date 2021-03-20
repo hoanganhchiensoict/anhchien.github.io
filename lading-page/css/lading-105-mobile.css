@@ -1,3 +1,7 @@
+body {
+    font-family: "Open Sans",sans-serif;
+}
+
 /*//chung*/
 @media (max-width: 767px) {
     .cc-wrapper {
@@ -35,6 +39,10 @@
         font-size: 16px;
     }
 
+    .text-white {
+        color: white;
+    }
+
     .wapper-btn-buy {
         align-items: center;
         justify-content: center;
@@ -63,6 +71,7 @@
         padding-left: 30px;
         padding-right: 30px;
         padding-bottom: 30px;
+        position: relative;
     }
 
     #logo {
@@ -70,6 +79,7 @@
         height: 50px;
         position: absolute;
         background-image: url('../pictures/color.png');
+        background-size: contain;
         top: 15px;
         left: 15px;
     }
@@ -88,6 +98,42 @@
         position: absolute;
         top: 0px;
         left: 0px;
+    }
+
+    .slick-slider, .slick-list, .slick-track {
+        height: 100%;
+    }
+
+    .slick-prev, .slick-next {
+        font-size: 0;
+        line-height: 0;
+        position: absolute;
+        top: 50%;
+        display: block;
+        width: 20px;
+        height: 20px;
+        padding: 0;
+        -webkit-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+        transform: translate(0, -50%);
+        cursor: pointer;
+        color: transparent;
+        border: none;
+        outline: none;
+        background: transparent;
+        z-index: 999;
+    }
+
+    #item1 {
+        background-color: red;
+    }
+
+    #item2 {
+        background-color: green;
+    }
+
+    #item3 {
+        background-color: blue;
     }
 
     #wrapper-indicator {
@@ -124,17 +170,17 @@
     }
 
     #s2-price-old {
-        font-size: 22px;
+        font-size: 20px;
         text-decoration-line: line-through;
     }
 
     #s2-price-cen {
-        font-size: 22px;
+        font-size: 20px;
         padding: 0px 10px 0px 10px;
     }
 
     #s2-price-show {
-        font-size: 22px;
+        font-size: 20px;
         color: red;
         font-weight: bold;
     }
@@ -265,6 +311,11 @@
         background-size: cover;
     }
 
+    .item-content-text {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
     #s3-buy {
         margin-top: 20px;
     }
@@ -326,4 +377,226 @@
         font-size: 14px;
         font-weight: normal;
     }
+}
+
+/*section6*/
+@media (max-width: 767px) {
+    #section6 {
+        display: flex;
+        flex-direction: column;
+        background-color: lightgray;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 30px;
+        padding-top: 10px;
+    }
+
+    #s6-wrapper-title {
+        display: flex;
+        flex-direction: row;
+        margin-left: -10px;
+        margin-top: 20px;
+    }
+
+    #icon-logo-s6 {
+        width: 30px;
+        height: 30px;
+        margin-top: 10px;
+        background-image: url("../pictures/ic-star.png");
+        background-size: cover;
+    }
+
+    .wrapper-ship-item {
+        display: flex;
+        flex-direction: row;
+        margin-top: 10px;
+        align-items: center;
+    }
+
+    .ship-item-icon {
+        width: 20px;
+        height: 20px;
+        background-color: #00aff0;
+        border-radius: 10px;
+        margin-right: 10px;
+    }
+
+    .ship-item-content {
+        font-size: 14px;
+        flex: 1;
+    }
+
+    #wrapper-ship-bg {
+        width: 100%;
+        height: 450px;
+        position: relative;
+        /*background-color: #00aff0;*/
+    }
+
+    #ship-bg1 {
+        width: 80px;
+        height: 100px;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        background-image: url("../pictures/ic-dot.jpg");
+        background-size: cover;
+    }
+
+    #ship-bg2 {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 0px;
+        right: 20px;
+        background-image: url("../pictures/ic-dot.jpg");
+        background-size: cover;
+    }
+
+    #ship-bg3 {
+        height: 400px;
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        right: 40px;
+        background-image: url("../pictures/sun-moon-p10.jpg");
+        background-size: cover;
+    }
+
+    #ship-bg4 {
+        width: 80px;
+        height: 80px;
+        border: 3px groove white;
+        border-radius: 50px;
+        position: absolute;
+        top: 125px;
+        right: 0px;
+        background-image: url("../pictures/sun-moon-p11.png");
+        background-size: cover;
+    }
+
+    #ship-bg5 {
+        width: 80px;
+        height: 80px;
+        border: 3px groove white;
+        border-radius: 50px;
+        position: absolute;
+        top: 280px;
+        right: 0px;
+        background-image: url("../pictures/sun-moon-p12.jpg");
+        background-size: cover;
+    }
+}
+
+/*section7*/
+@media (max-width: 767px) {
+    #section7 {
+        display: flex;
+        flex-direction: column;
+        background-color: lightpink;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 30px;
+        padding-top: 10px;
+        position: relative;
+    }
+
+    #s7-border-bg {
+        margin-top: 200px;
+        margin-bottom: 50px;
+        border: 1px groove blue;
+        height: 350px;
+    }
+
+    #s7-title {
+        position: absolute;
+        top: 20px;
+        left: 0px;
+        right: 0px;
+    }
+
+    #s7-main-bg1 {
+        position: absolute;
+        top: 75px;
+        left: 50px;
+        right: 50px;
+        height: 350px;
+        background-image: url("../pictures/sun-moon-p7.jpg");
+        background-size: cover;
+    }
+
+    #s7-main-bg2 {
+        position: absolute;
+        top: 445px;
+        left: 15px;
+        height: 160px;
+        width: 38%;
+        background-image: url("../pictures/sun-moon-p8.jpg");
+        background-size: contain;
+    }
+
+    #s7-main-bg3 {
+        position: absolute;
+        top: 445px;
+        right: 15px;
+        height: 160px;
+        width: 47%;
+        background-image: url("../pictures/sun-moon-p9.jpg");
+        background-size: contain;
+    }
+}
+
+/*section8*/
+@media (max-width: 767px) {
+    #section8 {
+        display: flex;
+        flex-direction: column;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 50px;
+        padding-top: 10px;
+        background-image: linear-gradient(to bottom, rgba(246, 16, 251, 1.0), rgba(35, 86, 218, 1.0));
+        /*height: 300px;*/
+        background-size: cover;
+    }
+
+    /*#wrapper-bg-s8 {*/
+        /*width: 100%;*/
+        /*height: 100%;*/
+        /*opacity: 0.1;*/
+        /*background-image: url("../pictures/bg-buy.jpg");*/
+    /*}*/
+
+    #s8-title {
+        color: white;
+    }
+
+    input {
+        height: 33px;
+        margin-top: 10px;
+        padding-left: 10px;
+    }
+
+    #btn-submit {
+        height: 33px;
+        margin-top: 20px;
+        background-color: black;
+        color: white;
+    }
+}
+
+/*section9*/
+@media (max-width: 767px) {
+    #section9 {
+        display: flex;
+        flex-direction: column;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 50px;
+        padding-top: 10px;
+        background-color: lightblue;
+        background-size: cover;
+    }
+
+
 }
