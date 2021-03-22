@@ -1,13 +1,15 @@
-body {
-    font-family: "Open Sans",sans-serif;
-}
-
 a, u {
     text-decoration: none;
 }
 
 /*//chung*/
-@media (max-width: 767px) {
+@media (min-width: 767px) {
+    body {
+        font-family: "Open Sans",sans-serif;
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
     .cc-wrapper {
         background-color: rgba(217, 235, 255, 0.2);
     }
@@ -64,10 +66,19 @@ a, u {
         font-size: 18px;
         color: white;
     }
+
+    .cc-wr {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #cc-wr-2 {
+        background-color: rgba(35, 86, 218, 0.1);
+    }
 }
 
 /*section1*/
-@media (max-width: 767px) {
+@media (min-width: 767px) {
     #section1 {
         display: flex;
         flex-direction: column;
@@ -76,6 +87,7 @@ a, u {
         padding-right: 30px;
         padding-bottom: 30px;
         position: relative;
+        flex: 1;
     }
 
     #logo {
@@ -176,16 +188,17 @@ a, u {
 }
 
 /*section2*/
-@media (max-width: 767px) {
+@media (min-width: 767px) {
 
     #section2 {
         display: flex;
         flex-direction: column;
-        background-color: rgba(217, 235, 255, 0.2);
+        /*background-color: rgba(217, 235, 255, 0.2);*/
         padding-left: 30px;
         padding-right: 30px;
         padding-bottom: 30px;
         padding-top: 10px;
+        flex: 1;
     }
 
     #wrapper-price {
@@ -273,7 +286,7 @@ a, u {
 }
 
 /*section3*/
-@media (max-width: 767px) {
+@media (min-width: 767px) {
     #section3 {
         display: flex;
         flex-direction: column;
@@ -346,27 +359,27 @@ a, u {
 }
 
 /*section4*/
-@media (max-width: 767px) {
+@media (min-width: 767px) {
     #section4 {
         display: flex;
         flex-direction: column;
         background-color: white;
-        padding-left: 30px;
-        padding-right: 30px;
+        /*padding-left: 30px;*/
+        /*padding-right: 30px;*/
         padding-bottom: 30px;
         padding-top: 10px;
     }
 
     #s4-banner {
         width: 100%;
-        min-height: 120px;
+        min-height: 220px;
         background-image: url("../pictures/banner.png");
         background-size: cover;
     }
 }
 
 /*section5*/
-@media (max-width: 767px) {
+@media (min-width: 767px) {
     #section5 {
         display: flex;
         flex-direction: column;
@@ -404,7 +417,7 @@ a, u {
 }
 
 /*section6*/
-@media (max-width: 767px) {
+@media (min-width: 767px) {
     #section6 {
         display: flex;
         flex-direction: column;
@@ -413,6 +426,7 @@ a, u {
         padding-right: 30px;
         padding-bottom: 30px;
         padding-top: 10px;
+        flex: 1;
     }
 
     #s6-wrapper-title {
@@ -513,16 +527,17 @@ a, u {
 }
 
 /*section7*/
-@media (max-width: 767px) {
+@media (min-width: 767px) {
     #section7 {
         display: flex;
         flex-direction: column;
-        background-color: rgba(35, 86, 218, 0.1);
+        background-color: white;
         padding-left: 30px;
         padding-right: 30px;
         padding-bottom: 30px;
         padding-top: 10px;
         position: relative;
+        flex: 1;
     }
 
     #s7-border-bg {
@@ -571,12 +586,12 @@ a, u {
 }
 
 /*section8*/
-@media (max-width: 767px) {
+@media (min-width: 767px) {
     #section8 {
         display: flex;
         flex-direction: column;
-        padding-left: 30px;
-        padding-right: 30px;
+        padding-left: 130px;
+        padding-right: 130px;
         padding-bottom: 50px;
         padding-top: 10px;
         background-image: linear-gradient(to bottom, rgba(246, 16, 251, 1.0), rgba(35, 86, 218, 1.0));
@@ -585,10 +600,10 @@ a, u {
     }
 
     /*#wrapper-bg-s8 {*/
-        /*width: 100%;*/
-        /*height: 100%;*/
-        /*opacity: 0.1;*/
-        /*background-image: url("../pictures/bg-buy.jpg");*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*opacity: 0.1;*/
+    /*background-image: url("../pictures/bg-buy.jpg");*/
     /*}*/
 
     #s8-title {
@@ -611,7 +626,7 @@ a, u {
 }
 
 /*section9*/
-@media (max-width: 767px) {
+@media (min-width: 767px) {
     #section9 {
         display: flex;
         flex-direction: column;

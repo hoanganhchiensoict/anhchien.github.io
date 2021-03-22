@@ -30,6 +30,7 @@
 
     <link rel="stylesheet" type="text/css" href="template/trangsuc-01/webroot/assets/css/fonts_vnsitecss.css"/>
     <link rel="stylesheet" type="text/css" href="lading-page/css/lading-105-mobile.css"/>
+    <link rel="stylesheet" type="text/css" href="lading-page/css/lading-105-web.css"/>
 
     <script type="text/javascript" src="template/trangsuc-01/webroot/assets/js/jquery.2.1.1.min.js"></script>
     <link rel="stylesheet" type="text/css" href="libs/slick/slick.css"/>
@@ -59,97 +60,108 @@
 <body>
 
 <div class="cc_wrapper">
-    <div id="section1">
-        <div id="logo"></div>
-        <h3 class="title-center">TotWoo Sun Moon</h3>
-        <span class="sub-title-center">Lorem ipsum dolor sit amet, consectetur adipiscing. Portenta haec esse dicit, neque ea ratione ullo modo</span>
 
-        <div id="wrapper_carousel">
-            <div id="cc-wrapper-carousel">
-                <div class="wrapper-carousel">
-                    <div class="item-carousel" id="item1">
-                        <iframe src="https://www.youtube.com/embed/O6IW5Ej6seg" height="100%"
-                                width="100%" allowfullscreen="" frameborder="0">
-                        </iframe>
+    <div class="cc-wr">
+        <div id="section1">
+            <div id="logo"></div>
+            <h3 class="title-center">TotWoo Sun Moon</h3>
+            <span class="sub-title-center">Lorem ipsum dolor sit amet, consectetur adipiscing. Portenta haec esse dicit, neque ea ratione ullo modo</span>
+
+            <div id="wrapper_carousel">
+                <div id="cc-wrapper-carousel">
+                    <div class="wrapper-carousel">
+                        <div class="item-carousel" id="item1">
+                            <iframe src="https://www.youtube.com/embed/O6IW5Ej6seg" height="100%"
+                                    width="100%" allowfullscreen="" frameborder="0">
+                            </iframe>
+                        </div>
+
+                        <div class="item-carousel" id="item2"></div>
+                        <div class="item-carousel" id="item3"></div>
+
                     </div>
-
-                    <div class="item-carousel" id="item2"></div>
-                    <div class="item-carousel" id="item3"></div>
-
                 </div>
             </div>
-        </div>
 
-        <div id="wrapper-indicator">
-            <a href="#" data-slide="1"><div class="item-indicator" id="indicator1"></div></a>
-            <a href="#" data-slide="2"><div class="item-indicator" id="indicator2"></div></a>
-            <a href="#" data-slide="3"><div class="item-indicator" id="indicator3"></div></a>
-        </div>
-
-        <script type="text/javascript">
-            $('.wrapper-carousel').slick({
-                autoplay:true,
-                prevArrow:"<button type='button' class='slick-prev pull-left'><i class='fa fa-angle-left' aria-hidden='true'></i></button>",
-                nextArrow:"<button type='button' class='slick-next pull-right'><i class='fa fa-angle-right' aria-hidden='true'></i></button>"
-            });
-
-            $('a[data-slide]').click(function(e) {
-                e.preventDefault();
-                var slideno = $(this).data('slide');
-                $('.wrapper-carousel').slick('slickGoTo', slideno - 1);
-            });
-        </script>
-    </div>
-
-    <div id="section2">
-        <h3 class="title-center">Giá sale 70% Amazon</h3>
-
-        <div id="wrapper-price">
-            <span id="s2-price-old">4.000.000 đ</span>
-            <span id="s2-price-cen">Còn</span>
-            <span id="s2-price-show">2.100.000 đ</span>
-        </div>
-
-        <div class="line-full" id="s2-line"></div>
-
-        <div id="wrapper-star">
-            <div class="star-item"></div>
-            <div class="star-item"></div>
-            <div class="star-item"></div>
-            <div class="star-item"></div>
-            <div class="star-item"></div>
-
-            <span id="text-comment">(1.900 đánh giá)</span>
-        </div>
-
-        <span id="text-order">1.900 đơn hàng</span>
-        <span id="s2-text-quantity">Chỉ còn 20 sản phẩm giá sốc</span>
-
-        <div id="wrapepr-countdown">
-            <div class="wrapepr-countdown-item">
-                <span class="countdown-value">15</span>
-                <span class="countdown-title">Ngày</span>
+            <div id="wrapper-indicator">
+                <a href="#" data-slide="1">
+                    <div class="item-indicator" id="indicator1"></div>
+                </a>
+                <a href="#" data-slide="2">
+                    <div class="item-indicator" id="indicator2"></div>
+                </a>
+                <a href="#" data-slide="3">
+                    <div class="item-indicator" id="indicator3"></div>
+                </a>
             </div>
 
-            <div class="wrapepr-countdown-item">
-                <span class="countdown-value">05</span>
-                <span class="countdown-title">Giờ</span>
-            </div>
+            <script type="text/javascript">
+                $('.wrapper-carousel').slick({
+                    autoplay: true,
+                    prevArrow: "<button type='button' class='slick-prev pull-left'><i class='fa fa-angle-left' aria-hidden='true'></i></button>",
+                    nextArrow: "<button type='button' class='slick-next pull-right'><i class='fa fa-angle-right' aria-hidden='true'></i></button>"
+                });
 
-            <div class="wrapepr-countdown-item">
-                <span class="countdown-value">00</span>
-                <span class="countdown-title">Phút</span>
-            </div>
-
-            <div class="wrapepr-countdown-item">
-                <span class="countdown-value">00</span>
-                <span class="countdown-title">Giây</span>
-            </div>
+                $('a[data-slide]').click(function (e) {
+                    e.preventDefault();
+                    var slideno = $(this).data('slide');
+                    $('.wrapper-carousel').slick('slickGoTo', slideno - 1);
+                });
+            </script>
         </div>
 
-        <div class="wapper-btn-buy" id="s2-buy">
-            <div class="wapper-buy-now">
-                <span class="title-buy-now">MUA NGAY</span>
+        <div id="section2">
+            <h3 class="title-center">Giá sale 70% Amazon</h3>
+
+            <div id="wrapper-price">
+                <span id="s2-price-old">4.000.000 đ</span>
+                <span id="s2-price-cen">Còn</span>
+                <span id="s2-price-show">2.100.000 đ</span>
+            </div>
+
+            <div class="line-full" id="s2-line"></div>
+
+            <div id="wrapper-star">
+                <div class="star-item"></div>
+                <div class="star-item"></div>
+                <div class="star-item"></div>
+                <div class="star-item"></div>
+                <div class="star-item"></div>
+
+                <span id="text-comment">(1.900 đánh giá)</span>
+            </div>
+
+            <span id="text-order">1.900 đơn hàng</span>
+            <span id="s2-text-quantity">Chỉ còn 20 sản phẩm giá sốc</span>
+
+            <div class="wrapepr-countdown">
+                <div class="wrapepr-countdown-item">
+                    <span class="countdown-value">15</span>
+                    <span class="countdown-title">Ngày</span>
+                </div>
+
+                <div class="wrapepr-countdown-item">
+                    <span class="countdown-value">05</span>
+                    <span class="countdown-title">Giờ</span>
+                </div>
+
+                <div class="wrapepr-countdown-item">
+                    <span class="countdown-value">00</span>
+                    <span class="countdown-title">Phút</span>
+                </div>
+
+                <div class="wrapepr-countdown-item">
+                    <span class="countdown-value">00</span>
+                    <span class="countdown-title">Giây</span>
+                </div>
+            </div>
+
+            <div class="wapper-btn-buy" id="s2-buy">
+                <a href="#section8">
+                    <div class="wapper-buy-now">
+                        <span class="title-buy-now">MUA NGAY</span>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
@@ -188,9 +200,11 @@
         </div>
 
         <div class="wapper-btn-buy" id="s3-buy">
-            <div class="wapper-buy-now">
-                <span class="title-buy-now">MUA NGAY</span>
-            </div>
+            <a href="#section8">
+                <div class="wapper-buy-now">
+                    <span class="title-buy-now">MUA NGAY</span>
+                </div>
+            </a>
         </div>
     </div>
 
@@ -217,67 +231,97 @@
         <span class="s5-title">Compatibility: <span class="s5-value">IOS & Android system</span></span>
 
         <div class="wapper-btn-buy" id="s3-buy">
-            <div class="wapper-buy-now">
-                <span class="title-buy-now">MUA NGAY</span>
+            <a href="#section8">
+                <div class="wapper-buy-now">
+                    <span class="title-buy-now">MUA NGAY</span>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="cc-wr" id="cc-wr-2">
+        <div id="section6">
+
+            <div id="wrapper-ship-bg">
+                <div id="ship-bg1"></div>
+                <div id="ship-bg2"></div>
+                <div id="ship-bg3"></div>
+                <div id="ship-bg4"></div>
+                <div id="ship-bg5"></div>
             </div>
-        </div>
-    </div>
 
-    <div id="section6">
+            <div id="s6-wrapper-title">
+                <div id="icon-logo-s6"></div>
+                <h3 class="title-left">Chính sách vận chuyển, bảo hành</h3>
+            </div>
 
-        <div id="wrapper-ship-bg">
-            <div id="ship-bg1"></div>
-            <div id="ship-bg2"></div>
-            <div id="ship-bg3"></div>
-            <div id="ship-bg4"></div>
-            <div id="ship-bg5"></div>
-        </div>
+            <div class="wrapper-ship-item">
+                <div class="ship-item-icon"></div>
+                <span class="ship-item-content">Miễn phí vận chuyển</span>
+            </div>
 
-        <div id="s6-wrapper-title">
-            <div id="icon-logo-s6"></div>
-            <h3 class="title-left">Chính sách vận chuyển, bảo hành</h3>
-        </div>
+            <div class="wrapper-ship-item">
+                <div class="ship-item-icon"></div>
+                <span class="ship-item-content">Đổi trả trong vòng 7 ngày. Trong trường hợp sản phẩm có lỗi đến từ nhà sản xuất.</span>
+            </div>
 
-        <div class="wrapper-ship-item">
-            <div class="ship-item-icon"></div>
-            <span class="ship-item-content">Miễn phí vận chuyển</span>
-        </div>
+            <div class="wrapper-ship-item">
+                <div class="ship-item-icon"></div>
+                <span class="ship-item-content">Bảo hành trong 06 tháng.</span>
+            </div>
 
-        <div class="wrapper-ship-item">
-            <div class="ship-item-icon"></div>
-            <span class="ship-item-content">Đổi trả trong vòng 7 ngày. Trong trường hợp sản phẩm có lỗi đến từ nhà sản xuất.</span>
-        </div>
+            <div class="wrapper-ship-item">
+                <div class="ship-item-icon"></div>
+                <span class="ship-item-content">Hoàn tiền tới 90% giá trị sp.</span>
+            </div>
 
-        <div class="wrapper-ship-item">
-            <div class="ship-item-icon"></div>
-            <span class="ship-item-content">Bảo hành trong 06 tháng.</span>
         </div>
 
-        <div class="wrapper-ship-item">
-            <div class="ship-item-icon"></div>
-            <span class="ship-item-content">Hoàn tiền tới 90% giá trị sp.</span>
-        </div>
+        <div id="section7">
+            <div id="s7-border-bg"></div>
+            <span class="title-center" id="s7-title">Đóng gói sang trọng</span>
+            <div id="s7-main-bg1"></div>
+            <div id="s7-main-bg2"></div>
+            <div id="s7-main-bg3"></div>
 
-    </div>
-
-    <div id="section7">
-        <div id="s7-border-bg"></div>
-        <span class="title-center" id="s7-title">Đóng gói sang trọng</span>
-        <div id="s7-main-bg1"></div>
-        <div id="s7-main-bg2"></div>
-        <div id="s7-main-bg3"></div>
-
-        <div class="wapper-btn-buy" id="s3-buy">
-            <div class="wapper-buy-now">
-                <span class="title-buy-now">MUA NGAY</span>
+            <div class="wapper-btn-buy" id="s3-buy">
+                <a href="#section8">
+                    <div class="wapper-buy-now">
+                        <span class="title-buy-now">MUA NGAY</span>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
 
     <div id="section8">
         <!--<div id="wrapper-bg-s8"></div>-->
+        <span class="title-center text-white">Chỉ còn 20 sản phẩm giá sốc</span>
+
+        <div class="wrapepr-countdown">
+            <div class="wrapepr-countdown-item">
+                <span class="countdown-value text-white">15</span>
+                <span class="countdown-title text-white">Ngày</span>
+            </div>
+
+            <div class="wrapepr-countdown-item">
+                <span class="countdown-value text-white">05</span>
+                <span class="countdown-title text-white">Giờ</span>
+            </div>
+
+            <div class="wrapepr-countdown-item">
+                <span class="countdown-value text-white">00</span>
+                <span class="countdown-title text-white">Phút</span>
+            </div>
+
+            <div class="wrapepr-countdown-item">
+                <span class="countdown-value text-white">00</span>
+                <span class="countdown-title text-white">Giây</span>
+            </div>
+        </div>
+
         <span class="title-center" id="s8-title">Nhận thông tin về sản phẩm</span>
-        <span class="sub-title-center" id="s8-title">Bạn quan tâm tới sản phẩm này? Vui lòng để lại thông tin để chúng tôi có thể liên hệ với bạn.</span>
+        <span class="sub-title-center text-white">Bạn quan tâm tới sản phẩm này? Vui lòng để lại thông tin để chúng tôi có thể liên hệ với bạn.</span>
 
         <form method="GET"
               style="display: flex; flex-direction: column"
