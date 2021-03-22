@@ -82,6 +82,7 @@ body {
         background-size: contain;
         top: 15px;
         left: 15px;
+        border-radius: 25px;
     }
 
     #wrapper_carousel {
@@ -125,15 +126,35 @@ body {
     }
 
     #item1 {
-        background-color: red;
     }
 
     #item2 {
-        background-color: green;
+        background-image: url("../pictures/distant.png");
     }
 
     #item3 {
-        background-color: blue;
+        background-image: url("../pictures/healthy.png");
+    }
+
+    .slick-dots li button {
+        background: url("../pictures/distant.png");
+        text-indent: -9999px;
+        overflow:hidden;
+        /* more CSS */
+    }
+
+    #indicator1{
+
+    }
+
+    #indicator2{
+        background-image: url("../pictures/distant.png");
+        background-size: cover;
+    }
+
+    #indicator3{
+        background-image: url("../pictures/healthy.png");
+        background-size: cover;
     }
 
     #wrapper-indicator {
@@ -145,8 +166,8 @@ body {
     .item-indicator {
         width: 50px;
         height: 50px;
-        background-color: red;
         margin-right: 10px;
+        border: 1px groove green;
     }
 }
 
@@ -156,7 +177,7 @@ body {
     #section2 {
         display: flex;
         flex-direction: column;
-        background-color: #EEF8FA;
+        background-color: rgba(217, 235, 255, 0.2);
         padding-left: 30px;
         padding-right: 30px;
         padding-bottom: 30px;
@@ -181,7 +202,6 @@ body {
 
     #s2-price-show {
         font-size: 20px;
-        color: red;
         font-weight: bold;
     }
 
@@ -346,7 +366,7 @@ body {
     #section5 {
         display: flex;
         flex-direction: column;
-        background-color: #9c9c9c;
+        background-color: rgba(35, 86, 218, 0.1);
         padding-left: 30px;
         padding-right: 30px;
         padding-bottom: 30px;
@@ -384,7 +404,7 @@ body {
     #section6 {
         display: flex;
         flex-direction: column;
-        background-color: lightgray;
+        background-color: white;
         padding-left: 30px;
         padding-right: 30px;
         padding-bottom: 30px;
@@ -493,7 +513,7 @@ body {
     #section7 {
         display: flex;
         flex-direction: column;
-        background-color: lightpink;
+        background-color: rgba(35, 86, 218, 0.1);
         padding-left: 30px;
         padding-right: 30px;
         padding-bottom: 30px;
@@ -594,7 +614,7 @@ body {
         padding-right: 30px;
         padding-bottom: 50px;
         padding-top: 10px;
-        background-color: lightblue;
+        background-color: darkblue;
         background-size: cover;
     }
 
