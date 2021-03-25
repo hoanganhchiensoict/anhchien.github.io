@@ -2,32 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdaf1324-233c-4adb-b79d-299465f777a3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/card-info.html" beforeDir="false" afterPath="$PROJECT_DIR$/card-info.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-paymentmethod.html" beforeDir="false" afterPath="$PROJECT_DIR$/cart-paymentmethod.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-success.html" beforeDir="false" afterPath="$PROJECT_DIR$/cart-success.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-100-sun.html" beforeDir="false" afterPath="$PROJECT_DIR$/detail-100-sun.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-101-sun.html" beforeDir="false" afterPath="$PROJECT_DIR$/detail-101-sun.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-102-moon.html" beforeDir="false" afterPath="$PROJECT_DIR$/detail-102-moon.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-103-moon.html" beforeDir="false" afterPath="$PROJECT_DIR$/detail-103-moon.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-104-moon.html" beforeDir="false" afterPath="$PROJECT_DIR$/detail-104-moon.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-105-sun-moon.html" beforeDir="false" afterPath="$PROJECT_DIR$/detail-105-sun-moon.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-106-sun-moon.html" beforeDir="false" afterPath="$PROJECT_DIR$/detail-106-sun-moon.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-107-sun-moon.html" beforeDir="false" afterPath="$PROJECT_DIR$/detail-107-sun-moon.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-108-lily.html" beforeDir="false" afterPath="$PROJECT_DIR$/detail-108-lily.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-109-bracelet-necklace.html" beforeDir="false" afterPath="$PROJECT_DIR$/detail-109-bracelet-necklace.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-110-flower-leaves.html" beforeDir="false" afterPath="$PROJECT_DIR$/detail-110-flower-leaves.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-200-flower-necklet.html" beforeDir="false" afterPath="$PROJECT_DIR$/detail-200-flower-necklet.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-201-flower-necklet.html" beforeDir="false" afterPath="$PROJECT_DIR$/detail-201-flower-necklet.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-202-the-moment.html" beforeDir="false" afterPath="$PROJECT_DIR$/detail-202-the-moment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-300-necklet.html" beforeDir="false" afterPath="$PROJECT_DIR$/detail-300-necklet.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/intro-105-sun-moon.html" beforeDir="false" afterPath="$PROJECT_DIR$/intro-105-sun-moon.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lading-105-sun-moon.html" beforeDir="false" afterPath="$PROJECT_DIR$/lading-105-sun-moon.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/intro-105-sun-moon.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lading-105-sun-moon.html" beforeDir="false" afterPath="$PROJECT_DIR$/lading-page/lading-105-sun-moon.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lading-105.html" beforeDir="false" afterPath="$PROJECT_DIR$/lading-105.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lading-page/css/lading-105-mobile.css" beforeDir="false" afterPath="$PROJECT_DIR$/lading-page/css/lading-105-mobile.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lading-the-moment.html" beforeDir="false" afterPath="$PROJECT_DIR$/lading-the-moment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lien-he.html" beforeDir="false" afterPath="$PROJECT_DIR$/lien-he.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/trangsuc-01/webroot/js/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/trangsuc-01/webroot/js/cart.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -40,41 +19,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lading-105.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="57" column="73" lean-forward="true" selection-start-line="57" selection-start-column="73" selection-end-line="57" selection-end-column="73" />
+            <state relative-caret-position="247">
+              <caret line="444" lean-forward="true" selection-start-line="444" selection-end-line="444" />
               <folding>
-                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#script#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#img#0;n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h3#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#3;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#form#0;n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/template/trangsuc-01/webroot/js/cart.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="18" column="69" selection-start-line="18" selection-start-column="69" selection-end-line="18" selection-end-column="69" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template/trangsuc-01/webroot/js/common.js">
+        <entry file="file://$PROJECT_DIR$/lading-the-moment.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3088">
-              <caret line="221" column="39" selection-start-line="221" selection-start-column="39" selection-end-line="221" selection-end-column="39" />
+            <state relative-caret-position="97">
+              <caret line="426" column="59" lean-forward="true" selection-start-line="426" selection-start-column="59" selection-end-line="426" selection-end-column="59" />
               <folding>
-                <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h3#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#form#0;n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#form#0;n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -91,7 +60,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>cc-wrapper-carousel</find>
       <find>s4</find>
       <find>wrapper-indicator</find>
       <find>logo</find>
@@ -121,6 +89,7 @@
       <find>from: &quot;Lading-105&quot;</find>
       <find>Lading-TheMoment</find>
       <find>cart</find>
+      <find>required</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;link rel=&quot;canonical&quot; href=&quot;dreamup198.com&quot;</replace>
@@ -142,7 +111,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/sitemap.xml" />
         <option value="$PROJECT_DIR$/lading-page/css/lading-intro14.css" />
         <option value="$PROJECT_DIR$/lading-page/css/lading-intro15.css" />
         <option value="$PROJECT_DIR$/lading-page/css/lading-intro17.css" />
@@ -190,9 +158,10 @@
         <option value="$PROJECT_DIR$/lading-105-sun-moon.html" />
         <option value="$PROJECT_DIR$/lien-he.html" />
         <option value="$PROJECT_DIR$/lading-page/css/lading-105-mobile.css" />
-        <option value="$PROJECT_DIR$/lading-105.html" />
-        <option value="$PROJECT_DIR$/lading-the-moment.html" />
         <option value="$PROJECT_DIR$/template/trangsuc-01/webroot/js/cart.js" />
+        <option value="$PROJECT_DIR$/lading-page/lading-105-sun-moon.html" />
+        <option value="$PROJECT_DIR$/lading-the-moment.html" />
+        <option value="$PROJECT_DIR$/lading-105.html" />
       </list>
     </option>
   </component>
@@ -215,11 +184,6 @@
             <path>
               <item name="demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="demo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="lading-page" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -248,10 +212,10 @@
       <recent name="F:\ProjectCc\Web\trangsuc-01.web4s.vn\demo\libs" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\ProjectCc\Web\trangsuc-01.web4s.vn\demo\lading-page" />
       <recent name="C:\Dev\Projects\anhchien.github.io\uploads\tiny_uploads" />
       <recent name="C:\Dev\Projects\anhchien.github.io" />
       <recent name="C:\Dev\Projects\anhchien.github.io\uploads\tiny_uploads\totwoo" />
-      <recent name="F:\ProjectCc\Web\trangsuc-01.web4s.vn\demo\lading-page" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -296,12 +260,12 @@
       <workItem from="1616402905710" duration="3298000" />
       <workItem from="1616470400647" duration="9971000" />
       <workItem from="1616556071888" duration="671000" />
-      <workItem from="1616641897830" duration="9690000" />
+      <workItem from="1616641897830" duration="11814000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="263474000" />
+    <option name="totallyTimeSpent" value="265598000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="3" y="35" width="1348" height="708" extended-state="0" />
@@ -355,16 +319,6 @@
     <state x="338" y="21" width="672" height="676" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1615137705885" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/robots.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sitemap.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="69" lean-forward="true" selection-start-line="5" selection-start-column="69" selection-end-line="5" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lading-page/css/lading-intro.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -456,13 +410,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-442">
           <caret line="4" column="49" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/card-info.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="73" column="40" selection-start-line="73" selection-start-column="40" selection-end-line="73" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -649,16 +596,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/intro-105-sun-moon.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="47" column="47" selection-start-line="47" selection-start-column="47" selection-end-line="47" selection-end-column="47" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lien-he.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
@@ -673,51 +610,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lading-105-sun-moon.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="55" column="50" selection-start-line="55" selection-start-column="50" selection-end-line="55" selection-end-column="50" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#svg#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#div#0;n#div#3;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#span#0;n#p#0;n#div#1;n#div#3;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lading-page/css/lading-105-mobile.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="217">
           <caret line="343" column="5" lean-forward="true" selection-start-line="343" selection-start-column="5" selection-end-line="343" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lading-the-moment.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="555" column="29" lean-forward="true" selection-start-line="555" selection-start-column="29" selection-end-line="555" selection-end-column="29" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h3#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#form#0;n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#form#0;n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lading-105.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="449" column="47" lean-forward="true" selection-start-line="449" selection-start-column="47" selection-end-line="449" selection-end-column="47" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h3#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#3;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#form#0;n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -729,6 +625,115 @@
             <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/intro-105-sun-moon.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="47" column="47" selection-start-line="47" selection-start-column="47" selection-end-line="47" selection-end-column="47" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JavaScript-modules-diagram/F:/ProjectCc/Web/trangsuc-01.web4s.vn/demo/lading-105-sun-moon.html">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JavaScript-modules-diagram</ID>
+          <OriginalElement>$PROJECT_DIR$/lading-105-sun-moon.html</OriginalElement>
+          <nodes>
+            <node x="" y="">$PROJECT_DIR$/template/trangsuc-01/webroot/assets/css/fonts_vnsitecss.css</node>
+            <node x="" y="">$PROJECT_DIR$/lading-105-sun-moon.html</node>
+            <node x="" y="">$PROJECT_DIR$/lading-page/css/lading-intro.css</node>
+            <node x="" y="">$PROJECT_DIR$/lading-page/css/lading-intro12.css</node>
+            <node x="" y="">$PROJECT_DIR$/lading-page/css/lading-intro13.css</node>
+            <node x="" y="">$PROJECT_DIR$/lading-page/css/lading-intro14.css</node>
+            <node x="" y="">$PROJECT_DIR$/lading-page/css/lading-intro15.css</node>
+            <node x="" y="">$PROJECT_DIR$/lading-page/css/lading-intro17.css</node>
+            <node x="" y="">$PROJECT_DIR$/lading-page/css/lading-intro7.css</node>
+            <node x="" y="">$PROJECT_DIR$/lading-page/css/lading-intro8.css</node>
+            <node x="" y="">$PROJECT_DIR$/lading-page/css/lading-intro9.css</node>
+            <node x="" y="">$PROJECT_DIR$/uploads/plugin/setting/3/trang-s-c-logo.png</node>
+            <node x="" y="">https://dreamup198.com/</node>
+            <node x="" y="">https://dreamup198.com/intro-105-sun-moon.html</node>
+            <node x="" y="">https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700&amp;amp;font-display=swap</node>
+            <node x="" y="">https://www.facebook.com/tr?id=484018939278089&amp;ev=PageView&amp;noscript=1</node>
+            <node x="" y="">https://www.gstatic.com/firebasejs/8.2.9/firebase-analytics.js</node>
+            <node x="" y="">https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.786762778505898" x="537.0553371036191" y="615.0322662393934" />
+          <SelectedNodes />
+          <Categories>
+            <Category>All</Category>
+          </Categories>
+          <VISIBILITY>Details</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JavaScript-modules-diagram/F:/ProjectCc/Web/trangsuc-01.web4s.vn/demo/lading-105.html">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JavaScript-modules-diagram</ID>
+          <OriginalElement>$PROJECT_DIR$/lading-105.html</OriginalElement>
+          <nodes>
+            <node x="" y="">$PROJECT_DIR$/template/trangsuc-01/webroot/assets/css/fonts_vnsitecss.css</node>
+            <node x="" y="">$PROJECT_DIR$/uploads/tiny_uploads/icon-call-nh.png</node>
+            <node x="" y="">$PROJECT_DIR$/template/trangsuc-01/webroot/assets/js/jquery.2.1.1.min.js</node>
+            <node x="" y="">$PROJECT_DIR$/lading-page/css/lading-105-mobile.css</node>
+            <node x="" y="">$PROJECT_DIR$/lading-page/css/lading-105-web.css</node>
+            <node x="" y="">$PROJECT_DIR$/lading-page/css/lading-105.css</node>
+            <node x="" y="">$PROJECT_DIR$/lading-105.html</node>
+            <node x="" y="">$PROJECT_DIR$/libs/slick/slick.css</node>
+            <node x="" y="">$PROJECT_DIR$/libs/slick/slick.min.js</node>
+            <node x="" y="">$PROJECT_DIR$/uploads/plugin/setting/3/trang-s-c-logo.png</node>
+            <node x="" y="">https://dreamup198.com/</node>
+            <node x="" y="">https://dreamup198.com/intro-105-sun-moon.html</node>
+            <node x="" y="">https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700&amp;amp;font-display=swap</node>
+            <node x="" y="">https://www.facebook.com/tr?id=484018939278089&amp;ev=PageView&amp;noscript=1</node>
+            <node x="" y="">https://www.gstatic.com/firebasejs/8.2.9/firebase-analytics.js</node>
+            <node x="" y="">https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.9241622574955908" x="439.0" y="273.5" />
+          <SelectedNodes />
+          <Categories>
+            <Category>All</Category>
+          </Categories>
+          <VISIBILITY>Details</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lading-page/lading-105-sun-moon.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="66" column="30" lean-forward="true" selection-start-line="66" selection-start-column="30" selection-end-line="66" selection-end-column="30" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#svg#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#div#3;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#span#0;n#p#0;n#div#1;n#div#3;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/trangsuc-01/webroot/js/cart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="35" column="20" lean-forward="true" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/card-info.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="777" column="57" selection-start-line="777" selection-start-column="57" selection-end-line="777" selection-end-column="57" />
         </state>
       </provider>
     </entry>
@@ -748,10 +753,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/template/trangsuc-01/webroot/js/cart.js">
+    <entry file="file://$PROJECT_DIR$/lading-the-moment.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="18" column="69" selection-start-line="18" selection-start-column="69" selection-end-line="18" selection-end-column="69" />
+        <state relative-caret-position="97">
+          <caret line="426" column="59" lean-forward="true" selection-start-line="426" selection-start-column="59" selection-end-line="426" selection-end-column="59" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#form#0;n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#form#0;n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lading-105.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="444" lean-forward="true" selection-start-line="444" selection-end-line="444" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#3;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#form#0;n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
