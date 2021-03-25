@@ -2,29 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdaf1324-233c-4adb-b79d-299465f777a3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/card-info.html" beforeDir="false" afterPath="$PROJECT_DIR$/card-info.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-paymentmethod.html" beforeDir="false" afterPath="$PROJECT_DIR$/cart-paymentmethod.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-success.html" beforeDir="false" afterPath="$PROJECT_DIR$/cart-success.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-100-sun.html" beforeDir="false" afterPath="$PROJECT_DIR$/detail-100-sun.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-101-sun.html" beforeDir="false" afterPath="$PROJECT_DIR$/detail-101-sun.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-102-moon.html" beforeDir="false" afterPath="$PROJECT_DIR$/detail-102-moon.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-103-moon.html" beforeDir="false" afterPath="$PROJECT_DIR$/detail-103-moon.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-104-moon.html" beforeDir="false" afterPath="$PROJECT_DIR$/detail-104-moon.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-105-sun-moon.html" beforeDir="false" afterPath="$PROJECT_DIR$/detail-105-sun-moon.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-106-sun-moon.html" beforeDir="false" afterPath="$PROJECT_DIR$/detail-106-sun-moon.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-107-sun-moon.html" beforeDir="false" afterPath="$PROJECT_DIR$/detail-107-sun-moon.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-108-lily.html" beforeDir="false" afterPath="$PROJECT_DIR$/detail-108-lily.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-109-bracelet-necklace.html" beforeDir="false" afterPath="$PROJECT_DIR$/detail-109-bracelet-necklace.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-110-flower-leaves.html" beforeDir="false" afterPath="$PROJECT_DIR$/detail-110-flower-leaves.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-200-flower-necklet.html" beforeDir="false" afterPath="$PROJECT_DIR$/detail-200-flower-necklet.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-201-flower-necklet.html" beforeDir="false" afterPath="$PROJECT_DIR$/detail-201-flower-necklet.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-202-the-moment.html" beforeDir="false" afterPath="$PROJECT_DIR$/detail-202-the-moment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-300-necklet.html" beforeDir="false" afterPath="$PROJECT_DIR$/detail-300-necklet.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lading-105.html" beforeDir="false" afterPath="$PROJECT_DIR$/lading-105.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lading-the-moment.html" beforeDir="false" afterPath="$PROJECT_DIR$/lading-the-moment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lien-he.html" beforeDir="false" afterPath="$PROJECT_DIR$/lien-he.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -37,24 +15,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/detail-201-flower-necklet.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="77" column="74" selection-start-line="77" selection-start-column="74" selection-end-line="77" selection-end-column="74" />
-              <folding>
-                <element signature="n#style#0;n#span#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/template/trangsuc-01/webroot/js/cart.js">
+        <entry file="file://$PROJECT_DIR$/card-info.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="18" column="69" lean-forward="true" selection-start-line="18" selection-start-column="69" selection-end-line="18" selection-end-column="69" />
+            <state relative-caret-position="321">
+              <caret line="75" column="54" lean-forward="true" selection-start-line="74" selection-start-column="5" selection-end-line="75" selection-end-column="54" />
+              <folding>
+                <element signature="e#5876#5896#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -70,7 +38,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>green</find>
       <find>pictures/sm-1.jpg</find>
       <find>sale</find>
       <find>s4-banner</find>
@@ -100,6 +67,7 @@
       <find>ifr</find>
       <find>'https://connect.facebook.net/en_US/fbevents.js');</find>
       <find>&lt;script type=&quot;text/javascript&quot; src=&quot;template/trangsuc-01/webroot/js/cart.js&quot;&gt;&lt;/script&gt;</find>
+      <find>PageView</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;link rel=&quot;canonical&quot; href=&quot;dreamup198.com&quot;</replace>
@@ -151,7 +119,6 @@
         <option value="$PROJECT_DIR$/template/trangsuc-01/webroot/js/cart.js" />
         <option value="$PROJECT_DIR$/lading-page/lading-105-sun-moon.html" />
         <option value="$PROJECT_DIR$/lading-the-moment.html" />
-        <option value="$PROJECT_DIR$/card-info.html" />
         <option value="$PROJECT_DIR$/cart-paymentmethod.html" />
         <option value="$PROJECT_DIR$/cart-success.html" />
         <option value="$PROJECT_DIR$/detail-103-moon.html" />
@@ -172,6 +139,7 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/lading-105.html" />
         <option value="$PROJECT_DIR$/lien-he.html" />
+        <option value="$PROJECT_DIR$/card-info.html" />
       </list>
     </option>
   </component>
@@ -271,12 +239,12 @@
       <workItem from="1616470400647" duration="9971000" />
       <workItem from="1616556071888" duration="671000" />
       <workItem from="1616641897830" duration="13727000" />
-      <workItem from="1616670798729" duration="1270000" />
+      <workItem from="1616670798729" duration="1559000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="268781000" />
+    <option name="totallyTimeSpent" value="269070000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="3" y="35" width="1348" height="708" extended-state="0" />
@@ -530,28 +498,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/detail-100-sun.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="39" column="36" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
-          <folding>
-            <element signature="n#style#0;n#span#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/detail-101-sun.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="40" column="36" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="36" />
-          <folding>
-            <element signature="n#style#0;n#span#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/detail-102-moon.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -700,31 +646,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cart-success.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="75" column="90" selection-start-line="75" selection-start-column="90" selection-end-line="75" selection-end-column="90" />
-          <folding>
-            <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#tbody#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cart-paymentmethod.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="108" column="90" selection-start-line="108" selection-start-column="90" selection-end-line="108" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/card-info.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="78" column="90" selection-start-line="78" selection-start-column="90" selection-end-line="78" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lien-he.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
@@ -765,6 +686,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/template/trangsuc-01/webroot/js/cart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="18" column="69" lean-forward="true" selection-start-line="18" selection-start-column="69" selection-end-line="18" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/detail-201-flower-necklet.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -776,10 +704,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/template/trangsuc-01/webroot/js/cart.js">
+    <entry file="file://$PROJECT_DIR$/cart-success.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="18" column="69" lean-forward="true" selection-start-line="18" selection-start-column="69" selection-end-line="18" selection-end-column="69" />
+        <state relative-caret-position="459">
+          <caret line="75" column="90" selection-start-line="75" selection-start-column="90" selection-end-line="75" selection-end-column="90" />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tbody#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cart-paymentmethod.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="417">
+          <caret line="108" column="90" selection-start-line="108" selection-start-column="90" selection-end-line="108" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/detail-101-sun.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="40" column="36" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="36" />
+          <folding>
+            <element signature="n#style#0;n#span#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/detail-100-sun.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="39" column="36" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
+          <folding>
+            <element signature="n#style#0;n#span#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/card-info.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="75" column="54" lean-forward="true" selection-start-line="74" selection-start-column="5" selection-end-line="75" selection-end-column="54" />
+          <folding>
+            <element signature="e#5876#5896#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
