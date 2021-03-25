@@ -217,6 +217,28 @@ var listProduct = [
         category: 2,
         url: 'detail-201-flower-necklet.html'
     },
+    {
+        id: 202,
+        name: 'The Moment - Gold/Silver',
+        trademark: 'TotWoo', //thương hiệu
+        price: 999000,
+        price_sale: 1500000,
+        color: 'Gold',
+        material: 'Hàng chính hãng', //chất liệu
+        thumb: 'lading-page/pictures/nc/nc8.jpg',
+        pictures: [
+            "lading-page/pictures/nc/nc1.jpg",
+            "lading-page/pictures/nc/nc2.jpg",
+            "lading-page/pictures/nc/nc3.jpg",
+            "lading-page/pictures/nc/nc4.jpg",
+            "lading-page/pictures/nc/nc5.jpg",
+            "lading-page/pictures/nc/nc6.jpg",
+            "lading-page/pictures/nc/nc7.jpg",
+            "lading-page/pictures/nc/nc8.jpg",
+        ],
+        category: 2,
+        url: 'detail-202-the-moment.html'
+    },
 
 //cat phu kien
     {
