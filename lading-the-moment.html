@@ -52,7 +52,7 @@
             s.parentNode.insertBefore(t,s)}(window, document,'script',
             'https://connect.facebook.net/en_US/fbevents.js');
         fbq('init', '484018939278089');
-        fbq('track', 'PageView');
+        fbq('track', 'PageView_Lading_The_Moment');
     </script>
     <noscript><img height="1" width="1" style="display:none"
                    src="https://www.facebook.com/tr?id=484018939278089&ev=PageView&noscript=1"
@@ -205,13 +205,19 @@
                 </div>
             </div>
 
-            <div class="wapper-btn-buy" id="s2-buy">
+            <div class="wapper-btn-buy s-buy" id="s2-buy">
                 <a href="#section8">
                     <div class="wapper-buy-now">
                         <span class="title-buy-now">MUA NGAY</span>
                     </div>
                 </a>
             </div>
+
+            <script type="text/javascript">
+                $('#s2-buy').click(function() {
+                    fbq('trackCustom', 'BuyNowLDTheMoment', {from: "Lading-TheMoment"});
+                });
+            </script>
         </div>
     </div>
 
@@ -264,13 +270,19 @@
             </div>
         </div>
 
-        <div class="wapper-btn-buy" id="s3-buy">
+        <div class="wapper-btn-buy s-buy" id="s3-buy">
             <a href="#section8">
                 <div class="wapper-buy-now">
                     <span class="title-buy-now">MUA NGAY</span>
                 </div>
             </a>
         </div>
+
+        <script type="text/javascript">
+            $('#s3-buy').click(function() {
+                fbq('trackCustom', 'BuyNowLDTheMoment', {from: "Lading-TheMoment"});
+            });
+        </script>
     </div>
 
     <div id="section4">
@@ -300,13 +312,19 @@
         <span class="s5-title">Kết nối: <span class="s5-value">Kết nối không dây thông minh</span></span>
         <span class="s5-title">Tương thích: <span class="s5-value">Thiết bị IOS & Android</span></span>
 
-        <div class="wapper-btn-buy" id="s3-buy">
+        <div class="wapper-btn-buy" id="s5-buy">
             <a href="#section8">
                 <div class="wapper-buy-now">
                     <span class="title-buy-now">MUA NGAY</span>
                 </div>
             </a>
         </div>
+
+        <script type="text/javascript">
+            $('#s5-buy').click(function() {
+                fbq('trackCustom', 'BuyNowLDTheMoment', {from: "Lading-TheMoment"});
+            });
+        </script>
     </div>
 
     <div class="cc-wr" id="cc-wr-2">
@@ -354,13 +372,19 @@
             <div id="s7-main-bg2"></div>
             <div id="s7-main-bg3"></div>
 
-            <div class="wapper-btn-buy" id="s3-buy">
+            <div class="wapper-btn-buy" id="s7-buy">
                 <a href="#section8">
                     <div class="wapper-buy-now">
                         <span class="title-buy-now">MUA NGAY</span>
                     </div>
                 </a>
             </div>
+
+            <script type="text/javascript">
+                $('#s7-buy').click(function() {
+                    fbq('trackCustom', 'BuyNowLDTheMoment', {from: "Lading-TheMoment"});
+                });
+            </script>
         </div>
     </div>
 
@@ -420,6 +444,12 @@
 
             <button type="submit" id="btn-submit">GỬI</button>
         </form>
+
+        <script type="text/javascript">
+            $('#btn-submit').click(function() {
+                fbq('trackCustom', 'SendFormLDTheMoment', {from: "Lading-TheMoment"});
+            });
+        </script>
     </div>
 
     <div id="section9">

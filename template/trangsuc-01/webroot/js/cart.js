@@ -5,6 +5,7 @@ var nh_cart = {
 
         // event add to cart on list
         $(document).on('click', '.btn-shop-cart', function () {
+
             var item_id = $(this).attr('item-id');
             if (item_id == null) item_id = 0;
             var data_post = {
@@ -14,6 +15,8 @@ var nh_cart = {
 
             self.addToCart(data_post);
             loadCartNumber();
+
+            fbq('trackCustom', 'AddToCart', {product: '' + item_id});
         })
 
         // event add to cart in detail page
@@ -28,6 +31,8 @@ var nh_cart = {
                 };
                 self.addToCart(data_post);
                 loadCartNumber();
+
+                fbq('trackCustom', 'AddToCart', {product: '' + item_id});
             } else {
                 var message = global_lang.messages_please_select_quantity;
                 nh_functions.showAlertGritter('error', message);
