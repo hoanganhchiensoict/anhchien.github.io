@@ -1,0 +1,145 @@
+#item1 {
+}
+
+#item2 {
+    background-image: url("../pictures/nc/nc1.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#item3 {
+    background-image: url("../pictures/nc/nc2.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#item4 {
+    background-image: url("../pictures/nc/nc3.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#item5 {
+    background-image: url("../pictures/nc/nc4.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#item6 {
+    background-image: url("../pictures/nc/nc5.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#item7 {
+    background-image: url("../pictures/nc/nc6.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#item8 {
+    background-image: url("../pictures/nc/nc7.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#item9 {
+    background-image: url("../pictures/nc/nc8.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+
+
+#indicator1{
+    background-image: url("../pictures/nc/nc2.jpg");
+    background-size: cover;
+}
+
+#indicator2{
+    background-image: url("../pictures/nc/nc1.jpg");
+    background-size: cover;
+}
+
+#indicator3{
+    background-image: url("../pictures/nc/nc2.jpg");
+    background-size: cover;
+}
+
+#indicator4{
+    background-image: url("../pictures/nc/nc3.jpg");
+    background-size: cover;
+}
+
+#indicator5{
+    background-image: url("../pictures/nc/nc4.jpg");
+    background-size: cover;
+}
+
+#indicator6{
+    background-image: url("../pictures/nc/nc5.jpg");
+    background-size: cover;
+}
+
+#indicator7{
+    background-image: url("../pictures/nc/nc6.jpg");
+    background-size: cover;
+}
+
+#indicator8{
+    background-image: url("../pictures/nc/nc7.jpg");
+    background-size: cover;
+}
+
+#indicator9{
+    background-image: url("../pictures/nc/nc8.jpg");
+    background-size: cover;
+}
+
+#s4-banner {
+    width: 100%;
+    min-height: 120px;
+    padding-bottom: 60%;
+    background-image: url("../pictures/nc/s4-banner.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+
+#ship-bg3 {
+    background-image: url("../pictures/nc/nc1.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+
+#ship-bg4 {
+    background-image: url("../pictures/nc/nc-box2.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+
+#ship-bg5 {
+    background-image: url("../pictures/nc/nc2.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+
+#s7-main-bg1 {
+    background-image: url("../pictures/nc/nc-box3.jpg");
+    background-position: center center;
+}
+
+/*#s7-main-bg2 {*/
+    /*background-image: url("../pictures/nc/nc-box4.jpg");*/
+/*}*/
+
+#function-img-1 {
+    background-image: url("../pictures/nc/nc-use1.jpg");
+}
