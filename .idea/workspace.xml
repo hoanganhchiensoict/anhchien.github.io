@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdaf1324-233c-4adb-b79d-299465f777a3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lading-105.html" beforeDir="false" afterPath="$PROJECT_DIR$/lading-105.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lading-the-moment.html" beforeDir="false" afterPath="$PROJECT_DIR$/lading-the-moment.html" afterDir="false" />
     </list>
@@ -16,54 +17,6 @@
         <option value="JavaScript File" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>sale</find>
-      <find>s4-banner</find>
-      <find>item-carousel</find>
-      <find>wrapper-carousel</find>
-      <find>ship-bg3</find>
-      <find>ship-bg4</find>
-      <find>Đóng</find>
-      <find>Thông tin chi tiết sản phẩm</find>
-      <find>&lt;a</find>
-      <find>Mua ngay</find>
-      <find>le-buy-now&quot;&gt;MUA</find>
-      <find>span class=&quot;title-buy-now&quot;&gt;MUA</find>
-      <find>btn-submit</find>
-      <find>trackCustom</find>
-      <find>Buy</find>
-      <find>lass=&quot;title-buy-now&quot;&gt;MUA</find>
-      <find>BuyNowLDSM</find>
-      <find>form</find>
-      <find>Lading-TheMom</find>
-      <find>Lading-105</find>
-      <find>from: &quot;Lading-105&quot;</find>
-      <find>Lading-TheMoment</find>
-      <find>cart</find>
-      <find>required</find>
-      <find>ifra</find>
-      <find>ifr</find>
-      <find>'https://connect.facebook.net/en_US/fbevents.js');</find>
-      <find>&lt;script type=&quot;text/javascript&quot; src=&quot;template/trangsuc-01/webroot/js/cart.js&quot;&gt;&lt;/script&gt;</find>
-      <find>PageView</find>
-      <find>484018939278089</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>&lt;link rel=&quot;canonical&quot; href=&quot;dreamup198.com&quot;</replace>
-      <replace>&lt;link rel=&quot;canonical&quot; href=&quot;http://dreamup198.com&quot;</replace>
-      <replace>uploads/tiny_uploads/icon-call-nh.png</replace>
-      <replace>Copyright by DreamUp198</replace>
-      <replace>https://dreamup198.com</replace>
-      <replace>height: 330px</replace>
-      <replace>&lt;link rel=&quot;alternate&quot; href=&quot;https://dreamup198.com/&quot; hreflang=&quot;vi&quot;</replace>
-      <replace>min-width</replace>
-      <replace>BuyNowLDTheMoment</replace>
-      <replace>Lading-TheMoment</replace>
-      <replace>from: &quot;Lading-TheMoment&quot;</replace>
-      <replace>773885416867834</replace>
-    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
