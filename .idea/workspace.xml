@@ -2,24 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdaf1324-233c-4adb-b79d-299465f777a3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/vong-tay-thong-minh-sun-moon.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-moon-104.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-sun-moon-105.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-100-sun.html" beforeDir="false" afterPath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-sun-100.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-101-sun.html" beforeDir="false" afterPath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-sun-101.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-102-moon.html" beforeDir="false" afterPath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-moon-102.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-106-sun-moon.html" beforeDir="false" afterPath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-sun-moon-106.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-107-sun-moon.html" beforeDir="false" afterPath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-sun-moon-107.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-108-lily.html" beforeDir="false" afterPath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-lily-108.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-109-bracelet-necklace.html" beforeDir="false" afterPath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-bracelet-necklace-109.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-110-flower-leaves.html" beforeDir="false" afterPath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-flower-leaves-110.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-200-flower-necklet.html" beforeDir="false" afterPath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-flower-necklet-200.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-201-flower-necklet.html" beforeDir="false" afterPath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-flower-necklet-201.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-202-the-moment.html" beforeDir="false" afterPath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-the-moment-202.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail-300-necklet.html" beforeDir="false" afterPath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-necklet-300.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/trangsuc-01/webroot/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/trangsuc-01/webroot/js/common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vong-tay-thong-minh.html" beforeDir="false" afterPath="$PROJECT_DIR$/vong-tay-thong-minh-the-moment.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/card-info.html" beforeDir="false" afterPath="$PROJECT_DIR$/card-info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart-paymentmethod.html" beforeDir="false" afterPath="$PROJECT_DIR$/cart-paymentmethod.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart-success.html" beforeDir="false" afterPath="$PROJECT_DIR$/cart-success.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lading-105.html" beforeDir="false" afterPath="$PROJECT_DIR$/lading-105.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lading-the-moment.html" beforeDir="false" afterPath="$PROJECT_DIR$/lading-the-moment.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lien-he.html" beforeDir="false" afterPath="$PROJECT_DIR$/lien-he.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-bracelet-necklace-109.html" beforeDir="false" afterPath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-bracelet-necklace-109.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-flower-leaves-110.html" beforeDir="false" afterPath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-flower-leaves-110.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-flower-necklet-200.html" beforeDir="false" afterPath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-flower-necklet-200.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-flower-necklet-201.html" beforeDir="false" afterPath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-flower-necklet-201.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-lily-108.html" beforeDir="false" afterPath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-lily-108.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-moon-102.html" beforeDir="false" afterPath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-moon-102.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-moon-103.html" beforeDir="false" afterPath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-moon-103.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-moon-104.html" beforeDir="false" afterPath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-moon-104.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-necklet-300.html" beforeDir="false" afterPath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-necklet-300.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-sun-100.html" beforeDir="false" afterPath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-sun-100.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-sun-101.html" beforeDir="false" afterPath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-sun-101.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-sun-moon-105.html" beforeDir="false" afterPath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-sun-moon-105.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-sun-moon-106.html" beforeDir="false" afterPath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-sun-moon-106.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-sun-moon-107.html" beforeDir="false" afterPath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-sun-moon-107.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-sun-moon.html" beforeDir="false" afterPath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-sun-moon.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-the-moment-202.html" beforeDir="false" afterPath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-the-moment-202.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-the-moment.html" beforeDir="false" afterPath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-the-moment.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -33,45 +39,80 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-the-moment.html">
+        <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-the-moment.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-sun-moon.html">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="299" column="14" lean-forward="true" selection-start-line="299" selection-start-column="8" selection-end-line="299" selection-end-column="14" />
+            <state relative-caret-position="238">
+              <caret line="78" column="36" selection-start-line="78" selection-start-column="36" selection-end-line="78" selection-end-column="36" />
               <folding>
-                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#script#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#img#0;n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/template/trangsuc-01/webroot/js/common.js">
+        <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-the-moment-202.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="164" column="68" lean-forward="true" selection-start-line="164" selection-start-column="68" selection-end-line="164" selection-end-column="68" />
+            <state relative-caret-position="308">
+              <caret line="54" column="36" lean-forward="true" selection-start-line="54" selection-start-column="36" selection-end-line="54" selection-end-column="36" />
               <folding>
-                <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+                <element signature="e#3131#3151#0" expanded="true" />
+                <element signature="n#style#0;n#span#2;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-moon-104.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="59" column="36" selection-start-line="59" selection-start-column="36" selection-end-line="59" selection-end-column="36" />
+              <folding>
+                <element signature="e#3183#3203#0" expanded="true" />
+                <element signature="n#style#0;n#span#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-sun-100.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="58" column="36" selection-start-line="58" selection-start-column="36" selection-end-line="58" selection-end-column="36" />
+              <folding>
+                <element signature="e#3038#3058#0" expanded="true" />
+                <element signature="n#style#0;n#span#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-sun-101.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="59" column="36" selection-start-line="59" selection-start-column="36" selection-end-line="59" selection-end-column="36" />
+              <folding>
+                <element signature="e#3160#3180#0" expanded="true" />
+                <element signature="n#style#0;n#span#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-sun-moon.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="58" column="36" selection-start-line="58" selection-start-column="36" selection-end-line="58" selection-end-column="36" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -80,8 +121,52 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-sun-moon-105.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="374">
+              <caret line="59" column="36" selection-start-line="59" selection-start-column="36" selection-end-line="59" selection-end-column="36" />
               <folding>
+                <element signature="e#3232#3252#0" expanded="true" />
+                <element signature="n#style#0;n#span#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-sun-moon-106.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="410">
+              <caret line="60" column="36" selection-start-line="60" selection-start-column="36" selection-end-line="60" selection-end-column="36" />
+              <folding>
+                <element signature="e#3263#3283#0" expanded="true" />
+                <element signature="n#style#0;n#span#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-sun-moon-107.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="359">
+              <caret line="60" column="36" selection-start-line="60" selection-start-column="36" selection-end-line="60" selection-end-column="36" />
+              <folding>
+                <element signature="e#3300#3320#0" expanded="true" />
+                <element signature="n#style#0;n#span#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-necklet-300.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="59" column="36" selection-start-line="59" selection-start-column="36" selection-end-line="59" selection-end-column="36" />
+              <folding>
+                <element signature="e#3146#3166#0" expanded="true" />
                 <element signature="n#style#0;n#span#2;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
               </folding>
@@ -152,23 +237,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/lading-page/css/lading-intro14.css" />
-        <option value="$PROJECT_DIR$/lading-page/css/lading-intro15.css" />
-        <option value="$PROJECT_DIR$/lading-page/css/lading-intro17.css" />
-        <option value="$PROJECT_DIR$/lading-page/css/lading-intro1.css" />
-        <option value="$PROJECT_DIR$/lading-page/css/lading-intro2.css" />
-        <option value="$PROJECT_DIR$/lading-page/css/lading-intro3.css" />
-        <option value="$PROJECT_DIR$/lading-page/css/lading-intro4.css" />
-        <option value="$PROJECT_DIR$/lading-page/css/lading-intro5.css" />
-        <option value="$PROJECT_DIR$/lading-page/css/lading-intro6.css" />
-        <option value="$PROJECT_DIR$/lading-page/css/lading-intro7.css" />
-        <option value="$PROJECT_DIR$/lading-page/css/lading-intro11.css" />
-        <option value="$PROJECT_DIR$/lading-page/css/lading-intro12.css" />
-        <option value="$PROJECT_DIR$/lading-page/css/lading-intro13.css" />
-        <option value="$PROJECT_DIR$/lading-page/css/lading-intro16.css" />
-        <option value="$PROJECT_DIR$/lading-page/css/lading-intro18.css" />
-        <option value="$PROJECT_DIR$/lading-page/css/lading-intro8.css" />
-        <option value="$PROJECT_DIR$/lading-page/css/lading-intro9.css" />
         <option value="$PROJECT_DIR$/lading-page/css/lading-intro.css" />
         <option value="$PROJECT_DIR$/template/trangsuc-01/webroot/css/css_custom_main.css" />
         <option value="$PROJECT_DIR$/lading-page/css/lading-105.css" />
@@ -180,9 +248,6 @@
         <option value="$PROJECT_DIR$/lading-page/css/lading-105-mobile.css" />
         <option value="$PROJECT_DIR$/template/trangsuc-01/webroot/js/cart.js" />
         <option value="$PROJECT_DIR$/lading-page/lading-105-sun-moon.html" />
-        <option value="$PROJECT_DIR$/card-info.html" />
-        <option value="$PROJECT_DIR$/cart-paymentmethod.html" />
-        <option value="$PROJECT_DIR$/cart-success.html" />
         <option value="$PROJECT_DIR$/detail-100-sun.html" />
         <option value="$PROJECT_DIR$/detail-101-sun.html" />
         <option value="$PROJECT_DIR$/detail-102-moon.html" />
@@ -198,11 +263,31 @@
         <option value="$PROJECT_DIR$/detail-201-flower-necklet.html" />
         <option value="$PROJECT_DIR$/detail-202-the-moment.html" />
         <option value="$PROJECT_DIR$/detail-300-necklet.html" />
+        <option value="$PROJECT_DIR$/template/trangsuc-01/webroot/js/common.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/card-info.html" />
+        <option value="$PROJECT_DIR$/cart-paymentmethod.html" />
+        <option value="$PROJECT_DIR$/cart-success.html" />
         <option value="$PROJECT_DIR$/lading-105.html" />
         <option value="$PROJECT_DIR$/lading-the-moment.html" />
         <option value="$PROJECT_DIR$/lien-he.html" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/template/trangsuc-01/webroot/js/common.js" />
+        <option value="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-bracelet-necklace-109.html" />
+        <option value="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-flower-leaves-110.html" />
+        <option value="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-flower-necklet-200.html" />
+        <option value="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-flower-necklet-201.html" />
+        <option value="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-lily-108.html" />
+        <option value="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-moon-102.html" />
+        <option value="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-moon-103.html" />
+        <option value="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-moon-104.html" />
+        <option value="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-necklet-300.html" />
+        <option value="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-sun-100.html" />
+        <option value="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-sun-101.html" />
+        <option value="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-sun-moon.html" />
+        <option value="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-sun-moon-105.html" />
+        <option value="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-sun-moon-106.html" />
+        <option value="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-sun-moon-107.html" />
+        <option value="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-the-moment.html" />
+        <option value="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-the-moment-202.html" />
       </list>
     </option>
   </component>
@@ -282,18 +367,18 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\ProjectCc\Web\trangsuc-01.web4s.vn\demo\lading-page" />
+      <recent name="C:\Dev\Projects\anhchien.github.io\uploads\tiny_uploads" />
+      <recent name="C:\Dev\Projects\anhchien.github.io" />
+      <recent name="C:\Dev\Projects\anhchien.github.io\uploads\tiny_uploads\totwoo" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\ProjectCc\Web\trangsuc-01.web4s.vn\demo" />
       <recent name="F:\ProjectCc\Web\trangsuc-01.web4s.vn\demo\uploads\plugin\setting\3" />
       <recent name="F:\ProjectCc\Web\trangsuc-01.web4s.vn\demo\lading-page\pictures\nc" />
       <recent name="F:\ProjectCc\Web\trangsuc-01.web4s.vn\demo\lading-page\css" />
       <recent name="F:\ProjectCc\Web\trangsuc-01.web4s.vn\demo\lading-page\pictures" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\ProjectCc\Web\trangsuc-01.web4s.vn\demo\lading-page" />
-      <recent name="C:\Dev\Projects\anhchien.github.io\uploads\tiny_uploads" />
-      <recent name="C:\Dev\Projects\anhchien.github.io" />
-      <recent name="C:\Dev\Projects\anhchien.github.io\uploads\tiny_uploads\totwoo" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -351,13 +436,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="276201000" />
+    <option name="totallyTimeSpent" value="279837000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="9" width="1348" height="708" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2259542" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2259542" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -523,213 +608,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/card-info.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="75" column="70" selection-start-line="75" selection-start-column="70" selection-end-line="75" selection-end-column="70" />
-          <folding>
-            <element signature="e#5876#5896#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cart-paymentmethod.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="105" column="70" selection-start-line="105" selection-start-column="70" selection-end-line="105" selection-end-column="70" />
-          <folding>
-            <element signature="e#5942#5962#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cart-success.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="72" column="70" selection-start-line="72" selection-start-column="55" selection-end-line="72" selection-end-column="70" />
-          <folding>
-            <element signature="e#5513#5533#0" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#tbody#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-sun-101.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="38" column="70" selection-start-line="38" selection-start-column="70" selection-end-line="38" selection-end-column="70" />
-          <folding>
-            <element signature="n#style#0;n#span#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-moon-102.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="38" column="70" selection-start-line="38" selection-start-column="70" selection-end-line="38" selection-end-column="70" />
-          <folding>
-            <element signature="n#style#0;n#span#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-moon-103.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="37" column="70" selection-start-line="37" selection-start-column="55" selection-end-line="37" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/detail-104-moon.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="38" column="70" selection-start-line="38" selection-start-column="70" selection-end-line="38" selection-end-column="70" />
-          <folding>
-            <element signature="n#style#0;n#span#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/detail-105-sun-moon.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="38" column="70" selection-start-line="38" selection-start-column="70" selection-end-line="38" selection-end-column="70" />
-          <folding>
-            <element signature="n#style#0;n#span#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-sun-moon-106.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="38" column="70" selection-start-line="38" selection-start-column="70" selection-end-line="38" selection-end-column="70" />
-          <folding>
-            <element signature="n#style#0;n#span#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-sun-moon-107.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="38" column="70" selection-start-line="38" selection-start-column="70" selection-end-line="38" selection-end-column="70" />
-          <folding>
-            <element signature="n#style#0;n#span#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-lily-108.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="38" column="70" selection-start-line="38" selection-start-column="70" selection-end-line="38" selection-end-column="70" />
-          <folding>
-            <element signature="n#style#0;n#span#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-bracelet-necklace-109.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="37" column="70" selection-start-line="37" selection-start-column="70" selection-end-line="37" selection-end-column="70" />
-          <folding>
-            <element signature="n#style#0;n#span#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-flower-leaves-110.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="38" column="70" selection-start-line="38" selection-start-column="70" selection-end-line="38" selection-end-column="70" />
-          <folding>
-            <element signature="n#style#0;n#span#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-flower-necklet-200.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="38" column="70" selection-start-line="38" selection-start-column="70" selection-end-line="38" selection-end-column="70" />
-          <folding>
-            <element signature="n#style#0;n#span#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-flower-necklet-201.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="38" column="70" selection-start-line="38" selection-start-column="70" selection-end-line="38" selection-end-column="70" />
-          <folding>
-            <element signature="n#style#0;n#span#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-the-moment-202.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="38" column="70" selection-start-line="38" selection-start-column="70" selection-end-line="38" selection-end-column="70" />
-          <folding>
-            <element signature="n#style#0;n#span#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lien-he.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
-          <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#3;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/detail-104-moon.html" />
+    <entry file="file://$PROJECT_DIR$/detail-105-sun-moon.html" />
     <entry file="file://$PROJECT_DIR$/template/trangsuc-01/webroot/js/cart.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="63" selection-start-line="18" selection-start-column="63" selection-end-line="18" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-necklet-300.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="77" column="74" selection-start-line="77" selection-start-column="74" selection-end-line="77" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-sun-100.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="21" column="19" lean-forward="true" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
-          <folding>
-            <element signature="n#style#0;n#span#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -758,50 +642,63 @@
     <entry file="file://$PROJECT_DIR$/lading-page/pictures/nc/nc5.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/lading-105.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="55" column="70" selection-start-line="55" selection-start-column="70" selection-end-line="55" selection-end-column="70" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/uploads/plugin/setting/3/trang-s-c-logo-0.png">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lading-the-moment.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="22" column="39" lean-forward="true" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="84" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h3#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#form#0;n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#form#0;n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/uploads/plugin/setting/3/trang-s-c-logo.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-the-moment.html">
+    <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-the-moment.html" />
+    <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-sun-moon.html" />
+    <entry file="file://$PROJECT_DIR$/template/trangsuc-01/webroot/js/common.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
+        <state relative-caret-position="112">
+          <caret line="164" column="68" selection-start-line="164" selection-start-column="68" selection-end-line="164" selection-end-column="68" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-sun-moon.html">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/card-info.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="79" column="4" lean-forward="true" selection-start-line="79" selection-start-column="4" selection-end-line="95" selection-end-column="36" />
+          <folding>
+            <element signature="e#6846#6866#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cart-paymentmethod.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="125" column="36" lean-forward="true" selection-start-line="109" selection-start-column="4" selection-end-line="125" selection-end-column="36" />
+          <folding>
+            <element signature="e#6921#6941#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cart-success.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="87" column="45" lean-forward="true" selection-start-line="87" selection-start-column="45" selection-end-line="87" selection-end-column="45" />
+          <folding>
+            <element signature="e#6502#6522#0" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tbody#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="299" column="14" lean-forward="true" selection-start-line="299" selection-start-column="8" selection-end-line="299" selection-end-column="14" />
+        <state relative-caret-position="307">
+          <caret line="76" column="36" lean-forward="true" selection-start-line="59" selection-start-column="4" selection-end-line="76" selection-end-column="36" />
           <folding>
+            <element signature="e#4204#4224#0" expanded="true" />
             <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -813,20 +710,98 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-sun-100.html">
+    <entry file="file://$PROJECT_DIR$/lading-105.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="295">
+          <caret line="76" column="36" selection-start-line="76" selection-start-column="36" selection-end-line="76" selection-end-column="36" />
           <folding>
+            <element signature="n#style#0;n#img#0;n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lading-the-moment.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="80" column="36" selection-start-line="80" selection-start-column="36" selection-end-line="80" selection-end-column="36" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#form#0;n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#form#0;n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lien-he.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="64" column="36" selection-start-line="64" selection-start-column="36" selection-end-line="64" selection-end-column="36" />
+          <folding>
+            <element signature="e#3538#3558#0" expanded="true" />
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#3;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-bracelet-necklace-109.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="58" column="36" selection-start-line="58" selection-start-column="36" selection-end-line="58" selection-end-column="36" />
+          <folding>
+            <element signature="e#3161#3181#0" expanded="true" />
             <element signature="n#style#0;n#span#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-sun-101.html">
+    <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-flower-leaves-110.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="342">
+          <caret line="59" column="36" selection-start-line="59" selection-start-column="36" selection-end-line="59" selection-end-column="36" />
           <folding>
+            <element signature="e#3142#3162#0" expanded="true" />
+            <element signature="n#style#0;n#span#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-flower-necklet-200.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="61" selection-start-line="61" selection-end-line="61" />
+          <folding>
+            <element signature="e#3173#3193#0" expanded="true" />
+            <element signature="n#style#0;n#span#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-flower-necklet-201.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="59" column="36" selection-start-line="59" selection-start-column="36" selection-end-line="59" selection-end-column="36" />
+          <folding>
+            <element signature="e#3171#3191#0" expanded="true" />
+            <element signature="n#style#0;n#span#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-lily-108.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="59" column="36" selection-start-line="59" selection-start-column="36" selection-end-line="59" selection-end-column="36" />
+          <folding>
+            <element signature="e#3145#3165#0" expanded="true" />
             <element signature="n#style#0;n#span#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
           </folding>
@@ -835,8 +810,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-moon-102.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="323">
+          <caret line="59" column="36" selection-start-line="59" selection-start-column="36" selection-end-line="59" selection-end-column="36" />
           <folding>
+            <element signature="e#3117#3137#0" expanded="true" />
             <element signature="n#style#0;n#span#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
           </folding>
@@ -845,8 +822,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-moon-103.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="459">
+          <caret line="58" column="36" selection-start-line="58" selection-start-column="36" selection-end-line="58" selection-end-column="36" />
           <folding>
+            <element signature="e#3083#3103#0" expanded="true" />
             <element signature="n#style#0;n#span#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
           </folding>
@@ -855,30 +834,115 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-moon-104.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="476">
+          <caret line="59" column="36" selection-start-line="59" selection-start-column="36" selection-end-line="59" selection-end-column="36" />
           <folding>
+            <element signature="e#3183#3203#0" expanded="true" />
             <element signature="n#style#0;n#span#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-necklet-300.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="59" column="36" selection-start-line="59" selection-start-column="36" selection-end-line="59" selection-end-column="36" />
+          <folding>
+            <element signature="e#3146#3166#0" expanded="true" />
+            <element signature="n#style#0;n#span#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-sun-100.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="58" column="36" selection-start-line="58" selection-start-column="36" selection-end-line="58" selection-end-column="36" />
+          <folding>
+            <element signature="e#3038#3058#0" expanded="true" />
+            <element signature="n#style#0;n#span#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-sun-101.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="59" column="36" selection-start-line="59" selection-start-column="36" selection-end-line="59" selection-end-column="36" />
+          <folding>
+            <element signature="e#3160#3180#0" expanded="true" />
+            <element signature="n#style#0;n#span#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-sun-moon.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="58" column="36" selection-start-line="58" selection-start-column="36" selection-end-line="58" selection-end-column="36" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-sun-moon-105.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="374">
+          <caret line="59" column="36" selection-start-line="59" selection-start-column="36" selection-end-line="59" selection-end-column="36" />
           <folding>
+            <element signature="e#3232#3252#0" expanded="true" />
             <element signature="n#style#0;n#span#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/template/trangsuc-01/webroot/js/common.js">
+    <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-sun-moon-106.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="164" column="68" lean-forward="true" selection-start-line="164" selection-start-column="68" selection-end-line="164" selection-end-column="68" />
+        <state relative-caret-position="410">
+          <caret line="60" column="36" selection-start-line="60" selection-start-column="36" selection-end-line="60" selection-end-column="36" />
           <folding>
-            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="e#3263#3283#0" expanded="true" />
+            <element signature="n#style#0;n#span#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-sun-moon-107.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="60" column="36" selection-start-line="60" selection-start-column="36" selection-end-line="60" selection-end-column="36" />
+          <folding>
+            <element signature="e#3300#3320#0" expanded="true" />
+            <element signature="n#style#0;n#span#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-the-moment.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="78" column="36" selection-start-line="78" selection-start-column="36" selection-end-line="78" selection-end-column="36" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-the-moment-202.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="54" column="36" lean-forward="true" selection-start-line="54" selection-start-column="36" selection-end-line="54" selection-end-column="36" />
+          <folding>
+            <element signature="e#3131#3151#0" expanded="true" />
+            <element signature="n#style#0;n#span#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
           </folding>
         </state>
