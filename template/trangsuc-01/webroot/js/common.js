@@ -12,7 +12,7 @@ var listProduct = [
             "uploads/tiny_uploads/totwoo/sun-black.jpg",
         ],
         category: 1,
-        url: 'detail-100-sun.html'
+        url: 'vong-tay-thong-minh-totwoo-sun-100.html'
     },
     {
         id: 101,
@@ -27,7 +27,7 @@ var listProduct = [
             "uploads/tiny_uploads/totwoo/sun-black-silver-metal-chain.jpg",
         ],
         category: 1,
-        url: 'detail-101-sun.html'
+        url: 'vong-tay-thong-minh-totwoo-sun-101.html'
     },
     {
         id: 102,
@@ -43,7 +43,7 @@ var listProduct = [
             "uploads/tiny_uploads/totwoo/moon-pink.jpg",
         ],
         category: 1,
-        url: 'detail-102-moon.html'
+        url: 'vong-tay-thong-minh-totwoo-moon-102.html'
     },
     {
         id: 103,
@@ -59,7 +59,7 @@ var listProduct = [
             "uploads/tiny_uploads/totwoo/moon-pink-zircons.jpg",
         ],
         category: 1,
-        url: 'detail-103-moon.html'
+        url: 'vong-tay-thong-minh-totwoo-moon-103.html'
     },
     {
         id: 104,
@@ -75,7 +75,7 @@ var listProduct = [
             "uploads/tiny_uploads/totwoo/moon-pink-zircons-metal-chain.jpg",
         ],
         category: 1,
-        url: 'detail-104-moon.html'
+        url: 'vong-tay-thong-minh-totwoo-moon-104.html'
     },
     {
         id: 105,
@@ -93,7 +93,7 @@ var listProduct = [
             "uploads/tiny_uploads/totwoo/sun-moon-black-pink.jpg",
         ],
         category: 1,
-        url: 'detail-105-sun-moon.html'
+        url: 'vong-tay-thong-minh-totwoo-sun-moon-105.html'
     },
     {
         id: 106,
@@ -111,7 +111,7 @@ var listProduct = [
             "uploads/tiny_uploads/totwoo/sun-moon-black-pink-zircons.jpg",
         ],
         category: 1,
-        url: 'detail-106-sun-moon.html'
+        url: 'vong-tay-thong-minh-totwoo-sun-moon-106.html'
     },
     {
         id: 107,
@@ -127,7 +127,7 @@ var listProduct = [
             "uploads/tiny_uploads/totwoo/sun-moon-silver-silver-zircons-metal-chain.jpg",
         ],
         category: 1,
-        url: 'detail-107-sun-moon.html'
+        url: 'vong-tay-thong-minh-totwoo-sun-moon-107.html'
     },
     {
         id: 108,
@@ -145,7 +145,7 @@ var listProduct = [
             "uploads/tiny_uploads/totwoo_lily4.jpg"
         ],
         category: 1,
-        url: 'detail-108-lily.html'
+        url: 'vong-tay-thong-minh-totwoo-lily-108.html'
     },
     {
         id: 109,
@@ -162,7 +162,7 @@ var listProduct = [
             "uploads/tiny_uploads/totwoo_daychuyen.jpg",
         ],
         category: 1,
-        url: 'detail-109-bracelet-necklace.html'
+        url: 'vong-tay-thong-minh-totwoo-bracelet-necklace-109.html'
     },
     {
         id: 110,
@@ -181,7 +181,7 @@ var listProduct = [
             "uploads/tiny_uploads/totwoo_lily4.jpg",
         ],
         category: 1,
-        url: 'detail-110-flower-leaves.html'
+        url: 'vong-tay-thong-minh-totwoo-flower-leaves-110.html'
     },
 
     //cat day chuyen
@@ -200,7 +200,7 @@ var listProduct = [
             "uploads/tiny_uploads/totwoo/flower-necklet-gold.jpg",
         ],
         category: 2,
-        url: 'detail-200-flower-necklet.html'
+        url: 'vong-tay-thong-minh-totwoo-flower-necklet-200.html'
     },
     {
         id: 201,
@@ -215,7 +215,7 @@ var listProduct = [
             "uploads/tiny_uploads/totwoo/flower-necklet-gold-full.jpg",
         ],
         category: 2,
-        url: 'detail-201-flower-necklet.html'
+        url: 'vong-tay-thong-minh-totwoo-flower-necklet-201.html'
     },
     {
         id: 202,
@@ -237,7 +237,7 @@ var listProduct = [
             "lading-page/pictures/nc/nc8.jpg",
         ],
         category: 2,
-        url: 'detail-202-the-moment.html'
+        url: 'vong-tay-thong-minh-totwoo-the-moment-202.html'
     },
 
 //cat phu kien
@@ -255,7 +255,7 @@ var listProduct = [
             "uploads/tiny_uploads/totwoo/necklet-pink.jpg",
         ],
         category: 3,
-        url: 'detail-300-necklet.html'
+        url: 'vong-tay-thong-minh-totwoo-necklet-300.html'
     },
 
 

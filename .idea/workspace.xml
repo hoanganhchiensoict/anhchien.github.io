@@ -2,8 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdaf1324-233c-4adb-b79d-299465f777a3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/vong-tay-thong-minh.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vong-tay-thong-minh-sun-moon.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-moon-104.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-sun-moon-105.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/detail-100-sun.html" beforeDir="false" afterPath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-sun-100.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/detail-101-sun.html" beforeDir="false" afterPath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-sun-101.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/detail-102-moon.html" beforeDir="false" afterPath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-moon-102.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/detail-106-sun-moon.html" beforeDir="false" afterPath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-sun-moon-106.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/detail-107-sun-moon.html" beforeDir="false" afterPath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-sun-moon-107.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/detail-108-lily.html" beforeDir="false" afterPath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-lily-108.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/detail-109-bracelet-necklace.html" beforeDir="false" afterPath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-bracelet-necklace-109.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/detail-110-flower-leaves.html" beforeDir="false" afterPath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-flower-leaves-110.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/detail-200-flower-necklet.html" beforeDir="false" afterPath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-flower-necklet-200.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/detail-201-flower-necklet.html" beforeDir="false" afterPath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-flower-necklet-201.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/detail-202-the-moment.html" beforeDir="false" afterPath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-the-moment-202.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/detail-300-necklet.html" beforeDir="false" afterPath="$PROJECT_DIR$/vong-tay-thong-minh-totwoo-necklet-300.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/trangsuc-01/webroot/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/trangsuc-01/webroot/js/common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vong-tay-thong-minh.html" beforeDir="false" afterPath="$PROJECT_DIR$/vong-tay-thong-minh-the-moment.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -15,10 +31,62 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh.html">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-the-moment.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-sun-moon.html">
           <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="299" column="14" lean-forward="true" selection-start-line="299" selection-start-column="8" selection-end-line="299" selection-end-column="14" />
+              <folding>
+                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#script#0;n#body#0;n#html#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/template/trangsuc-01/webroot/js/common.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="112">
+              <caret line="164" column="68" lean-forward="true" selection-start-line="164" selection-start-column="68" selection-end-line="164" selection-end-column="68" />
+              <folding>
+                <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-sun-moon-105.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="n#style#0;n#span#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -32,7 +100,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>s4-banner</find>
       <find>item-carousel</find>
       <find>wrapper-carousel</find>
       <find>ship-bg3</find>
@@ -62,6 +129,7 @@
       <find>PageView</find>
       <find>484018939278089</find>
       <find>uploads/plugin/setting/3/trang-s-c-logo.png</find>
+      <find>loadpr</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;link rel=&quot;canonical&quot; href=&quot;dreamup198.com&quot;</replace>
@@ -107,7 +175,6 @@
         <option value="$PROJECT_DIR$/lading-neck.html" />
         <option value="$PROJECT_DIR$/lading-page/css/lading-105-web.css" />
         <option value="$PROJECT_DIR$/lading-page/css/lading-neck.css" />
-        <option value="$PROJECT_DIR$/template/trangsuc-01/webroot/js/common.js" />
         <option value="$PROJECT_DIR$/intro-105-sun-moon.html" />
         <option value="$PROJECT_DIR$/lading-105-sun-moon.html" />
         <option value="$PROJECT_DIR$/lading-page/css/lading-105-mobile.css" />
@@ -135,6 +202,7 @@
         <option value="$PROJECT_DIR$/lading-the-moment.html" />
         <option value="$PROJECT_DIR$/lien-he.html" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/template/trangsuc-01/webroot/js/common.js" />
       </list>
     </option>
   </component>
@@ -151,7 +219,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -200,6 +267,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -215,8 +283,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\ProjectCc\Web\trangsuc-01.web4s.vn\demo\uploads\plugin\setting\3" />
       <recent name="F:\ProjectCc\Web\trangsuc-01.web4s.vn\demo" />
+      <recent name="F:\ProjectCc\Web\trangsuc-01.web4s.vn\demo\uploads\plugin\setting\3" />
       <recent name="F:\ProjectCc\Web\trangsuc-01.web4s.vn\demo\lading-page\pictures\nc" />
       <recent name="F:\ProjectCc\Web\trangsuc-01.web4s.vn\demo\lading-page\css" />
       <recent name="F:\ProjectCc\Web\trangsuc-01.web4s.vn\demo\lading-page\pictures" />
@@ -277,18 +345,19 @@
       <workItem from="1617159328618" duration="18000" />
       <workItem from="1617594695989" duration="542000" />
       <workItem from="1617683218365" duration="667000" />
-      <workItem from="1617772557984" duration="636000" />
+      <workItem from="1617772557984" duration="935000" />
+      <workItem from="1617851409994" duration="596000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="275306000" />
+    <option name="totallyTimeSpent" value="276201000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="9" width="1348" height="708" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2259542" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2259542" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -336,35 +405,6 @@
     <state x="338" y="21" width="672" height="676" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1615137705885" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lading-page/owl-carousel/assets/img/AjaxLoader.gif" />
-    <entry file="file://$PROJECT_DIR$/lading-page/owl-carousel/assets/js/application.js" />
-    <entry file="file://$PROJECT_DIR$/libs/slick/slick.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="2993" column="4" selection-start-line="2993" selection-start-column="4" selection-end-line="2993" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/trangsuc-01/webroot/assets/js/jquery.2.1.1.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lading-page/pictures/healthy.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lading-page/pictures/video-cap.JPG" />
-    <entry file="file://$PROJECT_DIR$/template/trangsuc-01/webroot/css/css_custom.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="180" column="1" lean-forward="true" selection-start-line="10" selection-end-line="180" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lading-page/pictures/how-to-use.jpeg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -483,17 +523,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/template/trangsuc-01/webroot/js/common.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-289">
-          <caret line="221" column="39" selection-start-line="221" selection-start-column="39" selection-end-line="221" selection-end-column="39" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/card-info.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="321">
@@ -526,7 +555,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/detail-101-sun.html">
+    <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-sun-101.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="155">
           <caret line="38" column="70" selection-start-line="38" selection-start-column="70" selection-end-line="38" selection-end-column="70" />
@@ -537,7 +566,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/detail-102-moon.html">
+    <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-moon-102.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="155">
           <caret line="38" column="70" selection-start-line="38" selection-start-column="70" selection-end-line="38" selection-end-column="70" />
@@ -548,7 +577,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/detail-103-moon.html">
+    <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-moon-103.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="155">
           <caret line="37" column="70" selection-start-line="37" selection-start-column="55" selection-end-line="37" selection-end-column="70" />
@@ -577,7 +606,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/detail-106-sun-moon.html">
+    <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-sun-moon-106.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="155">
           <caret line="38" column="70" selection-start-line="38" selection-start-column="70" selection-end-line="38" selection-end-column="70" />
@@ -588,7 +617,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/detail-107-sun-moon.html">
+    <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-sun-moon-107.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="155">
           <caret line="38" column="70" selection-start-line="38" selection-start-column="70" selection-end-line="38" selection-end-column="70" />
@@ -599,7 +628,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/detail-108-lily.html">
+    <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-lily-108.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="155">
           <caret line="38" column="70" selection-start-line="38" selection-start-column="70" selection-end-line="38" selection-end-column="70" />
@@ -610,7 +639,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/detail-109-bracelet-necklace.html">
+    <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-bracelet-necklace-109.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="155">
           <caret line="37" column="70" selection-start-line="37" selection-start-column="70" selection-end-line="37" selection-end-column="70" />
@@ -621,7 +650,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/detail-110-flower-leaves.html">
+    <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-flower-leaves-110.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="155">
           <caret line="38" column="70" selection-start-line="38" selection-start-column="70" selection-end-line="38" selection-end-column="70" />
@@ -632,7 +661,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/detail-200-flower-necklet.html">
+    <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-flower-necklet-200.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="155">
           <caret line="38" column="70" selection-start-line="38" selection-start-column="70" selection-end-line="38" selection-end-column="70" />
@@ -643,7 +672,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/detail-201-flower-necklet.html">
+    <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-flower-necklet-201.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="155">
           <caret line="38" column="70" selection-start-line="38" selection-start-column="70" selection-end-line="38" selection-end-column="70" />
@@ -654,7 +683,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/detail-202-the-moment.html">
+    <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-the-moment-202.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="155">
           <caret line="38" column="70" selection-start-line="38" selection-start-column="70" selection-end-line="38" selection-end-column="70" />
@@ -686,14 +715,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/detail-300-necklet.html">
+    <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-necklet-300.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="77" column="74" selection-start-line="77" selection-start-column="74" selection-end-line="77" selection-end-column="74" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/detail-100-sun.html">
+    <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-sun-100.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="291">
           <caret line="21" column="19" lean-forward="true" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
@@ -758,10 +787,20 @@
     <entry file="file://$PROJECT_DIR$/uploads/plugin/setting/3/trang-s-c-logo.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-the-moment.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-sun-moon.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="59" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="59" />
+        <state relative-caret-position="165">
+          <caret line="299" column="14" lean-forward="true" selection-start-line="299" selection-start-column="8" selection-end-line="299" selection-end-column="14" />
           <folding>
             <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -774,8 +813,76 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh.html">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-sun-100.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#style#0;n#span#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-sun-101.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#style#0;n#span#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-moon-102.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#style#0;n#span#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-moon-103.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#style#0;n#span#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-moon-104.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#style#0;n#span#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vong-tay-thong-minh-totwoo-sun-moon-105.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#style#0;n#span#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/trangsuc-01/webroot/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="164" column="68" lean-forward="true" selection-start-line="164" selection-start-column="68" selection-end-line="164" selection-end-column="68" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
