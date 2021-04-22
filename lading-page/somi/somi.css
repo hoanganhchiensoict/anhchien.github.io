@@ -33,6 +33,7 @@ input {
     margin-top: 20px;
     background-color: black;
     color: white;
+    width: 100%;
 }
 
 .title-center {
@@ -54,6 +55,16 @@ input {
     border: 80px solid black;
     border-image-source: url("../somi/bg.jpg");
     border-image-slice: 80 80 80 80;
+}
+
+@media (max-width: 600px) {
+    .cc_wrapper {
+        display: flex;
+        flex-direction: column;
+        border: 20px solid black;
+        border-image-source: url("../somi/bg.jpg");
+        border-image-slice: 80 80 80 80;
+    }
 }
 
 .s1 {
