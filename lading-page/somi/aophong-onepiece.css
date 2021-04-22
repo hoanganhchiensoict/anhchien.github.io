@@ -13,15 +13,6 @@ span {
     font-size: 14px;
 }
 
-button {
-    width: 100px;
-    height: 40px;
-    background: red;
-    color: #fff;
-    outline: none;
-    border: 0
-}
-
 input {
     height: 33px;
     margin-top: 10px;
@@ -43,10 +34,11 @@ input {
 }
 
 .im-header {
-    background-image: url("../somi/im1.png");
+    background-image: url("../somi/im2.jpg");
     width: 100%;
-    padding-bottom: 25%;
+    padding-bottom: 33%;
     background-size: cover;
+    margin-bottom: 10px;
 }
 
 .cc_wrapper {
@@ -74,32 +66,32 @@ input {
 }
 
 .s1-content1 {
-    background-image: url("../somi/000_xam.png");
+    background-image: url("../somi/20_c18.png");
     width: 100%;
-    padding-bottom: 125%;
+    padding-bottom: 100%;
     background-size: cover;
 }
 
 .s1-content2 {
-    background-image: url("../somi/000_xam2.png");
+    background-image: url("../somi/19_ace.png");
     width: 72%;
-    padding-bottom: 97%;
+    padding-bottom: 72%;
     background-size: cover;
     margin: 10%;
 }
 
 .s2-content1 {
-    background-image: url("../somi/sale.png");
-    width: 90%;
-    padding-bottom: 82%;
+    background-image: url("../somi/sale2.png");
+    width: 60%;
+    padding-bottom: 50%;
     background-size: cover;
-    margin-left: 10%;
+    margin-left: 40%;
 }
 
 .s2-content2 {
-    background-image: url("../somi/000_xam3.jpg");
+    background-image: url("../somi/mohinh.png");
     width: 100%;
-    padding-bottom: 90%;
+    padding-bottom: 100%;
     background-size: cover;
     margin-top: 20%;
 }
@@ -108,6 +100,92 @@ input {
     display: flex;
     flex-direction: column;
     margin-top: 10%;
+    margin-left: 20%;
+}
+
+.item {
+    width: 100%;
+    padding-bottom: 100%;
+    margin-bottom: 10px;
+    background-size: cover;
+    position: relative
+}
+
+.item0 {
+    background-image: url("../somi/1_doflamingo.png");
+}
+
+.item1 {
+    background-image: url("../somi/2_ace.png");
+}
+
+.item2 {
+    background-image: url("../somi/4_luffy.png");
+}
+
+.item3 {
+    background-image: url("../somi/5_chopper.png");
+}
+
+.item4 {
+    background-image: url("../somi/6_zoro.png");
+}
+
+.item5 {
+    background-image: url("../somi/7_ace.png");
+}
+
+.item6 {
+    background-image: url("../somi/8_luffy.png");
+}
+
+.item7 {
+    background-image: url("../somi/9_luffy.png");
+}
+
+.item8 {
+    background-image: url("../somi/12_do.png");
+}
+
+.item9 {
+    background-image: url("../somi/11_luffy.png");
+}
+
+.item10 {
+    background-image: url("../somi/13_ace.png");
+}
+
+.item11 {
+    background-image: url("../somi/14_shanks.png");
+}
+
+.item12 {
+    background-image: url("../somi/15_luffy.png");
+}
+
+.item13 {
+    background-image: url("../somi/16_chopper.png");
+}
+
+.item14 {
+    background-image: url("../somi/17_zoro.png");
+}
+
+.item15 {
+    background-image: url("../somi/18_luffy.png");
+}
+
+.item16 {
+    background-image: url("../somi/20_c18.png");
+}
+
+button {
+    width: 100px;
+    height: 40px;
+    background: red;
+    color: #fff;
+    outline: none;
+    border: 0
 }
 
 .wrapper-buy-now {
@@ -120,26 +198,19 @@ input {
 .other1 {
     flex: 1;
     margin: 5px;
-    background-image: url("../somi/00_trang.png");
-    padding-bottom: 30%;
+    background-image: url("../somi/000_xam2.png");
+    padding-bottom: 60%;
     background-size: cover;
 }
 
 .other2 {
     flex: 1;
     margin: 5px;
-    background-image: url("../somi/00_xanh.png");
-    padding-bottom: 30%;
+    background-image: url("../somi/000_xam.png");
+    padding-bottom: 60%;
     background-size: cover;
 }
 
-.other3 {
-    flex: 1;
-    margin: 5px;
-    background-image: url("../somi/00_den.png");
-    padding-bottom: 30%;
-    background-size: cover;
-}
 
 
 .hotline-phone-ring-wrap {
