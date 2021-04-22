@@ -119,6 +119,31 @@
 
 <body>
 
+<!-- Messenger Plugin chat Code -->
+<div id="fb-root"></div>
+<script>
+    window.fbAsyncInit = function() {
+        FB.init({
+            xfbml            : true,
+            version          : 'v10.0'
+        });
+    };
+
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Your Plugin chat code -->
+<div class="fb-customerchat"
+     attribution="biz_inbox"
+     page_id="112206660469969">
+</div>
+
 <div class="cc_wrapper">
     <div class="im-header"></div>
 
@@ -179,6 +204,13 @@
 
             <button type="submit" id="btn-submit">GỬI</button>
         </form>
+
+        <script type="text/javascript">
+            $('#btn-submit').click(function() {
+                fbq('trackCustom', 'SendFormSoMi', {from: "Lading-TheMoment"});
+                ttq.track('SubmitForm');
+            });
+        </script>
     </div>
 </div>
 
@@ -197,33 +229,6 @@
             <span class="text-hotline">096.919.0880</span>
         </a>
     </div>
-</div>
-
-<!-- Load Facebook SDK for JavaScript cho chat -->
-<div id="fb-root"></div>
-<script>
-    window.fbAsyncInit = function () {
-        FB.init({
-            xfbml: true,
-            version: 'v10.0'
-        });
-    };
-
-    (function (d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
-
-<!-- Your Chat Plugin code -->
-<div class="fb-customerchat"
-     attribution="setup_tool"
-     page_id="100154255482107"
-     logged_in_greeting="Hi! DreamUp198 có thể giúp gì cho bạn?"
-     logged_out_greeting="Hi! DreamUp198 có thể giúp gì cho bạn?">
 </div>
 
 </body>
