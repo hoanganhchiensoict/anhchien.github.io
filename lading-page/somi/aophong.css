@@ -74,32 +74,32 @@ input {
 }
 
 .s1-content1 {
-    background-image: url("../somi/000_xam.png");
+    background-image: url("../somi/00_trang.png");
     width: 100%;
-    padding-bottom: 125%;
+    padding-bottom: 100%;
     background-size: cover;
 }
 
 .s1-content2 {
-    background-image: url("../somi/000_xam2.png");
+    background-image: url("../somi/00_den.png");
     width: 72%;
-    padding-bottom: 97%;
+    padding-bottom: 72%;
     background-size: cover;
     margin: 10%;
 }
 
 .s2-content1 {
     background-image: url("../somi/price.JPG");
-    width: 90%;
-    padding-bottom: 100%;
+    width: 60%;
+    padding-bottom: 30%;
     background-size: cover;
-    margin-left: 10%;
+    margin-left: 40%;
 }
 
 .s2-content2 {
-    background-image: url("../somi/000_xam3.jpg");
+    background-image: url("../somi/00_xanh.png");
     width: 100%;
-    padding-bottom: 90%;
+    padding-bottom: 100%;
     background-size: cover;
     margin-top: 20%;
 }
@@ -108,6 +108,7 @@ input {
     display: flex;
     flex-direction: column;
     margin-top: 10%;
+    margin-left: 20%;
 }
 
 .wrapper-buy-now {
@@ -120,24 +121,16 @@ input {
 .other1 {
     flex: 1;
     margin: 5px;
-    background-image: url("../somi/00_trang.png");
-    padding-bottom: 30%;
+    background-image: url("../somi/000_xam2.png");
+    padding-bottom: 60%;
     background-size: cover;
 }
 
 .other2 {
     flex: 1;
     margin: 5px;
-    background-image: url("../somi/00_xanh.png");
-    padding-bottom: 30%;
-    background-size: cover;
-}
-
-.other3 {
-    flex: 1;
-    margin: 5px;
-    background-image: url("../somi/00_den.png");
-    padding-bottom: 30%;
+    background-image: url("../somi/000_xam.png");
+    padding-bottom: 60%;
     background-size: cover;
 }
 
