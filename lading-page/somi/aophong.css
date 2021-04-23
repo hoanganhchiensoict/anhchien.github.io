@@ -118,19 +118,21 @@ input {
     margin: 0 auto
 }
 
-.other1 {
+.item-other {
     flex: 1;
     margin: 5px;
+
+}
+
+.other1 {
     background-image: url("../somi/000_xam2.png");
-    padding-bottom: 60%;
+    padding-bottom: 120%;
     background-size: cover;
 }
 
 .other2 {
-    flex: 1;
-    margin: 5px;
     background-image: url("../somi/000_xam.png");
-    padding-bottom: 60%;
+    padding-bottom: 120%;
     background-size: cover;
 }
 

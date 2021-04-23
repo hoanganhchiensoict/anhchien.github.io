@@ -2,35 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdaf1324-233c-4adb-b79d-299465f777a3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/dreamup-ao-phong-onepiece.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lading-page/somi/11_luffy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lading-page/somi/12_do.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lading-page/somi/13_ace.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lading-page/somi/14_shanks.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lading-page/somi/15_luffy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lading-page/somi/16_chopper.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lading-page/somi/17_zoro.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lading-page/somi/18_luffy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lading-page/somi/19_ace.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lading-page/somi/1_doflamingo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lading-page/somi/20_c18.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lading-page/somi/2_ace.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lading-page/somi/4_luffy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lading-page/somi/5_chopper.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lading-page/somi/6_zoro.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lading-page/somi/7_ace.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lading-page/somi/8_luffy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lading-page/somi/9_luffy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lading-page/somi/aophong-onepiece.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lading-page/somi/im1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lading-page/somi/im2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lading-page/somi/mohinh.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lading-page/somi/sale.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lading-page/somi/sale2.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dreamup-ao-phong-dui.html" beforeDir="false" afterPath="$PROJECT_DIR$/dreamup-ao-phong-dui.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dreamup-ao-phong-onepiece.html" beforeDir="false" afterPath="$PROJECT_DIR$/onepiece.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dreamup-so-mi-dui.html" beforeDir="false" afterPath="$PROJECT_DIR$/dreamup-so-mi-dui.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lading-page/somi/aophong-onepiece.css" beforeDir="false" afterPath="$PROJECT_DIR$/lading-page/somi/aophong-onepiece.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lading-page/somi/aophong.css" beforeDir="false" afterPath="$PROJECT_DIR$/lading-page/somi/aophong.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lading-page/somi/im1.JPG" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/lading-page/somi/somi.css" beforeDir="false" afterPath="$PROJECT_DIR$/lading-page/somi/somi.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,11 +24,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="25" />
-    <option name="width" value="1348" />
-    <option name="height" value="708" />
   </component>
   <component name="ProjectId" id="1p1RXDNZJEDXDG0yHvalDsIlgHP" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -147,11 +119,13 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" />
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" />
-    <state x="379" y="96" width="607" height="536" key="find.popup" />
-    <state x="379" y="96" width="607" height="536" key="find.popup/0.0.1366.728@0.0.1366.728" />
-    <state x="338" y="21" width="672" height="676" key="search.everywhere.popup" />
-    <state x="338" y="21" width="672" height="676" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" />
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1619187482694">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1619187482694" />
+    <state x="379" y="96" width="607" height="536" key="find.popup" timestamp="1619187380500" />
+    <state x="379" y="96" width="607" height="536" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1619187380500" />
+    <state x="338" y="21" width="672" height="676" key="search.everywhere.popup" timestamp="1619187380500" />
+    <state x="338" y="21" width="672" height="676" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1619187380500" />
   </component>
 </project>

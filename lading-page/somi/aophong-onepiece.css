@@ -179,6 +179,10 @@ input {
     background-image: url("../somi/20_c18.png");
 }
 
+.item17 {
+    background-image: url("../somi/19_ace.png");
+}
+
 button {
     width: 100px;
     height: 40px;
@@ -195,19 +199,27 @@ button {
     margin: 0 auto
 }
 
-.other1 {
+.item-other {
     flex: 1;
     margin: 5px;
-    background-image: url("../somi/000_xam2.png");
-    padding-bottom: 60%;
+
+}
+
+.other1 {
+    background-image: url("../somi/00_trang.png");
+    padding-bottom: 100%;
     background-size: cover;
 }
 
 .other2 {
-    flex: 1;
-    margin: 5px;
-    background-image: url("../somi/000_xam.png");
-    padding-bottom: 60%;
+    background-image: url("../somi/00_xanh.png");
+    padding-bottom: 100%;
+    background-size: cover;
+}
+
+.other3 {
+    background-image: url("../somi/00_den.png");
+    padding-bottom: 100%;
     background-size: cover;
 }
 

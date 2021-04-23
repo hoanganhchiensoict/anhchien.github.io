@@ -117,27 +117,27 @@ input {
     margin: 0 auto
 }
 
-.other1 {
+.item-other {
     flex: 1;
     margin: 5px;
+
+}
+
+.other1 {
     background-image: url("../somi/00_trang.png");
-    padding-bottom: 30%;
+    padding-bottom: 100%;
     background-size: cover;
 }
 
 .other2 {
-    flex: 1;
-    margin: 5px;
     background-image: url("../somi/00_xanh.png");
-    padding-bottom: 30%;
+    padding-bottom: 100%;
     background-size: cover;
 }
 
 .other3 {
-    flex: 1;
-    margin: 5px;
     background-image: url("../somi/00_den.png");
-    padding-bottom: 30%;
+    padding-bottom: 100%;
     background-size: cover;
 }
 
