@@ -74,14 +74,14 @@ input {
 }
 
 .s1-content1 {
-    background-image: url("../somi/00_trang.png");
+    background-image: url("../somi/1.jpg");
     width: 100%;
     padding-bottom: 100%;
     background-size: cover;
 }
 
 .s1-content2 {
-    background-image: url("../somi/00_den.png");
+    background-image: url("../somi/2.jpg");
     width: 72%;
     padding-bottom: 72%;
     background-size: cover;
@@ -89,7 +89,7 @@ input {
 }
 
 .s2-content1 {
-    background-image: url("../somi/sale.png");
+    /*background-image: url("../somi/sale.png");*/
     width: 60%;
     padding-bottom: 50%;
     background-size: cover;
@@ -97,7 +97,7 @@ input {
 }
 
 .s2-content2 {
-    background-image: url("../somi/00_xanh.png");
+    background-image: url("../somi/3.jpg");
     width: 100%;
     padding-bottom: 100%;
     background-size: cover;
@@ -125,16 +125,49 @@ input {
 }
 
 .other1 {
-    background-image: url("../somi/000_xam2.png");
+    background-image: url("../somi/1_doflamingo.png");
     padding-bottom: 120%;
     background-size: cover;
 }
 
 .other2 {
-    background-image: url("../somi/000_xam.png");
+    background-image: url("../somi/2_ace.png");
     padding-bottom: 120%;
     background-size: cover;
 }
+
+.item {
+    width: 100%;
+    padding-bottom: 100%;
+    margin-bottom: 10px;
+    background-size: cover;
+    position: relative
+}
+
+.item0 {
+    background-image: url("../somi/4.jpg");
+}
+
+.item1 {
+    background-image: url("../somi/5.jpg");
+}
+
+.item2 {
+    background-image: url("../somi/6.jpg");
+}
+
+.item3 {
+    background-image: url("../somi/7.jpg");
+}
+
+.item4 {
+    background-image: url("../somi/8.jpg");
+}
+
+.item5 {
+    background-image: url("../somi/9.jpg");
+}
+
 
 
 .hotline-phone-ring-wrap {
