@@ -1,5 +1,68 @@
 var listProduct = [
     {
+        id: 900,
+        name: 'Áo thun đôi A-20 hình nam nữ',
+        trademark: '', //thương hiệu
+        price: 119000,
+        price_sale: 150000,
+        color: 'Trắng',
+        material: 'Cotton mỏng mát', //chất liệu
+        thumb: 'uploads/ao_doi/a20.jpg',
+        pictures: [
+            "uploads/ao_doi/a20.jpg",
+            "uploads/ao_doi/a20_2.jpg",
+        ],
+        category: 9,
+        url: 'ao-thun-doi-cotton-in-hinh-de-thuong-a20.html'
+    },
+    {
+        id: 901,
+        name: 'Áo thun đôi A-21 hình đáng yêu',
+        trademark: '', //thương hiệu
+        price: 119000,
+        price_sale: 15000,
+        color: 'Trắng',
+        material: 'Cotton mỏng mát', //chất liệu
+        thumb: 'uploads/ao_doi/a21.jpg',
+        pictures: [
+            "uploads/ao_doi/a21.jpg",
+        ],
+        category: 9,
+        url: 'ao-thun-doi-cotton-in-hinh-de-thuong-a21.html'
+    },
+    {
+        id: 902,
+        name: 'Áo thun đôi A-19 hình trái tim',
+        trademark: '', //thương hiệu
+        price: 119000,
+        price_sale: 15000,
+        color: 'Trắng',
+        material: 'Cotton mỏng mát', //chất liệu
+        thumb: 'uploads/ao_doi/a19_2.jpg',
+        pictures: [
+            "uploads/ao_doi/a19.jpg",
+            "uploads/ao_doi/a19_2.jpg",
+        ],
+        category: 9,
+        url: 'ao-thun-doi-cotton-in-hinh-trai-tim-a19.html'
+    },
+    {
+        id: 903,
+        name: 'Áo thun đôi A-22 hình thỏ đáng yêu',
+        trademark: '', //thương hiệu
+        price: 119000,
+        price_sale: 15000,
+        color: 'Trắng',
+        material: 'Cotton mỏng mát', //chất liệu
+        thumb: 'uploads/ao_doi/a22.jpg',
+        pictures: [
+            "uploads/ao_doi/a22.jpg",
+        ],
+        category: 9,
+        url: 'ao-thun-doi-cotton-in-hinh-tho-de-thuong-a22.html'
+    },
+
+    {
         id: 100,
         name: 'Sun - Black',
         trademark: 'TotWoo', //thương hiệu

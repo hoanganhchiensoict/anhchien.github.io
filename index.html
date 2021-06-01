@@ -60,19 +60,29 @@
     <!--    pixel Totwoo for Cc Mystery-->
     <!-- Facebook Pixel Code -->
     <script>
-        !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-            n.queue=[];t=b.createElement(e);t.async=!0;
-            t.src=v;s=b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t,s)}(window, document,'script',
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
             'https://connect.facebook.net/en_US/fbevents.js');
         fbq('init', '495643928243483');
         // fbq('track', 'PageView');
     </script>
     <!--<noscript><img height="1" width="1" style="display:none"-->
-                   <!--src="https://www.facebook.com/tr?id=495643928243483&ev=PageView&noscript=1"-->
+    <!--src="https://www.facebook.com/tr?id=495643928243483&ev=PageView&noscript=1"-->
     <!--/></noscript>-->
     <!-- End Facebook Pixel Code -->
 
@@ -201,7 +211,7 @@
 
     <div id="content-row-0" class="nh-row nhslider">
         <div class="mighty-slider"
-             style="background-image: url('uploads/tiny_uploads/banner.png'); background-size: cover;">
+             style="background-image: url('uploads/tiny_uploads/banner.png'); background-size: cover; background-position-y: center;">
         </div>
     </div>
     <!--<div id="content-row-25" class="nh-row bg-white">-->
@@ -257,6 +267,25 @@
     <!--</div>-->
     <!--</div>-->
 
+    <div id="content-row-9" class="nh-row hot-products">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-xs-12">
+                    <div class="item_block">
+                        <div class="box-product">
+                            <div class="title-block">
+                                <h4 style="text-align: center;" class="heading_title">Áo đôi</h4>
+                            </div>
+                            <div class="box-detail-list-product">
+                                <div class="row list-product-wrapper" id="list-product-item-cat9">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div id="content-row-1" class="nh-row hot-products">
         <div class="container">
             <div class="row">
@@ -316,29 +345,30 @@
     </div>
 
     <script type="text/javascript">
+        loadProduct(9)
         loadProduct(1)
         loadProduct(2)
         loadProduct(3)
         loadCartNumber()
     </script>
 
-    <div id="content-row-54" class="nh-row homepage-company-intro">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-12 col-xs-12">
-                    <div src="uploads/plugin/custom_img/2018-07-07/custom-home-banner-01.jpg"
-                         class="container section-company-intro">
-                        <div class="company-intro-banner">
-                            <button target="_self" class="company-intro-img">
-                                <img class="vc_single_image-img" alt="single"
-                                     src="uploads/plugin/custom_img/2018-07-26/custom-28034814640-4bf9ca94aa-o.png"/>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <!--<div id="content-row-54" class="nh-row homepage-company-intro">-->
+        <!--<div class="container-fluid">-->
+            <!--<div class="row">-->
+                <!--<div class="col-sm-12 col-xs-12">-->
+                    <!--<div src="uploads/plugin/custom_img/2018-07-07/custom-home-banner-01.jpg"-->
+                         <!--class="container section-company-intro">-->
+                        <!--<div class="company-intro-banner">-->
+                            <!--<button target="_self" class="company-intro-img">-->
+                                <!--<img class="vc_single_image-img" alt="single"-->
+                                     <!--src="uploads/plugin/custom_img/2018-07-26/custom-28034814640-4bf9ca94aa-o.png"/>-->
+                            <!--</button>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
     <!--<div id="content-row-58" class="nh-row homepage-news bg-white">-->
     <!--<div class="container">-->
     <!--<div class="row">-->
