@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdaf1324-233c-4adb-b79d-299465f777a3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ao-phong-doi-tay-ngan.html" beforeDir="false" afterPath="$PROJECT_DIR$/ao-phong-doi-tay-ngan.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -16,20 +15,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="353">
+              <caret line="138" column="13" lean-forward="true" selection-start-line="125" selection-start-column="4" selection-end-line="138" selection-end-column="13" />
+              <folding>
+                <element signature="e#3573#4329#0" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ao-phong-doi-tay-ngan.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="6152" column="38" selection-start-line="6150" selection-start-column="40" selection-end-line="6152" selection-end-column="38" />
+            <state relative-caret-position="369">
+              <caret line="1950" column="30" lean-forward="true" selection-start-line="1950" selection-start-column="30" selection-end-line="1950" selection-end-column="30" />
               <folding>
                 <element signature="e#415#1648#0" />
                 <element signature="n#link#9;n#head#0;n#html#0;n#!!top" />
                 <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
+                <element signature="n#script#1;n#head#0;n#html#0;n#!!top" />
                 <element signature="e#49561#49614#0" />
                 <element signature="e#49625#49677#0" />
                 <element signature="e#49747#49775#0" />
                 <element signature="e#49791#49825#0" />
                 <element signature="e#49868#49921#0" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#1;n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#div#7;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="e#190647#192378#0" />
                 <element signature="e#193093#234087#0" />
@@ -126,6 +142,11 @@
             <path>
               <item name="demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="demo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -228,18 +249,18 @@
       <workItem from="1622534091505" duration="5411000" />
       <workItem from="1622608295893" duration="1254000" />
       <workItem from="1622693144718" duration="186000" />
-      <workItem from="1623119199262" duration="7608000" />
+      <workItem from="1623119199262" duration="8916000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="328721000" />
+    <option name="totallyTimeSpent" value="330029000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="31" y="25" width="1333" height="686" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19459459" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19459459" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -467,18 +488,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="207" column="39" selection-start-line="207" selection-start-column="39" selection-end-line="207" selection-end-column="39" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ao-thun-doi-cotton-in-hinh-de-thuong-a21.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3954">
@@ -519,19 +528,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="138" column="13" lean-forward="true" selection-start-line="125" selection-start-column="4" selection-end-line="138" selection-end-column="13" />
+          <folding>
+            <element signature="e#3573#4329#0" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ao-phong-doi-tay-ngan.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="6152" column="38" selection-start-line="6150" selection-start-column="40" selection-end-line="6152" selection-end-column="38" />
+        <state relative-caret-position="369">
+          <caret line="1950" column="30" lean-forward="true" selection-start-line="1950" selection-start-column="30" selection-end-line="1950" selection-end-column="30" />
           <folding>
             <element signature="e#415#1648#0" />
             <element signature="n#link#9;n#head#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
+            <element signature="n#script#1;n#head#0;n#html#0;n#!!top" />
             <element signature="e#49561#49614#0" />
             <element signature="e#49625#49677#0" />
             <element signature="e#49747#49775#0" />
             <element signature="e#49791#49825#0" />
             <element signature="e#49868#49921#0" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#1;n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#div#7;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="e#190647#192378#0" />
             <element signature="e#193093#234087#0" />
