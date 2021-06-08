@@ -6142,7 +6142,7 @@
                 !</h3></div>
             <div id="FORM104" class="ladi-element">
                 <form method="GET"
-                      action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdQ868W0thMuT7EDtsCtZKlveP_fn76aPyxKwg9n-gAze4cHw/formResponse"
+
                       class="ladi-form">
 
                     <div id="BUTTON105" class="ladi-element">
@@ -6154,11 +6154,25 @@
                             </div>
                         </div>
                     </div>
+
+                    <script type="text/javascript">
+                        var btnBuy = document.getElementById("BUTTON105")
+                        btnBuy.addEventListener('click', function (e) {
+                            var name = document.getElementById("name").value
+                            var phone = document.getElementById("phone").value
+
+
+                            if (name != '' && phone != '') {
+                                ttq.track('Purchase');
+                            }
+                        })
+                    </script>
+
                     <div id="FORM_ITEM107" class="ladi-element">
                         <div class="ladi-form-item-container">
                             <div class="ladi-form-item-background"></div>
                             <div class="ladi-form-item"><input autocomplete="off" tabindex="1" name="entry.683750747"
-                                                               required
+                                                               required id="name"
                                                                class="ladi-form-control" type="text"
                                                                placeholder="H&#7885; v&agrave; t&ecirc;n" value="">
                             </div>
@@ -6168,7 +6182,7 @@
                         <div class="ladi-form-item-container">
                             <div class="ladi-form-item-background"></div>
                             <div class="ladi-form-item"><input autocomplete="off" tabindex="3" name="entry.514456815"
-                                                               required
+                                                               required id="phone"
                                                                class="ladi-form-control" type="tel"
                                                                placeholder="S&#7889; &#273;i&#7879;n tho&#7841;i"
                                                                pattern="(\+84|0){1}(9|8|7|5|3){1}[0-9]{8}" value="">
