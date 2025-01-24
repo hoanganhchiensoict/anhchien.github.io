@@ -331,7 +331,7 @@
     },
     {
       "index": 3,
-      "url": "",
+      "url": "https://coderealities.com/pictures/brainiqv2_bg/im_fruit_level3.png",
       "data": [
         {"x": 0, "y": 6, "z": 20},
         {"x": 1, "y": 6, "z": 19},
@@ -480,7 +480,7 @@
     },
     {
       "index": 4,
-      "url": "",
+      "url": "https://coderealities.com/pictures/brainiqv2_bg/im_fruit_level4.png",
       "data": [
         {"x": 3, "y": 5, "z": 30},
         {"x": 2, "y": 5, "z": 29},
@@ -628,7 +628,7 @@
     },
     {
       "index": 5,
-      "url": "",
+      "url": "https://coderealities.com/pictures/brainiqv2_bg/im_fruit_level5.png",
       "data": [
 
         {"x": 3, "y": 5, "z": 30},
