@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Microphone Test</title>
+  </head>
+  <body>
+    <h1>Test Microphone</h1>
+    <button onclick="startMic()">Start Microphone</button>
+    <p id="status">Status: Waiting...</p>
+
+    <script>
+      async function startMic() {
+        try {
+          await navigator.mediaDevices.getUserMedia({ audio: true });
+          document.getElementById("status").textContent =
+            "Microphone access granted!";
+        } catch (error) {
+          document.getElementById("status").textContent =
+            "Error: " + error.message;
+        }
+      }
+    </script>
+  </body>
+</html>
