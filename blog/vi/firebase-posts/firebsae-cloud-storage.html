@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>
+      Khám Phá Sức Mạnh của Firebase Cloud Storage: Lưu Trữ và Quản Lý Dữ Liệu
+      Một Cách Thuận Tiện!
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7;
+        color: #333;
+        line-height: 1.6;
+        padding: 0 1rem;
+        margin: auto;
+      }
+
+      .container {
+        display: flex;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .sidebar-left,
+      .sidebar-right {
+        width: 20%;
+        padding: 20px;
+        position: sticky;
+        top: 0;
+        height: fit-content;
+        background-color: #ffffff;
+        border-radius: 8px;
+        margin: 10px;
+        align-self: start;
+      }
+
+      .content {
+        width: 60%;
+        background-color: #fff;
+        padding: 30px;
+        margin: 10px;
+        border-radius: 8px;
+      }
+
+      h1,
+      h2 {
+        color: #2c3e50;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin: 1rem 0;
+      }
+      ul {
+        padding-left: 1.2rem;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1rem 0;
+      }
+      td,
+      th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+      td:first-child {
+        background-color: #f9f9f9;
+      }
+      h3 {
+        color: #2c3e50;
+        margin-top: 30px;
+      }
+      a {
+        color: #007acc;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .sidebar-left h3,
+      .sidebar-right h3 {
+        margin-top: 0;
+      }
+
+      .sidebar-left ul,
+      .sidebar-right ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .sidebar-left li,
+      .sidebar-right li {
+        margin-bottom: 8px;
+      }
+
+      /* TOC Button (mobile) */
+      .toc-button {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #007acc;
+        color: white;
+        padding: 10px 14px;
+        border: none;
+        border-radius: 50px;
+        font-size: 14px;
+        z-index: 1000;
+        cursor: pointer;
+      }
+
+      .toc-modal {
+        display: none;
+        position: fixed;
+        bottom: 70px;
+        right: 20px;
+        background-color: white;
+        border: 1px solid #ddd;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        padding: 10px;
+        z-index: 1000;
+        width: 250px;
+      }
+
+      .toc-modal ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .toc-modal li {
+        margin: 6px 0;
+      }
+
+      /* Responsive layout */
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+          padding: 10px;
+        }
+        .sidebar-left,
+        .sidebar-right {
+          display: none;
+        }
+        .content {
+          width: 100%;
+          margin: 0;
+        }
+        .toc-button {
+          display: block;
+        }
+      }
+      .wp-block-code {
+        background-color: #282c34;
+        color: #ffffff;
+        padding: 1em;
+        border-radius: 8px;
+        overflow-x: auto;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 0.95em;
+        line-height: 1.5;
+        margin: 1.5em 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .wp-block-code code {
+        background: none;
+        color: inherit;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar trái -->
+      <div class="sidebar-left">
+        <h3>Categories</h3>
+        <ul>
+          <li><a href="#">Firebase</a></li>
+          <li><a href="#">Authentication</a></li>
+          <li><a href="#">Database</a></li>
+          <li><a href="#">Hosting</a></li>
+          <li><a href="#">Messaging</a></li>
+        </ul>
+      </div>
+
+      <!-- Nội dung chính -->
+      <div class="content">
+        <h1>Firebsae Cloud Storage</h1>
+        <img
+          src="../../../pictures/blog/firebase/firebase6-cloud-storage.png"
+          alt="Firebase"
+        />
+        <!-- Nội dụng tiếp -->
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">I. Tổng quan</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Firebase Cloud Storage là một dịch vụ lưu trữ đám mây của Google, tích
+          hợp chặt chẽ với nền tảng Firebase. Trong blog này, chúng ta sẽ khám
+          phá tất cả những tính năng và lợi ích mà Firebase Cloud Storage mang
+          lại cho các nhà phát triển và doanh nghiệp:
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>Dễ Dàng Tích Hợp với Firebase</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            Firebase Cloud Storage là một phần của hệ sinh thái Firebase, giúp
+            việc tích hợp và quản lý dữ liệu trở nên đơn giản và hiệu quả.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>An Toàn và Bảo Mật Tối Đa</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            Với cơ sở hạ tầng bảo mật của Google, Firebase Cloud Storage đảm bảo
+            an toàn tuyệt đối cho dữ liệu của bạn. Tính năng kiểm soát quyền
+            truy cập giúp bạn quản lý ai có thể truy cập và sửa đổi dữ liệu.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>Khả Năng Mở Rộng Linh Hoạt</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            Dịch vụ này hỗ trợ khả năng mở rộng linh hoạt, đảm bảo rằng bạn có
+            thể nhanh chóng thích ứng với sự gia tăng đột ngột của dữ liệu mà
+            không làm ảnh hưởng đến hiệu suất.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">II. Chi phí</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Chi phí cho Firebase Cloud Storage được tính dựa trên một số yếu tố
+          khác nhau. Dưới đây là một số yếu tố quan trọng:
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>Lưu Trữ Dữ Liệu (Storage):</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            Chi phí này phụ thuộc vào lượng dữ liệu bạn lưu trữ trong Firebase
+            Cloud Storage. Giá sẽ được tính theo giảm giá dựa trên lượng dữ liệu
+            đã lưu trữ.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>Lưu Lượng Truy Cập (Data Transfer):</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            Chi phí này liên quan đến việc truy cập và tải xuống dữ liệu từ
+            Firebase Cloud Storage. Nó được tính dựa trên lượng dữ liệu đã
+            chuyển tải qua mạng.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>Chi phí Thao Tác (Operations):</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            Mỗi lần thực hiện thao tác như đọc, ghi, xóa, hoặc tìm kiếm dữ liệu,
+            bạn sẽ bị tính chi phí thao tác. Các loại thao tác có chi phí khác
+            nhau.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>Chi phí Tổng Hợp (Composite Operations):</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            Một số loại thao tác, như Copy hoặc Rewrite, có thể bao gồm nhiều
+            thao tác con và có chi phí tổng hợp cao hơn.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>Lưu Trữ Dự Phòng (Backup Storage):</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            Nếu bạn sử dụng tính năng lưu trữ dự phòng, có chi phí phụ thuộc vào
+            lượng dữ liệu được lưu trữ trong bản sao lưu.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>Vị Trí Lưu Trữ (Storage Class):</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            Firebase Cloud Storage cung cấp nhiều loại lưu trữ với giá khác
+            nhau. Ví dụ: lưu trữ tiêu chuẩn, lưu trữ tốc độ cao, lưu trữ lâu
+            dài, và lưu trữ dự phòng có giá khác nhau.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>Giảm Giá theo Quy Mô (Volume Discounts):</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            Nếu bạn lưu trữ một lượng lớn dữ liệu, Firebase có thể cung cấp giảm
+            giá theo quy mô.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>Dịch Vụ Mạng (Network Service Tiers):</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            Chi phí có thể thay đổi dựa trên loại dịch vụ mạng bạn chọn (ví dụ:
+            mạng tiêu chuẩn, mạng tăng tốc).
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">III. Triển khai với Flutter</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>Setup storage</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/XUf0htC4_f0I_hdCd145Cg6WgYMrelm5PVBV8iYK7HHK9wlhEPjKv_qlMB1B-1kTBtME_KmsB5GIwzDTdkDYWgEhkYiXW5Ep3-0gE7qBC4Wj5wMQiQGEIymO994c2rc3tJQZ-pwyCv_EB2wmiMZIYMw"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Tạm thời để allow read, write là true để cho phép đọc và ghi lên Cloud
+          Storage
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/1OUObfKgr6U981zNfBVB0ixrK9Wypc6H-Luia4Cwddw4mNJJkJSka1VLQFYOmvJbsmAQoWgcnGidYIwFW4tP2Zvr_cya2wuwu-xoUs6me-GWCfarYpNz5m6Z4zitM7cbn19ri4baOjNJzKzk3D53MpU"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>Thêm thư viện:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>flutter pub add firebase_storage</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>
+            flutter pub add image_picker: Thêm để dùng pick image và upload lên
+            storage
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>Pick image từ gallery và đẩy lên storage</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/5q6kYpcQLRn1Q8CaEzvNnpT0uUKmMbYBUsBR-zNtRpX20Vj9XDiBF4Yhal1RwlHM_CVUiQ6nSFbNk7GOHZTOT0UUC9HnJ5NIRJEsM2fy0ovZPHKGZFUzDfa0hpS0Nl5A08KxifXFE_ZESleHHKg_zA8"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>Kiểm tra lại trên console chúng ta có:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/IFxIDHJu_c373YEEJnSbzaXo6YRXq-fqt-fAZ5A3KMV9XDdb1BFo9Ce6A9a47xY-SSKvSKw9D5bjuYXvW7oq8YL2DJT72KbnY1q8L-o_eruvPs3XwEEvOfZpHhSu8mpqYXFIxsYLvWzTCtYofYo1TfE"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+      </div>
+
+      <!-- Sidebar phải -->
+      <div class="sidebar-right">
+        <h3>Table of Contents</h3>
+        <ul>
+          <li><a href="#realtime">Realtime Database</a></li>
+          <li><a href="#auth">Authentication</a></li>
+          <li><a href="#firestore">Cloud Firestore</a></li>
+          <li><a href="#functions">Cloud Functions</a></li>
+          <li><a href="#fcm">Cloud Messaging</a></li>
+          <li><a href="#hosting">Hosting</a></li>
+          <li><a href="#storage">Cloud Storage</a></li>
+          <li><a href="#performance">Performance Monitoring</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- TOC floating button -->
+    <button class="toc-button" onclick="toggleTOC()">TOC</button>
+    <div class="toc-modal" id="tocModal">
+      <ul>
+        <li><a href="#realtime" onclick="hideTOC()">Realtime Database</a></li>
+        <li><a href="#auth" onclick="hideTOC()">Authentication</a></li>
+        <li><a href="#firestore" onclick="hideTOC()">Cloud Firestore</a></li>
+        <li><a href="#functions" onclick="hideTOC()">Cloud Functions</a></li>
+        <li><a href="#fcm" onclick="hideTOC()">Cloud Messaging</a></li>
+        <li><a href="#hosting" onclick="hideTOC()">Hosting</a></li>
+        <li><a href="#storage" onclick="hideTOC()">Cloud Storage</a></li>
+        <li>
+          <a href="#performance" onclick="hideTOC()">Performance Monitoring</a>
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      function toggleTOC() {
+        const toc = document.getElementById("tocModal");
+        toc.style.display = toc.style.display === "block" ? "none" : "block";
+      }
+      function hideTOC() {
+        document.getElementById("tocModal").style.display = "none";
+      }
+    </script>
+  </body>
+</html>

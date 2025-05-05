@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>
+      Bảo mật Mượt Mà: Khám Phá Sức Mạnh của Firebase Authentication để Xác Thực
+      Người Dùng Hiệu Quả và An Toàn trong Ứng Dụng Của Bạn!
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7;
+        color: #333;
+        line-height: 1.6;
+        padding: 0 1rem;
+        margin: auto;
+      }
+
+      .container {
+        display: flex;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .sidebar-left,
+      .sidebar-right {
+        width: 20%;
+        padding: 20px;
+        position: sticky;
+        top: 0;
+        height: fit-content;
+        background-color: #ffffff;
+        border-radius: 8px;
+        margin: 10px;
+        align-self: start;
+      }
+
+      .content {
+        width: 60%;
+        background-color: #fff;
+        padding: 30px;
+        margin: 10px;
+        border-radius: 8px;
+      }
+
+      h1,
+      h2 {
+        color: #2c3e50;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin: 1rem 0;
+      }
+      ul {
+        padding-left: 1.2rem;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1rem 0;
+      }
+      td,
+      th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+      td:first-child {
+        background-color: #f9f9f9;
+      }
+      h3 {
+        color: #2c3e50;
+        margin-top: 30px;
+      }
+      a {
+        color: #007acc;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .sidebar-left h3,
+      .sidebar-right h3 {
+        margin-top: 0;
+      }
+
+      .sidebar-left ul,
+      .sidebar-right ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .sidebar-left li,
+      .sidebar-right li {
+        margin-bottom: 8px;
+      }
+
+      /* TOC Button (mobile) */
+      .toc-button {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #007acc;
+        color: white;
+        padding: 10px 14px;
+        border: none;
+        border-radius: 50px;
+        font-size: 14px;
+        z-index: 1000;
+        cursor: pointer;
+      }
+
+      .toc-modal {
+        display: none;
+        position: fixed;
+        bottom: 70px;
+        right: 20px;
+        background-color: white;
+        border: 1px solid #ddd;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        padding: 10px;
+        z-index: 1000;
+        width: 250px;
+      }
+
+      .toc-modal ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .toc-modal li {
+        margin: 6px 0;
+      }
+
+      /* Responsive layout */
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+          padding: 10px;
+        }
+        .sidebar-left,
+        .sidebar-right {
+          display: none;
+        }
+        .content {
+          width: 100%;
+          margin: 0;
+        }
+        .toc-button {
+          display: block;
+        }
+      }
+      .wp-block-code {
+        background-color: #282c34;
+        color: #ffffff;
+        padding: 1em;
+        border-radius: 8px;
+        overflow-x: auto;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 0.95em;
+        line-height: 1.5;
+        margin: 1.5em 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .wp-block-code code {
+        background: none;
+        color: inherit;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar trái -->
+      <div class="sidebar-left">
+        <h3>Categories</h3>
+        <ul>
+          <li><a href="#">Firebase</a></li>
+          <li><a href="#">Authentication</a></li>
+          <li><a href="#">Database</a></li>
+          <li><a href="#">Hosting</a></li>
+          <li><a href="#">Messaging</a></li>
+        </ul>
+      </div>
+
+      <!-- Nội dung chính -->
+      <div class="content">
+        <h1>Firebase Authentication</h1>
+        <img
+          src="../../../pictures/blog/firebase/firebase4-authentication.png"
+          alt="Firebase"
+        />
+        <!-- Nội dụng tiếp -->
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">I. Tổng quan</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Firebase Authentication hoạt động theo mô hình client-server, nơi
+          người dùng truy cập và tương tác với ứng dụng của bạn là phía client,
+          và dịch vụ Firebase Authentication được triển khai trên server
+          Firebase. Dưới đây là cách Firebase Authentication hoạt động chi tiết:
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>Đăng Ký và Đăng Nhập:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            Khi người dùng muốn sử dụng ứng dụng của bạn, họ có thể đăng ký (nếu
+            chưa có tài khoản) hoặc đăng nhập (nếu đã có tài khoản).
+          </li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>
+            Cho phép người dùng sử dụng các phương thức đăng nhập khác nhau như
+            email/mật khẩu, số điện thoại, hoặc cả đăng nhập bằng tài khoản
+            Google, Facebook, Twitter, v.v.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>SDK Integration:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            Ứng dụng của bạn sử dụng Firebase Authentication SDK để tích hợp
+            dịch vụ xác thực vào mã nguồn.
+          </li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>
+            Firebase cung cấp SDK cho nhiều nền tảng như Android, iOS, và web.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>Token-Based Authentication:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            Khi người dùng đăng nhập thành công, Firebase Authentication tạo một
+            JSON Web Token (JWT) chứa thông tin về người dùng.
+          </li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>
+            JWT này được gửi và lưu trữ an toàn trên thiết bị người dùng và được
+            sử dụng để xác thực truy cập khi giao tiếp với các dịch vụ và tài
+            nguyên của Firebase.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>Real-Time Authentication State:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            Firebase cung cấp một cơ chế để theo dõi trạng thái xác thực người
+            dùng trong thời gian thực.
+          </li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>
+            Khi trạng thái xác thực thay đổi (đăng nhập hoặc đăng xuất), sự kiện
+            này được phát ra và ứng dụng có thể phản ứng tức thì.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Firebase Authentication cung cấp một giải pháp toàn diện và dễ tích
+          hợp cho việc quản lý xác thực người dùng. Nó không chỉ giúp bảo mật
+          ứng dụng của bạn mà còn tăng cường trải nghiệm người dùng bằng cách
+          cung cấp các phương tiện đăng nhập thuận lợi và an toàn
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">II. Tích hợp với Flutter</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Mình sẽ demo đơn giản luồng Authentication với email &amp;
+          password.&nbsp;
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Vào Firebase Authentication -&gt; Sign-in method -&gt; Email/Password
+          -&gt; Enable
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/LtJNcQas0_7T2LvvhB26dnXcqOG-As_4gNC0i90qqHpZ-zeQP4iJmr-7_0r4BWDTQjLrhYdxk1c2aTuooAP9Cl4zQxUicsvKHTEctdet-QIz4MUeqbDgA2Yls9VR-4h1JeHOa_WQGRkrwmGL5qtuAGQ"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>Thêm thư viện:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>flutter pub add firebase_auth</li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>Đầu tiên, chúng ta cần thêm được user, sử dụng:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/aDpsLuPf6kjRvfvj71Jjy5vTvnkuNHGZj897wEMJg7MdVUm1BPuLDhF6Zokx9q_1MiN5SskDtIFMjVM1fVyD8dFzUL9Lua2q6MTY6lsgNNOgccddcKZTBXAn_Co5-UvdEShYWG4zLY8nZTaX6ujhQzM"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Sau khi thêm user ở Console -&gt; Authentication -&gt; Users chúng ta
+          sẽ thấy user đã được thêm thành công
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/EKKfrPaK5DRMMXdVvsiit2_h4V2jUlbY0ZezYe3twqA1q6SgBFxtlF7lI-2bU7O3nPR8PS0GiE8fEy-dw-BIbUEwWxbKzrd7kARxIiwly655zKsQpTr_94h78unZaQnS4dIu7NTVF7CADNGt7X3XwLQ"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          User đã được tạo, giờ nếu đăng nhập cần xác thực, chúng ta sẽ sử dụng
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/mWMTw7qlHvC69jmWOJ34_j-NUBl5smS67PHIRO-Vj8O50tuMQQqqBHRBPYIP_2Ryon4zKOjFTGCbrn9d5bNpQHtojqR7AbA33F4OKrRGkrOCaJJ4L_tozghK5ln-F8-A_mfkEvu8Mz0IXsws5na4lbU"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>Chạy debug và kiểm tra kết quả nhận được:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/APyFpkjrid3wQUn_lgQV6s8SmVY9aPqnIPXYmFLRW4u4VHEdnc-mgZ-A1rVB0KqJExFKXPsWy_Q67aymhjrY0cOySHR8cHO6g07dPwHxKf11OE7FZ9NZLlwyLLibwOvQbA-x5WNWpDg3fyji5AVuSlc"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+      </div>
+
+      <!-- Sidebar phải -->
+      <div class="sidebar-right">
+        <h3>Table of Contents</h3>
+        <ul>
+          <li><a href="#realtime">Realtime Database</a></li>
+          <li><a href="#auth">Authentication</a></li>
+          <li><a href="#firestore">Cloud Firestore</a></li>
+          <li><a href="#functions">Cloud Functions</a></li>
+          <li><a href="#fcm">Cloud Messaging</a></li>
+          <li><a href="#hosting">Hosting</a></li>
+          <li><a href="#storage">Cloud Storage</a></li>
+          <li><a href="#performance">Performance Monitoring</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- TOC floating button -->
+    <button class="toc-button" onclick="toggleTOC()">TOC</button>
+    <div class="toc-modal" id="tocModal">
+      <ul>
+        <li><a href="#realtime" onclick="hideTOC()">Realtime Database</a></li>
+        <li><a href="#auth" onclick="hideTOC()">Authentication</a></li>
+        <li><a href="#firestore" onclick="hideTOC()">Cloud Firestore</a></li>
+        <li><a href="#functions" onclick="hideTOC()">Cloud Functions</a></li>
+        <li><a href="#fcm" onclick="hideTOC()">Cloud Messaging</a></li>
+        <li><a href="#hosting" onclick="hideTOC()">Hosting</a></li>
+        <li><a href="#storage" onclick="hideTOC()">Cloud Storage</a></li>
+        <li>
+          <a href="#performance" onclick="hideTOC()">Performance Monitoring</a>
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      function toggleTOC() {
+        const toc = document.getElementById("tocModal");
+        toc.style.display = toc.style.display === "block" ? "none" : "block";
+      }
+      function hideTOC() {
+        document.getElementById("tocModal").style.display = "none";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>
+      Tận Dụng Sức Mạnh của Firebase Cloud Firestore: Cơ Sở Dữ Liệu NoSQL Linh
+      Hoạt Cho Quản lý Dữ Liệu Mượt Mà!
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7;
+        color: #333;
+        line-height: 1.6;
+        padding: 0 1rem;
+        margin: auto;
+      }
+
+      .container {
+        display: flex;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .sidebar-left,
+      .sidebar-right {
+        width: 20%;
+        padding: 20px;
+        position: sticky;
+        top: 0;
+        height: fit-content;
+        background-color: #ffffff;
+        border-radius: 8px;
+        margin: 10px;
+        align-self: start;
+      }
+
+      .content {
+        width: 60%;
+        background-color: #fff;
+        padding: 30px;
+        margin: 10px;
+        border-radius: 8px;
+      }
+
+      h1,
+      h2 {
+        color: #2c3e50;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin: 1rem 0;
+      }
+      ul {
+        padding-left: 1.2rem;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1rem 0;
+      }
+      td,
+      th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+      td:first-child {
+        background-color: #f9f9f9;
+      }
+      h3 {
+        color: #2c3e50;
+        margin-top: 30px;
+      }
+      a {
+        color: #007acc;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .sidebar-left h3,
+      .sidebar-right h3 {
+        margin-top: 0;
+      }
+
+      .sidebar-left ul,
+      .sidebar-right ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .sidebar-left li,
+      .sidebar-right li {
+        margin-bottom: 8px;
+      }
+
+      /* TOC Button (mobile) */
+      .toc-button {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #007acc;
+        color: white;
+        padding: 10px 14px;
+        border: none;
+        border-radius: 50px;
+        font-size: 14px;
+        z-index: 1000;
+        cursor: pointer;
+      }
+
+      .toc-modal {
+        display: none;
+        position: fixed;
+        bottom: 70px;
+        right: 20px;
+        background-color: white;
+        border: 1px solid #ddd;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        padding: 10px;
+        z-index: 1000;
+        width: 250px;
+      }
+
+      .toc-modal ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .toc-modal li {
+        margin: 6px 0;
+      }
+
+      /* Responsive layout */
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+          padding: 10px;
+        }
+        .sidebar-left,
+        .sidebar-right {
+          display: none;
+        }
+        .content {
+          width: 100%;
+          margin: 0;
+        }
+        .toc-button {
+          display: block;
+        }
+      }
+      .wp-block-code {
+        background-color: #282c34;
+        color: #ffffff;
+        padding: 1em;
+        border-radius: 8px;
+        overflow-x: auto;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 0.95em;
+        line-height: 1.5;
+        margin: 1.5em 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .wp-block-code code {
+        background: none;
+        color: inherit;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar trái -->
+      <div class="sidebar-left">
+        <h3>Categories</h3>
+        <ul>
+          <li><a href="#">Firebase</a></li>
+          <li><a href="#">Authentication</a></li>
+          <li><a href="#">Database</a></li>
+          <li><a href="#">Hosting</a></li>
+          <li><a href="#">Messaging</a></li>
+        </ul>
+      </div>
+
+      <!-- Nội dung chính -->
+      <div class="content">
+        <h1>Firebase Cloud FireStore</h1>
+        <img
+          src="../../../pictures/blog/firebase/firebase5-cloud-firestore.png"
+          alt="Firebase"
+        />
+        <!-- Nội dụng tiếp -->
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">I. Tổng quan</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Cloud Firestore là một cơ sở dữ liệu NoSQL của Google Firebase, được
+          thiết kế để lưu trữ và đồng bộ dữ liệu giữa các ứng dụng di động, web
+          và máy chủ.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Cloud Firestore tổ chức dữ liệu dưới dạng các tài liệu (documents)
+          trong các bộ sưu tập (collections). Mỗi tài liệu chứa các trường và
+          giá trị, tạo nên một cấu trúc dữ liệu linh hoạt và phản ánh cấu trúc
+          ứng dụng:&nbsp;
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Collection (Bộ sưu tập) -&gt; Document (Tài liệu) -&gt; Fields (Trường
+          và giá trị)
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Một trong những đặc điểm nổi bật của Cloud Firestore là khả năng hỗ
+          trợ cập nhật thời gian thực. Dữ liệu được tự động đồng bộ giữa các
+          thiết bị, giúp ứng dụng luôn duy trì thông tin mới nhất.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">II. Chi phí</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Theo thông tin mới nhất trên:
+          <a href="https://firebase.google.com/pricing"
+            >https://firebase.google.com/pricing</a
+          >
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/Eurc-pe30wHNSRhcFpIlGLEV6sRT19UcvgfprzUAN2cC7Em6MQfNKpc6S9ztd0vlg_i936J_74AF51CCJG9faCW3d0m5-N63wZ_yKeQG9iZGsxeRkNHT5ZuKP0jherxqwQAJUmMBuUkujYiMzNJgUwQ"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li><strong>Số lượng tài liệu bạn đọc, viết và xóa</strong> .</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>
+            <strong>Số lượng mục chỉ mục khớp với </strong
+            ><a
+              href="https://firebase.google.com/docs/firestore/pricing?hl=vi#aggregation_queries"
+              ><strong>các truy vấn tổng hợp</strong></a
+            >
+            . Bạn bị tính phí một lần đọc tài liệu cho mỗi lô có tối đa 1000 mục
+            nhập chỉ mục khớp với truy vấn.
+          </li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>
+            <strong>Dung lượng lưu trữ mà cơ sở dữ liệu của bạn sử dụng</strong>
+            , bao gồm cả chi phí dành cho siêu dữ liệu và chỉ mục.
+          </li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li><strong>Lượng băng thông mạng mà bạn sử dụng</strong> .</li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">1. Document writes</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Chi phí ghi dữ liệu trong Cloud Firestore của Firebase phụ thuộc vào
+          số lần bạn thực hiện các write operations, bao gồm việc thêm mới, cập
+          nhật hoặc xóa dữ liệu.&nbsp;
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>Document writes sẽ được tính như sau:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>mỗi thao tác add, set hoặc update được tính là một lần ghi</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>====== Thêm Mới Một Tài Liệu</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:code -->
+        <pre
+          class="wp-block-code"
+        ><code>// Thêm mới một tài liệu vào một bộ sưu tập
+
+var newDocumentRef = FirebaseFirestore.instance.collection('users').add({
+
+  'name': 'John Doe',
+
+  'age': 25,
+
+});
+
+// Mỗi lần thêm mới một tài liệu là một write operation</code></pre>
+        <!-- /wp:code -->
+
+        <!-- wp:paragraph -->
+        <p>====== Cập Nhật Một Trường Trong Một Tài Liệu</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:code -->
+        <pre
+          class="wp-block-code"
+        ><code>// Cập nhật trường 'age' trong một tài liệu
+
+var userDocRef = FirebaseFirestore.instance.collection('users').doc('user_id');
+
+userDocRef.update({
+
+  'age': 26,
+
+});
+
+// Mỗi lần cập nhật một trường trong một tài liệu là một write operation</code></pre>
+        <!-- /wp:code -->
+
+        <!-- wp:paragraph -->
+        <p>===== Batch Writes</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:code -->
+        <pre
+          class="wp-block-code"
+        ><code>// Sử dụng batch writes để thêm mới và cập nhật nhiều tài liệu trong một batch
+
+var batch = FirebaseFirestore.instance.batch();
+
+// Thêm mới một tài liệu
+
+batch.set(FirebaseFirestore.instance.collection('users').doc('user1'), {'name': 'Alice', 'age': 30});
+
+// Cập nhật một tài liệu
+
+batch.update(FirebaseFirestore.instance.collection('users').doc('user2'), {'age': 28});
+
+// Thực hiện batch writes
+
+batch.commit();
+
+// Tổng số lần ghi là tổng số lần thực hiện mỗi thao tác trong batch</code></pre>
+        <!-- /wp:code -->
+
+        <!-- wp:paragraph -->
+        <p>===== Atomic Transactions</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:code -->
+        <pre
+          class="wp-block-code"
+        ><code>// Sử dụng transaction để thực hiện một write operation có tính atomic
+
+FirebaseFirestore.instance.runTransaction((transaction) async {
+
+  // Đọc dữ liệu hiện tại
+
+  var userDocRef = FirebaseFirestore.instance.collection('users').doc('user_id');
+
+  var snapshot = await transaction.get(userDocRef);
+
+  var currentAge = snapshot.data()?&#91;'age'] ?? 0;
+
+  // Thực hiện cập nhật dữ liệu
+
+  transaction.update(userDocRef, {'age': currentAge + 1});
+
+});
+
+// Mỗi lần thực hiện transaction là một write operation</code></pre>
+        <!-- /wp:code -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">2. Document deletes</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>===== Xóa 1 tài liệu độc lập</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:code -->
+        <pre class="wp-block-code"><code>// Xóa một tài liệu từ bộ sưu tập
+
+var userDocRef = FirebaseFirestore.instance.collection('users').doc('user_id');
+
+userDocRef.delete();
+
+// Mỗi lần xóa một tài liệu là một document delete</code></pre>
+        <!-- /wp:code -->
+
+        <!-- wp:paragraph -->
+        <p>===== Batch write với thao tác xóa</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:code -->
+        <pre
+          class="wp-block-code"
+        ><code>// Sử dụng batch writes để xóa nhiều tài liệu trong một batch
+
+var batch = FirebaseFirestore.instance.batch();
+
+// Xóa một tài liệu
+
+batch.delete(FirebaseFirestore.instance.collection('users').doc('user1'));
+
+// Xóa một tài liệu khác
+
+batch.delete(FirebaseFirestore.instance.collection('users').doc('user2'));
+
+// Thực hiện batch writes
+
+batch.commit();
+
+// Tổng số lần xóa là tổng số lần thực hiện mỗi thao tác xóa trong batch</code></pre>
+        <!-- /wp:code -->
+
+        <!-- wp:paragraph -->
+        <p>===== Atomic Transactions với Thao Tác Xóa</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:code -->
+        <pre
+          class="wp-block-code"
+        ><code>// Sử dụng transaction để thực hiện một thao tác xóa có tính atomic
+
+FirebaseFirestore.instance.runTransaction((transaction) async {
+
+  // Xóa một tài liệu
+
+  var userDocRef = FirebaseFirestore.instance.collection('users').doc('user_id');
+
+  transaction.delete(userDocRef);
+
+});
+
+// Mỗi lần thực hiện transaction với thao tác xóa là một document delete</code></pre>
+        <!-- /wp:code -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">3. Document reads</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Document Reads được tính dựa trên số lượng tài liệu thực sự được đọc
+          từ cơ sở dữ liệu, không phải là số lượng tài liệu được trả về từ truy
+          vấn.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>===== Đọc 1 tài liệu</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:code -->
+        <pre class="wp-block-code"><code>// Đọc một tài liệu từ bộ sưu tập
+
+var userDocRef = FirebaseFirestore.instance.collection('users').doc('user_id');
+
+var snapshot = await userDocRef.get();
+
+// Mỗi lần đọc một tài liệu là một Document Read</code></pre>
+        <!-- /wp:code -->
+
+        <!-- wp:paragraph -->
+        <p>===== Truy vấn nhiều tài liệu</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:code -->
+        <pre
+          class="wp-block-code"
+        ><code>// Thực hiện một truy vấn để đọc nhiều tài liệu
+
+var querySnapshot = await FirebaseFirestore.instance.collection('users').where('age', isGreaterThan: 25).get();
+
+// Mỗi lần đọc một tài liệu trong kết quả truy vấn là một Document Read. truy vấn trong DB với 10 tài liệu thỏa mãn thì Document read được tính là 10.</code></pre>
+        <!-- /wp:code -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Ngoài ra: Có một khoản phí tối thiểu cho một lần đọc tài liệu cho mỗi
+          truy vấn bạn thực hiện, ngay cả khi truy vấn không trả về kết quả nào.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>===== Truy vấn tổng hợp</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Đối với các truy vấn tổng hợp như count() , sum() và avg() 1 Document
+          Read cho mỗi lô có tối đa 1000 mục nhập chỉ mục khớp với truy vấn. Kể
+          cả 0 có chỉ mục nào phù hợp thì vẫn tính 1. Ví dụ: phép toán count()
+          khớp từ 0 đến 1000 mục nhập chỉ mục sẽ được tính phí cho 1 Document
+          Read. Đối với thao tác count() khớp với 1500 mục nhập chỉ mục, bạn sẽ
+          bị tính phí cho 2 Document Read.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>===== Đọc Thông Qua Stream</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:code -->
+        <pre
+          class="wp-block-code"
+        ><code>// Đọc dữ liệu thông qua stream với 1 user_id cụ thể
+
+var userDocRef = FirebaseFirestore.instance.collection('users').doc('user_id');
+
+var stream = userDocRef.snapshots();
+
+// Mỗi lần có sự thay đổi dữ liệu, là một Document Read</code></pre>
+        <!-- /wp:code -->
+
+        <!-- wp:code -->
+        <pre
+          class="wp-block-code"
+        ><code>// Đọc dữ liệu từ collection thông qua stream với cả 1 collection
+
+var collectionRef = FirebaseFirestore.instance.collection('users');
+
+var stream = collectionRef.snapshots();
+
+// Lần đầu tiên, Firebase sẽ gửi một snapshot với toàn bộ dữ liệu trong 'users'
+
+// Chi phí Document Reads sẽ phụ thuộc vào số lượng tài liệu trong 'users'. Ví dụ có 10 users thì sẽ là 10 Document Read
+
+// Sau đó, mỗi khi có sự thay đổi trong 'users', Firebase sẽ gửi các snapshot cập nhật
+
+// Chi phí Document Reads cho mỗi cập nhật sẽ phụ thuộc vào số lượng tài liệu thay đổi trong cập nhật đó</code></pre>
+        <!-- /wp:code -->
+
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">III. Demo với Flutter</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>Create database</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>Lưu ý: Location sau khi chọn thì sẽ không thể thay đổi được</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/O4-aR3fOI7CVuTR0KOjn3SsXwHSlapLocREs4QT-xfCRBNefTwLxuYSwPGbhIOtyMtfVpWqnpJASVayJfUcAGUy0RzgprfEPPeAJvdvbUaUVoDRP87zOQEcuQ1KzQq_wsYQRk4DiWjj_MW3ThxdCcCU"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Tạm thời để allow read, write là true để cho phép đọc và ghi lên
+          Firestore.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/rJYtZpYivezbt4AZx6imQl44nig8Jxg4WnfG8RryqNr-Y-udgeLsV3aoclwWWQHw7M6Zot4vmQ9T8wdffvPHQjM65oSj7tOFAG7mgXwHCQiCzhun1eqB_01_QY7mgB5wI9prSplE2jK3ZcwX2XgCKQs"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>Thêm lib trong Flutter</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>flutter pub add cloud_firestore</li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>Thêm mới dữ liệu và kiểm tra trên console</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/wa4NikxFnEQQyl-3zfKJM4GwdMw7FeOPciV8-oTl7ppSUbjFKLXBphTBAMmGnoEbijmgsLILeXljbWcCMMQhdxII968_z1EOGBKv-JFjUMBFOjMUGjK4wiW8APCg_iuLCspUCY748MOeHATHFcqEL3c"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/aAvP39wMmLcakDgesOsLJU9I0cfagtjLqQDkqObUCgw5OI_qRPAEQsmMRneOxURTf5DgudHg62w6SLI8qe1aGdZ0pPAgAFpqQ9KmBOT56-pZOaKzVOOiEtC8yTNVr-9pK2Mc8N8z-gjD5h6XPblgStw"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>Đọc dữ liệu trong collection chúng ta có:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/XjMBYxN_SDzZocT-ZnMg-e8brM4ZQheds9dzvX8NxbPsjQv9p6-ijmPXDqCIQNS-kBl_0ArabfC7AbIOWaWqDe7mm2eGVifs7AyCOFfs_k4iFSWA7MZIjacEIDQGYQhYdV-n78j-3H20uNgP2rRzxrQ"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+      </div>
+
+      <!-- Sidebar phải -->
+      <div class="sidebar-right">
+        <h3>Table of Contents</h3>
+        <ul>
+          <li><a href="#realtime">Realtime Database</a></li>
+          <li><a href="#auth">Authentication</a></li>
+          <li><a href="#firestore">Cloud Firestore</a></li>
+          <li><a href="#functions">Cloud Functions</a></li>
+          <li><a href="#fcm">Cloud Messaging</a></li>
+          <li><a href="#hosting">Hosting</a></li>
+          <li><a href="#storage">Cloud Storage</a></li>
+          <li><a href="#performance">Performance Monitoring</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- TOC floating button -->
+    <button class="toc-button" onclick="toggleTOC()">TOC</button>
+    <div class="toc-modal" id="tocModal">
+      <ul>
+        <li><a href="#realtime" onclick="hideTOC()">Realtime Database</a></li>
+        <li><a href="#auth" onclick="hideTOC()">Authentication</a></li>
+        <li><a href="#firestore" onclick="hideTOC()">Cloud Firestore</a></li>
+        <li><a href="#functions" onclick="hideTOC()">Cloud Functions</a></li>
+        <li><a href="#fcm" onclick="hideTOC()">Cloud Messaging</a></li>
+        <li><a href="#hosting" onclick="hideTOC()">Hosting</a></li>
+        <li><a href="#storage" onclick="hideTOC()">Cloud Storage</a></li>
+        <li>
+          <a href="#performance" onclick="hideTOC()">Performance Monitoring</a>
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      function toggleTOC() {
+        const toc = document.getElementById("tocModal");
+        toc.style.display = toc.style.display === "block" ? "none" : "block";
+      }
+      function hideTOC() {
+        document.getElementById("tocModal").style.display = "none";
+      }
+    </script>
+  </body>
+</html>

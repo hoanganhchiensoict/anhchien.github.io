@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>
+      Solving the problem: How to implement a Base Flutter using which
+      architecture, how to organize the code, and how to manage state
+      effectively.
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7;
+        color: #333;
+        line-height: 1.6;
+        padding: 0 1rem;
+        margin: auto;
+      }
+
+      .container {
+        display: flex;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .sidebar-left,
+      .sidebar-right {
+        width: 20%;
+        padding: 20px;
+        position: sticky;
+        top: 0;
+        height: fit-content;
+        background-color: #ffffff;
+        border-radius: 8px;
+        margin: 10px;
+        align-self: start;
+      }
+
+      .content {
+        width: 60%;
+        background-color: #fff;
+        padding: 30px;
+        margin: 10px;
+        border-radius: 8px;
+      }
+
+      h1,
+      h2 {
+        color: #2c3e50;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin: 1rem 0;
+      }
+      ul {
+        padding-left: 1.2rem;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1rem 0;
+      }
+      td,
+      th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+      td:first-child {
+        background-color: #f9f9f9;
+      }
+      h3 {
+        color: #2c3e50;
+        margin-top: 30px;
+      }
+      a {
+        color: #007acc;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .sidebar-left h3,
+      .sidebar-right h3 {
+        margin-top: 0;
+      }
+
+      .sidebar-left ul,
+      .sidebar-right ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .sidebar-left li,
+      .sidebar-right li {
+        margin-bottom: 8px;
+      }
+
+      /* TOC Button (mobile) */
+      .toc-button {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #007acc;
+        color: white;
+        padding: 10px 14px;
+        border: none;
+        border-radius: 50px;
+        font-size: 14px;
+        z-index: 1000;
+        cursor: pointer;
+      }
+
+      .toc-modal {
+        display: none;
+        position: fixed;
+        bottom: 70px;
+        right: 20px;
+        background-color: white;
+        border: 1px solid #ddd;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        padding: 10px;
+        z-index: 1000;
+        width: 250px;
+      }
+
+      .toc-modal ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .toc-modal li {
+        margin: 6px 0;
+      }
+
+      /* Responsive layout */
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+          padding: 10px;
+        }
+        .sidebar-left,
+        .sidebar-right {
+          display: none;
+        }
+        .content {
+          width: 100%;
+          margin: 0;
+        }
+        .toc-button {
+          display: block;
+        }
+      }
+      .wp-block-code {
+        background-color: #282c34;
+        color: #ffffff;
+        padding: 1em;
+        border-radius: 8px;
+        overflow-x: auto;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 0.95em;
+        line-height: 1.5;
+        margin: 1.5em 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .wp-block-code code {
+        background: none;
+        color: inherit;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar trái -->
+      <div class="sidebar-left">
+        <h3>Categories</h3>
+        <ul>
+          <li><a href="#">Firebase</a></li>
+          <li><a href="#">Authentication</a></li>
+          <li><a href="#">Database</a></li>
+          <li><a href="#">Hosting</a></li>
+          <li><a href="#">Messaging</a></li>
+        </ul>
+      </div>
+
+      <!-- Nội dung chính -->
+      <div class="content">
+        <h1>Implementing Flutter Base - Part 2: Overall Architecture</h1>
+        <img
+          src="../../../pictures/blog/flutter_base/flutter_base2.png"
+          alt="Firebase"
+        />
+        <!-- Nội dụng tiếp -->
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">
+          I. Solving the overall architecture problem.
+        </h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Continuing from the context part, now we delve into more details in
+          the process of building the Flutter base.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>First, we need to address the two most important questions:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            How to implement the Flutter base using which architecture, and how
+            to organize the code?
+          </li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>How to manage state effectively?</li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Do you wonder why I believe these are the top two issues that need to
+          be understood and resolved first? In our company, there are many
+          mobile app projects running simultaneously, and cross-team support is
+          common. Most team members are new to Flutter. Therefore, making a
+          decision about the overall architecture is extremely important. This
+          will provide a shared vision and goal, allowing us to support each
+          other as effectively as possible. Projects with a good architecture
+          are also easier to maintain and troubleshoot.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Without further ado, let's dive into the details of the answers to the
+          two questions:
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            Architecture: It's Clean Architecture, organizing the code with a
+            Layer-first approach combined with Feature-first.
+          </li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>State Management: Using Bloc Cubit.</li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">
+          1. Architecture following Clean Architecture.
+        </h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Once again, the familiar name Clean Architecture, a name that many in
+          the IT industry have heard of. Along with it comes a lot of
+          discussions: whether it's overly complex, whether it might not be
+          necessary, everyone applying it differently, and so on. But surely
+          those who have heard these discussions cannot deny the outstanding
+          advantages it offers us: ease of maintenance, scalability, extremely
+          effective layer separation, easy unit testing, and more.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">2. State management with Bloc Cubit.</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          There are countless approaches to state management, and I chose Bloc
+          and implemented the Bloc pattern from the early days of my
+          exploration. The reason for this choice is that back when I was
+          learning, I found that Bloc was excellent at separating business logic
+          from the UI. This is something I highly value, as it's a practice I
+          also emphasized when working with native platforms.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">
+          3. Combining Feature-first with Layer-first to optimize code
+          organization.
+        </h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          And when implementing them, to organize the source code, I combine
+          both Layer-first and Feature-first ???
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh4.googleusercontent.com/-R7GpYWi-_JzFD1M7x4lYySg2oAc5HzYMXPsPCocANVuHs1HW9PFHOZ0hEgaQ8-DA0XJCGXPZxoO5y3R82VYeBmsYTsCiEIlinTRKWulEdSzcLWiNzVrz90nZhw877mzyOuGgRDkIhAMQa6QOiaollg"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>Wait, what? Why combine both feature-first and layer-first?</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          If organized by feature-first: it's easy to manage each specific
+          feature, but as a result, the code organization might become
+          fragmented according to each feature. As you can see in the left-hand
+          image, if there is shared processing logic among features, what
+          happens? In most applications we work on, features often have many
+          connections and are not perfectly separated for organization in this
+          way.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          As for organizing by layer-first: this is an approach where we can
+          manage based on specific layers, each handling distinct tasks, which
+          allows us to make the best use of the source code. But looking at the
+          right-hand image and the real-life situation when we have to maintain
+          a feature, it can be a nightmare to navigate up and down through the
+          layers to read the corresponding files.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          So, the solution of combining both approaches is something worth
+          considering. I use layer-first for organizing data and business logic
+          layers, and feature-first for managing source code with specific
+          features for the presentation layer.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">II.Project structure.</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh5.googleusercontent.com/uF6-xgPL9aN-wzP0nA3lGQqMYINFOqBKrTPAR_T_k69eOCrxNZWnx1WRlDHDIVB1tKw1kLzyGzJBQwH7B42gju1mv1WVdD_SVzUE2aVAITz8hbPNAew1Yww8-TpLbAw3nXSPGFx3CrGcxGdEfsofE9s"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Everything we can see in the implementation of Clean Architecture is
+          condensed in the diagram above.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Looking at it, we can clearly see the three most important layers:
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            <strong>Presentation</strong>: containing UI and Bloc (This is the
+            layer we will implement following the Feature-first approach). It's
+            responsible for displaying and interacting with users.
+          </li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>
+            <strong>Domain</strong>: containing Use Cases, Entities, and
+            Interface Repositories. It's responsible for handling business
+            logic.
+          </li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>
+            <strong>Data</strong>: containing Impl Repositories, Models, and
+            Data sources (local &amp; remote). It's responsible for managing
+            data for the application.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Corresponding to these main layers are the folders we will manage. In
+          addition, I've created a utils folder, where I implement small base
+          modules and convenient utilities.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>When combined, we organize the code as follows:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh6.googleusercontent.com/B54cc9fe6jWicEjyid7tOXJWck6G7ILXjVf8d_mxX73MkLdqj5UHLIGRWJJymtDfV_Cad-dV6-67FcMszF5OIMXhGnID6Ac27WS6Y0j1RPIOwlQmn03OmcrfyGbE2Tbmsuak4ZX85bEUjaNmkXZIa4Q"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+      </div>
+
+      <!-- Sidebar phải -->
+      <div class="sidebar-right">
+        <h3>Table of Contents</h3>
+        <ul>
+          <li><a href="#realtime">Realtime Database</a></li>
+          <li><a href="#auth">Authentication</a></li>
+          <li><a href="#firestore">Cloud Firestore</a></li>
+          <li><a href="#functions">Cloud Functions</a></li>
+          <li><a href="#fcm">Cloud Messaging</a></li>
+          <li><a href="#hosting">Hosting</a></li>
+          <li><a href="#storage">Cloud Storage</a></li>
+          <li><a href="#performance">Performance Monitoring</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- TOC floating button -->
+    <button class="toc-button" onclick="toggleTOC()">TOC</button>
+    <div class="toc-modal" id="tocModal">
+      <ul>
+        <li><a href="#realtime" onclick="hideTOC()">Realtime Database</a></li>
+        <li><a href="#auth" onclick="hideTOC()">Authentication</a></li>
+        <li><a href="#firestore" onclick="hideTOC()">Cloud Firestore</a></li>
+        <li><a href="#functions" onclick="hideTOC()">Cloud Functions</a></li>
+        <li><a href="#fcm" onclick="hideTOC()">Cloud Messaging</a></li>
+        <li><a href="#hosting" onclick="hideTOC()">Hosting</a></li>
+        <li><a href="#storage" onclick="hideTOC()">Cloud Storage</a></li>
+        <li>
+          <a href="#performance" onclick="hideTOC()">Performance Monitoring</a>
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      function toggleTOC() {
+        const toc = document.getElementById("tocModal");
+        toc.style.display = toc.style.display === "block" ? "none" : "block";
+      }
+      function hideTOC() {
+        document.getElementById("tocModal").style.display = "none";
+      }
+    </script>
+  </body>
+</html>

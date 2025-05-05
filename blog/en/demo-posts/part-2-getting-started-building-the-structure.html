@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>
+      Build a basic Flutter project structure, declare resources, and manage a
+      general list of screens within the application.
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7;
+        color: #333;
+        line-height: 1.6;
+        padding: 0 1rem;
+        margin: auto;
+      }
+
+      .container {
+        display: flex;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .sidebar-left,
+      .sidebar-right {
+        width: 20%;
+        padding: 20px;
+        position: sticky;
+        top: 0;
+        height: fit-content;
+        background-color: #ffffff;
+        border-radius: 8px;
+        margin: 10px;
+        align-self: start;
+      }
+
+      .content {
+        width: 60%;
+        background-color: #fff;
+        padding: 30px;
+        margin: 10px;
+        border-radius: 8px;
+      }
+
+      h1,
+      h2 {
+        color: #2c3e50;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin: 1rem 0;
+      }
+      ul {
+        padding-left: 1.2rem;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1rem 0;
+      }
+      td,
+      th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+      td:first-child {
+        background-color: #f9f9f9;
+      }
+      h3 {
+        color: #2c3e50;
+        margin-top: 30px;
+      }
+      a {
+        color: #007acc;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .sidebar-left h3,
+      .sidebar-right h3 {
+        margin-top: 0;
+      }
+
+      .sidebar-left ul,
+      .sidebar-right ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .sidebar-left li,
+      .sidebar-right li {
+        margin-bottom: 8px;
+      }
+
+      /* TOC Button (mobile) */
+      .toc-button {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #007acc;
+        color: white;
+        padding: 10px 14px;
+        border: none;
+        border-radius: 50px;
+        font-size: 14px;
+        z-index: 1000;
+        cursor: pointer;
+      }
+
+      .toc-modal {
+        display: none;
+        position: fixed;
+        bottom: 70px;
+        right: 20px;
+        background-color: white;
+        border: 1px solid #ddd;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        padding: 10px;
+        z-index: 1000;
+        width: 250px;
+      }
+
+      .toc-modal ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .toc-modal li {
+        margin: 6px 0;
+      }
+
+      /* Responsive layout */
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+          padding: 10px;
+        }
+        .sidebar-left,
+        .sidebar-right {
+          display: none;
+        }
+        .content {
+          width: 100%;
+          margin: 0;
+        }
+        .toc-button {
+          display: block;
+        }
+      }
+      .wp-block-code {
+        background-color: #282c34;
+        color: #ffffff;
+        padding: 1em;
+        border-radius: 8px;
+        overflow-x: auto;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 0.95em;
+        line-height: 1.5;
+        margin: 1.5em 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .wp-block-code code {
+        background: none;
+        color: inherit;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar trái -->
+      <div class="sidebar-left">
+        <h3>Categories</h3>
+        <ul>
+          <li><a href="#">Firebase</a></li>
+          <li><a href="#">Authentication</a></li>
+          <li><a href="#">Database</a></li>
+          <li><a href="#">Hosting</a></li>
+          <li><a href="#">Messaging</a></li>
+        </ul>
+      </div>
+
+      <!-- Nội dung chính -->
+      <div class="content">
+        <h1>Part 2. Getting Started - Building the Structure</h1>
+        <img
+          src="../../../pictures/blog/flutter_demo/flutter_demo2.png"
+          alt="Firebase"
+        />
+        <!-- Nội dụng tiếp -->
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">I.Project Initialization</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          After initializing the Flutter project with Android and iOS platforms,
+          the initial project structure looks like this:
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/tTI80r1VCWOBod-OZViiKpZpd9nocoTh4zJFvKA1IGgQ8TrqGrEDDSYgDxGcHt_0M-8IvtBFT09cXNs_57joZTNSYv0Lz7NOgD943ka6czBgNvb5RkYlK5G9MOF_H3NgVeic0Odpa9mRuijfQUSsnYU"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">II.Organizing Project Directories</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          <img
+            width="353"
+            height="343"
+            src="https://lh7-us.googleusercontent.com/5NP8mBWqDpfkJirJUlRSg-yC7F929PsN8ESB4-cuYaF5OAX0HXj_kET-LRK9v12U5bjXgiLbTr4RZhOSi2ijcOtVt5KcrUfuSYea-W737AU4soQ2YSDzFDCXba2I6M0gqrMxEf3PLXUNtJ7bbRILYXE"
+          />
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>We have a basic structure as follows:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            Base_network: This directory is where we implement the connection
+            from the app to the backend.
+          </li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>
+            Base_styles: Implementation of the base for colors, fonts, icons.
+          </li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>
+            Features: A directory containing feature. For example, the
+            "features" directory might contain screens like home, detail, etc.
+          </li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>Models: The structure of objects in the project.</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>Utils: Classes that serve common tasks.</li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Add necessary resources such as fonts and icons to assets and list
+          them in pubspec.yaml
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          <img
+            width="624"
+            height="507"
+            src="https://lh7-us.googleusercontent.com/Ah1c-nJLrUpyoqHk93BsP_WWTIzonf3a0wLCJb-36kxAZyNTj8OysRUPPrVhQSK1OKt8b_uO-M-7rDjqZhl1KsrRxGhPLaTorYezyYmett3d-_7SM8di3lTyr46NM1UXmbk7hKiC5xeoFABOEDbErOs"
+          />
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">III.Define the Screens</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Inside the "features" directory, let's add the "home" and "detail"
+          screens
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/TWRLrPDwOlLmpDXXHKd37hcWVqCr1i5sBG8jVnEmzCldtRcj5e_ieBasHOvhQa0cjkdn-tzUOIltndodo5JE-cIMHkNtt06HLFA2oHf1imFbCFeuTPPbGXe8Lm89wc61R5Tmo8FyeV9dUBmj1afElic"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>With the following content</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/k7F218p2iE5N-WLfNagm2UoggeMmcGxmjxd75wNBgZNfvdH2ya2ftr4N-apoe68e-tfx3CgScPnGHPErapDJBJUJjgrVEBthWMeIKaeFcw8q6bM9uVDXg-dGSpRT18n4VxpWiX8ItHZ5yXLknI4OXEw"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          For convenient screen management, let's add a route_generator.dart
+          file in the lib directory. Here, we will define the screens along with
+          their corresponding names.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/5sIN3xV5pWf_zMR8N-M7-n4sfd6sKysSxaSPT0MSjn2NRzYoar4tKCe4Th5O6zkfNz3Y53A_DTjKHf22Lb9g4kJaoKvtK_UtomDuE6VTw6InFIrg03DIGGDqBHSnIhQBA7dwf-RO5_EbdO-pnzBEHoE"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/b3Hi0Jz7L4sgDMcTMwJ3RUD6y7KRZFXPPUWiP_7prXm-sS6f0oBWC3YqNmJQUDUdBbiHXvPugTw_wfmFCajD-63DGo_6J6vMag0dTY0IYD19ra3KeRd7OrkhrhJl74btFhyQZxkDOIMzJIERi7kSR_A"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          And in main.dart, the MyApp widget should now return MaterialApp with
+          the following parameters:
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          onGenerateRoute: RouteGenerator.generateRoute,initialRoute: '/'
+          (Define the initial screen when the app is opened, which is the "home"
+          screen)
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">IV.Summary</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Through this tutorial, we have successfully built the basic structure
+          of the project, declared resources, and provided a general overview of
+          managing the list of screens in the application.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p></p>
+        <!-- /wp:paragraph -->
+      </div>
+
+      <!-- Sidebar phải -->
+      <div class="sidebar-right">
+        <h3>Table of Contents</h3>
+        <ul>
+          <li><a href="#realtime">Realtime Database</a></li>
+          <li><a href="#auth">Authentication</a></li>
+          <li><a href="#firestore">Cloud Firestore</a></li>
+          <li><a href="#functions">Cloud Functions</a></li>
+          <li><a href="#fcm">Cloud Messaging</a></li>
+          <li><a href="#hosting">Hosting</a></li>
+          <li><a href="#storage">Cloud Storage</a></li>
+          <li><a href="#performance">Performance Monitoring</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- TOC floating button -->
+    <button class="toc-button" onclick="toggleTOC()">TOC</button>
+    <div class="toc-modal" id="tocModal">
+      <ul>
+        <li><a href="#realtime" onclick="hideTOC()">Realtime Database</a></li>
+        <li><a href="#auth" onclick="hideTOC()">Authentication</a></li>
+        <li><a href="#firestore" onclick="hideTOC()">Cloud Firestore</a></li>
+        <li><a href="#functions" onclick="hideTOC()">Cloud Functions</a></li>
+        <li><a href="#fcm" onclick="hideTOC()">Cloud Messaging</a></li>
+        <li><a href="#hosting" onclick="hideTOC()">Hosting</a></li>
+        <li><a href="#storage" onclick="hideTOC()">Cloud Storage</a></li>
+        <li>
+          <a href="#performance" onclick="hideTOC()">Performance Monitoring</a>
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      function toggleTOC() {
+        const toc = document.getElementById("tocModal");
+        toc.style.display = toc.style.display === "block" ? "none" : "block";
+      }
+      function hideTOC() {
+        document.getElementById("tocModal").style.display = "none";
+      }
+    </script>
+  </body>
+</html>

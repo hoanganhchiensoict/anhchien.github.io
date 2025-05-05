@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>
+      Handling application's business logic contained within use cases, linking
+      with the Data layer through interfaces, and implementing automatic model
+      generation.
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7;
+        color: #333;
+        line-height: 1.6;
+        padding: 0 1rem;
+        margin: auto;
+      }
+
+      .container {
+        display: flex;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .sidebar-left,
+      .sidebar-right {
+        width: 20%;
+        padding: 20px;
+        position: sticky;
+        top: 0;
+        height: fit-content;
+        background-color: #ffffff;
+        border-radius: 8px;
+        margin: 10px;
+        align-self: start;
+      }
+
+      .content {
+        width: 60%;
+        background-color: #fff;
+        padding: 30px;
+        margin: 10px;
+        border-radius: 8px;
+      }
+
+      h1,
+      h2 {
+        color: #2c3e50;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin: 1rem 0;
+      }
+      ul {
+        padding-left: 1.2rem;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1rem 0;
+      }
+      td,
+      th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+      td:first-child {
+        background-color: #f9f9f9;
+      }
+      h3 {
+        color: #2c3e50;
+        margin-top: 30px;
+      }
+      a {
+        color: #007acc;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .sidebar-left h3,
+      .sidebar-right h3 {
+        margin-top: 0;
+      }
+
+      .sidebar-left ul,
+      .sidebar-right ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .sidebar-left li,
+      .sidebar-right li {
+        margin-bottom: 8px;
+      }
+
+      /* TOC Button (mobile) */
+      .toc-button {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #007acc;
+        color: white;
+        padding: 10px 14px;
+        border: none;
+        border-radius: 50px;
+        font-size: 14px;
+        z-index: 1000;
+        cursor: pointer;
+      }
+
+      .toc-modal {
+        display: none;
+        position: fixed;
+        bottom: 70px;
+        right: 20px;
+        background-color: white;
+        border: 1px solid #ddd;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        padding: 10px;
+        z-index: 1000;
+        width: 250px;
+      }
+
+      .toc-modal ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .toc-modal li {
+        margin: 6px 0;
+      }
+
+      /* Responsive layout */
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+          padding: 10px;
+        }
+        .sidebar-left,
+        .sidebar-right {
+          display: none;
+        }
+        .content {
+          width: 100%;
+          margin: 0;
+        }
+        .toc-button {
+          display: block;
+        }
+      }
+      .wp-block-code {
+        background-color: #282c34;
+        color: #ffffff;
+        padding: 1em;
+        border-radius: 8px;
+        overflow-x: auto;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 0.95em;
+        line-height: 1.5;
+        margin: 1.5em 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .wp-block-code code {
+        background: none;
+        color: inherit;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar trái -->
+      <div class="sidebar-left">
+        <h3>Categories</h3>
+        <ul>
+          <li><a href="#">Firebase</a></li>
+          <li><a href="#">Authentication</a></li>
+          <li><a href="#">Database</a></li>
+          <li><a href="#">Hosting</a></li>
+          <li><a href="#">Messaging</a></li>
+        </ul>
+      </div>
+
+      <!-- Nội dung chính -->
+      <div class="content">
+        <h1>Implementing Flutter Base - Part 4: Details - Domain Layer</h1>
+        <img
+          src="../../../pictures/blog/flutter_base/flutter_base4.png"
+          alt="Firebase"
+        />
+        <!-- Nội dụng tiếp -->
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">I. Tasks</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          The task of this layer is primarily to handle the business logic
+          within the application, which is contained in use cases. It connects
+          to the data layer based on interfaces for repositories.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh6.googleusercontent.com/AkQo81T79KP9V7hKlK-6-IBBuvSYVCm10fx1MAieeDJwTxyCE-at7UUU3G1hrHXSK5bcd3DEdbjxJKx2PoTaykvU9C0jz8TQ9N2ceyi5fQ4iu-S-UljwQAnV6IW1cLNqx4q2sgnneuJO6rrMVMd8Ojw"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">II. The tasks that need to be handled.</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Corresponding to the diagram above, in the Domain layer, we will have:
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>Implement use cases</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>Implement entities</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>
+            Implement interface repositories and handle the automatic object
+            casting.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">III. Detailed processing</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">1. Implement Use cases</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Many of you may wonder why we need to have use cases for handling
+          business logic when in the Bloc pattern, the bloc itself contains some
+          logic. So, why do we need use cases? However, that is a minor
+          misconception because it confuses business logic processing with
+          presentation logic processing at the level of interaction between
+          users and various features. Being able to differentiate between these
+          two separate types of logic allows us to reuse code effectively in use
+          cases.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          A small example to illustrate the usefulness of use cases is a logout
+          logic. Here, we need to perform tasks such as clearing user data and
+          unsubscribing from FCM (Firebase Cloud Messaging). Now, imagine that
+          in your application, there are two different places where a user can
+          log out: one is on the profile page, and the other is on the home
+          page, where there's a personal icon that, when clicked, displays a
+          dialog with a logout button. In such a scenario, it's easy to reuse a
+          single LogoutUseCase to handle logout.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Each use case has a well-defined input and output, making it easy to
+          perform testing.<img
+            width="543"
+            height="316"
+            src="https://lh4.googleusercontent.com/5rIcGaGQgnUc4TKSo8GexjhhwKb_1QhBs0BLCjAKbdmxVWrKSgzwJ-oDWJhvik0LwwqENeOoNXYaAIXG4I6lEVB15nHtuZcqPsMOh3wfz0d7w8kbceDQodpbnwb_cXwjz9ZT0SZkURDBBH5hqMt5Pzc"
+          />
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">2. Implement entities</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">
+          3. Implement interface repositories and handle the automatic object
+          casting.
+        </h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Next is the completion of repositories, which I promised to explain in
+          detail in this part. The domain layer only contains interfaces for
+          repositories, while the implementation lies in the data layer. The
+          most important aspect here is to automatically cast the received data
+          from the remote data source to the appropriate data type. For example,
+          when you perform a login, the data you expect after a successful login
+          should clearly be of type LoginResponse (containing id, token, etc.)
+          and not just a dynamic object. How can we achieve this automatically?
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          To address this issue, we can use generic types in Flutter. I created
+          an object called DataResponse, which represents the data that has
+          undergone the automatic casting of objects returned by repositories.
+          It's similar to ServiceResponse but automatically provides the
+          corresponding return type for successful data.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh6.googleusercontent.com/kv7oWItpFe86sfyBltMuhlVTcAvkJOdPhy4kumrydAmL7Erm9MdFM5Y6pYbkJPcZ10FJ6_OLt0DEeAj0dCTEdf-f6pizIk5jGapUnsVl_qUqvX_nBggzGXYENsndkr1t_tR4RuQijq8FTpjoxnZOVp4"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          The important thing is how the automatic data type conversion function
+          works. It's quite simple. We typically receive data from API calls in
+          the following formats:
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>Object format: {key: value}</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>
+            Array of objects: [1, 2, 3], ["a", "b"], [{key: value}, {key:
+            value}]
+          </li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>Data formats: true/false, numbers, strings</li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh5.googleusercontent.com/9UYJ-DFtbr7fzUvSCVhkSZbC5SIS7r2ldXw_9z78nBQDAADRph_tg-DEuFQDiXeZ6ZV2GNHQB0xGLG2uUHmGBJhc3QmXfXFmcTxjbYjXxqZrjO7mz-1GIXXSJWATCuih_K8pXtjUGaOYQlTrBx5pAqY"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          So we have successfully implemented automatic data type conversion.
+          Now the repositories will look like this:
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          <img
+            width="538"
+            height="351"
+            src="https://lh5.googleusercontent.com/VPm0r_6oQlmZFHXisPr-be-xDSipvVfTNwUcbj9UdQytkaF17MKWIKVCo7IF6WxiJr2GTOoRPD7SCy9rAsSz7sjHmQSVupA89ZF59Z67CZolYsGtcblEeMJEfNgKGlhGPymBpAOgioLliw3SNUOjVrA"
+          />
+        </p>
+        <!-- /wp:paragraph -->
+      </div>
+
+      <!-- Sidebar phải -->
+      <div class="sidebar-right">
+        <h3>Table of Contents</h3>
+        <ul>
+          <li><a href="#realtime">Realtime Database</a></li>
+          <li><a href="#auth">Authentication</a></li>
+          <li><a href="#firestore">Cloud Firestore</a></li>
+          <li><a href="#functions">Cloud Functions</a></li>
+          <li><a href="#fcm">Cloud Messaging</a></li>
+          <li><a href="#hosting">Hosting</a></li>
+          <li><a href="#storage">Cloud Storage</a></li>
+          <li><a href="#performance">Performance Monitoring</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- TOC floating button -->
+    <button class="toc-button" onclick="toggleTOC()">TOC</button>
+    <div class="toc-modal" id="tocModal">
+      <ul>
+        <li><a href="#realtime" onclick="hideTOC()">Realtime Database</a></li>
+        <li><a href="#auth" onclick="hideTOC()">Authentication</a></li>
+        <li><a href="#firestore" onclick="hideTOC()">Cloud Firestore</a></li>
+        <li><a href="#functions" onclick="hideTOC()">Cloud Functions</a></li>
+        <li><a href="#fcm" onclick="hideTOC()">Cloud Messaging</a></li>
+        <li><a href="#hosting" onclick="hideTOC()">Hosting</a></li>
+        <li><a href="#storage" onclick="hideTOC()">Cloud Storage</a></li>
+        <li>
+          <a href="#performance" onclick="hideTOC()">Performance Monitoring</a>
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      function toggleTOC() {
+        const toc = document.getElementById("tocModal");
+        toc.style.display = toc.style.display === "block" ? "none" : "block";
+      }
+      function hideTOC() {
+        document.getElementById("tocModal").style.display = "none";
+      }
+    </script>
+  </body>
+</html>

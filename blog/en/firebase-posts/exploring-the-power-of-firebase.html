@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>
+      Exploring the Power of Firebase: Real-time Data, User Authentication,
+      Cloud Storage, and More for Seamless App Development!
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7;
+        color: #333;
+        line-height: 1.6;
+        padding: 0 1rem;
+        margin: auto;
+      }
+
+      .container {
+        display: flex;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .sidebar-left,
+      .sidebar-right {
+        width: 20%;
+        padding: 20px;
+        position: sticky;
+        top: 0;
+        height: fit-content;
+        background-color: #ffffff;
+        border-radius: 8px;
+        margin: 10px;
+        align-self: start;
+      }
+
+      .content {
+        width: 60%;
+        background-color: #fff;
+        padding: 30px;
+        margin: 10px;
+        border-radius: 8px;
+      }
+
+      h1,
+      h2 {
+        color: #2c3e50;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin: 1rem 0;
+      }
+      ul {
+        padding-left: 1.2rem;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1rem 0;
+      }
+      td,
+      th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+      td:first-child {
+        background-color: #f9f9f9;
+      }
+      h3 {
+        color: #2c3e50;
+        margin-top: 30px;
+      }
+      a {
+        color: #007acc;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .sidebar-left h3,
+      .sidebar-right h3 {
+        margin-top: 0;
+      }
+
+      .sidebar-left ul,
+      .sidebar-right ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .sidebar-left li,
+      .sidebar-right li {
+        margin-bottom: 8px;
+      }
+
+      /* TOC Button (mobile) */
+      .toc-button {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #007acc;
+        color: white;
+        padding: 10px 14px;
+        border: none;
+        border-radius: 50px;
+        font-size: 14px;
+        z-index: 1000;
+        cursor: pointer;
+      }
+
+      .toc-modal {
+        display: none;
+        position: fixed;
+        bottom: 70px;
+        right: 20px;
+        background-color: white;
+        border: 1px solid #ddd;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        padding: 10px;
+        z-index: 1000;
+        width: 250px;
+      }
+
+      .toc-modal ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .toc-modal li {
+        margin: 6px 0;
+      }
+
+      /* Responsive layout */
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+          padding: 10px;
+        }
+        .sidebar-left,
+        .sidebar-right {
+          display: none;
+        }
+        .content {
+          width: 100%;
+          margin: 0;
+        }
+        .toc-button {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar trái -->
+      <div class="sidebar-left">
+        <h3>Categories</h3>
+        <ul>
+          <li><a href="#">Firebase</a></li>
+          <li><a href="#">Authentication</a></li>
+          <li><a href="#">Database</a></li>
+          <li><a href="#">Hosting</a></li>
+          <li><a href="#">Messaging</a></li>
+        </ul>
+      </div>
+
+      <!-- Nội dung chính -->
+      <div class="content">
+        <h1 class="wp-block-heading">Exploring the Power of Firebase</h1>
+        <img
+          src="../../../pictures/blog/firebase/firebase1.png"
+          alt="Firebase"
+        />
+
+        <p>
+          Firebase is a Google cloud platform that provides various services and
+          tools for mobile and web app development. Firebase assists developers
+          in building applications quickly and efficiently without requiring
+          extensive knowledge of database management, server setup, or user
+          management. Here are some key services that Firebase offers:
+        </p>
+
+        <h3 class="wp-block-heading">Firebase Realtime Database</h3>
+
+        <ul>
+          <li>
+            Description: Realtime Database, storing data in JSON format and
+            automatically synchronizing data between devices and servers.
+          </li>
+
+          <li>
+            Application: Online data storage and synchronization, real-time chat
+            applications.
+          </li>
+        </ul>
+
+        <h3 class="wp-block-heading">Firebase Authentication</h3>
+
+        <ul>
+          <li>
+            Description: User authentication and login management service
+            offering various methods such as email/password, Google Sign-In,
+            Facebook Login, and many other authentication providers.
+          </li>
+
+          <li>Application: User management, secure authentication.</li>
+        </ul>
+
+        <h3 class="wp-block-heading">Firebase Cloud Firestore</h3>
+
+        <ul>
+          <li>
+            Description: Cloud-based NoSQL database service built on collections
+            and documents, supporting powerful querying.
+          </li>
+
+          <li>Application: Flexible storage and retrieval of data.</li>
+        </ul>
+
+        <h3 class="wp-block-heading">Firebase Cloud Functions</h3>
+
+        <ul>
+          <li>
+            Description: Write and deploy Node.js source code directly from the
+            Firebase Console, integrated with Firebase events.
+          </li>
+
+          <li>
+            Application: Handling events such as database changes,
+            authentication, and notifications.
+          </li>
+        </ul>
+
+        <h3 class="wp-block-heading">Firebase Cloud Messaging (FCM)</h3>
+
+        <ul>
+          <li>
+            Description: Cloud notification service that supports sending
+            notifications to Android, iOS, and web devices.
+          </li>
+
+          <li>Application: Sending notifications to users, advertising.</li>
+        </ul>
+
+        <h3 class="wp-block-heading">Firebase Hosting</h3>
+
+        <ul>
+          <li>
+            Description: Cloud service for deploying and hosting web
+            applications or static websites.
+          </li>
+
+          <li>Application: Quick and easy deployment of web applications.</li>
+        </ul>
+
+        <h3 class="wp-block-heading">Firebase Cloud Storage</h3>
+
+        <ul>
+          <li>
+            Description: Secure cloud storage for data such as images, videos,
+            and files.
+          </li>
+
+          <li>Application: Storage and management of multimedia files.</li>
+        </ul>
+
+        <h3 class="wp-block-heading">Firebase Performance Monitoring</h3>
+
+        <ul>
+          <li>
+            Description: Monitor and assess application performance to optimize
+            user experience.
+          </li>
+
+          <li>Application: Measure and optimize application performance.</li>
+        </ul>
+
+        <p>
+          Firebase brings convenience and time savings to developers, allowing
+          them to focus on building features and user experiences instead of
+          worrying about infrastructure. Firebase services are available with a
+          pay-as-you-go pricing model, and it supports multiple development
+          platforms such as Android, iOS, and web.
+        </p>
+
+        <p>
+          <br />In this series, I will describe the steps to successfully deploy
+          some Firebase services, including Firebase Authentication, Firebase
+          Cloud Firestore, Firebase Cloud Messaging (FCM), Firebase Cloud
+          Storage, Firebase Remote Config, Firebase Realtime Database, and
+          Firebase Distribution.
+        </p>
+      </div>
+
+      <!-- Sidebar phải -->
+      <div class="sidebar-right">
+        <h3>Table of Contents</h3>
+        <ul>
+          <li><a href="#realtime">Realtime Database</a></li>
+          <li><a href="#auth">Authentication</a></li>
+          <li><a href="#firestore">Cloud Firestore</a></li>
+          <li><a href="#functions">Cloud Functions</a></li>
+          <li><a href="#fcm">Cloud Messaging</a></li>
+          <li><a href="#hosting">Hosting</a></li>
+          <li><a href="#storage">Cloud Storage</a></li>
+          <li><a href="#performance">Performance Monitoring</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- TOC floating button -->
+    <button class="toc-button" onclick="toggleTOC()">TOC</button>
+    <div class="toc-modal" id="tocModal">
+      <ul>
+        <li><a href="#realtime" onclick="hideTOC()">Realtime Database</a></li>
+        <li><a href="#auth" onclick="hideTOC()">Authentication</a></li>
+        <li><a href="#firestore" onclick="hideTOC()">Cloud Firestore</a></li>
+        <li><a href="#functions" onclick="hideTOC()">Cloud Functions</a></li>
+        <li><a href="#fcm" onclick="hideTOC()">Cloud Messaging</a></li>
+        <li><a href="#hosting" onclick="hideTOC()">Hosting</a></li>
+        <li><a href="#storage" onclick="hideTOC()">Cloud Storage</a></li>
+        <li>
+          <a href="#performance" onclick="hideTOC()">Performance Monitoring</a>
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      function toggleTOC() {
+        const toc = document.getElementById("tocModal");
+        toc.style.display = toc.style.display === "block" ? "none" : "block";
+      }
+      function hideTOC() {
+        document.getElementById("tocModal").style.display = "none";
+      }
+    </script>
+  </body>
+</html>

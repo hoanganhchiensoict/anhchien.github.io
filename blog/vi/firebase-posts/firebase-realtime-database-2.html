@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>
+      Đồng bộ dữ liệu một cách dễ dàng, chinh phục Firebase Realtime Database để
+      tối ưu hóa hiệu suất ứng dụng mượt mà
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7;
+        color: #333;
+        line-height: 1.6;
+        padding: 0 1rem;
+        margin: auto;
+      }
+
+      .container {
+        display: flex;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .sidebar-left,
+      .sidebar-right {
+        width: 20%;
+        padding: 20px;
+        position: sticky;
+        top: 0;
+        height: fit-content;
+        background-color: #ffffff;
+        border-radius: 8px;
+        margin: 10px;
+        align-self: start;
+      }
+
+      .content {
+        width: 60%;
+        background-color: #fff;
+        padding: 30px;
+        margin: 10px;
+        border-radius: 8px;
+      }
+
+      h1,
+      h2 {
+        color: #2c3e50;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin: 1rem 0;
+      }
+      ul {
+        padding-left: 1.2rem;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1rem 0;
+      }
+      td,
+      th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+      td:first-child {
+        background-color: #f9f9f9;
+      }
+      h3 {
+        color: #2c3e50;
+        margin-top: 30px;
+      }
+      a {
+        color: #007acc;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .sidebar-left h3,
+      .sidebar-right h3 {
+        margin-top: 0;
+      }
+
+      .sidebar-left ul,
+      .sidebar-right ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .sidebar-left li,
+      .sidebar-right li {
+        margin-bottom: 8px;
+      }
+
+      /* TOC Button (mobile) */
+      .toc-button {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #007acc;
+        color: white;
+        padding: 10px 14px;
+        border: none;
+        border-radius: 50px;
+        font-size: 14px;
+        z-index: 1000;
+        cursor: pointer;
+      }
+
+      .toc-modal {
+        display: none;
+        position: fixed;
+        bottom: 70px;
+        right: 20px;
+        background-color: white;
+        border: 1px solid #ddd;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        padding: 10px;
+        z-index: 1000;
+        width: 250px;
+      }
+
+      .toc-modal ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .toc-modal li {
+        margin: 6px 0;
+      }
+
+      /* Responsive layout */
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+          padding: 10px;
+        }
+        .sidebar-left,
+        .sidebar-right {
+          display: none;
+        }
+        .content {
+          width: 100%;
+          margin: 0;
+        }
+        .toc-button {
+          display: block;
+        }
+      }
+      .wp-block-code {
+        background-color: #282c34;
+        color: #ffffff;
+        padding: 1em;
+        border-radius: 8px;
+        overflow-x: auto;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 0.95em;
+        line-height: 1.5;
+        margin: 1.5em 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .wp-block-code code {
+        background: none;
+        color: inherit;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar trái -->
+      <div class="sidebar-left">
+        <h3>Categories</h3>
+        <ul>
+          <li><a href="#">Firebase</a></li>
+          <li><a href="#">Authentication</a></li>
+          <li><a href="#">Database</a></li>
+          <li><a href="#">Hosting</a></li>
+          <li><a href="#">Messaging</a></li>
+        </ul>
+      </div>
+
+      <!-- Nội dung chính -->
+      <div class="content">
+        <h1>Firebase Realtime Database</h1>
+        <img
+          src="../../../pictures/blog/firebase/firebase7-realtime-db.png"
+          alt="Firebase"
+        />
+        <!-- Nội dụng tiếp -->
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">I. Tổng quan</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Firebase Realtime Database đóng vai trò quan trọng trong việc cung cấp
+          một giải pháp linh hoạt và mạnh mẽ cho việc lưu trữ và đồng bộ dữ liệu
+          theo thời gian thực. Firebase Realtime Database sử dụng mô hình thời
+          gian thực, cho phép dữ liệu được đồng bộ ngay lập tức khi có thay
+          đổi.&nbsp;
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Dữ liệu trong Firebase Realtime Database được lưu trữ dưới dạng JSON,
+          tạo ra một cấu trúc linh hoạt và dễ đọc.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">II. So sánh với với Firebase Firestore</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Firebase cung cấp hai cơ sở dữ liệu tài liệu dựa trên đám mây mà khách
+          hàng có thể truy cập. Firebase khuyên khách hàng mới nên bắt đầu với
+          Cloud Firestore:
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            <strong>Cloud Firestore</strong> là cơ sở dữ liệu tài liệu tương
+            thích JSON cấp doanh nghiệp <em>được đề xuất</em> , được hơn 250.000
+            nhà phát triển tin cậy. Nó phù hợp cho các ứng dụng có mô hình dữ
+            liệu phong phú yêu cầu khả năng truy vấn, khả năng mở rộng và tính
+            sẵn sàng cao. Nó cũng cung cấp khả năng đồng bộ hóa máy khách có độ
+            trễ thấp và truy cập dữ liệu ngoại tuyến.
+          </li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>
+            <strong>Realtime DB</strong> là cơ sở dữ liệu JSON của Firebase cổ
+            điển. Nó phù hợp cho các ứng dụng có mô hình dữ liệu đơn giản yêu
+            cầu tra cứu đơn giản và đồng bộ hóa có độ trễ thấp với khả năng mở
+            rộng hạn chế.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>Mô hình dữ liệu</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Cả Cơ sở dữ liệu thời gian thực và Cloud Firestore đều là Cơ sở dữ
+          liệu NoSQL.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:table -->
+        <figure class="wp-block-table">
+          <table>
+            <tbody>
+              <tr>
+                <td>Cloud Firestore</td>
+                <td>Realtime DB</td>
+              </tr>
+              <tr>
+                <td>
+                  Lưu trữ dữ liệu dưới dạng bộ sưu tập tài liệu.Dữ liệu đơn giản
+                  dễ dàng lưu trữ trong các tài liệu, rất giống với JSON.Dữ liệu
+                  phức tạp, có thứ bậc dễ dàng tổ chức hơn trên quy mô lớn bằng
+                  cách sử dụng các bộ sưu tập con trong tài liệu.Yêu cầu ít
+                  chuẩn hóa và làm phẳng dữ liệu hơn.
+                </td>
+                <td>
+                  Lưu trữ dữ liệu dưới dạng một cây JSON lớn.Dữ liệu đơn giản
+                  rất dễ dàng để lưu trữ.Dữ liệu phức tạp, có thứ bậc khó tổ
+                  chức hơn trên quy mô lớn.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </figure>
+        <!-- /wp:table -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Ngoài ra còn nhiều yếu tố so sánh mà trang chủ Firebase cung cấp và
+          khuyến nghị sử dụng Firestore, các bạn có thể xem thêm tại:
+          <a href="https://firebase.google.com/docs/database/rtdb-vs-firestore"
+            >https://firebase.google.com/docs/database/rtdb-vs-firestore</a
+          >&nbsp;
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">III. Chi phí</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Chi phí cho việc sử dụng Firebase Realtime Database được tính dựa trên
+          một số yếu tố chính. Dưới đây là một số điểm quan trọng mà bạn cần
+          biết:
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>Dung Lượng Dữ Liệu (Storage):</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            Chi phí được tính dựa trên dung lượng dữ liệu bạn lưu trữ trong
+            Firebase Realtime Database. Giá sẽ tăng theo dung lượng dữ liệu đã
+            lưu trữ.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>Thao Tác Đọc và Ghi (Read and Write Operations):</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            Mỗi lần bạn đọc hoặc ghi dữ liệu, Firebase tính một số lần thao tác
+            (operations). Chi phí được tính dựa trên số lần thao tác này. Có sự
+            khác biệt trong chi phí giữa thao tác đọc và thao tác ghi.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>Thời Gian Thực (Realtime):</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            Firebase Realtime Database cung cấp khả năng đồng bộ thời gian thực.
+            Việc sử dụng tính năng này có thể ảnh hưởng đến chi phí do sự tăng
+            của số lần đồng bộ dữ liệu trong thời gian thực.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>Vùng Địa Lý (Geo-location):</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            Giá có thể thay đổi tùy thuộc vào vùng địa lý mà bạn đang sử dụng
+            Firebase Realtime Database.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>Loại Dịch Vụ Mạng (Network Service Tiers):</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            Firebase cung cấp các loại dịch vụ mạng khác nhau với giá khác nhau.
+            Chi phí có thể thay đổi tùy thuộc vào loại dịch vụ mạng bạn chọn.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>Giảm Giá theo Quy Mô (Volume Discounts):</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            Nếu bạn có lượng lớn dữ liệu và hoạt động, có thể có các chương
+            trình giảm giá theo quy mô.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">IV. Triển khai với Flutter</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>Create database</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/8KEOC3IIt4fWZahYb-Z5mB4IHuMTEQIUJ0RuGEeY1ydGs6IZgOhg2eBYhGq2cs76exfgdLaJOA1seuH2HqOpgbyjdEiIULAfZ2HmGoBm1A97zehad9FiZtIdYVY7wcnROwBukZDpyVG5oMG0sD9PuK0"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Tạm thời để allow read, write là true để cho phép đọc và ghi. Ở bài
+          Securities Rule mình sẽ nói chi tiết hơn
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/6W74rOr_cggp9EPRSidNcoC4VEwrANWMR40E4iWGNIfcB2RBO8XrhxmD5a_SiEgwjzFHzHG9n9wAYJ_DjYIFWARbPWQOII5YNYBVpl631DgIJH-LtpJ58BALVCvd_XdHkuFXk8NbrCTOe4Ipi9_z2ZQ"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Vào Project Settings download lại file google-service.json,
+          GoogleService-Info.plist copy lại vào project
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>Thêm lib:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>flutter pub add firebase_database</li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>Ghi dữ liệu vào db:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/XHZZW4l_ju1ja6tYX9AqiLhSZbYqk_3yQ35R4mGPW9hq768cy7a1UZqOQr-OS-rX4LSkn9qA8NN-moFdSyUSqPsf2iAWqQSXdm4JrcNZUa2qtb-6VpUx8H5vKg2T4yHWMgkJw2X-C7bS2UmzlXeUx3s"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>Kết quả trên console:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/ll8dX9bJ_OpcSFreZS82TcBUDKafpOWy7FFzFUpeE0JRr8WT4ii9bkEisuN3FHiQEUw-FC1XNfWTLUP91dZ2RWeCKSLhM0VfmHHFdVG3QCJQIUCsb0t9-qJHvHR26l8b81dpReVqtvAL_1tLCip4KPQ"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>Lấy dữ liệu</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/yOkRni4zvRaI8A7fELAi1E2Zv1lIoJoCWVnQUfA-J9tDRysMeYdSgcrI3azJmaECLZHcsipV8_hKWrU5Uzfs1FKzJ78FYsOs1wIZqUMCuO6eCZz91AhqhNvnztCFN_WVvGnPaXFMvQcKNftVCuNtdSk"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+      </div>
+
+      <!-- Sidebar phải -->
+      <div class="sidebar-right">
+        <h3>Table of Contents</h3>
+        <ul>
+          <li><a href="#realtime">Realtime Database</a></li>
+          <li><a href="#auth">Authentication</a></li>
+          <li><a href="#firestore">Cloud Firestore</a></li>
+          <li><a href="#functions">Cloud Functions</a></li>
+          <li><a href="#fcm">Cloud Messaging</a></li>
+          <li><a href="#hosting">Hosting</a></li>
+          <li><a href="#storage">Cloud Storage</a></li>
+          <li><a href="#performance">Performance Monitoring</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- TOC floating button -->
+    <button class="toc-button" onclick="toggleTOC()">TOC</button>
+    <div class="toc-modal" id="tocModal">
+      <ul>
+        <li><a href="#realtime" onclick="hideTOC()">Realtime Database</a></li>
+        <li><a href="#auth" onclick="hideTOC()">Authentication</a></li>
+        <li><a href="#firestore" onclick="hideTOC()">Cloud Firestore</a></li>
+        <li><a href="#functions" onclick="hideTOC()">Cloud Functions</a></li>
+        <li><a href="#fcm" onclick="hideTOC()">Cloud Messaging</a></li>
+        <li><a href="#hosting" onclick="hideTOC()">Hosting</a></li>
+        <li><a href="#storage" onclick="hideTOC()">Cloud Storage</a></li>
+        <li>
+          <a href="#performance" onclick="hideTOC()">Performance Monitoring</a>
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      function toggleTOC() {
+        const toc = document.getElementById("tocModal");
+        toc.style.display = toc.style.display === "block" ? "none" : "block";
+      }
+      function hideTOC() {
+        document.getElementById("tocModal").style.display = "none";
+      }
+    </script>
+  </body>
+</html>

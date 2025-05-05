@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>
+      Managing and interacting between various data sources (remote and local)
+      while configuring different environments like Dev -> SIT -> UAT -> Prod.
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7;
+        color: #333;
+        line-height: 1.6;
+        padding: 0 1rem;
+        margin: auto;
+      }
+
+      .container {
+        display: flex;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .sidebar-left,
+      .sidebar-right {
+        width: 20%;
+        padding: 20px;
+        position: sticky;
+        top: 0;
+        height: fit-content;
+        background-color: #ffffff;
+        border-radius: 8px;
+        margin: 10px;
+        align-self: start;
+      }
+
+      .content {
+        width: 60%;
+        background-color: #fff;
+        padding: 30px;
+        margin: 10px;
+        border-radius: 8px;
+      }
+
+      h1,
+      h2 {
+        color: #2c3e50;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin: 1rem 0;
+      }
+      ul {
+        padding-left: 1.2rem;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1rem 0;
+      }
+      td,
+      th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+      td:first-child {
+        background-color: #f9f9f9;
+      }
+      h3 {
+        color: #2c3e50;
+        margin-top: 30px;
+      }
+      a {
+        color: #007acc;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .sidebar-left h3,
+      .sidebar-right h3 {
+        margin-top: 0;
+      }
+
+      .sidebar-left ul,
+      .sidebar-right ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .sidebar-left li,
+      .sidebar-right li {
+        margin-bottom: 8px;
+      }
+
+      /* TOC Button (mobile) */
+      .toc-button {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #007acc;
+        color: white;
+        padding: 10px 14px;
+        border: none;
+        border-radius: 50px;
+        font-size: 14px;
+        z-index: 1000;
+        cursor: pointer;
+      }
+
+      .toc-modal {
+        display: none;
+        position: fixed;
+        bottom: 70px;
+        right: 20px;
+        background-color: white;
+        border: 1px solid #ddd;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        padding: 10px;
+        z-index: 1000;
+        width: 250px;
+      }
+
+      .toc-modal ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .toc-modal li {
+        margin: 6px 0;
+      }
+
+      /* Responsive layout */
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+          padding: 10px;
+        }
+        .sidebar-left,
+        .sidebar-right {
+          display: none;
+        }
+        .content {
+          width: 100%;
+          margin: 0;
+        }
+        .toc-button {
+          display: block;
+        }
+      }
+      .wp-block-code {
+        background-color: #282c34;
+        color: #ffffff;
+        padding: 1em;
+        border-radius: 8px;
+        overflow-x: auto;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 0.95em;
+        line-height: 1.5;
+        margin: 1.5em 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .wp-block-code code {
+        background: none;
+        color: inherit;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar trái -->
+      <div class="sidebar-left">
+        <h3>Categories</h3>
+        <ul>
+          <li><a href="#">Firebase</a></li>
+          <li><a href="#">Authentication</a></li>
+          <li><a href="#">Database</a></li>
+          <li><a href="#">Hosting</a></li>
+          <li><a href="#">Messaging</a></li>
+        </ul>
+      </div>
+
+      <!-- Nội dung chính -->
+      <div class="content">
+        <h1>Implementing Flutter Base - Part 3: Details - Data Layer</h1>
+        <img
+          src="../../../pictures/blog/flutter_base/flutter_base3.png"
+          alt="Firebase"
+        />
+        <!-- Nội dụng tiếp -->
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">I. Tasks</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          The main task of this layer is to manage and interact with data
+          sources (remote and local).
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh6.googleusercontent.com/VdVCMGn7j7KSvjdzAkTKH_A7XjTBSGObhONcK8bSEi8RceSbcYNgkrAmZJstw3ThpnPZhuG_3UO98xYaVctrVoWYh1I5co0S-xtHiaD-qIDNa8VBu4pg-hFQHTVIKBt9GTT1yalHiAZri3pa0eLfLw0"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">II. The tasks that need to be handled.</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Going from bottom to top, these are the tasks that need to be
+          addressed at this layer:
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list {"ordered":true} -->
+        <ol>
+          <!-- wp:list-item -->
+          <li>
+            Implementation on various environments: Dev -&gt; SIT -&gt; UAT
+            -&gt; Prod
+          </li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>Implementing the base network for calling APIs</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>Creating models using auto-generated code</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>Implementing repositories</li>
+          <!-- /wp:list-item -->
+        </ol>
+        <!-- /wp:list -->
+
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">III. Detailed processing</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>Let's start handling each task one by one:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">
+          1. Implementing various environments, going from DEV -&gt; SIT -&gt;
+          UAT -&gt; PROD.
+        </h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          The applications we deploy all go through development, testing by
+          testers, and then the Go-live phase, which means we will have
+          different environments accordingly. Therefore, the flexibility to
+          switch between these environments is necessary, and I've established
+          this in the project's base.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          On pub.dev, there are many libraries that can help with this. I chose
+          the flutter_dotenv library based on its number of likes, and it's very
+          easy to use.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          <strong>Declaring environments:</strong> I create an assets folder in
+          the root project and then create an env folder to manage the different
+          environments. It will look like this:
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh4.googleusercontent.com/K5aLdIgXgBRyn2PMYFPvwvYiCFIgU7Rd7tAc0ME5NGnDWG_l43zPLrKwtDonP-hs-se26qbw4c9w05BsudrLEEYzL8vPXiW_tdsxtakNJO26FtBdgFIcjFTtIWguId6RGKBmf86uFSYZyeX2oVGpPAA"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          In the .env file, it only contains one line: ENV=prod. The value of
+          ENV is set based on the environment you want to build: dev, sit, uat,
+          prod.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh3.googleusercontent.com/Agx5CRxS-e9sKe2HE6c2DL1zTS4MECLn31UmLwErJicB4mI4we4Zbz431bIvgvVIRIsVH2nLykwbSqjU2ocdJu5X3rw8fVAdnoXzG9tCZmHdYbG190gfs0eiYao66nY4cBMQDPYornpze8KWacJc6fI"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          In the .env.dev, .env.ida, and .env.prod files, what do they contain?
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh5.googleusercontent.com/Xyerkeo-W88S0JjhqABewvuyWyVMmEVscFsYe4YqDcNwMoJR5lXWUG71rSZzLUby_E2ehRLtCnqVS43BVHLtzKcHzu0hPBRZpom5RyZ1eW0X1Kh4WPFzBTlDz0raxZ7Q0X3nhX47RqtLFQtZNZleW6s"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          These are the domain endpoints that your application needs to connect
+          to the backend. Here, I have API_AUTH, and if you have additional
+          backends to connect to, you can add corresponding domain endpoints
+          here.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          <strong>Fetching data:</strong> After declaring the environments, it's
+          time to fetch data from the respective environments. I create a "Env"
+          class located in the "utils" directory to handle this initialization
+          in the main file and access the respective domain endpoints as
+          follows:
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh5.googleusercontent.com/XU15H05mvS-EcpGLfFy-zRSrsBFGsdYS5Q6vioIh6lNgkHNQ8bgpWLmezI26mZkWYo3Ur3pGVwXY65ZTJ11lG0hcK3znrOTSdFbBQ8J7cU3pxPDJQAdHZpx_wbRrc1RAPb3yedSZNvTDR3ndCsUDz9s"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          And calling <code><strong>await Env.init()</strong></code> in the
+          <code><strong>main.dart</strong></code> file completes the setup.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">
+          2. Implementing the base network to make API calls and interact with
+          the backend
+        </h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>To complete the base network, we need to:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>Choose a library to connect to the backend through APIs.</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>
+            Implement BaseService, which includes base GET, POST, PUT, DELETE,
+            and header.
+          </li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>
+            Handle error cases in the base service, ensuring that data is
+            returned on the base network.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Initially, I used Dart's http library, but later switched to Dio for
+          its convenience in transferring binary data. Separating the classes
+          thoroughly makes switching libraries very simple, with minimal changes
+          due to differences between the two libraries, all without affecting
+          other layers or classes.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          The most important aspect here is the implementation of BaseService
+          and handling all exceptions, ensuring data is returned to the layers
+          above. Here's a basic outline of this part:
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh4.googleusercontent.com/cRfs6hIbjpKwF-Nb9MwWAidwpHhemkW9e9HGJa1W0ns-iofevFcBbA9yE6EuYsZPxysgt82WGhULpTCTP6J_LZxXl0CUdjNXVLWAFyB5ihNN6Mi6oqyYubvSEi7smUrpgoZwBN45Qp26QF1IzXVjFEU"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          So, looking at the diagram, I'll create a class called BaseService,
+          which will contain the basic methods get, put, post, delete, and
+          return data as described in the ServiceResponse class.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          The data returned is in the form of a ServiceResponse, which includes:
+          Success/Failure status, data in case of success, and an error message
+          if there is a failure.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh5.googleusercontent.com/84Fn2RUqNK2o9bbxygtj6jJDtvo7xm_g0prpXbmBCHoKrVvuHEx5cC-08MnFPs2IlCZpJ6Db_4t1gvqmdTbrgRe7BYs6OZay9Rhge8wJpHbirXDIFWQaiyA2st3qXmPczIOgLNPe6hg_Uw4BAAi4VYQ"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          <br />In which, it contains BaseException, which are the exceptions I
+          defined when the API calls fail, including BadRequestException,
+          ForbiddenException, FetchDataException, ApiNotRespondingException,
+          UnAuthorizedException, ... and you can add many other exception cases
+          you want to check as well.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh4.googleusercontent.com/tCjxfUlB_lHoLGD0LIgIJXKfacloVEqvfGa-9Hd5UrA5i4fjzE7lAf1bOC67By_dJLkwZXQUD99rd8KdF4Xl7lWTBszNNBaJg3tqTItEb_n1q5_BbjEsPNeQDGqp9atsSUfEhs6rhIDtEkDmHqzon7Y"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          The task of describing the ServiceResponse object returned by
+          BaseService is completed. Now we proceed to finalize the GET, POST,
+          PUT, DELETE methods, and handle all possible error cases that may
+          occur when calling the API.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh3.googleusercontent.com/2t6ayh8Q3q5zGUlYDwGIlj2SfZrcX4_aPo7IILk3k3CmgyNy9FmUB5pZsXVMzO-QtkNy2byatfOY_Aayyc2XxSEG-9AZyqTxhbljR5Fjtf8w5e7u1u2xxB6T6UOeAuPHvQdhJ0r9Tuy4F_u-EFZ-qzE"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          I wonder if you have any questions about what is contained in the
+          _handleErrorDio method? Or have you already imagined that it's the
+          place where we handle all the other exceptions? For example, if the
+          API call times out, we return an ApiNotRespondingException error, or
+          if there's no internet connection, we return a FetchDataException
+          error, and so on.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh6.googleusercontent.com/s3D2a3JXLkYvkAJT05gVVx59A1r-e6HdYf9Di3Wki8Aduzt_3Z1XkBJ9LR3ZGHerqaTt4kMZtrN0tZzE2n93jJ2XZO8SR4gl7Tx-27phDkaCNkx6pSVcPDko6zy5FOm0xx0-WhzRIz5kyfrKW2xKkVA"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Now that we've implemented BaseService, in the datasource_remote
+          folder, you'll have corresponding services that simply call the API
+          and return the response to the repositories. For example, in the login
+          flow, I have AuthService that contains two APIs: login and
+          registerFcm:<br /><img
+            width="545"
+            height="201"
+            src="https://lh6.googleusercontent.com/x03LOsaePN0AMuFuZDYvdxus76WjyAYZLnKRgCrO58CZsNfVts1aZjE4W9lAwCSt2WUnW8SeUMLuzHzmzd0BSdtixBoDX52_pOeJIwkRtcSgvegQBRAIgGGOItVt3_2_7DA_D1VqsAYcv1dLVKz0sqU"
+          />
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">
+          3. Implementing models using auto-generated code.
+        </h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Dart is an object-oriented language, so we need models to describe the
+          request and response objects. To make the data casting process more
+          automatic, I used freezed to generate corresponding code for models.
+          My request and response classes are structured as follows:
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh5.googleusercontent.com/b7SPkZ5IYgYmP15hERjqJThHBgubh28s4ZQasmOYQKatMITI9nR3VEXSLc-fzSuaT3OtPIGkq3ggBiZX9zTQpdxkDhsqQUOgLUycvn4GKw1Bi4_HLOuwg4kebcaYi16ap0dvd1ARfGVeSvd43sD89LY"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">4. Implementing repositories.</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          This article is already quite lengthy, so I'll leave it here and
+          handle those topics along with the repository interface in the next
+          article. In that section, I will explain how to automatically cast
+          data to the desired objects within the repositories.
+        </p>
+        <!-- /wp:paragraph -->
+      </div>
+
+      <!-- Sidebar phải -->
+      <div class="sidebar-right">
+        <h3>Table of Contents</h3>
+        <ul>
+          <li><a href="#realtime">Realtime Database</a></li>
+          <li><a href="#auth">Authentication</a></li>
+          <li><a href="#firestore">Cloud Firestore</a></li>
+          <li><a href="#functions">Cloud Functions</a></li>
+          <li><a href="#fcm">Cloud Messaging</a></li>
+          <li><a href="#hosting">Hosting</a></li>
+          <li><a href="#storage">Cloud Storage</a></li>
+          <li><a href="#performance">Performance Monitoring</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- TOC floating button -->
+    <button class="toc-button" onclick="toggleTOC()">TOC</button>
+    <div class="toc-modal" id="tocModal">
+      <ul>
+        <li><a href="#realtime" onclick="hideTOC()">Realtime Database</a></li>
+        <li><a href="#auth" onclick="hideTOC()">Authentication</a></li>
+        <li><a href="#firestore" onclick="hideTOC()">Cloud Firestore</a></li>
+        <li><a href="#functions" onclick="hideTOC()">Cloud Functions</a></li>
+        <li><a href="#fcm" onclick="hideTOC()">Cloud Messaging</a></li>
+        <li><a href="#hosting" onclick="hideTOC()">Hosting</a></li>
+        <li><a href="#storage" onclick="hideTOC()">Cloud Storage</a></li>
+        <li>
+          <a href="#performance" onclick="hideTOC()">Performance Monitoring</a>
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      function toggleTOC() {
+        const toc = document.getElementById("tocModal");
+        toc.style.display = toc.style.display === "block" ? "none" : "block";
+      }
+      function hideTOC() {
+        document.getElementById("tocModal").style.display = "none";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>
+      Empower Your Apps with Firebase Cloud Firestore: Flexible NoSQL Database
+      for Seamless Data Management!
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7;
+        color: #333;
+        line-height: 1.6;
+        padding: 0 1rem;
+        margin: auto;
+      }
+
+      .container {
+        display: flex;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .sidebar-left,
+      .sidebar-right {
+        width: 20%;
+        padding: 20px;
+        position: sticky;
+        top: 0;
+        height: fit-content;
+        background-color: #ffffff;
+        border-radius: 8px;
+        margin: 10px;
+        align-self: start;
+      }
+
+      .content {
+        width: 60%;
+        background-color: #fff;
+        padding: 30px;
+        margin: 10px;
+        border-radius: 8px;
+      }
+
+      h1,
+      h2 {
+        color: #2c3e50;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin: 1rem 0;
+      }
+      ul {
+        padding-left: 1.2rem;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1rem 0;
+      }
+      td,
+      th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+      td:first-child {
+        background-color: #f9f9f9;
+      }
+      h3 {
+        color: #2c3e50;
+        margin-top: 30px;
+      }
+      a {
+        color: #007acc;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .sidebar-left h3,
+      .sidebar-right h3 {
+        margin-top: 0;
+      }
+
+      .sidebar-left ul,
+      .sidebar-right ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .sidebar-left li,
+      .sidebar-right li {
+        margin-bottom: 8px;
+      }
+
+      /* TOC Button (mobile) */
+      .toc-button {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #007acc;
+        color: white;
+        padding: 10px 14px;
+        border: none;
+        border-radius: 50px;
+        font-size: 14px;
+        z-index: 1000;
+        cursor: pointer;
+      }
+
+      .toc-modal {
+        display: none;
+        position: fixed;
+        bottom: 70px;
+        right: 20px;
+        background-color: white;
+        border: 1px solid #ddd;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        padding: 10px;
+        z-index: 1000;
+        width: 250px;
+      }
+
+      .toc-modal ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .toc-modal li {
+        margin: 6px 0;
+      }
+
+      /* Responsive layout */
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+          padding: 10px;
+        }
+        .sidebar-left,
+        .sidebar-right {
+          display: none;
+        }
+        .content {
+          width: 100%;
+          margin: 0;
+        }
+        .toc-button {
+          display: block;
+        }
+      }
+
+      .wp-block-code {
+        background-color: #282c34;
+        color: #ffffff;
+        padding: 1em;
+        border-radius: 8px;
+        overflow-x: auto;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 0.95em;
+        line-height: 1.5;
+        margin: 1.5em 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .wp-block-code code {
+        background: none;
+        color: inherit;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar trái -->
+      <div class="sidebar-left">
+        <h3>Categories</h3>
+        <ul>
+          <li><a href="#">Firebase</a></li>
+          <li><a href="#">Authentication</a></li>
+          <li><a href="#">Database</a></li>
+          <li><a href="#">Hosting</a></li>
+          <li><a href="#">Messaging</a></li>
+        </ul>
+      </div>
+
+      <!-- Nội dung chính -->
+      <div class="content">
+        <h1>Firebase Cloud FireStore</h1>
+        <img
+          src="../../../pictures/blog/firebase/firebase5-cloud-firestore.png"
+          alt="Firebase"
+        />
+        <!-- Nội dụng tiếp -->
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">I. Overview</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Cloud Firestore is a NoSQL database from Google Firebase, designed to
+          store and synchronize data across mobile, web, and server
+          applications.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Cloud Firestore organizes data as documents within collections. Each
+          document contains fields and values, creating a flexible data
+          structure that reflects the application's architecture:
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>Collection -&gt; Document -&gt; Fields&nbsp;</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          One of the notable features of Cloud Firestore is its real-time update
+          capability. Data is automatically synchronized across devices,
+          ensuring that the application always maintains the latest information.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">II.Pricing</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          According to the latest information:
+          <a href="https://firebase.google.com/pricing"
+            >https://firebase.google.com/pricing</a
+          >
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/EXnNI1ioODFGixJOjgWRBPrrsIZT4p9skcw8BvFsCsJIf0EVlmSbXltIwlnz4JWQRiqbGydlkFY-jTrpUVIJNMfN2DroFxpIUEXiPa2VYyZY_wx6QpXUzFmP-cfbTukrlbmL01F5zg_5HsoCOAMnUgM"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>The number of documents you read, write, and delete.</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>
+            The number of index entries that match composite queries. You are
+            charged once for reading a document for each batch with a maximum of
+            1000 index entries matching the query.
+          </li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>
+            The storage capacity your database uses, including fees for metadata
+            and indexing.
+          </li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>Network bandwidth.</li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">1. Document writes</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          The cost of writing data in Firebase's Cloud Firestore depends on the
+          number of times you perform write operations, including adding new,
+          updating data.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>Document writes are calculated as follows:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>Add, set, or update operation is counted as one write.</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>====== Adding a New Document</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:code -->
+        <pre
+          class="wp-block-code"
+        ><code>var newDocumentRef = FirebaseFirestore.instance.collection('users').add({
+
+  'name': 'John Doe',
+
+  'age': 25,
+
+});
+
+// Each time you add a new document is considered a write operation.</code></pre>
+        <!-- /wp:code -->
+
+        <!-- wp:paragraph -->
+        <p>====== Update a Field in a Document</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:code -->
+        <pre class="wp-block-code"><code>// Update the 'age' field in a document
+
+var userDocRef = FirebaseFirestore.instance.collection('users').doc('user_id');
+
+userDocRef.update({
+
+  'age': 26,
+
+});
+// Each time you update a field in a document is considered a write operation</code></pre>
+        <!-- /wp:code -->
+
+        <!-- wp:paragraph -->
+        <p>===== Batch Writes</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:code -->
+        <pre
+          class="wp-block-code"
+        ><code>// Use batch writes to add and update multiple documents in a batch
+
+var batch = FirebaseFirestore.instance.batch();
+
+// Add new document
+
+batch.set(FirebaseFirestore.instance.collection('users').doc('user1'), {'name': 'Alice', 'age': 30});
+
+// Update document
+
+batch.update(FirebaseFirestore.instance.collection('users').doc('user2'), {'age': 28});
+
+batch.commit();
+
+// The total write count is the sum of the number of times each operation is performed in the batch</code></pre>
+        <!-- /wp:code -->
+
+        <!-- wp:paragraph -->
+        <p>===== Atomic Transactions</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:code -->
+        <pre
+          class="wp-block-code"
+        ><code>// Use transactions to perform a write operation atomically
+
+FirebaseFirestore.instance.runTransaction((transaction) async {
+
+  // Read the current data
+
+  var userDocRef = FirebaseFirestore.instance.collection('users').doc('user_id');
+
+  var snapshot = await transaction.get(userDocRef);
+
+  var currentAge = snapshot.data()?&#91;'age'] ?? 0;
+
+  // Update data
+
+  transaction.update(userDocRef, {'age': currentAge + 1});
+
+});
+
+// Each time a transaction is executed is considered a write operation</code></pre>
+        <!-- /wp:code -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">2. Document deletes</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>===== Delete an individual document</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:code -->
+        <pre
+          class="wp-block-code"
+        ><code>var userDocRef = FirebaseFirestore.instance.collection('users').doc('user_id');
+
+userDocRef.delete();
+
+// Each time you delete a document is considered a document delete.</code></pre>
+        <!-- /wp:code -->
+
+        <!-- wp:paragraph -->
+        <p>===== Batch write with delete operations</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:code -->
+        <pre
+          class="wp-block-code"
+        ><code>// Use batch writes to delete multiple documents in a batch
+
+var batch = FirebaseFirestore.instance.batch();
+
+// Delete document
+
+batch.delete(FirebaseFirestore.instance.collection('users').doc('user1'));
+
+// Delete other document
+
+batch.delete(FirebaseFirestore.instance.collection('users').doc('user2'));
+
+batch.commit();
+
+// The total delete count is the sum of the number of times each delete operation is performed in the batch.</code></pre>
+        <!-- /wp:code -->
+
+        <!-- wp:paragraph -->
+        <p>===== Atomic Transactions with Delete Operations</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:code -->
+        <pre
+          class="wp-block-code"
+        ><code>// Use transactions to perform a delete operation atomically
+
+FirebaseFirestore.instance.runTransaction((transaction) async {
+
+  // Delete document
+
+  var userDocRef = FirebaseFirestore.instance.collection('users').doc('user_id');
+
+  transaction.delete(userDocRef);
+
+});
+
+// Each time a transaction with a delete operation is executed is considered a document delete.</code></pre>
+        <!-- /wp:code -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">3. Document reads</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Document Reads are calculated based on the number of documents
+          actually read from the database, not the number of documents returned
+          by the query.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>===== Read Document</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:code -->
+        <pre class="wp-block-code"><code>// Read a document from the collection
+
+var userDocRef = FirebaseFirestore.instance.collection('users').doc('user_id');
+
+var snapshot = await userDocRef.get();
+
+// Each time you read a document is considered a Document Read</code></pre>
+        <!-- /wp:code -->
+
+        <!-- wp:paragraph -->
+        <p>===== Query Multiple Documents</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:code -->
+        <pre
+          class="wp-block-code"
+        ><code>// Execute a query to read multiple documents
+
+var querySnapshot = await FirebaseFirestore.instance.collection('users').where('age', isGreaterThan: 25).get();
+
+//Each time you read a document within the query result is a Document Read. For example, if your query in the database matches 10 documents, then the Document Read count is considered as 10.
+
+Additionally, there is a minimum fee for each document read for each query you perform, even if the query doesn't return any results.</code></pre>
+        <!-- /wp:code -->
+
+        <!-- wp:paragraph -->
+        <p>===== Aggregation queries</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          For
+          <a
+            href="https://firebase.google.com/docs/firestore/query-data/aggregation-queries"
+            >aggregation queries</a
+          >
+          such as count(), sum(), and avg(), you are charged one document read
+          for each batch of up to 1000 index entries matched by the query. For
+          aggregation queries that match 0 index entries, there is a minimum
+          charge of one document read.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          For example, count() operations that match between 0 and 1000 index
+          entries are billed for one document read. For a count() operation that
+          matches 1500 index entries, you are billed 2 document reads.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>===== Read Through Stream</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:code -->
+        <pre
+          class="wp-block-code"
+        ><code>// Read data through a stream with a specific user_id
+
+var userDocRef = FirebaseFirestore.instance.collection('users').doc('user_id');
+
+var stream = userDocRef.snapshots();
+
+// Each time there is a change in the data is considered a Document Read</code></pre>
+        <!-- /wp:code -->
+
+        <!-- wp:code -->
+        <pre
+          class="wp-block-code"
+        ><code>// Read data from a collection through a stream with an entire collection
+
+var collectionRef = FirebaseFirestore.instance.collection('users');
+
+var stream = collectionRef.snapshots();
+
+// The first time, Firebase will send a snapshot with the entire data in 'users'
+
+// The Document Reads cost will depend on the number of documents in 'users'. For example, if there are 10 users, it will be 10 Document Reads
+
+// After that, whenever there is a change in 'users', Firebase will send snapshots of the updates
+
+// The Document Reads cost for each update will depend on the number of documents changed in that update</code></pre>
+        <!-- /wp:code -->
+
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">III. Demo</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>Create database</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>Note: The location, once selected, cannot be changed.</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/2lDS5Q0bMvdY7dQW-r6aNE2eAQBYqV60VXEI5efc-rWoIJqC41b6Gb1Qi3Y-IgKIgJjIB7jli7xzJMS0brgM2tJmnz9UpBXVk2P8NlcTCFcxf6L8iZfyd2Byqw6yiay2v0TzN5kw-ym0OPqaPJuy0NU"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Temporarily set allow read, write to true to allow reading and writing
+          to Firestore.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/XZj61R5wA4c5jvwNsqhtkKCm9X8xAi_ai68SRWr8i6wwNZicuSfuRw82aVmByNrZusQqDGy1tHPTIGAVRXgA0f-x9DQgsgSoTbBMKmTJUoV65Gobn2DM_kF0ZpSz7tTY4cC50vp-z5JY1I3XDK8s8aY"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>Add lib:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>flutter pub add cloud_firestore</li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>Add new data and check on the console.</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/TNz3vKxB4rC1uaLO2EiZaTSJ_jOzwtyabVE1FtM3-Osev-yeaTGBLgke-iOE0TIbPyzIpxIZNPtftC29_epkdeHGLdWpktwEmfVG9pfOp1-lUCwMGU2tVQcLrgwQSWNlAXmyqdiZgzS9Y0rX8Glb2UI"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/u0d6SlUDj9ibda7MyNA0vG7pd7dFhtIg1cX_DV-KWDKI6nx0KzSF5VBDSUEy8vNEgpVJUbFJMQIUChO0erp95pSHXZJdHn7hnCqU6D0YL_9k9upXSVe_9OV-K9sC2bTxvOAtTd3xrNhb5r5YKU3s2Qw"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>To read data in the collection, we have:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/4LW6GtC2LEkJ9H2GR_opMUcYAbgh5ZZTNBpnER1M0S4s8Ym5ZHvgC0K1QqxaB7JY5ZzC2jmLX_BVHIp34i18Vxhl_c5XL4Y45L_jNanj05XYBWBb0QneBOvzgszxhMJdaD-41iwVkNMW7rbAyjcxW-U"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+      </div>
+
+      <!-- Sidebar phải -->
+      <div class="sidebar-right">
+        <h3>Table of Contents</h3>
+        <ul>
+          <li><a href="#realtime">Realtime Database</a></li>
+          <li><a href="#auth">Authentication</a></li>
+          <li><a href="#firestore">Cloud Firestore</a></li>
+          <li><a href="#functions">Cloud Functions</a></li>
+          <li><a href="#fcm">Cloud Messaging</a></li>
+          <li><a href="#hosting">Hosting</a></li>
+          <li><a href="#storage">Cloud Storage</a></li>
+          <li><a href="#performance">Performance Monitoring</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- TOC floating button -->
+    <button class="toc-button" onclick="toggleTOC()">TOC</button>
+    <div class="toc-modal" id="tocModal">
+      <ul>
+        <li><a href="#realtime" onclick="hideTOC()">Realtime Database</a></li>
+        <li><a href="#auth" onclick="hideTOC()">Authentication</a></li>
+        <li><a href="#firestore" onclick="hideTOC()">Cloud Firestore</a></li>
+        <li><a href="#functions" onclick="hideTOC()">Cloud Functions</a></li>
+        <li><a href="#fcm" onclick="hideTOC()">Cloud Messaging</a></li>
+        <li><a href="#hosting" onclick="hideTOC()">Hosting</a></li>
+        <li><a href="#storage" onclick="hideTOC()">Cloud Storage</a></li>
+        <li>
+          <a href="#performance" onclick="hideTOC()">Performance Monitoring</a>
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      function toggleTOC() {
+        const toc = document.getElementById("tocModal");
+        toc.style.display = toc.style.display === "block" ? "none" : "block";
+      }
+      function hideTOC() {
+        document.getElementById("tocModal").style.display = "none";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>
+      Analyze the interface and construct a basic UI. Learn how to break down a
+      large widget into smaller widgets and then assemble them together.
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7;
+        color: #333;
+        line-height: 1.6;
+        padding: 0 1rem;
+        margin: auto;
+      }
+
+      .container {
+        display: flex;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .sidebar-left,
+      .sidebar-right {
+        width: 20%;
+        padding: 20px;
+        position: sticky;
+        top: 0;
+        height: fit-content;
+        background-color: #ffffff;
+        border-radius: 8px;
+        margin: 10px;
+        align-self: start;
+      }
+
+      .content {
+        width: 60%;
+        background-color: #fff;
+        padding: 30px;
+        margin: 10px;
+        border-radius: 8px;
+      }
+
+      h1,
+      h2 {
+        color: #2c3e50;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin: 1rem 0;
+      }
+      ul {
+        padding-left: 1.2rem;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1rem 0;
+      }
+      td,
+      th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+      td:first-child {
+        background-color: #f9f9f9;
+      }
+      h3 {
+        color: #2c3e50;
+        margin-top: 30px;
+      }
+      a {
+        color: #007acc;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .sidebar-left h3,
+      .sidebar-right h3 {
+        margin-top: 0;
+      }
+
+      .sidebar-left ul,
+      .sidebar-right ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .sidebar-left li,
+      .sidebar-right li {
+        margin-bottom: 8px;
+      }
+
+      /* TOC Button (mobile) */
+      .toc-button {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #007acc;
+        color: white;
+        padding: 10px 14px;
+        border: none;
+        border-radius: 50px;
+        font-size: 14px;
+        z-index: 1000;
+        cursor: pointer;
+      }
+
+      .toc-modal {
+        display: none;
+        position: fixed;
+        bottom: 70px;
+        right: 20px;
+        background-color: white;
+        border: 1px solid #ddd;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        padding: 10px;
+        z-index: 1000;
+        width: 250px;
+      }
+
+      .toc-modal ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .toc-modal li {
+        margin: 6px 0;
+      }
+
+      /* Responsive layout */
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+          padding: 10px;
+        }
+        .sidebar-left,
+        .sidebar-right {
+          display: none;
+        }
+        .content {
+          width: 100%;
+          margin: 0;
+        }
+        .toc-button {
+          display: block;
+        }
+      }
+      .wp-block-code {
+        background-color: #282c34;
+        color: #ffffff;
+        padding: 1em;
+        border-radius: 8px;
+        overflow-x: auto;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 0.95em;
+        line-height: 1.5;
+        margin: 1.5em 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .wp-block-code code {
+        background: none;
+        color: inherit;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar trái -->
+      <div class="sidebar-left">
+        <h3>Categories</h3>
+        <ul>
+          <li><a href="#">Firebase</a></li>
+          <li><a href="#">Authentication</a></li>
+          <li><a href="#">Database</a></li>
+          <li><a href="#">Hosting</a></li>
+          <li><a href="#">Messaging</a></li>
+        </ul>
+      </div>
+
+      <!-- Nội dung chính -->
+      <div class="content">
+        <h1>Part 3: Implementing the UI for the HomeScreen</h1>
+        <img
+          src="../../../pictures/blog/flutter_demo/flutter_demo3.png"
+          alt="Firebase"
+        />
+        <!-- Nội dụng tiếp -->
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">I.UI Analysis</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          <img
+            width="223"
+            height="369"
+            src="https://lh7-us.googleusercontent.com/LwiBmsI_-laDosHaMs-CRudZT_V4oXwukiJ-6EZJkVDa7Ir2OAsnQ94rui2UbXmPLZO9m6PUfdGRM2cPWrVjc8djOJ_lNyxqURKYRsvIYaJzjNAUwIFwcnGV8GOOw7c4-ZrxOgXR3PYYRSUzBazNmvg"
+          />
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Looking at the screen UI, we can categorize it into the following
+          general Widgets:
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>Background image at the bottom</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>HeaderWidget containing the IQ Icon</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>Widget arrow indicating the horizontal axis</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>Widget arrow indicating the vertical axis</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>
+            Widget displaying a list of questions. Each question is a small
+            Widget
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>
+          The UI components overlap, to construct this, we will use the Stack
+          Widget.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">II.Breaking Down the Small Widgets</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">
+          1. Building the Background, Header Widget, and Axis Widgets
+        </h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          As shown in the image, the build function returns a Container
+          containing the background image at the bottom. Inside the Stack, it
+          sequentially contains the following Widgets: HeaderHomeWidget,
+          HomeHorizontalAxisWidget, and HomeVerticalAxisWidget.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/h4kuOrS8Oqcu8gEqrdwNX8plAJk5l6MjlwL7p-DIC4g-eWyMij0YZTX-ZaPxSODam_b3ZNDeOB8IYYxYfJ0M6507d-H4SGnXB6dcg9_L4s-1ZJ0ZG6A3MLSw2uJs5wByxywWPYLuGNzyhdtUnZQFrNQ"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/7iIDxwWl5hurz_pKnCtIYwDb5n6B-8pqPMPfQU2o-_9_TkBMppu_cQ2kOQ4B8BrB5u1uyQvoA2L6Vm6rxV-bs30qqUG8wvyVvWWJbLJD79kHQI6Hvc4S_9PBHku87EnUP60y-zAfTNW9tt_Bi_NlBSg"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>After running, you will have the UI:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          <img
+            width="187"
+            height="406"
+            src="https://lh7-us.googleusercontent.com/E9d0Mx5iXfToHv6pRwYo-YFkWnzsR3V1rK-alxiHWqCvfr91IVWvgfzWueBsEQKDYguiG1LMt9io01af3PvHOWsqGxUIqZ-8IJWyDoVNEaNATcQhWbHM4149g2VyJbiXFODRO88mMBAhsBpDuDd03kE"
+          />
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">2.List of Questions</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Next is the Widget that displays the list of questions, which includes
+          the QuestionMainWidget representing one question.&nbsp;
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          The list of questions will have left padding of 50, right padding of
+          40, top padding of 90, and bottom padding of 110. We will use
+          SliverGrid to display the list in three columns.:
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/Gc71ZCfXJVwqQsVgP6q39JN7CWaIGuVP-S5zQI_6SYAd4vGv2E0T6TcvZt8u3gfBH_xsWKP4I_zJ-rt09SJsC-z5zfVMni8wA3gmDp8K1j1lWGqaI2de9P6F8KAKSCUfCj_rFPFnVZk1m5NcYwK4LvE"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>In which</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            childCount: Currently, it's temporarily set to fake 11 questions
+            corresponding to 11 child Widgets of QuestionMainWidget.
+            mainAxisSpacing, crossAxisSpacing: The spacing between
+            QuestionMainWidget in the vertical and horizontal directions.
+          </li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>
+            childAspectRatio: The aspect ratio of the width to height for each
+            child Widget.&nbsp;
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>Each child component will have two states:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/HfKafYaiRxXo7j32_Z6XHtVSCh2ssh1s5OqWCJdnpQFMz0o-d_rZPvQi5cXZpHTC9jpUXZsPdLosBCzN-oJqYJYpq3Td9mKkGNDF0RsQ1iRA-EnJkMVAzf81Zhio9e1t8C7HXkhU4trYiGZVNNWaL8o"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/KonBqr2jWvthwdP3QBaLSPTGCX5ry6xJFy0lyimEuzZ-IFG3zawh-MD2CuJLMo9LiorvRrr9Q87Sc5NJaGirToVglI-5x97gXVlDX3RtIfPl_uJzIX2iHgJxpvzQ1DL_9xCdop_qPKmVEgPLw8U-GBo"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>They will contain:&nbsp;</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>Background image</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>Thumbnail image displaying the question</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>Question number with the case of a correct answer</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>Lock icon for unanswered questions</li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/XuxU4ZNdmnwjLyX1vVJhax3VbXFDZDVBIbax2lg96crXlWuFd2BbC93Pr5KD0Dqr6HRKY-AqM7OHnPrwnVtIfnP3tg-lCxqkDd0kb7osaKj5gbbf6k9e9zXXWOwb12bFk39pd2EEUjZuwhzFmB-UrV0"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          We will complete the QuestionMainWidget after fully implementing the
+          logic to retrieve data from the backend, along with checking the
+          condition of passed questions. Currently, it's just temporarily
+          displaying the background and text.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          <img
+            width="161"
+            height="349"
+            src="https://lh7-us.googleusercontent.com/0p-zkBqeQVqXYtaPdE3NSxgSZ7BMbK9D5WL8SDuua8Iza_0jPaVXxs_c7KKWB4-B5ONktM-Us0mt6uioeFmbIZT0O4DtW2Xj3QyBasJ0IxdptZxILHbJa9GBLYxAp_rRVw9zPiPlxEfsNxEaTHCfZPk"
+          />
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">III.Summary</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          In this tutorial, we have learned how to analyze the UI and build a
+          basic UI. The current UI does not have real data; in the next
+          tutorial, we will continue to build the connection and retrieve real
+          data from the backend.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p></p>
+        <!-- /wp:paragraph -->
+      </div>
+
+      <!-- Sidebar phải -->
+      <div class="sidebar-right">
+        <h3>Table of Contents</h3>
+        <ul>
+          <li><a href="#realtime">Realtime Database</a></li>
+          <li><a href="#auth">Authentication</a></li>
+          <li><a href="#firestore">Cloud Firestore</a></li>
+          <li><a href="#functions">Cloud Functions</a></li>
+          <li><a href="#fcm">Cloud Messaging</a></li>
+          <li><a href="#hosting">Hosting</a></li>
+          <li><a href="#storage">Cloud Storage</a></li>
+          <li><a href="#performance">Performance Monitoring</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- TOC floating button -->
+    <button class="toc-button" onclick="toggleTOC()">TOC</button>
+    <div class="toc-modal" id="tocModal">
+      <ul>
+        <li><a href="#realtime" onclick="hideTOC()">Realtime Database</a></li>
+        <li><a href="#auth" onclick="hideTOC()">Authentication</a></li>
+        <li><a href="#firestore" onclick="hideTOC()">Cloud Firestore</a></li>
+        <li><a href="#functions" onclick="hideTOC()">Cloud Functions</a></li>
+        <li><a href="#fcm" onclick="hideTOC()">Cloud Messaging</a></li>
+        <li><a href="#hosting" onclick="hideTOC()">Hosting</a></li>
+        <li><a href="#storage" onclick="hideTOC()">Cloud Storage</a></li>
+        <li>
+          <a href="#performance" onclick="hideTOC()">Performance Monitoring</a>
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      function toggleTOC() {
+        const toc = document.getElementById("tocModal");
+        toc.style.display = toc.style.display === "block" ? "none" : "block";
+      }
+      function hideTOC() {
+        document.getElementById("tocModal").style.display = "none";
+      }
+    </script>
+  </body>
+</html>

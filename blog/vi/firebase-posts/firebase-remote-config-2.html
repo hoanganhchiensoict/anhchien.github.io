@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>
+      Tối Ưu Hóa Trải Nghiệm Người Dùng: Sử Dụng Firebase Remote Config để Linh
+      Hoạt Điều Chỉnh và Cải Thiện Ứng Dụng của Bạn!
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7;
+        color: #333;
+        line-height: 1.6;
+        padding: 0 1rem;
+        margin: auto;
+      }
+
+      .container {
+        display: flex;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .sidebar-left,
+      .sidebar-right {
+        width: 20%;
+        padding: 20px;
+        position: sticky;
+        top: 0;
+        height: fit-content;
+        background-color: #ffffff;
+        border-radius: 8px;
+        margin: 10px;
+        align-self: start;
+      }
+
+      .content {
+        width: 60%;
+        background-color: #fff;
+        padding: 30px;
+        margin: 10px;
+        border-radius: 8px;
+      }
+
+      h1,
+      h2 {
+        color: #2c3e50;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin: 1rem 0;
+      }
+      ul {
+        padding-left: 1.2rem;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1rem 0;
+      }
+      td,
+      th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+      td:first-child {
+        background-color: #f9f9f9;
+      }
+      h3 {
+        color: #2c3e50;
+        margin-top: 30px;
+      }
+      a {
+        color: #007acc;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .sidebar-left h3,
+      .sidebar-right h3 {
+        margin-top: 0;
+      }
+
+      .sidebar-left ul,
+      .sidebar-right ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .sidebar-left li,
+      .sidebar-right li {
+        margin-bottom: 8px;
+      }
+
+      /* TOC Button (mobile) */
+      .toc-button {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #007acc;
+        color: white;
+        padding: 10px 14px;
+        border: none;
+        border-radius: 50px;
+        font-size: 14px;
+        z-index: 1000;
+        cursor: pointer;
+      }
+
+      .toc-modal {
+        display: none;
+        position: fixed;
+        bottom: 70px;
+        right: 20px;
+        background-color: white;
+        border: 1px solid #ddd;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        padding: 10px;
+        z-index: 1000;
+        width: 250px;
+      }
+
+      .toc-modal ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .toc-modal li {
+        margin: 6px 0;
+      }
+
+      /* Responsive layout */
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+          padding: 10px;
+        }
+        .sidebar-left,
+        .sidebar-right {
+          display: none;
+        }
+        .content {
+          width: 100%;
+          margin: 0;
+        }
+        .toc-button {
+          display: block;
+        }
+      }
+      .wp-block-code {
+        background-color: #282c34;
+        color: #ffffff;
+        padding: 1em;
+        border-radius: 8px;
+        overflow-x: auto;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 0.95em;
+        line-height: 1.5;
+        margin: 1.5em 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .wp-block-code code {
+        background: none;
+        color: inherit;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar trái -->
+      <div class="sidebar-left">
+        <h3>Categories</h3>
+        <ul>
+          <li><a href="#">Firebase</a></li>
+          <li><a href="#">Authentication</a></li>
+          <li><a href="#">Database</a></li>
+          <li><a href="#">Hosting</a></li>
+          <li><a href="#">Messaging</a></li>
+        </ul>
+      </div>
+
+      <!-- Nội dung chính -->
+      <div class="content">
+        <h1>Firebase Remote Config</h1>
+        <img
+          src="../../../pictures/blog/firebase/firebase2-remote-config.png"
+          alt="Firebase"
+        />
+        <!-- Nội dụng tiếp -->
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">I. Tổng quan</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Firebase Remote Config là một dịch vụ của Firebase giúp bạn quản lý và
+          cập nhật cấu hình ứng dụng mà không cần phải phát hành phiên bản mới
+          trên cửa hàng ứng dụng. Nó cho phép bạn điều chỉnh các giá trị cấu
+          hình từ bảng điều khiển Firebase Console và gửi chúng đến ứng dụng của
+          người dùng một cách linh hoạt.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>Dưới đây là một số điểm quan trọng về Firebase Remote Config:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>Cập Nhật Động:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            Cho phép bạn điều chỉnh giá trị cấu hình mà không cần cập nhật ứng
+            dụng trên cửa hàng ứng dụng.
+          </li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>
+            Cập nhật có thể được kích hoạt bất cứ lúc nào, giúp bạn thực hiện
+            các thay đổi nhanh chóng mà không cần phải chờ đợi quá trình phê
+            duyệt.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>Phân Loại Người Dùng:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            Bạn có thể phân loại người dùng thành các nhóm và áp dụng các giá
+            trị cấu hình khác nhau cho từng nhóm. Điều này giúp thử nghiệm tính
+            năng và trải nghiệm người dùng.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>Điều Kiện Kích Hoạt:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            Cung cấp khả năng áp dụng các giá trị cấu hình dựa trên điều kiện
+            như phiên bản ứng dụng, quốc gia, ngôn ngữ, và các điều kiện tùy
+            chỉnh khác.
+          </li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>Hiệu Suất và Ổn Định:</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>
+            Dữ liệu cấu hình được lưu trữ đồng bộ, giúp đảm bảo hiệu suất cao và
+            ổn định trong quá trình cập nhật.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>Integrations:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            Firebase Remote Config có thể kết hợp với các dịch vụ khác của
+            Firebase như Analytics để phân tích hiệu suất các thay đổi cấu hình.
+          </li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>
+            Có SDK cho nhiều nền tảng như Android, iOS, và web, giúp tích hợp
+            dịch vụ vào ứng dụng của bạn một cách dễ dàng.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>An Toàn và Bảo Mật:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            Dữ liệu cấu hình được truyền tải qua kết nối an toàn sử dụng HTTPS,
+            đảm bảo tính bảo mật.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Firebase Remote Config thường được sử dụng để điều chỉnh tính năng ứng
+          dụng, cài đặt và trải nghiệm người dùng mà không cần phải phát hành
+          một phiên bản mới. Điều này rất hữu ích khi bạn muốn thử nghiệm và tối
+          ưu hóa ứng dụng của mình trong thời gian thực.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">
+          II. Firebase remote config hoạt động như thế nào?
+        </h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">1. Cơ chế Fetch và Active</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Firebase Remote Config hoạt động dựa trên cơ chế lấy và cập nhật dữ
+          liệu cấu hình từ máy chủ Firebase và đồng bộ nó với ứng dụng di động
+          của người dùng thông qua SDK được cung cấp sẵn.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          <img
+            src="https://lh7-us.googleusercontent.com/0XZ7l7I4V5ttaxQC-PYd7AGTVA1kR6rjT45XOBIBOa_S-ylHCZqH4OcavzndNlSLM79d0M_ofXVeyZAP5qTlhpkFxx6Epezxf-nVYBPuEsJPNGybd-FLEkG2MpdGhonXhcVWAMkX9v-ej1L6LTdrHls"
+            width="624"
+            height="535"
+          />Fetch Dữ Liệu Từ Máy Chủ Firebase:
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            Khi bạn gọi hàm fetch, SDK Firebase Remote Config kết nối với máy
+            chủ Firebase để lấy dữ liệu cấu hình mới nhất. Dữ liệu này thường
+            được trả về dưới dạng JSON.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>Lưu Trữ Dữ Liệu Tạm Thời (Cache):</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            Sau khi fetch thành công, dữ liệu cấu hình mới được lưu trữ tạm thời
+            trong bộ nhớ cache của thiết bị. Điều này giúp ứng dụng có thể sử
+            dụng ngay lập tức các giá trị cấu hình mới mà không cần phải fetch
+            lại từ server mỗi khi cần sử dụng.
+          </li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>
+            Hàm activateFetched chuyển dữ liệu từ bộ nhớ cache sang cấu hình
+            hiện tại của ứng dụng.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Trong trường hợp bạn gọi hàm fetch khi thời gian expiration chưa hết,
+          Firebase Remote Config sẽ kiểm tra xem đã đủ thời gian giữa các lần
+          fetch hay chưa. Nếu thời gian giữa các lần fetch chưa đủ, nó sẽ trả về
+          dữ liệu từ bộ nhớ cache mà không thực hiện lời gọi đến máy chủ
+          Firebase để lấy dữ liệu mới.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>Sử Dụng Dữ Liệu Cấu Hình Trong Ứng Dụng:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            Sau khi active, các giá trị cấu hình mới đã sẵn sàng để sử dụng
+            trong mã nguồn của ứng dụng.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>Tự Động Cập Nhật Dữ Liệu:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            Nếu bạn đã cấu hình tự động cập nhật dữ liệu, SDK có thể tự động
+            thực hiện quá trình fetch và lưu cache theo thời gian hoặc sự kiện
+            cụ thể. Điều này giúp duy trì thông tin cấu hình ứng dụng mà không
+            cần sự can thiệp thủ công.
+          </li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>
+            Hàm fetchAndActivate kết hợp cả hai bước fetch và activate một cách
+            tự động.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Quá trình này giúp ứng dụng linh hoạt hóa quy trình cập nhật cấu hình
+          và giảm thiểu thời gian cần thiết để áp dụng các thay đổi. Cả quá
+          trình fetch và lưu cache đều được thực hiện một cách bảo đảm hiệu suất
+          và đồng bộ.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">2. Cấu hình theo thời gian thực</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Firebase Remote Config cung cấp khả năng cập nhật cấu hình ứng dụng
+          theo thời gian thực thông qua một số tính năng linh hoạt. Khi bạn cấu
+          hình Firebase Remote Config để cập nhật theo thời gian thực, điều này
+          có một số khác biệt so với cách thông thường. Dưới đây là một số khác
+          biệt khi bạn sử dụng tính năng cập nhật theo thời gian thực:
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>Cập Nhật Ngay Lập Tức (Instant Updates):</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            Khi tính năng cập nhật theo thời gian thực được kích hoạt, các thay
+            đổi trong cấu hình có thể được áp dụng ngay lập tức cho ứng dụng mà
+            không cần phải đợi lần fetch tiếp theo.
+          </li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>
+            Điều này giúp ứng dụng có thể phản ứng nhanh chóng đối với các thay
+            đổi cấu hình mới.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>Polling Tự Động (Automatic Polling):</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            Firebase Remote Config sẽ tự động thực hiện các lần fetch để kiểm
+            tra và lấy dữ liệu cấu hình mới từ máy chủ Firebase mà không cần
+            phải gọi lệnh fetch từ ứng dụng.
+          </li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>
+            Điều này giúp đảm bảo rằng ứng dụng của bạn có thể cập nhật cấu hình
+            ngay cả khi người dùng không thực hiện thao tác gì.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">III. Tích hợp với Flutter</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>Tạo project Firebase Demo mới</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/m11-F1-lwEzqc3PYEdXLRZLplLFmoWe8osg8p9Wl6nlbBy5XLLRylE9zTk6GhoNV0HGW0naOa864qtXbiI-EZGJF82-5qvHnrUkoSgeJne27MjFkjymTfwCT0rxJ5Xo3KmLvOgzaxZzBPu5VfuYl0ps"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Trên
+          <a href="https://console.firebase.google.com/"
+            >https://console.firebase.google.com/</a
+          >
+          đăng nhập vào tài khoản và tạo 1 project mới.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/4GOsqHCcNfqBQs82ayu5kSY1ZbC7LCZYyowb987VnsPMQOkxACYg1iZTnonF3txfy_BDMNrQOrxYk0SgJ3fDWcf5rPxp4K-A7FpE6NPj_I5bNfdUxBgHkXMEILRhq3h9Z8V9onvHzOKHUQOkuoN7qjE"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Add App iOS và Android tương ứng, sau đó download file cấu hình và
+          copy vào project
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>Thêm các lib&nbsp; vào project flutter</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>flutter pub add firebase_core</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>flutter pub add firebase_remote_config</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>flutter pub add firebase_analytics</li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>Khởi tạo tại main</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/-rl8kNlQohsaXjMRXjjUHUB17y5aM5EilWNaAodDxx_LM35M9kmivJV3XcbWcB-9ptZebnx4-a2T_bl2zxwvr0ybFRz-joGAuePlolEMc5pQgsYDl4Krt7QcdAX62QMa0bMgYRA3PbokcNoXJqPFbXU"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>Đối với Android:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>Cần thêm: apply plugin: 'com.google.gms.google-services'</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/pBfgnZtBwOctqpyc9reOOPisXLo9M8AuzArPvpoCFK4IXL2xVfeNbwpdDvFnPCeAhwu-4INXYS7M_10yc0pQ9_P7LHr-6FFGDpPcZ-5ujqTpgQnY_hR_3K71YKDxMyIheloxtREwV7ovMbGd_DYB8lg"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>Và: classpath 'com.google.gms:google-services:4.3.13'</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/Uh40JSaIH2kUIhAoG7GlQxHsaxSPSfqIn-PDTxHRkJg7-G3VjtRo_PffQ0fKft66p9lN4gwjoCYiIFD-dCVmNUG8x8CuEjiKzCglN664RDvkoqG1KoxLKGAvB5Jaxdi-LcAcoQE7v3YqCBD4kqmDLXQ"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>Truy cập console và Create Configuration</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/3KFmYsEH4OOukF0RMalxAjbhUALTdpZHF7FNUEoH7o_FC68NDzgXFmYVPkKBgVjF7gxjz2Uy0C5tsWMEKdzxZxJ-8iOk_qkP0dQd9LCJl8A_j2y_6ycKIl31sZYryfub1pEKK5vokZzaSU8VseLTzRE"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/qCCQaj9hOvTs8GkPdNA1O--dYfpBdFifKP5ohJbC7gZqsCOmBzl5V7cH0-CrucJpmgD0D7O81L-kZm8DItrm65a0YfOv4qU9lmV9Bp8CJhjKnmI4_S6yb5TMHDmKPTX4mVhCUEvYh_4CjClCr6WdpEw"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>Sau đó publish change, là dữ liệu trên remote config đã sẵn sàng</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">1. Cơ chế fetch và active</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/ipWOntemqKkTYEpaaaYMK_v42ZHZ_yZCeYvHBsOmBa1QkRv4BfFwH5EsFkV53AB_MlpJFnvToGLK3uD4TU5nuML6bhGkPCje_KV5mFfYZ5N1s1ewRvUabFU7TfHcu2sYGc93BUjQVIuEPEuFiMQJyzg"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Setup remote và lấy kết quả trong code, chạy debug và kiểm tra dữ liệu
+          chúng ta thấy remoteConfig.getAll() trả về Map chứa các key và value:
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>key_demo_remote_config: chính là key đã thêm tại console</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>
+            Value là dạng: RemoteConfigValue, để lấy dữ liệu cần cast về dạng
+            string, int, bool … tương ứng
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/ZmROplgyuHVhGxu5RFol3FAkammUNzCEaLuIoN7p31_p_JvqtJAHmhT2zzq5ufkrmUlzA4KRsCjesK8TL07I9mLqBSj5_YtYlMNdUWiwzwSw8MDgW1joQgMDaUqWwtN2GSnw9SYhUWzqTsZBj3Tbrn4"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">2. Lấy dữ liệu theo thời gian thực</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Sử dụng remoteConfig.onConfigUpdated.listen để lắng nghe event thay
+          đổi, trên console thực hiện update dữ liệu và publish change, sau khi
+          publish chúng ta bắt được thay đổi trong event như sau:
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/ceNUz4s_va58Q4Qqak0UvbssTCDkchIO7r73GpbrY0XqNIPrtlM1n6ap5qSXSet-j9WqmtEj3xoV-DeTLi6ep8wPkFbipUy7Xj0yixQK-Z6XcsX_b9YWq6_pOE60EMyH_OVzG9zwv5STbs2xcBftlIM"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+      </div>
+
+      <!-- Sidebar phải -->
+      <div class="sidebar-right">
+        <h3>Table of Contents</h3>
+        <ul>
+          <li><a href="#realtime">Realtime Database</a></li>
+          <li><a href="#auth">Authentication</a></li>
+          <li><a href="#firestore">Cloud Firestore</a></li>
+          <li><a href="#functions">Cloud Functions</a></li>
+          <li><a href="#fcm">Cloud Messaging</a></li>
+          <li><a href="#hosting">Hosting</a></li>
+          <li><a href="#storage">Cloud Storage</a></li>
+          <li><a href="#performance">Performance Monitoring</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- TOC floating button -->
+    <button class="toc-button" onclick="toggleTOC()">TOC</button>
+    <div class="toc-modal" id="tocModal">
+      <ul>
+        <li><a href="#realtime" onclick="hideTOC()">Realtime Database</a></li>
+        <li><a href="#auth" onclick="hideTOC()">Authentication</a></li>
+        <li><a href="#firestore" onclick="hideTOC()">Cloud Firestore</a></li>
+        <li><a href="#functions" onclick="hideTOC()">Cloud Functions</a></li>
+        <li><a href="#fcm" onclick="hideTOC()">Cloud Messaging</a></li>
+        <li><a href="#hosting" onclick="hideTOC()">Hosting</a></li>
+        <li><a href="#storage" onclick="hideTOC()">Cloud Storage</a></li>
+        <li>
+          <a href="#performance" onclick="hideTOC()">Performance Monitoring</a>
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      function toggleTOC() {
+        const toc = document.getElementById("tocModal");
+        toc.style.display = toc.style.display === "block" ? "none" : "block";
+      }
+      function hideTOC() {
+        document.getElementById("tocModal").style.display = "none";
+      }
+    </script>
+  </body>
+</html>

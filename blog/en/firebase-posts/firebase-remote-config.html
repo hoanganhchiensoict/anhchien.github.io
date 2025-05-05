@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>
+      Enhancing User Experience: Utilize Firebase Remote Config for Flexible
+      Tuning and Improvement of Your App!
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7;
+        color: #333;
+        line-height: 1.6;
+        padding: 0 1rem;
+        margin: auto;
+      }
+
+      .container {
+        display: flex;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .sidebar-left,
+      .sidebar-right {
+        width: 20%;
+        padding: 20px;
+        position: sticky;
+        top: 0;
+        height: fit-content;
+        background-color: #ffffff;
+        border-radius: 8px;
+        margin: 10px;
+        align-self: start;
+      }
+
+      .content {
+        width: 60%;
+        background-color: #fff;
+        padding: 30px;
+        margin: 10px;
+        border-radius: 8px;
+      }
+
+      h1,
+      h2 {
+        color: #2c3e50;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin: 1rem 0;
+      }
+      ul {
+        padding-left: 1.2rem;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1rem 0;
+      }
+      td,
+      th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+      td:first-child {
+        background-color: #f9f9f9;
+      }
+      h3 {
+        color: #2c3e50;
+        margin-top: 30px;
+      }
+      a {
+        color: #007acc;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .sidebar-left h3,
+      .sidebar-right h3 {
+        margin-top: 0;
+      }
+
+      .sidebar-left ul,
+      .sidebar-right ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .sidebar-left li,
+      .sidebar-right li {
+        margin-bottom: 8px;
+      }
+
+      /* TOC Button (mobile) */
+      .toc-button {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #007acc;
+        color: white;
+        padding: 10px 14px;
+        border: none;
+        border-radius: 50px;
+        font-size: 14px;
+        z-index: 1000;
+        cursor: pointer;
+      }
+
+      .toc-modal {
+        display: none;
+        position: fixed;
+        bottom: 70px;
+        right: 20px;
+        background-color: white;
+        border: 1px solid #ddd;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        padding: 10px;
+        z-index: 1000;
+        width: 250px;
+      }
+
+      .toc-modal ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .toc-modal li {
+        margin: 6px 0;
+      }
+
+      /* Responsive layout */
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+          padding: 10px;
+        }
+        .sidebar-left,
+        .sidebar-right {
+          display: none;
+        }
+        .content {
+          width: 100%;
+          margin: 0;
+        }
+        .toc-button {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar trái -->
+      <div class="sidebar-left">
+        <h3>Categories</h3>
+        <ul>
+          <li><a href="#">Firebase</a></li>
+          <li><a href="#">Authentication</a></li>
+          <li><a href="#">Database</a></li>
+          <li><a href="#">Hosting</a></li>
+          <li><a href="#">Messaging</a></li>
+        </ul>
+      </div>
+
+      <!-- Nội dung chính -->
+      <div class="content">
+        <h1>Firebase Remote Config</h1>
+        <img
+          src="../../../pictures/blog/firebase/firebase2-remote-config.png"
+          alt="Firebase"
+        />
+        <!-- Nội dụng tiếp -->
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">I. Overview</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Firebase Remote Config is a Firebase service that helps you manage and
+          update your app's configuration without the need to release a new
+          version on the app store. It allows you to adjust configuration values
+          from the Firebase Console and deliver them to users' apps flexibly.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>Here are some key points about Firebase Remote Config:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>Dynamic Configuration Updates:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            Allows you to adjust configuration values without the need to update
+            the app on the app store.
+          </li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>
+            Updates can be triggered at any time, allowing you to make changes
+            quickly without having to wait for the approval process.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>User Classification:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            You can classify users into groups and apply different configuration
+            values to each group. This helps in testing features and user
+            experiences.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>Trigger Conditions:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            Providing the ability to apply configuration values based on
+            conditions such as app version, country, language, and other custom
+            conditions. Performance and Stability.:
+          </li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>
+            Configuration data is stored synchronously, ensuring high
+            performance and stability during updates.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>Integrations:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            Firebase Remote Config can be integrated with other Firebase
+            services, such as Analytics, to analyze the performance of
+            configuration changes.
+          </li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>
+            There is an SDK for various platforms such as Android, iOS, and web,
+            facilitating easy integration of the service into your application.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>Security and Safety:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            Configuration data is transmitted over a secure connection using
+            HTTPS, ensuring security.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Firebase Remote Config is commonly used to adjust app features,
+          settings, and user experiences without having to release a new
+          version. This is particularly useful when you want to test and
+          optimize your app in real-time.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">
+          II. How does Firebase Remote Config work?
+        </h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">1. Fetch và Active</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Firebase Remote Config operates based on a mechanism of fetching and
+          updating configuration data from the Firebase server and synchronizing
+          it with the user's mobile app through the provided SDK.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          <img
+            width="624"
+            height="535"
+            src="https://lh7-us.googleusercontent.com/vbxezfrtq-spJ4KViBd-zlkZgzZ0K9HS9J2Xc6QdAC0Oz3jrm4lThSMnUfCSG0ONzQYv9DV4N8Q21O2SNPAZvU0fmNiCRBUWtP4iuvzLFRVsdTQzumYO4J0NfLfw53yQe4mnCqGqx2lVmLhbJ_AP5q4"
+          />
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>Fetch data from Firebase server:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            When you call the fetch function, the Firebase Remote Config SDK
+            connects to the Firebase server to retrieve the latest configuration
+            data. This data is typically returned in JSON format.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>Cache</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            After a successful fetch, the new configuration data is temporarily
+            stored in the device's cache memory. This allows the app to
+            immediately use the new configuration values without having to fetch
+            them from the server every time they are needed.
+          </li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>
+            The activateFetched function transfers the data from the cache
+            memory to the current configuration of the app.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>
+          In case you call the fetch function when the expiration time has not
+          elapsed, Firebase Remote Config will check whether enough time has
+          passed between fetches. If the time between fetches is not sufficient,
+          it will return the data from the cache memory without making a call to
+          the Firebase server to retrieve new data.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>Use:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            After activation, the new configuration values are ready to be used
+            in the source code of the application.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>Automatic Data Update:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            If you have configured automatic data updates, the SDK can
+            automatically perform the fetch and caching process based on a set
+            time interval or a specific event. This helps maintain the
+            application configuration information without manual intervention.
+          </li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>
+            The fetchAndActivate function combines both the fetch and activate
+            steps automatically.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>
+          This process helps streamline the configuration update workflow of the
+          application, reducing the time required to apply changes. Both the
+          fetch and cache storage processes are performed to ensure performance
+          and synchronization.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">2. Real-time configuration</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Firebase Remote Config provides the ability to update app
+          configurations in real-time through several flexible features. When
+          you configure Firebase Remote Config for real-time updates, there are
+          some differences compared to the usual approach. Here are some
+          distinctions when you use the real-time update feature:
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>Instant Updates:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            When the real-time update feature is activated, changes in the
+            configuration can be applied immediately to the application without
+            waiting for the next fetch.
+          </li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>
+            This allows the application to respond promptly to new configuration
+            changes.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>Automatic Polling:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            Firebase Remote Config will automatically perform fetches to check
+            and retrieve new configuration data from the Firebase server without
+            the need for the app to explicitly call the fetch command..
+          </li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>
+            This ensures that your application can update its configuration even
+            when users do not perform any specific actions.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">III. Demo with Flutter</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>Create a new Firebase Demo project:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/IGtF9wx8_dvLgXXR29_Q7MnqTw1UWaH6zz98xKSDMRNWiPT3baA8yhPsh25pFr-YfmR3SnksPfO6QLQO_FcdsMJht_0rmrhTLvTkG_AUbYbvpjLJUJ4tAccbijRXZ52Dz7PH6yoitG3Ugog4ADJLdX4"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          At https://console.firebase.google.com/, log in to your account and
+          create a new project.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/WacXvsPXrSdl8CvptjZTS229GpFe0hTcEsS0akTEDS0271UzJqFVj_WBjlJjuFkxe67dC9SBDLoKRYv4g2alfb7BS-8AqElc1FUpyYFOHMMevm-LanzR1oSTauYnocnpzvWOze0_hy8NjOgwAHYcBLo"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Add iOS and Android apps accordingly, then download the configuration
+          file and copy it into the project.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>Add lib</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>flutter pub add firebase_core</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>flutter pub add firebase_remote_config</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>flutter pub add firebase_analytics</li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>Initialize at the main</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/hCAp2pbY-0cfyjOzCfZOqM-imavTEhm7GjzRzg2EELSGhvjueVAi3O02YVb9ni86dtIxDbbiOP9bw8mBPKmSLyoXPhJfDH2JxJnQ-K5O_TjQeUkC5EuRSlAncuPpga4lg-W1VWGAKn_nt_wb4gbfKAQ"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>Android:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>Add: apply plugin: 'com.google.gms.google-services'</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/b6rE9Hkj34A_ZqaktvDhqGQyIBBUBuk9Wryooyu1kX_WobHi4bsdNFIRcIZ_cCon6v-3zz9t8UtIJrVJJsnRyjtbA-OMFvmkNAQNLGdod1O5pPgNOBbEyRP_9_4A2DUsvzpFQXAHlIgVlD1KIaANj0M"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>and: classpath 'com.google.gms:google-services:4.3.13'</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/MsaMOANwsu9uZYkuCP5L5qQ97WpQoLqspq58COam-PQGkvir2oIyqsX1umDyWSOxtfojXW8fbLBfEuKZ-q2E--J64SAXn1i60X1Q-8dpjwfYS-TaXirPBkjyLkZ1lOLI76MYFa_0zrcXPagVsaZScjI"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>Access the console and create configuration</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/uwtgokHguxlyetBW8weVM9YqHdJV3a2HnIjgZ5tyBfE1W3rjTcU7EGmUW8XHDj_G8sk8VuZ2wxHLTBPlisT2rEUkijUo-Ko1jj9p6f9JrMec9hxoqOWN_ljQFesQ3ySjzPoxwReh6ARykmFXUJE5ESY"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/0KZKaC0I5lhHVxDCNoeXFALYtheZfLXWim8t92zk3mF8W7BQEGWjvpPaTDPshPxbw6iIC34KLyiHT0Aow-VQqOohsHpuGls3TNXovBe1pdwBQwXQbskD_Mpe5xUR4XFTiGmal6uqNYahAYV-QK2-sKA"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>Publish change, the data on Remote Config is now ready</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">1. fetch and active</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/V4LsnUv7U5xPhyO_PaDSB5UdGLPXn-FPBT3b5BNFeb_SgTZffxcKEJWHDCAk9YHUDODAJQxzckkuDZTaNGeq4gptZAd1010CuWC64GhjMX3F1ZTa3u1D2r4wuVt-Yfwl7Eu8RPtN6jAIu1UPoA9F-VM"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Set up the remote and retrieve the results in the code, run debug, and
+          check the data. We observe that remoteConfig.getAll() returns a Map
+          containing keys and values:
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            key_demo_remote_config: These are the keys added in the console
+          </li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>
+            value is of type RemoteConfigValue. To retrieve the data, it needs
+            to be cast to the corresponding types such as string, int, bool,
+            etc.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/6guUkAaXGp2dvjcuK5oG3DYsAUw_ST9cg-irBFInj2hmcVuyY6kZrppGGZJi4A9CRA-KVAENbWz8wk1AeS3ejgBFrbh-0ys2wFf3baRrUpUtyhJyMoh4W15ttXTESPxNBdJB385E0d25_ArKgPDf5tY"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">2. Real-time configuration</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Utilize remoteConfig.onConfigUpdated.listen to listen for
+          configuration change events. On the console, perform data updates and
+          publish the changes. After publishing, we capture the changes in the
+          event as follows:
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/ONYq-3ocQqQ_7Yg8MRI6DGoyMZK1qnCikqskgdd7Gyto2fR5DBfdakr08PhyGQg6ocbdVPbbAG0QHcv5C8DBKqbgSEwvRrhQqiz1Qm5TxBg5f9vB7sd9mrGctWU6aw9CgSkKr8mlulkB1iCMTmFxJZs"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+      </div>
+
+      <!-- Sidebar phải -->
+      <div class="sidebar-right">
+        <h3>Table of Contents</h3>
+        <ul>
+          <li><a href="#realtime">Realtime Database</a></li>
+          <li><a href="#auth">Authentication</a></li>
+          <li><a href="#firestore">Cloud Firestore</a></li>
+          <li><a href="#functions">Cloud Functions</a></li>
+          <li><a href="#fcm">Cloud Messaging</a></li>
+          <li><a href="#hosting">Hosting</a></li>
+          <li><a href="#storage">Cloud Storage</a></li>
+          <li><a href="#performance">Performance Monitoring</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- TOC floating button -->
+    <button class="toc-button" onclick="toggleTOC()">TOC</button>
+    <div class="toc-modal" id="tocModal">
+      <ul>
+        <li><a href="#realtime" onclick="hideTOC()">Realtime Database</a></li>
+        <li><a href="#auth" onclick="hideTOC()">Authentication</a></li>
+        <li><a href="#firestore" onclick="hideTOC()">Cloud Firestore</a></li>
+        <li><a href="#functions" onclick="hideTOC()">Cloud Functions</a></li>
+        <li><a href="#fcm" onclick="hideTOC()">Cloud Messaging</a></li>
+        <li><a href="#hosting" onclick="hideTOC()">Hosting</a></li>
+        <li><a href="#storage" onclick="hideTOC()">Cloud Storage</a></li>
+        <li>
+          <a href="#performance" onclick="hideTOC()">Performance Monitoring</a>
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      function toggleTOC() {
+        const toc = document.getElementById("tocModal");
+        toc.style.display = toc.style.display === "block" ? "none" : "block";
+      }
+      function hideTOC() {
+        document.getElementById("tocModal").style.display = "none";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>
+      Build the basic structure of the base network, fetch data from the API,
+      and convert it into an object model. Implement basic state management.
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7;
+        color: #333;
+        line-height: 1.6;
+        padding: 0 1rem;
+        margin: auto;
+      }
+
+      .container {
+        display: flex;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .sidebar-left,
+      .sidebar-right {
+        width: 20%;
+        padding: 20px;
+        position: sticky;
+        top: 0;
+        height: fit-content;
+        background-color: #ffffff;
+        border-radius: 8px;
+        margin: 10px;
+        align-self: start;
+      }
+
+      .content {
+        width: 60%;
+        background-color: #fff;
+        padding: 30px;
+        margin: 10px;
+        border-radius: 8px;
+      }
+
+      h1,
+      h2 {
+        color: #2c3e50;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin: 1rem 0;
+      }
+      ul {
+        padding-left: 1.2rem;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1rem 0;
+      }
+      td,
+      th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+      td:first-child {
+        background-color: #f9f9f9;
+      }
+      h3 {
+        color: #2c3e50;
+        margin-top: 30px;
+      }
+      a {
+        color: #007acc;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .sidebar-left h3,
+      .sidebar-right h3 {
+        margin-top: 0;
+      }
+
+      .sidebar-left ul,
+      .sidebar-right ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .sidebar-left li,
+      .sidebar-right li {
+        margin-bottom: 8px;
+      }
+
+      /* TOC Button (mobile) */
+      .toc-button {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #007acc;
+        color: white;
+        padding: 10px 14px;
+        border: none;
+        border-radius: 50px;
+        font-size: 14px;
+        z-index: 1000;
+        cursor: pointer;
+      }
+
+      .toc-modal {
+        display: none;
+        position: fixed;
+        bottom: 70px;
+        right: 20px;
+        background-color: white;
+        border: 1px solid #ddd;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        padding: 10px;
+        z-index: 1000;
+        width: 250px;
+      }
+
+      .toc-modal ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .toc-modal li {
+        margin: 6px 0;
+      }
+
+      /* Responsive layout */
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+          padding: 10px;
+        }
+        .sidebar-left,
+        .sidebar-right {
+          display: none;
+        }
+        .content {
+          width: 100%;
+          margin: 0;
+        }
+        .toc-button {
+          display: block;
+        }
+      }
+      .wp-block-code {
+        background-color: #282c34;
+        color: #ffffff;
+        padding: 1em;
+        border-radius: 8px;
+        overflow-x: auto;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 0.95em;
+        line-height: 1.5;
+        margin: 1.5em 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .wp-block-code code {
+        background: none;
+        color: inherit;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar trái -->
+      <div class="sidebar-left">
+        <h3>Categories</h3>
+        <ul>
+          <li><a href="#">Firebase</a></li>
+          <li><a href="#">Authentication</a></li>
+          <li><a href="#">Database</a></li>
+          <li><a href="#">Hosting</a></li>
+          <li><a href="#">Messaging</a></li>
+        </ul>
+      </div>
+
+      <!-- Nội dung chính -->
+      <div class="content">
+        <h1>Part 4. Handling Networking to Retrieve Real Data</h1>
+        <img
+          src="../../../pictures/blog/flutter_demo/flutter_demo4.png"
+          alt="Firebase"
+        />
+        <!-- Nội dụng tiếp -->
+        <!-- wp:paragraph -->
+        <p>
+          We will proceed with the next step, which is retrieving the list of
+          questions from the backend and displaying them accordingly.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">I.Reorganizing the REST API Library</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">
+          1.Creating a Demo API to Return Data with Express.js Server
+        </h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          To obtain data from the API, let's quickly create an Express.js server
+          and return the response as follows::
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/AaHrXo7SFlsTM8oMwtjzvkeX0AFDLtMoy5qqCEz88tllBC21ZUk3TaXLCnAWYf8XBiDpe--R7zy2NYxEQxEm0KAiEWtNs2_o8DIiLm0ic5QYERUmouq-4RkpQV1kYCaZVElfyAtqRFiK-hy6FIZYlbQ"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">2. Define the Basic Response</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          The data after calling the API can have success/failure scenarios.
+          Correspondingly, we will create a ServiceResponse model to define it.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/oLoM8N3nhsFS_viko6gRDN1f5cw5m0bj5abZqkexYGydAvvWJq4POZCMOi4iqzdPE-pm8jOaQtvatTvrtbyXGvB2ijTZth3pKv5Nx2jqGsx45J9rM-7jqc1jJzi5dgANXVyYrUQOZPPxVP9t29mTOqQ"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>In the ServiceResponse, we can observe:&nbsp;</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            Status: an enum Status { success, error }, representing the
+            success/failure of the response.
+          </li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>Data: the data received after a successful response.</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>Exception: the error returned in case of failure.</li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">
+          3. Wrapping the REST API Calling Library
+        </h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          In Flutter, to connect to an API, we use the dio library:<a
+            href="https://pub.dev/packages/dio"
+          >
+            https://pub.dev/packages/dio</a
+          >
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          The first thing to do when dealing with networking is to wrap the dio
+          library into a base class for handling. This is not only applicable to
+          networking but also to many other types of handling. Why do we need to
+          do this? It's because at some point, we may want to use a different
+          library to replace it. Wrapping the original library into a utils
+          class helps avoid unnecessary changes later on. It also allows us to
+          handle exceptions in a centralized manner.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>The wrapped dio in utils will look like this:&nbsp;</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/LdOdSh9STLEqV67yagpfkfoyCqbXjxO92BuAJ6ch_tOHkIWSGN3q7gdQJVcCsnEXuty9HvZT791V-nyHKIEHafcqSEGXBBfapadEfZO5AykNXRwSYebxoK0-NRUyaSl5nf5CpElZGCTkznVxCy2dZsI"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Here, I'm wrapping the get method and handling basic dio exceptions,
+          returning an error response. If you have specific requirements to
+          handle different exception cases according to the task requirements,
+          you can refer to advanced Flutter topics on building a base.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">II.Basic State Management</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">1.Calling API to Fetch Data</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          After completing the basic networking part, let's return to the home
+          screen. We observe that on this screen, there is data about the list
+          of questions. This is the state, and to manage it, Flutter provides
+          various mechanisms. I will introduce using Bloc Cubit, but first,
+          let's start with basic state management in Flutter with
+          StatefulWidget.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          In the HomeScreen, we switch to a StatefulWidget to call the API,
+          fetch the question data, and display it.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/kKDpdwji2fIzWJS8OW-4iYJ5bLCZXf--ELe3qu_cbpwGxQE1BjjWnIApc1EsXV1jkvvKaFs0xIs6std34w6yfE02gEREe5wbwl-3BpSHmzxpBnFnyBGmvkLRnGOD97xDSl_wYcQtFXC8nFnzpa4w2Go"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/mrLCaoKYBrESGzuNRaqJdBEVWLMevY4waTZvsdaASBsb032TzbamkoyuF7-knaT6CNz9usNJEP0-gsiuU9ruh_JAAHtNLTn8EDVSRM7lu-WSri_p7D6Dj7898kquYsgDZicXApjtwMxZe7hLMTu3SfM"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Run the project again, and if we print the data, we should see it:
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/zLvmzphr6Zz3n7kifSw3NlxNbeLE-hpjxROrdO2tasnCpDmOy_FQDQHpB9gP0DR79u6LBO0M-PnE9LQaGAdrDJ1VDbXUo8zIPOkwQN0kbehPwaT54arN_9AGdiufwv1KLI3JPDz_LnCZp1iunegoCRg"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          So, with a successful API call, we now have data about the list of
+          questions.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">
+          2.Casting the data received from the API into an object model
+        </h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          To use the data, we need to build an object model for the questions
+          and cast the received data into that model.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/58ytvfA_9jcZujlNYEeI4w8s3cNesW6LAbyB-5hgLYxBWyxOUDMb1j-_UOvNnik-tMlezla1YBfFd5GzC-6OUx8zRiyQ_GS3t-tBGkgGFVhbt3mB-ZaGVCQW51A-NzieE6nej87yMIrwetGbhDf8RsA"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          In the model, we define values such as number, result, picture,
+          suggest corresponding to the data returned from the API. You'll also
+          see the fromJson function, which helps us convert data from JSON to an
+          object. Now that we have created the model, let's proceed to casting
+          the data and modifying the getListQuestion() function:
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/QG8-rqNAQoxeMoR09-XIlDWd_uE3rjGJWnpSOFWvcjL-b0qaQAASbT2Jnocuro3koH8WJRwtj_PauPn-E3kqftKjfPBJVZY_td-ANzyTVMq4JL-cCYwOJVr-WcWLT5UCpo85upS1ls7OyAyU5xS3zXo"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>Next, let's run the debug and check each value at each step:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/3QsAYVim7SBgItCm0IeYkUZhrPi6SRls9ZX3i-nIgtGGS2nZ0pYRipMPsME-axuEKC8EtJQW-m8mRa7cNofGi2f_ODNeVQCX9FaK5H9Pmxj0o_gx9vz9Qa7GdVvoIEG6BBz1V38ntp43JlvnDHsYNps"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Checking response.data, we can see that the API has returned 9
+          questions, and the data is currently a List of Maps, with each Map
+          containing the data for one question.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/KtLA_MwyaJY9Or-Cd7hnLDIhx-IuOJvgS_O6VHib11iGj6KVOMq6_KmWZ2i7vozsyK1_yIjrFxY2jbZ6wCfGdp5hv_oOhuO9NDSjtYYEm8a9ml-xzAhMWZ1Tv6mV3v26vrSoxgqhsorTzqIb6G33r8o"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          <br />Checking the next statement: here, we iterate through the array
+          of questions above, calling QuestionModel.fromJson(json) to cast it to
+          QuestionModel. We can see that at this point, the data type for the
+          questions is no longer a Map but has been cast to the correct
+          QuestionModel.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          This ensures that the data is converted to the corresponding object.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">3.setState</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          To notify the UI that the state has changed, we use setState. Let's
+          update the list of questions loaded from the API for the HomeScreen:
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/THFXWPC-yZzz4X8eZ_BwkZsNwFpoBKuemO-AuFrcO8_5tEfe-DFWRj-aP0aCq86HGhokxL-BwxIfU4k5BwqAcQ5EuoG3h_fb59FyNrofte1eBeDnzUIMozUHe3cvclEPLcT0ejRWMdRMoFY8-KkVlYU"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          After setState, the build function will be called, and the UI will be
+          redrawn. Consequently, the list of questions will be displayed
+          accordingly.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">III. Summary</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Through this tutorial, we have built the basic structure of
+          base_network, retrieved data from the API, and converted it into an
+          object model that can be used in the app. Additionally, we have
+          understood the basics of state management in Flutter.
+        </p>
+        <!-- /wp:paragraph -->
+      </div>
+
+      <!-- Sidebar phải -->
+      <div class="sidebar-right">
+        <h3>Table of Contents</h3>
+        <ul>
+          <li><a href="#realtime">Realtime Database</a></li>
+          <li><a href="#auth">Authentication</a></li>
+          <li><a href="#firestore">Cloud Firestore</a></li>
+          <li><a href="#functions">Cloud Functions</a></li>
+          <li><a href="#fcm">Cloud Messaging</a></li>
+          <li><a href="#hosting">Hosting</a></li>
+          <li><a href="#storage">Cloud Storage</a></li>
+          <li><a href="#performance">Performance Monitoring</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- TOC floating button -->
+    <button class="toc-button" onclick="toggleTOC()">TOC</button>
+    <div class="toc-modal" id="tocModal">
+      <ul>
+        <li><a href="#realtime" onclick="hideTOC()">Realtime Database</a></li>
+        <li><a href="#auth" onclick="hideTOC()">Authentication</a></li>
+        <li><a href="#firestore" onclick="hideTOC()">Cloud Firestore</a></li>
+        <li><a href="#functions" onclick="hideTOC()">Cloud Functions</a></li>
+        <li><a href="#fcm" onclick="hideTOC()">Cloud Messaging</a></li>
+        <li><a href="#hosting" onclick="hideTOC()">Hosting</a></li>
+        <li><a href="#storage" onclick="hideTOC()">Cloud Storage</a></li>
+        <li>
+          <a href="#performance" onclick="hideTOC()">Performance Monitoring</a>
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      function toggleTOC() {
+        const toc = document.getElementById("tocModal");
+        toc.style.display = toc.style.display === "block" ? "none" : "block";
+      }
+      function hideTOC() {
+        document.getElementById("tocModal").style.display = "none";
+      }
+    </script>
+  </body>
+</html>

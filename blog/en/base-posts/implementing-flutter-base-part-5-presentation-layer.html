@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>
+      Organize code following a feature-first approach, handle exceptions,
+      manage navigation within the application, multi-language, create common
+      base components.
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7;
+        color: #333;
+        line-height: 1.6;
+        padding: 0 1rem;
+        margin: auto;
+      }
+
+      .container {
+        display: flex;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .sidebar-left,
+      .sidebar-right {
+        width: 20%;
+        padding: 20px;
+        position: sticky;
+        top: 0;
+        height: fit-content;
+        background-color: #ffffff;
+        border-radius: 8px;
+        margin: 10px;
+        align-self: start;
+      }
+
+      .content {
+        width: 60%;
+        background-color: #fff;
+        padding: 30px;
+        margin: 10px;
+        border-radius: 8px;
+      }
+
+      h1,
+      h2 {
+        color: #2c3e50;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin: 1rem 0;
+      }
+      ul {
+        padding-left: 1.2rem;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1rem 0;
+      }
+      td,
+      th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+      td:first-child {
+        background-color: #f9f9f9;
+      }
+      h3 {
+        color: #2c3e50;
+        margin-top: 30px;
+      }
+      a {
+        color: #007acc;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .sidebar-left h3,
+      .sidebar-right h3 {
+        margin-top: 0;
+      }
+
+      .sidebar-left ul,
+      .sidebar-right ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .sidebar-left li,
+      .sidebar-right li {
+        margin-bottom: 8px;
+      }
+
+      /* TOC Button (mobile) */
+      .toc-button {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #007acc;
+        color: white;
+        padding: 10px 14px;
+        border: none;
+        border-radius: 50px;
+        font-size: 14px;
+        z-index: 1000;
+        cursor: pointer;
+      }
+
+      .toc-modal {
+        display: none;
+        position: fixed;
+        bottom: 70px;
+        right: 20px;
+        background-color: white;
+        border: 1px solid #ddd;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        padding: 10px;
+        z-index: 1000;
+        width: 250px;
+      }
+
+      .toc-modal ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .toc-modal li {
+        margin: 6px 0;
+      }
+
+      /* Responsive layout */
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+          padding: 10px;
+        }
+        .sidebar-left,
+        .sidebar-right {
+          display: none;
+        }
+        .content {
+          width: 100%;
+          margin: 0;
+        }
+        .toc-button {
+          display: block;
+        }
+      }
+      .wp-block-code {
+        background-color: #282c34;
+        color: #ffffff;
+        padding: 1em;
+        border-radius: 8px;
+        overflow-x: auto;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 0.95em;
+        line-height: 1.5;
+        margin: 1.5em 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .wp-block-code code {
+        background: none;
+        color: inherit;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar trái -->
+      <div class="sidebar-left">
+        <h3>Categories</h3>
+        <ul>
+          <li><a href="#">Firebase</a></li>
+          <li><a href="#">Authentication</a></li>
+          <li><a href="#">Database</a></li>
+          <li><a href="#">Hosting</a></li>
+          <li><a href="#">Messaging</a></li>
+        </ul>
+      </div>
+
+      <!-- Nội dung chính -->
+      <div class="content">
+        <h1>Implementing Flutter Base - Part 5: Presentation Layer</h1>
+        <img
+          src="../../../pictures/blog/flutter_base/flutter_base5.png"
+          alt="Firebase"
+        />
+        <!-- Nội dụng tiếp -->
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">I. Tasks</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          The task of this layer is to display the user interface and interact
+          with users.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh3.googleusercontent.com/w3C8o6OEKEoqwBqBlluAKFsB4rKW6RDeZX9pXlXQPdDKbl63l2X1kJKGCJfmi7PSPnVqMxZyqz819tVCbLQpU0xlWigyNbYYF69_mxSUJEtqapUovpKdGVusRtUIQzClSBoCH_YVImzLLbPVkT8nXkw"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">II. The tasks that need to be handled.</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          In this layer, we will structure the code following the feature-first
+          approach, encompassing features that include blocs, states, and
+          widgets. These features are constructed based on the specific
+          requirements of each project. To complete this foundational part, we
+          need to address several tasks, such as:
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>Structuring based on the feature-first approach</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>Screen navigation</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>
+            Displaying errors and exceptions from the lower layers, if
+            necessary, on the user interface
+          </li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>Implementing multilingual support</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>
+            Implementing base components (such as common buttons, text styles,
+            etc.) and base styles
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">III. Detailed processing</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">
+          1. Structuring based on the feature-first approach
+        </h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh4.googleusercontent.com/L7qcWgyte1ujH5O1YWHSlIE0UhvocOlELXWOzb_dzFLFRxU1rrhx6hg3GTQhbHoQ6d4_IrQlXz0HCviV3CvCdO9m0bfs12IRvRKPRRrp6DCBnhRQe-hDaLLBq6Yk8OMukU-apZFDkdFvmGANrbMNS5A"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          The "presentation" folder contains corresponding features within the
+          application. Inside, there are structures related to:
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>Bloc: for state management</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>
+            Components: holding widgets that break down the screen into smaller
+            parts
+          </li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>
+            Individual "screens" representing various screens in the
+            application.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">
+          2. Displaying errors and exceptions from the lower layers, if
+          necessary, on the user interface
+        </h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          In the Domain and Data layers, after handling logic and retrieving
+          data for the Presentation layer, there may be errors encountered
+          during this process that need to be communicated to the user on the
+          screen. For example, displaying an alert when the API connection
+          fails, and so on.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh6.googleusercontent.com/3xh6hDWUJMb6AULWgSyvA1l5ZK3KuI9glMUgLzckAjsMjcWIkLu_3IK7uK3Rq5hr9qVquQGbXeYlPNLxC2LDkiyrhUSpfJmypXdxsv1foqgBofORjD1A9VGxVn4XU_SyRMRVkxpbJFQGFrcHMORJcVg"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          I implemented an extension for Future, so the Future functions in the
+          Bloc Cubit, after processing and returning an error to the screen,
+          only need to catch the error using "onCatchError" to display the
+          corresponding error message.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh6.googleusercontent.com/aEv6nfZEAKkDZFxJXDy9E0deheYcrdeO3M40ENS9ovRcaQjcl22uHhGrM9492LUPPl0T79U8sbuCwkO3uqOScQOneqBg5MSydsYWKsunu-gyp-1g0_xtIJCCYuCRAe07pNrEKesYgnQPc-nB-J8tLRQ"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">3. Screen navigation</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          In this part, I use the Navigator provided by Flutter, which is quite
+          simple and convenient to use.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh6.googleusercontent.com/9LN-qTcyM3Ag_qialF_egVjRO7lpOpjQCJ9g21LBoYN1lIOizbIkHeJxKp2BGLMQTXGeAJj6mkhh3bGYen56GwcHirLTMdH8BpvfBWiUv-ZCFbsswXEZpGKEfij7igVMS_JKnv14BTekl4WsNazrc88"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          I've separated this into a class to consolidate all the screens the
+          app has as shown above. We only need to declare it in the main file
+          with the <code>onGenerateRoute</code> key parameter.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          When navigating, I simply pass the corresponding screen names and
+          params:
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">4. Implementing multilingual support</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Mobile apps often need to support multiple languages, so
+          precalculating and implementing multilingual support in the base is
+          essential. There are many libraries that support this, and their usage
+          is straightforward. You just need to choose the one that fits your
+          project best.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">
+          5. Implementing base components (such as common buttons, text styles,
+          etc.) and base styles
+        </h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          There are many widgets that will appear repeatedly in your app. To
+          minimize redundant code, you should create base components and reuse
+          them. As mentioned in part a, we also have components within features.
+          The main difference here is that base components contain widgets used
+          throughout the entire app, while feature components are intended to
+          split and reuse widgets in individual screens.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Regarding base styles, they will include colors, fonts, and icons:
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh4.googleusercontent.com/aCu9By-vyyd5EckwZoSK2thQiWYVavJgiRsj86MGkzK5BfK_PC_P99a4Wfu6wvK7CcyNXlJJkjotGeH-3xtbYbHWJS1-k1jFyc-1pHvH7V8YRC7f7yoXUt268RQD_E9KMRbj0xWl4mlsv3UV8ZGTi8U"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh6.googleusercontent.com/S1p5NDcEzueeuaMmjam1LAVIs0MNNJE-PILstb3y6EP1sun5PhxOwslll76ERJEwSD2HYu0yTO3V1JE4U745CHV336dP5sq8WtCU_zQ8dzm-qnDK-TeIR52wkSpwFIrfkhDTLspEqejzj4ZwuXWO9UQ"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh4.googleusercontent.com/3M4oID3P5rpAhK3q7iokYH4-9dN4XZD4CPl7DEWbQij-2KxaEBzY-cOpXiHsvWm4CN2z1gL3U-UqebETaHt2KcPBZ1kSUc4qlAmLK30OOhchOgc2FGBfVWwD7xW1CWp09XaQoKZEYbcsCsu6aht-kDg"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+      </div>
+
+      <!-- Sidebar phải -->
+      <div class="sidebar-right">
+        <h3>Table of Contents</h3>
+        <ul>
+          <li><a href="#realtime">Realtime Database</a></li>
+          <li><a href="#auth">Authentication</a></li>
+          <li><a href="#firestore">Cloud Firestore</a></li>
+          <li><a href="#functions">Cloud Functions</a></li>
+          <li><a href="#fcm">Cloud Messaging</a></li>
+          <li><a href="#hosting">Hosting</a></li>
+          <li><a href="#storage">Cloud Storage</a></li>
+          <li><a href="#performance">Performance Monitoring</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- TOC floating button -->
+    <button class="toc-button" onclick="toggleTOC()">TOC</button>
+    <div class="toc-modal" id="tocModal">
+      <ul>
+        <li><a href="#realtime" onclick="hideTOC()">Realtime Database</a></li>
+        <li><a href="#auth" onclick="hideTOC()">Authentication</a></li>
+        <li><a href="#firestore" onclick="hideTOC()">Cloud Firestore</a></li>
+        <li><a href="#functions" onclick="hideTOC()">Cloud Functions</a></li>
+        <li><a href="#fcm" onclick="hideTOC()">Cloud Messaging</a></li>
+        <li><a href="#hosting" onclick="hideTOC()">Hosting</a></li>
+        <li><a href="#storage" onclick="hideTOC()">Cloud Storage</a></li>
+        <li>
+          <a href="#performance" onclick="hideTOC()">Performance Monitoring</a>
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      function toggleTOC() {
+        const toc = document.getElementById("tocModal");
+        toc.style.display = toc.style.display === "block" ? "none" : "block";
+      }
+      function hideTOC() {
+        document.getElementById("tocModal").style.display = "none";
+      }
+    </script>
+  </body>
+</html>

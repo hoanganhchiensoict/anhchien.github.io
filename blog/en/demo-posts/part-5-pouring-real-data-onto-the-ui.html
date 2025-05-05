@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>
+      Complete the interface with real data fetched from the API. Implement
+      basic navigation between screens and pass necessary data.
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7;
+        color: #333;
+        line-height: 1.6;
+        padding: 0 1rem;
+        margin: auto;
+      }
+
+      .container {
+        display: flex;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .sidebar-left,
+      .sidebar-right {
+        width: 20%;
+        padding: 20px;
+        position: sticky;
+        top: 0;
+        height: fit-content;
+        background-color: #ffffff;
+        border-radius: 8px;
+        margin: 10px;
+        align-self: start;
+      }
+
+      .content {
+        width: 60%;
+        background-color: #fff;
+        padding: 30px;
+        margin: 10px;
+        border-radius: 8px;
+      }
+
+      h1,
+      h2 {
+        color: #2c3e50;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin: 1rem 0;
+      }
+      ul {
+        padding-left: 1.2rem;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1rem 0;
+      }
+      td,
+      th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+      td:first-child {
+        background-color: #f9f9f9;
+      }
+      h3 {
+        color: #2c3e50;
+        margin-top: 30px;
+      }
+      a {
+        color: #007acc;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .sidebar-left h3,
+      .sidebar-right h3 {
+        margin-top: 0;
+      }
+
+      .sidebar-left ul,
+      .sidebar-right ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .sidebar-left li,
+      .sidebar-right li {
+        margin-bottom: 8px;
+      }
+
+      /* TOC Button (mobile) */
+      .toc-button {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #007acc;
+        color: white;
+        padding: 10px 14px;
+        border: none;
+        border-radius: 50px;
+        font-size: 14px;
+        z-index: 1000;
+        cursor: pointer;
+      }
+
+      .toc-modal {
+        display: none;
+        position: fixed;
+        bottom: 70px;
+        right: 20px;
+        background-color: white;
+        border: 1px solid #ddd;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        padding: 10px;
+        z-index: 1000;
+        width: 250px;
+      }
+
+      .toc-modal ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .toc-modal li {
+        margin: 6px 0;
+      }
+
+      /* Responsive layout */
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+          padding: 10px;
+        }
+        .sidebar-left,
+        .sidebar-right {
+          display: none;
+        }
+        .content {
+          width: 100%;
+          margin: 0;
+        }
+        .toc-button {
+          display: block;
+        }
+      }
+      .wp-block-code {
+        background-color: #282c34;
+        color: #ffffff;
+        padding: 1em;
+        border-radius: 8px;
+        overflow-x: auto;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 0.95em;
+        line-height: 1.5;
+        margin: 1.5em 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .wp-block-code code {
+        background: none;
+        color: inherit;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar trái -->
+      <div class="sidebar-left">
+        <h3>Categories</h3>
+        <ul>
+          <li><a href="#">Firebase</a></li>
+          <li><a href="#">Authentication</a></li>
+          <li><a href="#">Database</a></li>
+          <li><a href="#">Hosting</a></li>
+          <li><a href="#">Messaging</a></li>
+        </ul>
+      </div>
+
+      <!-- Nội dung chính -->
+      <div class="content">
+        <h1>Part 5: Display Real Data on the UI</h1>
+        <img
+          src="../../../pictures/blog/flutter_demo/flutter_demo5.png"
+          alt="Firebase"
+        />
+        <!-- Nội dụng tiếp -->
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">
+          I.Complete the Widget representing one question in the list
+        </h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          In the previous section, we had a Widget for each question, which is
+          QuestionMainWidget. Now, let's proceed to fill in the complete data
+          for it.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>To summarize the analysis from the previous tutorial, we have:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/HfKafYaiRxXo7j32_Z6XHtVSCh2ssh1s5OqWCJdnpQFMz0o-d_rZPvQi5cXZpHTC9jpUXZsPdLosBCzN-oJqYJYpq3Td9mKkGNDF0RsQ1iRA-EnJkMVAzf81Zhio9e1t8C7HXkhU4trYiGZVNNWaL8o"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/KonBqr2jWvthwdP3QBaLSPTGCX5ry6xJFy0lyimEuzZ-IFG3zawh-MD2CuJLMo9LiorvRrr9Q87Sc5NJaGirToVglI-5x97gXVlDX3RtIfPl_uJzIX2iHgJxpvzQ1DL_9xCdop_qPKmVEgPLw8U-GBo"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>QuestionMainWidget will contain:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>Background image</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>Thumbnail image displaying the question</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>Question number with the case of a correct answer</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>Lock icon for unanswered questions</li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>
+          The background image and the number "1" have been temporarily drawn;
+          now, we need to display the thumbnail for the question and the
+          corresponding question number/lock icon. To display the complete
+          QuestionMainWidget, it needs to receive the input data as
+          QuestionModel and the locked/unlocked status.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/MteFj9dudyjB07khPhysSiAWnzAUqydVXVUJFT6N60k5xDjrZTVdDz3QFwveVZ6xbXXTha7dGl8mQNyV7LpOirrCFOUi2V1q1RjNRJJa9IPn8hJjcACkwhGHfutwwXSNvrrGjk00acB0421Q_Vce4KE"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Adjust the Widget displaying the list of questions on the HomeScreen
+          and pass in the corresponding data. We will temporarily fake the
+          isLock field as false/true to test QuestionMainWidget. Also, set the
+          childCount to the correct value listQuestion.length to display the
+          correct and sufficient number of questions.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/geezOL6YE1JKTEcCd9R4qU1ve5w7mWb6RHbNcL-ArPizDKnX2DcK8e81wFTGFkR5KCdtLO5VxnzzanM06War6EPp0-wa-6Cwps4xymgnH6nam3w2B0gUBSmHSZL5rymTHNVmfPg-MLhvGzCxMYsUYD4"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          To display the thumbnail for the question, we will load the image from
+          the picture field in QuestionModel using cached_network_image (<a
+            href="https://pub.dev/packages/cached_network_image"
+            >https://pub.dev/packages/cached_network_image</a
+          >).
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/__AKLC-h9oCLmhYxQ8JA4opdImumyisTljsHHua9V8CZ5aNT9XPKeZMxyKyJnR_eL0H5tPAIjBxCk1d_FoB7NW_-cvBSB2RIf7ihHqnbiZLVkDmqKwjlkUVrotMoK7NkWYAH-obfZ0n6lssFOontxv8"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Corresponding to the isLock data passed in as false/true, we have the
+          result:
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          <img
+            width="165"
+            height="359"
+            src="https://lh7-us.googleusercontent.com/h8wb5XEEmMxXEjGmeQnddJ9m3BvDzTC60kHGzyAD3vQ9lWaf1-wlpahsR3PHt2NBE0OkWX-mpAYLJFxcFuRW_1CfJaENXUPU9QOxScqoC6L1r7AkbPqWPJ98fRjMZWq5QWmF6kPgnc7rMqmkvJ5QZAw"
+          />
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          <img
+            src="https://lh7-us.googleusercontent.com/p1KiSfbM9nmrbiiUVpPMrkEav5Z32Vl9J4TZ0jkDEBnL69J2BJaKGgZZni28aBVHEGaxQFOX1lYC5Gsrnrcdou7l6AT2x9oSI68DQJDA3RhcaUpKr090e3qrlZV8y1TbCj1g2-Nr-88xkOFELD47Nq8"
+            width="162"
+            height="357"
+          />
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>That completes the basic structure of the HomeScreen.</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">
+          II.Navigation and Passing Data to the Detail Screen
+        </h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          After clicking on a question, we will navigate to the detail
+          screen.The DetailScreen has been defined in the RouteGenerator, now we
+          will navigate to it using Navigator and pass the corresponding
+          selected question data.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>In DetailScreen, we add DetailArgs containing QuestionModel,</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/fryiXpkBR1Aj7O9jA_PC95TOBYnPbDuyOAGjQrHL5wXOvysvUwXB3Dcz8RIy598COmb6IX9rMHdqKDls_JRvBdRChq1mDioVTO28HKbFN1jb5heVR5CEGCljNicdUbgwvMZjpvWoNRSlxjWOx-xHYec"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>The RouteGenerator also adds arguments for DetailScreen:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/k02xSXKxjlpDh8RAIlAMy3XJMPOICCuA4fA5C7Omq1IIh6zLyFema3jRi1zS3zBM7D4kpMbYeeKmDB-uJjy2VUFmnSbe-dUGeRX7WylyjkfnRUiD8zxF-r-084PE5-OgRbCG8kqZlGVoh6P-sUmoGL4"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          And in QuestionMainWidget, handle the onPressDetail() function to
+          navigate and pass data to the new screen:
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/GZkLacJWCv9lqapzfVP5TFfmB9lGxqaOq7M5v8sUI6tIImyoGRBo_dCJ0hvmR12tsfJQzcLRe57s1mj9C7tWLesS1-WCA2l05op-BPpkbdAqn57ukedsyCbDjy8_S5NddrWxMfgxjdfPjob1roEI7kk"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          So that completes the process of navigation and data passing with
+          Navigator.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">
+          III.Analyze the UI of the Detail Screen
+        </h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          <img
+            width="259"
+            height="426"
+            src="https://lh7-us.googleusercontent.com/ndb-D1SIvs4FPTfU6OhSApAHOpmEOTaGYhHaLuHFUBiRHQrE1ZOV4ir6kkb_RbO4eDrq_mLwNrSDelNOfrSYrjArPgJ3d4Qgn_xGOH3mFj-txkEJeoeMb3k6CZ4xRdJ26_UgrbYHTSpSpmyTHFVuBBM"
+          />
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Looking at the UI, we can break it down into general Widgets as
+          follows:
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>Background image at the bottom</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>
+            HeaderWidget containing the Back icon and the title displaying the
+            question:
+          </li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>Widget displaying the blackboard</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>Widget displaying the question on the blackboard</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>
+            Widget displaying the answer, clear button, and check answer button
+          </li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>Widget displaying the list of buttons</li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>
+          From here, you can implement the corresponding UI in Flutter based on
+          the UI knowledge you have
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">IV.Summary</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          In this tutorial, we have completed the UI on the HomeScreen with real
+          data fetched from the API. We learned how to navigate between screens
+          and pass necessary data.
+        </p>
+        <!-- /wp:paragraph -->
+      </div>
+
+      <!-- Sidebar phải -->
+      <div class="sidebar-right">
+        <h3>Table of Contents</h3>
+        <ul>
+          <li><a href="#realtime">Realtime Database</a></li>
+          <li><a href="#auth">Authentication</a></li>
+          <li><a href="#firestore">Cloud Firestore</a></li>
+          <li><a href="#functions">Cloud Functions</a></li>
+          <li><a href="#fcm">Cloud Messaging</a></li>
+          <li><a href="#hosting">Hosting</a></li>
+          <li><a href="#storage">Cloud Storage</a></li>
+          <li><a href="#performance">Performance Monitoring</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- TOC floating button -->
+    <button class="toc-button" onclick="toggleTOC()">TOC</button>
+    <div class="toc-modal" id="tocModal">
+      <ul>
+        <li><a href="#realtime" onclick="hideTOC()">Realtime Database</a></li>
+        <li><a href="#auth" onclick="hideTOC()">Authentication</a></li>
+        <li><a href="#firestore" onclick="hideTOC()">Cloud Firestore</a></li>
+        <li><a href="#functions" onclick="hideTOC()">Cloud Functions</a></li>
+        <li><a href="#fcm" onclick="hideTOC()">Cloud Messaging</a></li>
+        <li><a href="#hosting" onclick="hideTOC()">Hosting</a></li>
+        <li><a href="#storage" onclick="hideTOC()">Cloud Storage</a></li>
+        <li>
+          <a href="#performance" onclick="hideTOC()">Performance Monitoring</a>
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      function toggleTOC() {
+        const toc = document.getElementById("tocModal");
+        toc.style.display = toc.style.display === "block" ? "none" : "block";
+      }
+      function hideTOC() {
+        document.getElementById("tocModal").style.display = "none";
+      }
+    </script>
+  </body>
+</html>

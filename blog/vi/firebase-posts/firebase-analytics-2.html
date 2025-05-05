@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>
+      Nâng Cao Hiểu Biết Ứng Dụng: Kết Hợp Firebase Analytics và Flutter để Đạt
+      Đến Sự Xuất Sắc Dựa Trên Dữ Liệu
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7;
+        color: #333;
+        line-height: 1.6;
+        padding: 0 1rem;
+        margin: auto;
+      }
+
+      .container {
+        display: flex;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .sidebar-left,
+      .sidebar-right {
+        width: 20%;
+        padding: 20px;
+        position: sticky;
+        top: 0;
+        height: fit-content;
+        background-color: #ffffff;
+        border-radius: 8px;
+        margin: 10px;
+        align-self: start;
+      }
+
+      .content {
+        width: 60%;
+        background-color: #fff;
+        padding: 30px;
+        margin: 10px;
+        border-radius: 8px;
+      }
+
+      h1,
+      h2 {
+        color: #2c3e50;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin: 1rem 0;
+      }
+      ul {
+        padding-left: 1.2rem;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1rem 0;
+      }
+      td,
+      th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+      td:first-child {
+        background-color: #f9f9f9;
+      }
+      h3 {
+        color: #2c3e50;
+        margin-top: 30px;
+      }
+      a {
+        color: #007acc;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .sidebar-left h3,
+      .sidebar-right h3 {
+        margin-top: 0;
+      }
+
+      .sidebar-left ul,
+      .sidebar-right ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .sidebar-left li,
+      .sidebar-right li {
+        margin-bottom: 8px;
+      }
+
+      /* TOC Button (mobile) */
+      .toc-button {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #007acc;
+        color: white;
+        padding: 10px 14px;
+        border: none;
+        border-radius: 50px;
+        font-size: 14px;
+        z-index: 1000;
+        cursor: pointer;
+      }
+
+      .toc-modal {
+        display: none;
+        position: fixed;
+        bottom: 70px;
+        right: 20px;
+        background-color: white;
+        border: 1px solid #ddd;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        padding: 10px;
+        z-index: 1000;
+        width: 250px;
+      }
+
+      .toc-modal ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .toc-modal li {
+        margin: 6px 0;
+      }
+
+      /* Responsive layout */
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+          padding: 10px;
+        }
+        .sidebar-left,
+        .sidebar-right {
+          display: none;
+        }
+        .content {
+          width: 100%;
+          margin: 0;
+        }
+        .toc-button {
+          display: block;
+        }
+      }
+      .wp-block-code {
+        background-color: #282c34;
+        color: #ffffff;
+        padding: 1em;
+        border-radius: 8px;
+        overflow-x: auto;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 0.95em;
+        line-height: 1.5;
+        margin: 1.5em 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .wp-block-code code {
+        background: none;
+        color: inherit;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar trái -->
+      <div class="sidebar-left">
+        <h3>Categories</h3>
+        <ul>
+          <li><a href="#">Firebase</a></li>
+          <li><a href="#">Authentication</a></li>
+          <li><a href="#">Database</a></li>
+          <li><a href="#">Hosting</a></li>
+          <li><a href="#">Messaging</a></li>
+        </ul>
+      </div>
+
+      <!-- Nội dung chính -->
+      <div class="content">
+        <h1>Firebase Analytics</h1>
+        <img
+          src="../../../pictures/blog/firebase/firebase8-analytics.png"
+          alt="Firebase"
+        />
+        <!-- Nội dụng tiếp -->
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">I. Tổng quan</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Firebase Analytics là một dịch vụ phân tích di động mạnh mẽ được cung
+          cấp bởi Firebase, một nền tảng phát triển ứng dụng di động và web của
+          Google. Firebase Analytics giúp bạn hiểu rõ hơn về cách người dùng
+          tương tác với ứng dụng của bạn, từ đó giúp bạn đưa ra quyết định thông
+          minh để cải thiện trải nghiệm người dùng và hiệu suất ứng dụng.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>Các đặc điểm chính của FB Analytics như sau:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>Theo Dõi Sự Kiện:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            Firebase Analytics cho phép bạn theo dõi các sự kiện quan trọng
+            trong ứng dụng của mình. Các sự kiện này có thể là hành động của
+            người dùng như mở ứng dụng, nhấp vào nút, xem màn hình cụ thể, và
+            nhiều hơn nữa.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>Phân Tích Người Dùng:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            Cung cấp thông tin chi tiết về người dùng, bao gồm nguồn người dùng,
+            loại thiết bị, hệ điều hành, địa lý, và các thuộc tính khác để bạn
+            có cái nhìn toàn diện về đối tượng người dùng.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>Chuyển Đổi và Retention Analysis:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            Firebase Analytics giúp theo dõi và phân tích quá trình chuyển đổi
+            người dùng từ một sự kiện sang sự kiện khác. Nó cũng cung cấp thông
+            tin về việc giữ lại người dùng sau thời gian sử dụng ứng dụng.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">II. Triển khai với Flutter</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">1. Tích hợp code với Flutter</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>Thêm thư viện:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>flutter pub add firebase_analytics</li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/vqnJzTkiEpJbxqjAUSfR3xHdAVlYIYmSo9Uwa58X4pBa_3IbKV9Bw3dQcGGNy4BfYWSt2qrGpwr-mDKGv8w8oorZPeAfptT4jC6ITBAjY2JJelD074RGngGSMBj9Y6TOGkVRAenNEeG-_hzP0fi-LAw"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">2.Debug view</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>iOS:&nbsp;</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>Để chạy được Debug view cần các thao tác thêm&nbsp;</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>FIRDebugEnabled</li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/e0Uf1y5Mb4TIy4l7psxFh1PFFeTaATU9RUwOxWUzhwVvfYsiIueQEXOW7HoiLwp-96048mhERE_VBpR4uOc_ciPxmiqkPHI4go22KYyVcjRqALYD_xJtxkHgJYk9QvGki-kGpbx7H9b5931znCRfSU4"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>Android:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>Để chạy được Debug view cần các thao tác như sau:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            Trên thiết bị -&gt; Vào Settings -&gt;
+            <strong>Developer Options</strong> -&gt;
+            <strong>Select debug app</strong> -&gt; Chọn app bạn cần debug
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/IQ2_2cGk0NArURJ3OCDwKB6jWn6BV15lXuOJvCHhO9r5ZoCFYcHxyLucTxdFeJRWrGIFdVoi51YPqT9U6lbiuyUHo1V-jTmKWnmCDkzg3OAWg2tEGibwIPC2FB-sPgq8vuxTg0AbcpxF7ePSTlThhuo"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            Trên terminal: cd /Users/mystery/Library/Android/sdk/platform-tools
+            &amp;&amp; ./adb shell setprop debug.firebase.analytics.app
+            your.app.package
+          </li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>Thực hiện 1 thao tác có bắn lên Fb Analytics và kiểm tra:</li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/c2aNMdNPpl3mUP5gLnzvNaS255ZratxQOfujyu5ti99lECtqG_H-1t9Q1V1c8n0bP50Fw05dQ8XdiqAwHBxHKSoNbrpy2OeF8fVhJFBq_yBPRMOGzCH3vvj-6w8jpaYAxhYU9DI5r6XVYhTivAqku8U"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Lúc này Debug Device sẽ hiện lên thiết bị và chúng ta có thể kiểm tra
+          các sự kiện kèm theo tham số bắn lên Firebase Analytics
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>Chú ý: Khi sử dụng xong Debug view thì chạy&nbsp;</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          ./adb shell setprop debug.firebase.analytics.app none //để tắt thiết
+          bị
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>3. Debug với Console với Android</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>Chạy các lệnh sau:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:code -->
+        <pre class="wp-block-code"><code>Cd {path}/sdk/platform-tools
+
+./adb shell setprop log.tag.FA VERBOSE
+
+./adb shell setprop log.tag.FA-SVC VERBOSE
+
+./adb logcat -v time -s FA FA-SVC</code></pre>
+        <!-- /wp:code -->
+
+        <!-- wp:paragraph -->
+        <p>Khi bắn 1 event lên Firebase Analytics ta sẽ nhận được log:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/YAy4tMzXmhCy8kVBiIbEVXLEiQzmoh1ktY5Y2e-4lES6Hg3Oh1yhyNWB_qp1y6jp_SLjMgkCDtg4QToF7L8inxNJpfHExd8WDc1FaWkz-rBtWMbhrjNW34e1zznVpxzVScb60RZiCRAoYTgIuBRLkCE"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Nhìn log chúng ta có thể kiểm tra được name: test_debug_view kèm theo
+          params tương ứng.
+        </p>
+        <!-- /wp:paragraph -->
+      </div>
+
+      <!-- Sidebar phải -->
+      <div class="sidebar-right">
+        <h3>Table of Contents</h3>
+        <ul>
+          <li><a href="#realtime">Realtime Database</a></li>
+          <li><a href="#auth">Authentication</a></li>
+          <li><a href="#firestore">Cloud Firestore</a></li>
+          <li><a href="#functions">Cloud Functions</a></li>
+          <li><a href="#fcm">Cloud Messaging</a></li>
+          <li><a href="#hosting">Hosting</a></li>
+          <li><a href="#storage">Cloud Storage</a></li>
+          <li><a href="#performance">Performance Monitoring</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- TOC floating button -->
+    <button class="toc-button" onclick="toggleTOC()">TOC</button>
+    <div class="toc-modal" id="tocModal">
+      <ul>
+        <li><a href="#realtime" onclick="hideTOC()">Realtime Database</a></li>
+        <li><a href="#auth" onclick="hideTOC()">Authentication</a></li>
+        <li><a href="#firestore" onclick="hideTOC()">Cloud Firestore</a></li>
+        <li><a href="#functions" onclick="hideTOC()">Cloud Functions</a></li>
+        <li><a href="#fcm" onclick="hideTOC()">Cloud Messaging</a></li>
+        <li><a href="#hosting" onclick="hideTOC()">Hosting</a></li>
+        <li><a href="#storage" onclick="hideTOC()">Cloud Storage</a></li>
+        <li>
+          <a href="#performance" onclick="hideTOC()">Performance Monitoring</a>
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      function toggleTOC() {
+        const toc = document.getElementById("tocModal");
+        toc.style.display = toc.style.display === "block" ? "none" : "block";
+      }
+      function hideTOC() {
+        document.getElementById("tocModal").style.display = "none";
+      }
+    </script>
+  </body>
+</html>

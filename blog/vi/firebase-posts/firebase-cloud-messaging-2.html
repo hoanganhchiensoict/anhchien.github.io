@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>
+      Kết Nối Hiệu Quả: Hướng Dẫn Sử Dụng Firebase Cloud Messaging (FCM) để Tối
+      Ưu Hóa Gửi và Nhận Thông Báo trong Ứng Dụng Của Bạn!
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7;
+        color: #333;
+        line-height: 1.6;
+        padding: 0 1rem;
+        margin: auto;
+      }
+
+      .container {
+        display: flex;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .sidebar-left,
+      .sidebar-right {
+        width: 20%;
+        padding: 20px;
+        position: sticky;
+        top: 0;
+        height: fit-content;
+        background-color: #ffffff;
+        border-radius: 8px;
+        margin: 10px;
+        align-self: start;
+      }
+
+      .content {
+        width: 60%;
+        background-color: #fff;
+        padding: 30px;
+        margin: 10px;
+        border-radius: 8px;
+      }
+
+      h1,
+      h2 {
+        color: #2c3e50;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin: 1rem 0;
+      }
+      ul {
+        padding-left: 1.2rem;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1rem 0;
+      }
+      td,
+      th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+      td:first-child {
+        background-color: #f9f9f9;
+      }
+      h3 {
+        color: #2c3e50;
+        margin-top: 30px;
+      }
+      a {
+        color: #007acc;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .sidebar-left h3,
+      .sidebar-right h3 {
+        margin-top: 0;
+      }
+
+      .sidebar-left ul,
+      .sidebar-right ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .sidebar-left li,
+      .sidebar-right li {
+        margin-bottom: 8px;
+      }
+
+      /* TOC Button (mobile) */
+      .toc-button {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #007acc;
+        color: white;
+        padding: 10px 14px;
+        border: none;
+        border-radius: 50px;
+        font-size: 14px;
+        z-index: 1000;
+        cursor: pointer;
+      }
+
+      .toc-modal {
+        display: none;
+        position: fixed;
+        bottom: 70px;
+        right: 20px;
+        background-color: white;
+        border: 1px solid #ddd;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        padding: 10px;
+        z-index: 1000;
+        width: 250px;
+      }
+
+      .toc-modal ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .toc-modal li {
+        margin: 6px 0;
+      }
+
+      /* Responsive layout */
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+          padding: 10px;
+        }
+        .sidebar-left,
+        .sidebar-right {
+          display: none;
+        }
+        .content {
+          width: 100%;
+          margin: 0;
+        }
+        .toc-button {
+          display: block;
+        }
+      }
+      .wp-block-code {
+        background-color: #282c34;
+        color: #ffffff;
+        padding: 1em;
+        border-radius: 8px;
+        overflow-x: auto;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 0.95em;
+        line-height: 1.5;
+        margin: 1.5em 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .wp-block-code code {
+        background: none;
+        color: inherit;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar trái -->
+      <div class="sidebar-left">
+        <h3>Categories</h3>
+        <ul>
+          <li><a href="#">Firebase</a></li>
+          <li><a href="#">Authentication</a></li>
+          <li><a href="#">Database</a></li>
+          <li><a href="#">Hosting</a></li>
+          <li><a href="#">Messaging</a></li>
+        </ul>
+      </div>
+
+      <!-- Nội dung chính -->
+      <div class="content">
+        <h1>Firebase Cloud Messaging</h1>
+        <img
+          src="../../../pictures/blog/firebase/firebase3-fcm.png"
+          alt="Firebase"
+        />
+        <!-- Nội dụng tiếp -->
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">I. Tổng quan</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Firebase Cloud Messaging (FCM) là một dịch vụ của Firebase được cung
+          cấp bởi Google để hỗ trợ việc gửi thông báo và tin nhắn từ máy chủ đến
+          các thiết bị di động, ứng dụng web và thiết bị khác.&nbsp;
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>Kiến trúc FCM:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          <img
+            width="624"
+            height="351"
+            src="https://lh7-us.googleusercontent.com/SA5i0MS3l8Ba6WDaOPIRV5iHpHTBCvJDZf5G-v_ckT52OR54slU1AlLp3Xdl967VoC43PmgBm4PlnHGiT14WhELzEVBlgtH2RpvBCEOp6BgAQasREcOq_m1ls8kS9HYTOISxpC9r2f6gdaIJCUPTolI"
+          />
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>Tóm tắt về cách FCM hoạt động</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          <img
+            width="624"
+            height="451"
+            src="https://lh7-us.googleusercontent.com/5yAu5P0_vQg2pSN0V6mCjbp9AmXtONybxZuyPKxDezKXSPd5J3p_WdoAjnogI8ZE3R6Z4DNRQq5wY7_A17z8z_JLGtUL4O3or9X1pMBzs_vOfCvAfIEcS9P80uoBW9U1WtR5dgkGf2D-5b6I8lVSxEw"
+          />
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>Đăng ký thiết bị:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            Khi người dùng cài đặt ứng dụng có gắn SDK Firebase trên thiết bị di
+            động hoặc trang web, thiết bị sẽ đăng ký với FCM.
+          </li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>
+            Firebase sẽ tạo một token định danh duy nhất cho thiết bị này.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>Gửi token đến máy chủ:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            Token được gửi từ thiết bị đến máy chủ của ứng dụng, nơi nó được lưu
+            trữ cho việc sử dụng sau này.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>Gửi thông báo từ máy chủ:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            Khi ứng dụng máy chủ muốn gửi thông báo đến các thiết bị đã đăng ký,
+            nó sẽ sử dụng API của FCM để gửi thông điệp cùng với danh sách các
+            token thiết bị mục tiêu.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>FCM đưa thông báo đến thiết bị:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            FCM sẽ nhận thông điệp từ máy chủ và chuyển nó đến tất cả các thiết
+            bị đăng ký.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>Thiết bị xử lý thông báo:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            Thiết bị nhận được thông báo từ FCM hiển thị thông báo đó cho người
+            dùng.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Các ứng dụng của FCM không chỉ giới hạn trong việc gửi thông báo, mà
+          còn có thể được tích hợp để thực hiện các tác vụ như đồng bộ dữ liệu,
+          xác thực người dùng, và nhiều tính năng khác để cải thiện trải nghiệm
+          người dùng trên nền tảng đa dạng.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Chú ý trong việc quản lý FCM token, nó sẽ thay đổi trong các trường
+          hợp sau:
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>Ứng dụng được khôi phục trên thiết bị mới</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>Ứng dụng được xóa/cài đặt lại</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>User chủ động xóa dữ liệu app</li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">II. Tích hợp với Flutter</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Tiếp tục với project demo ở bài trước, chúng ta thêm thư viện vào
+          project flutter
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>flutter pub add firebase_messaging</li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>Requesting permission</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Mở thông báo hỏi quyền nhận notification khi khách hàng mở app lên:
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:code -->
+        <pre
+          class="wp-block-code"
+        ><code>FirebaseMessaging messaging = FirebaseMessaging.instance;
+
+NotificationSettings settings = await messaging.requestPermission(
+
+&nbsp;&nbsp;alert: true,
+
+&nbsp;&nbsp;announcement: false,
+
+&nbsp;&nbsp;badge: true,
+
+&nbsp;&nbsp;carPlay: false,
+
+&nbsp;&nbsp;criticalAlert: false,
+
+&nbsp;&nbsp;provisional: false,
+
+&nbsp;&nbsp;sound: true,
+
+);
+
+print('User granted permission: ${settings.authorizationStatus}');</code></pre>
+        <!-- /wp:code -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Sau khi khách hàng cho phép nhận notification, ứng dụng có thể xử lý
+          được các message gửi tới với các trường hợp như sau
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">1.Foreground messages</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Foreground là trạng thái ứng dụng đang mở, người dùng đang xem, đang
+          sử dụng. Để nghe tin nhắn trong khi ứng dụng của bạn ở Foreground,
+          lắng nghe onMessage:
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:code -->
+        <pre
+          class="wp-block-code"
+        ><code>FirebaseMessaging.onMessage.listen((RemoteMessage message) {
+
+&nbsp;&nbsp;print('Got a message whilst in the foreground!');
+
+&nbsp;&nbsp;print('Message data: ${message.data}');
+
+&nbsp;&nbsp;if (message.notification != null) {
+
+&nbsp;&nbsp;&nbsp;&nbsp;print('Message also contained a notification: ${message.notification}');
+
+&nbsp;&nbsp;}
+
+});</code></pre>
+        <!-- /wp:code -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Truy cập vào console -&gt; Vào Messaging -&gt; Tạo test message như
+          sau
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/vhDBPClPogCyW-VZbjRJajJXUXHhe6OVRrY-JqdvzVhNdR6xbzNrn2EQtyhmyu4P-ux9DeB_jxalN8tt52CQxL3Wk6vGuZbmrrWmpIj4X8sOPOZJIdNfwRaH6Rd9zUFlEIXGaLlGTKxKLvS0n3MBqx0"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Send xuống device chúng ta sẽ nhận được dữ liệu tương ứng trong
+          onMessage
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/6dkpLVxXC2te-1ixeCP41g7ahGVlNNnF62KdaQad1ezIBfUMK3h96CMR2400B6pVqpWq8dee1dl4fiCD5epBs_hk4yWhlYEehOxFK-999-NB7YfbjvQBIWEOyWrWsY4sxilTIfzSPLeNRJ_zUHcnSSM"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">2.Background messages</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Là trạng thái ứng dụng đang ở nền (Khi ứng dụng đang được sử dụng mà
+          người dùng nhấn phím home, hoặc chuyển sang dùng ứng dụng khác). Sử
+          dụng onBackgroundMessage để nhận được message trong trường hợp này:
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/k0BPKHT684h0l4Lr-Kp4l2_4bK9msyByd5njWN8277RRd8uCbr4F7yHP7QIx6E9bu4zXOPSgECbpkMvvLCUHoSkzYD-D5t7ePdkx6ZDH2QwwadDIU8twIz3QBNclNTsngzNo8SnqbBkc_l9BL6Z4MkM"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:code -->
+        <pre
+          class="wp-block-code"
+        ><code>FirebaseMessaging.<em>onBackgroundMessage</em>(FCM.<em>firebaseMessagingBackgroundHandler</em>);</code></pre>
+        <!-- /wp:code -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Khi ẩn app xuống background và bắn noti từ console chúng ta nhận được
+          notification thành công với log:
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/I1T6CoM5IEXU1CJY5E9vAg611Sj6YLzmd5ftTmWBt3BLZIsXFvlW9V6kyAycKmR2ST_ooDW1MnN7c8H6mygajjRv_krFSiIrhlxNFn9xQfFPK0__UevFKKKrz34lUIu9leC8FaN1gLNBG83xb6VivLE"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">3. App Killed</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Khi app kill chúng ta không thể nhìn được log như 2 trường hợp trên,
+          thay vào đó notification sẽ hiển thị ngay tại notification center trên
+          thiết bị như sau:
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/4cJtIKp0e3rEoTM9v-VcX0whp3hCFEPQRznDF6xj3OpKfxXaidbcwVu_CEFsmYNk7N1lOd4c8lJNmiPSIqUtBdO08ADCyDJA_b6KsZPLOLAa_mB916-abaZEahiQMj24gHukhZnd7MisvGODYjj-pro"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Trường hợp debug không nhận được noti khi app kill, các bạn có thể
+          truy cập và kiểm tra thêm theo hướng dẫn:
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          <a
+            href="https://stackoverflow.com/questions/57054706/flutter-fcm-is-not-working-when-app-is-closed"
+            >https://stackoverflow.com/questions/57054706/flutter-fcm-is-not-working-when-app-is-closed</a
+          >
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          <a href="https://github.com/firebase/flutterfire/issues/9685"
+            >https://github.com/firebase/flutterfire/issues/9685</a
+          >
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>Chú ý:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Đối với iOS, truy cập vào Project Settings -&gt; Chọn Cloud Messaging
+          -&gt; Upload APNs certificates thì ứng dụng mới có thể nhận được
+          notification, ngoài ra notification chỉ nhận được trên thiết bị thật.
+        </p>
+        <!-- /wp:paragraph -->
+      </div>
+
+      <!-- Sidebar phải -->
+      <div class="sidebar-right">
+        <h3>Table of Contents</h3>
+        <ul>
+          <li><a href="#realtime">Realtime Database</a></li>
+          <li><a href="#auth">Authentication</a></li>
+          <li><a href="#firestore">Cloud Firestore</a></li>
+          <li><a href="#functions">Cloud Functions</a></li>
+          <li><a href="#fcm">Cloud Messaging</a></li>
+          <li><a href="#hosting">Hosting</a></li>
+          <li><a href="#storage">Cloud Storage</a></li>
+          <li><a href="#performance">Performance Monitoring</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- TOC floating button -->
+    <button class="toc-button" onclick="toggleTOC()">TOC</button>
+    <div class="toc-modal" id="tocModal">
+      <ul>
+        <li><a href="#realtime" onclick="hideTOC()">Realtime Database</a></li>
+        <li><a href="#auth" onclick="hideTOC()">Authentication</a></li>
+        <li><a href="#firestore" onclick="hideTOC()">Cloud Firestore</a></li>
+        <li><a href="#functions" onclick="hideTOC()">Cloud Functions</a></li>
+        <li><a href="#fcm" onclick="hideTOC()">Cloud Messaging</a></li>
+        <li><a href="#hosting" onclick="hideTOC()">Hosting</a></li>
+        <li><a href="#storage" onclick="hideTOC()">Cloud Storage</a></li>
+        <li>
+          <a href="#performance" onclick="hideTOC()">Performance Monitoring</a>
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      function toggleTOC() {
+        const toc = document.getElementById("tocModal");
+        toc.style.display = toc.style.display === "block" ? "none" : "block";
+      }
+      function hideTOC() {
+        document.getElementById("tocModal").style.display = "none";
+      }
+    </script>
+  </body>
+</html>
