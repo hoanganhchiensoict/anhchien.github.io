@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <title>
-      Tối Ưu Hóa Triển Khai: Khám Phá Firebase App Distribution Cho Việc Phân
-      Phối Ứng Dụng Dễ Dàng
+      Quản lý state với Bloc Cubit, chia tách các class theo từng nhiệm vụ độc
+      lập, tối ưu trong quá trình xây dựng mã code và bảo trì
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
@@ -196,182 +196,207 @@
 
       <!-- Nội dung chính -->
       <div class="content">
-        <h1>Firebase Distribution</h1>
+        <h1>Bài 6: Quản lý state với Cubit</h1>
         <img
-          src="../../../pictures/blog/firebase/firebase9-distribution.png"
+          src="../../../pictures/blog/flutter_demo/flutter_demo6.png"
           alt="Firebase"
         />
         <!-- Nội dụng tiếp -->
+        <!-- wp:paragraph -->
+        <p>
+          Trong series Demo cơ bản này, mình đã giới thiệu và demo các phần như
+          UI, Quản lý state cơ bản, điều hướng và truyền dữ liệu, networking.
+          Còn 1 phần mình muốn giới thiệu nữa đó chính là quản lý state với Bloc
+          Cubit.
+        </p>
+        <!-- /wp:paragraph -->
+
         <!-- wp:heading -->
-        <h2 class="wp-block-heading">I. Tổng quan</h2>
+        <h2 class="wp-block-heading">
+          I.Tại sao cần quản lý state theo cách nâng cao hơn?
+        </h2>
         <!-- /wp:heading -->
 
         <!-- wp:paragraph -->
         <p>
-          Firebase Distribution là một trong những tính năng mạnh mẽ của nền
-          tảng Firebase, được thiết kế để giúp các nhà phát triển quản lý và
-          phân phối ứng dụng di động của họ một cách hiệu quả và tiện lợi. Được
-          xây dựng trên cơ sở hạ tầng Firebase mạnh mẽ, Distribution mang lại
-          một loạt các tính năng và lợi ích cho quá trình triển khai ứng dụng.
-          Firebase Distribution phù hợp trong quá trình phân phối ứng dụng cho
-          đội ngũ tester nội bộ của tổ chức.
+          Rõ ràng ở trang HomeScreen, chúng ta chỉ sử dụng setState cơ bản, giao
+          diện vẫn đủ đáp ứng. Vậy tại sao cần phải quản lý state theo 1 cách
+          khác?&nbsp;
         </p>
         <!-- /wp:paragraph -->
 
         <!-- wp:paragraph -->
-        <p>Các lợi ích khi sử dụng:</p>
+        <p>
+          Nhìn vào việc quản lý state ở màn HomeScreen chúng ta có thể nhận
+          thấy: Toàn bộ logic xử lý, và giao diện đều trong cùng 1 class, cấu
+          trúc như vậy rõ ràng là ko sạch đúng không. Việc chỉ sử dụng setState
+          chúng ta hoàn toàn có thể xây dựng được mọi ứng dụng, nhưng logic cho
+          các ứng dụng thì đa phần rất phức tạp, nên nếu có thể tách biệt giữa
+          logic và hiển thị, rõ ràng cấu trúc lúc đó sẽ rất sạch. Bloc cubit sẽ
+          giúp chúng ta đáp ứng được việc đó, toàn bộ logic xử lý dữ liệu lúc
+          này đều được đẩy về cho Cubit xử lý và cập nhật lại state, HomeScreen
+          chỉ việc thực hiện vẽ giao diện tương ứng với state.
+        </p>
         <!-- /wp:paragraph -->
 
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">II.Tiến hành refactor lại HomeScreen</h2>
+        <!-- /wp:heading -->
+
         <!-- wp:paragraph -->
-        <p>Phân Phối Nhanh Chóng và Dễ Dàng</p>
+        <p>
+          Add lib
+          <a href="https://pub.dev/packages/flutter_bloc"
+            >https://pub.dev/packages/flutter_bloc</a
+          >
+          và
+          <a href="https://pub.dev/packages/bloc"
+            >https://pub.dev/packages/bloc</a
+          >&nbsp;
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/JKO-k8iyCfeu56TAx1zgeCy1mw8x0Xt0UTGQnmEFeFTahg4nx3VrAsEduYeox-n7Ldj2sUZtY6-QX2ASixgMZMlKJ-X3-FiHfBnubQ-fgqXBMcI6i1j3hZnVcoxxAmONKbOgw9H5vNTx66n9HoP5L-w"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>Tiến hành tách các class theo mô hình trên ta có</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/QD45XnhArHJVQXpBQahv1_2p5K77ONfgIFynLzgBzx2OvWUf4zjs1sRiYmFcw7thr5HbyhZe5O_Xl9QcbqcYJbOm3YAduHalP_bG60ohyiyUFvTZw3O_v6mS7qNsA8UHGTEU4eKc25znl8h4skYp7v4"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">1.State</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          HomeState thể hiện cho Data là class chứa các state của màn home, tất
+          cả các state của màn home chúng ta sẽ thêm ở đây.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/U7kQQizrOFmifbu6u7TJl3sVIMkA_YbdQeQaLj8830o4-5zmBzCBXq72IfVqXJQMfUnvRGflRfKg5WWUueZQkBYwDFi8Dms81eACWGHt4IHprL8QyAfcl0aNYkjmYkfM4ljjBVs8Bz5EcP2v1zZ7TtI"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">2.Cubit</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          HomeCubit sẽ chứa tất cả các logic của HomeScreen, tiến hành chuyển
+          đổi phần logic lấy danh sách câu hỏi sang cubit chúng ta có:
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/15nfLSubLR4BvWMyc8a2T_qxZB111jwvw3s0R0VTpy4Rqwg7Vq4LqXz7osdPlgPo8cnciZduzCCf0wGe8kYlJKiJmTviIltFAMT6ghhrKS2OWgLAWhPEwElQYoyaWyGF3Zh70AmYm6gU6qV4uSIUFXM"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">3.UI</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Dữ liệu và Logic cho giao diện đã đủ, giờ update nốt màn HomeScreen để
+          kết nối nào
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/dOnHCzz6qz5kchxUe5nTEANRHfVCZS2bQLo8TDizCCUO5ls995wCxlni9u7G9qjnNmjuq-57qeiKgN-cn4VTWiC7zUztKuuX_16rLlyJ_EaJM4AD4XToMPJkRvlQ9DjCfLBE54b18S6H9vIxKkrRaVM"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>Ở trên chúng ta có&nbsp;</p>
         <!-- /wp:paragraph -->
 
         <!-- wp:list -->
         <ul>
           <!-- wp:list-item -->
           <li>
-            Firebase Distribution giúp bạn phân phối ứng dụng nhanh chóng đến
-            các nhóm người thử nghiệm mà không cần thông qua các cửa hàng ứng
-            dụng chính thức.
+            BlocProvider: Đây là Widget cung cấp 1 instance của Bloc cho các
+            Widget con chứa trong nó
           </li>
           <!-- /wp:list-item -->
-        </ul>
-        <!-- /wp:list -->
 
-        <!-- wp:paragraph -->
-        <p>Quản Lý Nhóm Người Dùng</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:list -->
-        <ul>
           <!-- wp:list-item -->
           <li>
-            Tạo và quản lý các nhóm người dùng mà bạn muốn chia sẻ ứng dụng.
-            Điều này giúp kiểm soát việc phân phối và thu thập phản hồi từ những
-            người quan trọng nhất cho sản phẩm của bạn.
+            BlocBuilder: là Widget dùng để xây dựng UI dựa trên state của Bloc,
+            khi state thay đổi BlocBuilder sẽ tái xây dựng UI để phản ánh trạng
+            thái mới
           </li>
           <!-- /wp:list-item -->
-        </ul>
-        <!-- /wp:list -->
 
-        <!-- wp:paragraph -->
-        <p>Kiểm Soát Phiên Bản</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:list -->
-        <ul>
           <!-- wp:list-item -->
           <li>
-            Firebase Distribution giúp bạn kiểm soát phiên bản ứng dụng được
-            phân phối, giúp đảm bảo rằng những người nhận được phiên bản phù hợp
-            và đồng đều.
+            HomeCubit()..getListQuestion(): Cubit được khởi tạo và gọi vào hàm
+            getListQuestion 1 lần duy nhất để lấy về danh sách câu hỏi.
           </li>
           <!-- /wp:list-item -->
         </ul>
         <!-- /wp:list -->
 
         <!-- wp:heading -->
-        <h2 class="wp-block-heading">II. Triển khai</h2>
+        <h2 class="wp-block-heading">III.Tổng kết</h2>
         <!-- /wp:heading -->
 
         <!-- wp:paragraph -->
         <p>
-          Firebase Distribution có nhiều cách triển khai như thông qua Firebase
-          Console, Firebase CLI, fastlane, Rest API, hay với Gradle với Android.
-          Trong bài này mình hướng dẫn cách triển khai đơn giản với Firebase
-          Console.
+          Như vậy là các class đã được tách biệt hoàn toàn: HomeScreen chỉ chứa
+          UI. HomeCubit xử lý các Logic và update lại HomeState. Nhưng có 1 điều
+          nhỏ mà mình chưa được hài lòng, đó là ở hàm copyWith trong HomeState.
+          Với những ứng dụng lớn hơn, chứa nhiều trạng thái, thì hàm copyWith sẽ
+          rất lớn, và dev sẽ nhận thấy việc các dòng code bị lặp rất nhiều.
+          Nhưng các bạn yên tâm, chúng đều có cách để xử lý, đó chính là việc tự
+          động generate code với
+          <a href="https://pub.dev/packages/freezed">freezed</a> mà mình có giới
+          thiệu ở series Base Flutter.
         </p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:paragraph -->
-        <p>Android</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:paragraph -->
-        <p>Chạy Flutter -&gt; Build Apk</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:image -->
-        <figure class="wp-block-image">
-          <img
-            src="https://lh7-us.googleusercontent.com/QPbOY7LXmK94xxEgEeHUQS6ZhtbhNutlf5rLQfPrJGE89mZ6uzw7JP0F-niVmVIUCVikihk7vxiKMidIN3TReROaaL7aF7JJ1YE-bY9UxRJ5eHVxKpH5_ncDFvTRQbD_hmWz7YY51yHMEEOCxQTS3og"
-            alt=""
-          />
-        </figure>
-        <!-- /wp:image -->
-
-        <!-- wp:image -->
-        <figure class="wp-block-image">
-          <img
-            src="https://lh7-us.googleusercontent.com/908821W1Kh2Dz3zSWqxr0KXCL2V1Wh5weRON1E6W5bFxr1BFkPNfBYMIHmDQXKUMm_5ucqvdG2pn7TgTCOqFxDj8kjKpBoPCscKyCD3wggQXxrr4iioj4atq-ZPsGM6tEDZPbYCtUgKL-Ny9kwXD140"
-            alt=""
-          />
-        </figure>
-        <!-- /wp:image -->
-
-        <!-- wp:paragraph -->
-        <p>
-          Thêm email tester để invite (Có thể tạo 1 group các email lại và gửi
-          vào group).
-        </p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:paragraph -->
-        <p>Thêm release note:</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:image -->
-        <figure class="wp-block-image">
-          <img
-            src="https://lh7-us.googleusercontent.com/uai1-X47L_nYf3OkUS5VDqxSJmXRVbkYrOLoylhbqQLBR1n21Aa9ywq3nVOzbPjxwkgLbtP-OPm8XL9pWXEg2PeP1Clc3-0fvLcKoyjQSYzuVEsjSj3nJRX4LXA8LaudV-fmeFmRIlERQ1mqYnD1U-I"
-            alt=""
-          />
-        </figure>
-        <!-- /wp:image -->
-
-        <!-- wp:image -->
-        <figure class="wp-block-image">
-          <img
-            src="https://lh7-us.googleusercontent.com/5azgFqdg6U0QrQRuUH-I8EDpYwyxoXwx3QNvt1pUIxjqdWQRL4DTjdW8VtmJXJ2I1wemMtwiZCG1geU2s6uLtfbH5PLQTbPZD1H2bU-BOSgTa756VEe1A25mp0UwtQDR9Vl_zkXH4QVrpErfoXAfm9o"
-            alt=""
-          />
-        </figure>
-        <!-- /wp:image -->
-
-        <!-- wp:paragraph -->
-        <p>
-          Click Get Start để bắt đầu tải về bản cài đặt ứng dụng và tiến hành
-          kiểm thử.
-        </p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:paragraph -->
-        <p>iOS:</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:paragraph -->
-        <p>Tương tự Android:</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:paragraph -->
-        <p>iOS cần build ipa và đẩy lên console tương ứng.</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:paragraph -->
-        <p>Tuy nhiên với iOS cần chú ý:</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:paragraph -->
-        <p>Cần add UDID của thiết bị vào tài khoản developer.apple.com</p>
         <!-- /wp:paragraph -->
 
         <!-- wp:paragraph -->
         <p>
-          Trường hợp thiết bị chưa được add -> Khi phân phối qua email -> Người
-          dùng cần download setting và cài đặt . Lúc này sẽ có email thông báo
-          UDID cần được add, dev cần add lại và phân phối lại bản build mới cho
-          khách hàng đó.
+          Trong suốt series mình đã triển khai thực tế 1 màn hình nhỏ, phần còn
+          lại nhờ các bạn tiếp tục tự triển khai để có thể hoàn thiện được ứng
+          dụng. Ở series này, mình chỉ tập trung vào giải quyết các vấn đề chính
+          đủ để cho các bạn newbie hiểu và có thể tiếp tục tự triển khai tiếp.
         </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>Cảm ơn các bạn</p>
         <!-- /wp:paragraph -->
       </div>
 

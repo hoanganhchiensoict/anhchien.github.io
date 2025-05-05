@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <title>
-      Nâng Cao Hiểu Biết Ứng Dụng: Kết Hợp Firebase Analytics và Flutter để Đạt
-      Đến Sự Xuất Sắc Dựa Trên Dữ Liệu
+      Giải quyết bài toán: triển khai Base Flutter theo kiến trúc nào, cách tổ
+      chức code ra sao, và quản lý state sao cho hiệu quả
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
@@ -196,246 +196,240 @@
 
       <!-- Nội dung chính -->
       <div class="content">
-        <h1>Firebase Analytics</h1>
+        <h1>Triển khai Base Flutter - Phần 2: Kiến trúc tổng thể</h1>
         <img
-          src="../../../pictures/blog/firebase/firebase8-analytics.png"
+          src="../../../pictures/blog/flutter_base/flutter_base2.png"
           alt="Firebase"
         />
         <!-- Nội dụng tiếp -->
         <!-- wp:heading -->
-        <h2 class="wp-block-heading">I. Tổng quan</h2>
+        <h2 class="wp-block-heading">
+          I. Giải quyết bài toán kiến trúc tổng thể
+        </h2>
         <!-- /wp:heading -->
 
         <!-- wp:paragraph -->
         <p>
-          Firebase Analytics là một dịch vụ phân tích di động mạnh mẽ được cung
-          cấp bởi Firebase, một nền tảng phát triển ứng dụng di động và web của
-          Google. Firebase Analytics giúp bạn hiểu rõ hơn về cách người dùng
-          tương tác với ứng dụng của bạn, từ đó giúp bạn đưa ra quyết định thông
-          minh để cải thiện trải nghiệm người dùng và hiệu suất ứng dụng.
+          Tiếp nối sau phần bối cảnh, giờ chúng ta đi vào chi tiết hơn trong quá
+          trình xây dựng base Flutter.
         </p>
         <!-- /wp:paragraph -->
 
         <!-- wp:paragraph -->
-        <p>Các đặc điểm chính của FB Analytics như sau:</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:paragraph -->
-        <p>Theo Dõi Sự Kiện:</p>
+        <p>Đầu tiên là giải quyết 2 câu hỏi quan trọng nhất:</p>
         <!-- /wp:paragraph -->
 
         <!-- wp:list -->
         <ul>
           <!-- wp:list-item -->
           <li>
-            Firebase Analytics cho phép bạn theo dõi các sự kiện quan trọng
-            trong ứng dụng của mình. Các sự kiện này có thể là hành động của
-            người dùng như mở ứng dụng, nhấp vào nút, xem màn hình cụ thể, và
-            nhiều hơn nữa.
+            Triển khai base Flutter theo kiến trúc nào, cách tổ chức code ra
+            sao?
           </li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>Cách quản lý state ra sao?</li>
           <!-- /wp:list-item -->
         </ul>
         <!-- /wp:list -->
 
         <!-- wp:paragraph -->
-        <p>Phân Tích Người Dùng:</p>
+        <p>
+          Các bạn liệu có thắc mắc tại sao mình lại cho rằng đây là 2 vấn đề
+          quan trọng hàng đầu mà cần phải tìm hiểu và phải giải quyết được đầu
+          tiên không? Ở công ty mình, có rất nhiều dự án mobile app cùng chạy,
+          việc anh em hỗ trợ chéo lẫn nhau trong các dự án là điều thường thấy,
+          các thành viên đều chưa ai biết tới Flutter,... Cho nên việc quyết
+          định được kiến trúc tổng thể là điều vô cùng quan trọng. Từ đó anh em
+          sẽ có tầm nhìn và mục tiêu chung, có thể hỗ trợ nhau tốt nhất có thể.
+          Các dự án có kiến trúc tốt cũng sẽ dễ dàng bảo trì, sửa chữa hơn.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Không lan man thêm nữa, chúng ta đi vào chi tiết vào câu trả lời cho 2
+          câu hỏi trên:
+        </p>
         <!-- /wp:paragraph -->
 
         <!-- wp:list -->
         <ul>
           <!-- wp:list-item -->
           <li>
-            Cung cấp thông tin chi tiết về người dùng, bao gồm nguồn người dùng,
-            loại thiết bị, hệ điều hành, địa lý, và các thuộc tính khác để bạn
-            có cái nhìn toàn diện về đối tượng người dùng.
+            Kiến trúc: đó chính là Clean Architecture, tổ chức code theo
+            Layer-first kết hợp với Feature-first
           </li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>Quản lý State: sử dụng Bloc Cubit</li>
           <!-- /wp:list-item -->
         </ul>
         <!-- /wp:list -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">1. Kiến trúc theo Clean Architecture</h3>
+        <!-- /wp:heading -->
 
         <!-- wp:paragraph -->
-        <p>Chuyển Đổi và Retention Analysis:</p>
+        <p>
+          Lại là cái tên Clean Architecture, một cái tên quen thuộc mà rất nhiều
+          người trong ngành CNTT đã nghe thấy. Đi cùng với nó là hàng tá các lời
+          bàn tán: nào là cồng kềnh, phức tạp, có thể không cần thiết lắm, mỗi
+          người áp dụng 1 kiểu,... Nhưng chắc hẳn những người đã nghe tới những
+          lời bàn tán đó thì đều không thể phủ nhận những ưu điểm vượt trội mà
+          nó mang lại cho chúng ta: dễ dàng maintain, mở rộng, chia để trị các
+          tầng vô cùng hiệu quả, dễ dàng unit test,..
+        </p>
         <!-- /wp:paragraph -->
 
-        <!-- wp:list -->
-        <ul>
-          <!-- wp:list-item -->
-          <li>
-            Firebase Analytics giúp theo dõi và phân tích quá trình chuyển đổi
-            người dùng từ một sự kiện sang sự kiện khác. Nó cũng cung cấp thông
-            tin về việc giữ lại người dùng sau thời gian sử dụng ứng dụng.
-          </li>
-          <!-- /wp:list-item -->
-        </ul>
-        <!-- /wp:list -->
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">2. Quản lý state với Bloc Cubit</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Vấn đề về quản lý state có vô vàn các phương án, mình lựa chọn bloc và
+          triển khai bloc pattern từ những ngày đầu tìm hiểu. Lý do cho sự lựa
+          chọn này là vì ngày đó khi tìm hiểu mình thấy bloc làm rất tốt trong
+          việc tách biệt giữa business logic và ui. Đó cũng là việc mà khi mình
+          làm trên nền tảng native mình vô cùng chú trọng tới.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">
+          3. Kết hợp giữa Feature-first với Layer-first để tối ưu trong việc tổ
+          chức code
+        </h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Và khi triển khai chúng, để tổ chức mã nguồn mình kết hợp giữa Layer
+          first và Feature first ???
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh4.googleusercontent.com/-R7GpYWi-_JzFD1M7x4lYySg2oAc5HzYMXPsPCocANVuHs1HW9PFHOZ0hEgaQ8-DA0XJCGXPZxoO5y3R82VYeBmsYTsCiEIlinTRKWulEdSzcLWiNzVrz90nZhw877mzyOuGgRDkIhAMQa6QOiaollg"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Ủa là sao? Tại sao là kết hợp cả feature-first với layer-first vậy?
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Nếu tổ chức theo feature-first: thật dễ để quản lý từng tính năng cụ
+          thể, nhưng cũng chính vì thế màn trông việc tổ chức code có phần bị
+          phân mảnh theo từng feature. Như bạn thấy hình bên trái, nếu trong các
+          feature có cùng logic xử lý thì điều gì sẽ xảy ra. Mà các ứng dụng
+          chúng ta thường làm, các tính năng nhiều khi móc nối với nhau rất
+          nhiều, đâu có phân tách hoàn hảo để có thể tổ chức theo cách như
+          vậy.&nbsp;
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Còn với cách tổ chức theo layer-first: đây là cách tiếp cận mà chúng
+          ta có thể quản lý theo từng tầng cụ thể, các tầng đảm nhiệm những
+          nhiệm vụ riêng biệt mà từ đó có thể tận dụng lại mã nguồn tốt nhất có
+          thể. Nhưng nhìn vào hình bên phải, và tình huống thực tế khi chúng ta
+          phải maintain 1 tính năng. Thật là ám ảnh khi phải kéo lên kéo xuống
+          từng tầng để có thể đọc các file tương ứng.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Như vậy, giải pháp kết hợp cả 2 lại vô hình chung lại là 1 phương án
+          rất đáng suy ngẫm. Mình sử dụng layer-first cho việc tổ chức tầng dữ
+          liệu và business logic, còn feature-first thì mình dùng để quản lý mã
+          nguồn với từng tính năng cụ thể dành cho tầng hiển thị.
+        </p>
+        <!-- /wp:paragraph -->
 
         <!-- wp:heading -->
-        <h2 class="wp-block-heading">II. Triển khai với Flutter</h2>
+        <h2 class="wp-block-heading">II. Cấu trúc dự án</h2>
         <!-- /wp:heading -->
-
-        <!-- wp:heading {"level":3} -->
-        <h3 class="wp-block-heading">1. Tích hợp code với Flutter</h3>
-        <!-- /wp:heading -->
-
-        <!-- wp:paragraph -->
-        <p>Thêm thư viện:</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:list -->
-        <ul>
-          <!-- wp:list-item -->
-          <li>flutter pub add firebase_analytics</li>
-          <!-- /wp:list-item -->
-        </ul>
-        <!-- /wp:list -->
 
         <!-- wp:image -->
         <figure class="wp-block-image">
           <img
-            src="https://lh7-us.googleusercontent.com/vqnJzTkiEpJbxqjAUSfR3xHdAVlYIYmSo9Uwa58X4pBa_3IbKV9Bw3dQcGGNy4BfYWSt2qrGpwr-mDKGv8w8oorZPeAfptT4jC6ITBAjY2JJelD074RGngGSMBj9Y6TOGkVRAenNEeG-_hzP0fi-LAw"
-            alt=""
-          />
-        </figure>
-        <!-- /wp:image -->
-
-        <!-- wp:heading {"level":3} -->
-        <h3 class="wp-block-heading">2.Debug view</h3>
-        <!-- /wp:heading -->
-
-        <!-- wp:paragraph -->
-        <p>iOS:&nbsp;</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:paragraph -->
-        <p>Để chạy được Debug view cần các thao tác thêm&nbsp;</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:list -->
-        <ul>
-          <!-- wp:list-item -->
-          <li>FIRDebugEnabled</li>
-          <!-- /wp:list-item -->
-        </ul>
-        <!-- /wp:list -->
-
-        <!-- wp:image -->
-        <figure class="wp-block-image">
-          <img
-            src="https://lh7-us.googleusercontent.com/e0Uf1y5Mb4TIy4l7psxFh1PFFeTaATU9RUwOxWUzhwVvfYsiIueQEXOW7HoiLwp-96048mhERE_VBpR4uOc_ciPxmiqkPHI4go22KYyVcjRqALYD_xJtxkHgJYk9QvGki-kGpbx7H9b5931znCRfSU4"
+            src="https://lh5.googleusercontent.com/uF6-xgPL9aN-wzP0nA3lGQqMYINFOqBKrTPAR_T_k69eOCrxNZWnx1WRlDHDIVB1tKw1kLzyGzJBQwH7B42gju1mv1WVdD_SVzUE2aVAITz8hbPNAew1Yww8-TpLbAw3nXSPGFx3CrGcxGdEfsofE9s"
             alt=""
           />
         </figure>
         <!-- /wp:image -->
 
         <!-- wp:paragraph -->
-        <p>Android:</p>
+        <p>
+          Tất tần tật những gì chúng ta có thể thấy trong việc triển khai Clean
+          Architecture đều được cô đọng lại trong hình vẽ trên.&nbsp;
+        </p>
         <!-- /wp:paragraph -->
 
         <!-- wp:paragraph -->
-        <p>Để chạy được Debug view cần các thao tác như sau:</p>
+        <p>Nhìn vào chúng ta có thể thấy rõ được có 3 layer quan trọng nhất:</p>
         <!-- /wp:paragraph -->
 
         <!-- wp:list -->
         <ul>
           <!-- wp:list-item -->
           <li>
-            Trên thiết bị -&gt; Vào Settings -&gt;
-            <strong>Developer Options</strong> -&gt;
-            <strong>Select debug app</strong> -&gt; Chọn app bạn cần debug
+            <strong>Presentation</strong>: chứa UI và Bloc (Đây chính là tầng mà
+            chúng ta sẽ triển khai theo Feature first). Đảm nhiệm vai trò hiển
+            thị và tương tác với người dùng
           </li>
           <!-- /wp:list-item -->
-        </ul>
-        <!-- /wp:list -->
 
-        <!-- wp:image -->
-        <figure class="wp-block-image">
-          <img
-            src="https://lh7-us.googleusercontent.com/IQ2_2cGk0NArURJ3OCDwKB6jWn6BV15lXuOJvCHhO9r5ZoCFYcHxyLucTxdFeJRWrGIFdVoi51YPqT9U6lbiuyUHo1V-jTmKWnmCDkzg3OAWg2tEGibwIPC2FB-sPgq8vuxTg0AbcpxF7ePSTlThhuo"
-            alt=""
-          />
-        </figure>
-        <!-- /wp:image -->
-
-        <!-- wp:list -->
-        <ul>
           <!-- wp:list-item -->
           <li>
-            Trên terminal: cd /Users/mystery/Library/Android/sdk/platform-tools
-            &amp;&amp; ./adb shell setprop debug.firebase.analytics.app
-            your.app.package
+            <strong>Domain</strong>: chứa Use Cases, Entities và Interface
+            Repositories. Đảm nhiệm vai trò xử lý các business logic
           </li>
           <!-- /wp:list-item -->
 
           <!-- wp:list-item -->
-          <li>Thực hiện 1 thao tác có bắn lên Fb Analytics và kiểm tra:</li>
+          <li>
+            <strong>Data</strong>: chứa Impl Repositories, Models và Data source
+            (local &amp; remote). Đảm nhiệm vai trò quản lý dữ liệu cho ứng dụng
+          </li>
           <!-- /wp:list-item -->
         </ul>
         <!-- /wp:list -->
 
-        <!-- wp:image -->
-        <figure class="wp-block-image">
-          <img
-            src="https://lh7-us.googleusercontent.com/c2aNMdNPpl3mUP5gLnzvNaS255ZratxQOfujyu5ti99lECtqG_H-1t9Q1V1c8n0bP50Fw05dQ8XdiqAwHBxHKSoNbrpy2OeF8fVhJFBq_yBPRMOGzCH3vvj-6w8jpaYAxhYU9DI5r6XVYhTivAqku8U"
-            alt=""
-          />
-        </figure>
-        <!-- /wp:image -->
-
         <!-- wp:paragraph -->
         <p>
-          Lúc này Debug Device sẽ hiện lên thiết bị và chúng ta có thể kiểm tra
-          các sự kiện kèm theo tham số bắn lên Firebase Analytics
+          Tương ứng với các layer chính là các folder mà chúng ta sẽ quản lý.
+          Ngoài ra mình có tạo thêm folder utils là nơi mình triển khai các base
+          module nhỏ/ các utils tiện lợi sử dụng)
         </p>
         <!-- /wp:paragraph -->
 
         <!-- wp:paragraph -->
-        <p>Chú ý: Khi sử dụng xong Debug view thì chạy&nbsp;</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:paragraph -->
-        <p>
-          ./adb shell setprop debug.firebase.analytics.app none //để tắt thiết
-          bị
-        </p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:paragraph -->
-        <p>3. Debug với Console với Android</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:paragraph -->
-        <p>Chạy các lệnh sau:</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:code -->
-        <pre class="wp-block-code"><code>Cd {path}/sdk/platform-tools
-
-./adb shell setprop log.tag.FA VERBOSE
-
-./adb shell setprop log.tag.FA-SVC VERBOSE
-
-./adb logcat -v time -s FA FA-SVC</code></pre>
-        <!-- /wp:code -->
-
-        <!-- wp:paragraph -->
-        <p>Khi bắn 1 event lên Firebase Analytics ta sẽ nhận được log:</p>
+        <p>Và khi kết hợp lại chúng ta có cách tổ chức code như sau:</p>
         <!-- /wp:paragraph -->
 
         <!-- wp:image -->
         <figure class="wp-block-image">
           <img
-            src="https://lh7-us.googleusercontent.com/YAy4tMzXmhCy8kVBiIbEVXLEiQzmoh1ktY5Y2e-4lES6Hg3Oh1yhyNWB_qp1y6jp_SLjMgkCDtg4QToF7L8inxNJpfHExd8WDc1FaWkz-rBtWMbhrjNW34e1zznVpxzVScb60RZiCRAoYTgIuBRLkCE"
+            src="https://lh6.googleusercontent.com/B54cc9fe6jWicEjyid7tOXJWck6G7ILXjVf8d_mxX73MkLdqj5UHLIGRWJJymtDfV_Cad-dV6-67FcMszF5OIMXhGnID6Ac27WS6Y0j1RPIOwlQmn03OmcrfyGbE2Tbmsuak4ZX85bEUjaNmkXZIa4Q"
             alt=""
           />
         </figure>
         <!-- /wp:image -->
-
-        <!-- wp:paragraph -->
-        <p>
-          Nhìn log chúng ta có thể kiểm tra được name: test_debug_view kèm theo
-          params tương ứng.
-        </p>
-        <!-- /wp:paragraph -->
       </div>
 
       <!-- Sidebar phải -->

@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <title>
-      Tối Ưu Hóa Triển Khai: Khám Phá Firebase App Distribution Cho Việc Phân
-      Phối Ứng Dụng Dễ Dàng
+      Xử lý các business logic trong ứng dụng chứa trong use cases, liên kết với
+      tầng Data qua các interface. Và triển khai việc tự động generate model
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
@@ -196,114 +196,135 @@
 
       <!-- Nội dung chính -->
       <div class="content">
-        <h1>Firebase Distribution</h1>
+        <h1>Triển khai Base Flutter - Phần 4: Chi tiết - Tầng Domain</h1>
         <img
-          src="../../../pictures/blog/firebase/firebase9-distribution.png"
+          src="../../../pictures/blog/flutter_base/flutter_base4.png"
           alt="Firebase"
         />
         <!-- Nội dụng tiếp -->
         <!-- wp:heading -->
-        <h2 class="wp-block-heading">I. Tổng quan</h2>
+        <h2 class="wp-block-heading">I. Nhiệm vụ</h2>
         <!-- /wp:heading -->
 
         <!-- wp:paragraph -->
         <p>
-          Firebase Distribution là một trong những tính năng mạnh mẽ của nền
-          tảng Firebase, được thiết kế để giúp các nhà phát triển quản lý và
-          phân phối ứng dụng di động của họ một cách hiệu quả và tiện lợi. Được
-          xây dựng trên cơ sở hạ tầng Firebase mạnh mẽ, Distribution mang lại
-          một loạt các tính năng và lợi ích cho quá trình triển khai ứng dụng.
-          Firebase Distribution phù hợp trong quá trình phân phối ứng dụng cho
-          đội ngũ tester nội bộ của tổ chức.
+          Nhiệm vụ của tầng này chính là xử lý các business logic trong ứng dụng
+          chứa trong use cases. Nó liên kết với tầng data dựa theo interface cho
+          repositories
         </p>
         <!-- /wp:paragraph -->
 
-        <!-- wp:paragraph -->
-        <p>Các lợi ích khi sử dụng:</p>
-        <!-- /wp:paragraph -->
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh6.googleusercontent.com/AkQo81T79KP9V7hKlK-6-IBBuvSYVCm10fx1MAieeDJwTxyCE-at7UUU3G1hrHXSK5bcd3DEdbjxJKx2PoTaykvU9C0jz8TQ9N2ceyi5fQ4iu-S-UljwQAnV6IW1cLNqx4q2sgnneuJO6rrMVMd8Ojw"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">II. Các công việc cần xử lý</h2>
+        <!-- /wp:heading -->
 
         <!-- wp:paragraph -->
-        <p>Phân Phối Nhanh Chóng và Dễ Dàng</p>
+        <p>Tương ứng với hình vẽ trên, ở tầng Domain này chúng ta sẽ có:</p>
         <!-- /wp:paragraph -->
 
         <!-- wp:list -->
         <ul>
           <!-- wp:list-item -->
-          <li>
-            Firebase Distribution giúp bạn phân phối ứng dụng nhanh chóng đến
-            các nhóm người thử nghiệm mà không cần thông qua các cửa hàng ứng
-            dụng chính thức.
-          </li>
+          <li>Triển khai use cases</li>
           <!-- /wp:list-item -->
-        </ul>
-        <!-- /wp:list -->
 
-        <!-- wp:paragraph -->
-        <p>Quản Lý Nhóm Người Dùng</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:list -->
-        <ul>
           <!-- wp:list-item -->
-          <li>
-            Tạo và quản lý các nhóm người dùng mà bạn muốn chia sẻ ứng dụng.
-            Điều này giúp kiểm soát việc phân phối và thu thập phản hồi từ những
-            người quan trọng nhất cho sản phẩm của bạn.
-          </li>
+          <li>Triển khai entities</li>
           <!-- /wp:list-item -->
-        </ul>
-        <!-- /wp:list -->
 
-        <!-- wp:paragraph -->
-        <p>Kiểm Soát Phiên Bản</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:list -->
-        <ul>
           <!-- wp:list-item -->
           <li>
-            Firebase Distribution giúp bạn kiểm soát phiên bản ứng dụng được
-            phân phối, giúp đảm bảo rằng những người nhận được phiên bản phù hợp
-            và đồng đều.
+            Triển khai interface repositories, xử lý việc tự động cast object
           </li>
           <!-- /wp:list-item -->
         </ul>
         <!-- /wp:list -->
 
         <!-- wp:heading -->
-        <h2 class="wp-block-heading">II. Triển khai</h2>
+        <h2 class="wp-block-heading">III. Chi tiết xử lý</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">1. Triển khai Use cases</h3>
         <!-- /wp:heading -->
 
         <!-- wp:paragraph -->
         <p>
-          Firebase Distribution có nhiều cách triển khai như thông qua Firebase
-          Console, Firebase CLI, fastlane, Rest API, hay với Gradle với Android.
-          Trong bài này mình hướng dẫn cách triển khai đơn giản với Firebase
-          Console.
+          Nhiều bạn có thể thắc mắc rằng, trong bloc pattern thì bloc cũng đã
+          chứa những xử lý logic tại đây, như vậy chúng ta đâu cần phải có thêm
+          use cases để xử lý chứ? Nhưng đó là 1 sai lầm nhỏ, do việc đánh đồng
+          giữa xử lý business logic với xử lý presentation logic ở mức tương tác
+          giữa người dùng với các feature đó. Việc phân biệt được 2 logic riêng
+          biệt này sẽ giúp chúng ta tái sử dụng code ở use cases rất tuyệt vời.
         </p>
         <!-- /wp:paragraph -->
 
         <!-- wp:paragraph -->
-        <p>Android</p>
+        <p>
+          Một ví dụ nhỏ để minh họa cho tác dụng của use cases là mình có logic
+          logout tài khoản, ở đây mình phải thực hiện các công việc như: Xóa các
+          thông tin lưu trữ về người dùng, hủy đăng ký fcm. Và bạn thử nghĩ xem
+          biết đâu rằng trong ứng dụng của mình có 2 nơi có thể bấm logout để
+          thoát đăng nhập: 1 là ở trang profile, 2 là ở trang chủ có icon cá
+          nhân bấm vào thì hiện lên dialog và cũng có nút cho phép logout. Nếu
+          gặp phải trường hợp như này bạn sẽ thấy thật đơn giản khi có thể tái
+          sử dụng 1 hàm xử lý LogoutUseCases duy nhất.Một UseCases luôn được
+          định nghĩa rõ ràng đầu vào và đầu ra, chính vì thế nó cũng rất dễ dàng
+          để có thể kiểm thử tại đây.<img
+            width="543"
+            height="316"
+            src="https://lh4.googleusercontent.com/5rIcGaGQgnUc4TKSo8GexjhhwKb_1QhBs0BLCjAKbdmxVWrKSgzwJ-oDWJhvik0LwwqENeOoNXYaAIXG4I6lEVB15nHtuZcqPsMOh3wfz0d7w8kbceDQodpbnwb_cXwjz9ZT0SZkURDBBH5hqMt5Pzc"
+          />
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">2. Triển khai entities</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">
+          3. Triển khai interface repositories, xử lý việc tự động cast object
+        </h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Tiếp theo là việc hoàn thiện cho repositories mà mình đã hứa với các
+          bạn là để lại cho phần này. Tầng domain chỉ chứa các interface cho
+          repo còn việc thực thi chúng thì nằm ở tầng data. Và việc quan trọng
+          nhất ở đây mà mình cần xử lý chính là việc tự động cast được về đúng
+          kiểu dữ liệu cho data được nhận về từ remote data source. Như khi bạn
+          thực hiện login, dữ liệu cuối cùng mà bạn mong muốn được nhận được sau
+          khi login thành công rõ ràng phải là LoginResponse (chứa id, token, …)
+          chứ ko phải chỉ là 1 object dynamic nữa. Để cho việc này được tự động
+          hơn thì chúng ta cần phải làm gì?
+        </p>
         <!-- /wp:paragraph -->
 
         <!-- wp:paragraph -->
-        <p>Chạy Flutter -&gt; Build Apk</p>
+        <p>
+          Để giải quyết được việc đó, chúng ta có thể sử dụng Generic types
+          trong Flutter. Mình tạo ra 1 object là DataResponse là data đã qua xử
+          lý việc tự động cast object mà repositories trả về, tương tự như
+          ServiceResponse và chỉ khác là dữ liệu thành công đã tự động có kiểu
+          trả về tương ứng.
+        </p>
         <!-- /wp:paragraph -->
 
         <!-- wp:image -->
         <figure class="wp-block-image">
           <img
-            src="https://lh7-us.googleusercontent.com/QPbOY7LXmK94xxEgEeHUQS6ZhtbhNutlf5rLQfPrJGE89mZ6uzw7JP0F-niVmVIUCVikihk7vxiKMidIN3TReROaaL7aF7JJ1YE-bY9UxRJ5eHVxKpH5_ncDFvTRQbD_hmWz7YY51yHMEEOCxQTS3og"
-            alt=""
-          />
-        </figure>
-        <!-- /wp:image -->
-
-        <!-- wp:image -->
-        <figure class="wp-block-image">
-          <img
-            src="https://lh7-us.googleusercontent.com/908821W1Kh2Dz3zSWqxr0KXCL2V1Wh5weRON1E6W5bFxr1BFkPNfBYMIHmDQXKUMm_5ucqvdG2pn7TgTCOqFxDj8kjKpBoPCscKyCD3wggQXxrr4iioj4atq-ZPsGM6tEDZPbYCtUgKL-Ny9kwXD140"
+            src="https://lh6.googleusercontent.com/kv7oWItpFe86sfyBltMuhlVTcAvkJOdPhy4kumrydAmL7Erm9MdFM5Y6pYbkJPcZ10FJ6_OLt0DEeAj0dCTEdf-f6pizIk5jGapUnsVl_qUqvX_nBggzGXYENsndkr1t_tR4RuQijq8FTpjoxnZOVp4"
             alt=""
           />
         </figure>
@@ -311,28 +332,35 @@
 
         <!-- wp:paragraph -->
         <p>
-          Thêm email tester để invite (Có thể tạo 1 group các email lại và gửi
-          vào group).
+          Điều quan trọng là hàm tự động chuyển đổi kiểu dữ liệu kia hoạt động
+          như thế nào? Rất đơn giản thôi, chúng ta sẽ thường có các dạng dữ liệu
+          nhận về khi call api:
         </p>
         <!-- /wp:paragraph -->
 
-        <!-- wp:paragraph -->
-        <p>Thêm release note:</p>
-        <!-- /wp:paragraph -->
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>Trả về dạng đối tượng: {key: value}</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>
+            Trả về dạng mảng đổi tượng: [1, 2, 3], [“a”, “b”], [{key: value},
+            {key: value}]
+          </li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>Api trả về dạng dữ liệu: true/false, number, string</li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
 
         <!-- wp:image -->
         <figure class="wp-block-image">
           <img
-            src="https://lh7-us.googleusercontent.com/uai1-X47L_nYf3OkUS5VDqxSJmXRVbkYrOLoylhbqQLBR1n21Aa9ywq3nVOzbPjxwkgLbtP-OPm8XL9pWXEg2PeP1Clc3-0fvLcKoyjQSYzuVEsjSj3nJRX4LXA8LaudV-fmeFmRIlERQ1mqYnD1U-I"
-            alt=""
-          />
-        </figure>
-        <!-- /wp:image -->
-
-        <!-- wp:image -->
-        <figure class="wp-block-image">
-          <img
-            src="https://lh7-us.googleusercontent.com/5azgFqdg6U0QrQRuUH-I8EDpYwyxoXwx3QNvt1pUIxjqdWQRL4DTjdW8VtmJXJ2I1wemMtwiZCG1geU2s6uLtfbH5PLQTbPZD1H2bU-BOSgTa756VEe1A25mp0UwtQDR9Vl_zkXH4QVrpErfoXAfm9o"
+            src="https://lh5.googleusercontent.com/9UYJ-DFtbr7fzUvSCVhkSZbC5SIS7r2ldXw_9z78nBQDAADRph_tg-DEuFQDiXeZ6ZV2GNHQB0xGLG2uUHmGBJhc3QmXfXFmcTxjbYjXxqZrjO7mz-1GIXXSJWATCuih_K8pXtjUGaOYQlTrBx5pAqY"
             alt=""
           />
         </figure>
@@ -340,37 +368,12 @@
 
         <!-- wp:paragraph -->
         <p>
-          Click Get Start để bắt đầu tải về bản cài đặt ứng dụng và tiến hành
-          kiểm thử.
-        </p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:paragraph -->
-        <p>iOS:</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:paragraph -->
-        <p>Tương tự Android:</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:paragraph -->
-        <p>iOS cần build ipa và đẩy lên console tương ứng.</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:paragraph -->
-        <p>Tuy nhiên với iOS cần chú ý:</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:paragraph -->
-        <p>Cần add UDID của thiết bị vào tài khoản developer.apple.com</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:paragraph -->
-        <p>
-          Trường hợp thiết bị chưa được add -> Khi phân phối qua email -> Người
-          dùng cần download setting và cài đặt . Lúc này sẽ có email thông báo
-          UDID cần được add, dev cần add lại và phân phối lại bản build mới cho
-          khách hàng đó.
+          Như vậy là đã hoàn thành xong việc tự động cast dữ liệu, lúc này
+          repositories sẽ trông như thế này:<img
+            src="https://lh5.googleusercontent.com/VPm0r_6oQlmZFHXisPr-be-xDSipvVfTNwUcbj9UdQytkaF17MKWIKVCo7IF6WxiJr2GTOoRPD7SCy9rAsSz7sjHmQSVupA89ZF59Z67CZolYsGtcblEeMJEfNgKGlhGPymBpAOgioLliw3SNUOjVrA"
+            width="538"
+            height="351"
+          />
         </p>
         <!-- /wp:paragraph -->
       </div>

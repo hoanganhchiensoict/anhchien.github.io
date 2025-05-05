@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>
+      Xây dựng cấu trúc cơ bản của base network, lấy được dữ liệu từ api và
+      chuyển đổi về dạng object model có thể sử dụng trong app. Quản lý state cơ
+      bản
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7;
+        color: #333;
+        line-height: 1.6;
+        padding: 0 1rem;
+        margin: auto;
+      }
+
+      .container {
+        display: flex;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .sidebar-left,
+      .sidebar-right {
+        width: 20%;
+        padding: 20px;
+        position: sticky;
+        top: 0;
+        height: fit-content;
+        background-color: #ffffff;
+        border-radius: 8px;
+        margin: 10px;
+        align-self: start;
+      }
+
+      .content {
+        width: 60%;
+        background-color: #fff;
+        padding: 30px;
+        margin: 10px;
+        border-radius: 8px;
+      }
+
+      h1,
+      h2 {
+        color: #2c3e50;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin: 1rem 0;
+      }
+      ul {
+        padding-left: 1.2rem;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1rem 0;
+      }
+      td,
+      th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+      td:first-child {
+        background-color: #f9f9f9;
+      }
+      h3 {
+        color: #2c3e50;
+        margin-top: 30px;
+      }
+      a {
+        color: #007acc;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .sidebar-left h3,
+      .sidebar-right h3 {
+        margin-top: 0;
+      }
+
+      .sidebar-left ul,
+      .sidebar-right ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .sidebar-left li,
+      .sidebar-right li {
+        margin-bottom: 8px;
+      }
+
+      /* TOC Button (mobile) */
+      .toc-button {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #007acc;
+        color: white;
+        padding: 10px 14px;
+        border: none;
+        border-radius: 50px;
+        font-size: 14px;
+        z-index: 1000;
+        cursor: pointer;
+      }
+
+      .toc-modal {
+        display: none;
+        position: fixed;
+        bottom: 70px;
+        right: 20px;
+        background-color: white;
+        border: 1px solid #ddd;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        padding: 10px;
+        z-index: 1000;
+        width: 250px;
+      }
+
+      .toc-modal ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .toc-modal li {
+        margin: 6px 0;
+      }
+
+      /* Responsive layout */
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+          padding: 10px;
+        }
+        .sidebar-left,
+        .sidebar-right {
+          display: none;
+        }
+        .content {
+          width: 100%;
+          margin: 0;
+        }
+        .toc-button {
+          display: block;
+        }
+      }
+      .wp-block-code {
+        background-color: #282c34;
+        color: #ffffff;
+        padding: 1em;
+        border-radius: 8px;
+        overflow-x: auto;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 0.95em;
+        line-height: 1.5;
+        margin: 1.5em 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .wp-block-code code {
+        background: none;
+        color: inherit;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar trái -->
+      <div class="sidebar-left">
+        <h3>Categories</h3>
+        <ul>
+          <li><a href="#">Firebase</a></li>
+          <li><a href="#">Authentication</a></li>
+          <li><a href="#">Database</a></li>
+          <li><a href="#">Hosting</a></li>
+          <li><a href="#">Messaging</a></li>
+        </ul>
+      </div>
+
+      <!-- Nội dung chính -->
+      <div class="content">
+        <h1>Bài 4. Xử lý networking lấy dữ liệu thật</h1>
+        <img
+          src="../../../pictures/blog/flutter_demo/flutter_demo4.png"
+          alt="Firebase"
+        />
+        <!-- Nội dụng tiếp -->
+        <!-- wp:paragraph -->
+        <p>
+          Chúng ta sẽ xử lý bước tiếp theo là lấy dữ liệu danh sách các câu hỏi
+          từ BE và hiển thị lên tương ứng.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">I.Cấu trúc lại thư viện gọi RestApi</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">
+          1.Tạo demo api trả dữ liệu với server expressjs
+        </h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Để có dữ liệu từ api, mình tạo nhanh 1 server expressjs và trả về
+          response như sau:
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/SXVwN_7MmCMhvy-XMys4d0v4Ef8Pp4hSYUTPCOK2tScr4eyZs4i9LyvjZUEJ9bvpEYZogAwmVXd-avrIJxrgLQitTFs2xRVFOPAyFMtVZycYvFhs6y4Q0ApxIYGS1B9qno5POppMfk4EKS6F4owGvCI"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">2. Định nghĩa response cơ bản</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Dữ liệu sau khi call api sẽ có trường hợp thành công/thất bại. Tương
+          ứng đó ta sẽ tạo model ServiceResponse để định nghĩa.&nbsp;
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/Bwaj5frjRgx6fX0LXNTiJF4PDQkmZnRSpOA-f_WGdJcNBbNwnJUnGTsXnJ_Aa2w2lEpOhmlcCnZ-xKOFL2wP1_xpW7wAr85ra6sWRIDA9yDyr5ltHOPsUDudK1FRL5yl5Qw4rpZSqIx-6oSBlNUtxHE"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>Trong ServiceResponse chúng ta có thể thấy:&nbsp;</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            Status: enum Status { success, error }, chính là thể hiện cho
+            response thành công/ thất bại
+          </li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>Data: Là dữ liệu sau khi thành công mà chúng ta nhận được</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>Exception: là lỗi trả về khi thất bại</li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">3. Wrap lại thư viện gọi rest api</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Ở Flutter, để có thể kết nối vào api, chúng ta sử dụng thư viện
+          <a href="https://pub.dev/packages/dio">dio</a>
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Việc đầu tiên cần làm khi xử lý với networking là cần phải wrap thư
+          viện dio thành class base xử lý. Không chỉ với việc xử lý với
+          networking, mà còn với nhiều xử lý khác, chúng ta cũng cần làm như
+          vậy, tại sao lại cần phải làm thế? Đó chính là vì một thời điểm nào
+          đó, chúng ta có thể sử dụng 1 thư viện khác để thay thế, việc wrap thư
+          viện gốc chúng ta cần vào utils sẽ tránh được những thay đổi không
+          đáng có về sau, đồng thời có thể xử lý các trường hợp ngoại lệ được
+          tập trung tại đây.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>Utils wrap dio sẽ có dạng:&nbsp;</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/lFcKJ1HWNx7fRCVcLlm8Z4GfSL8ncDP9OZ9So_eKhKWiGHuSEgm1CkpZXP7BsJKuKN4mf3ZDPiY8TWB5Z0Ucd2Ef9SO22Ml8DYyjFEMj-PYCYVrSrw_0uz6I05DdWBBpwMlDz38adEpBhj1zBQqauo8"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Ở đây mình thực hiện wrap lại method get, và chỉ xử lý cơ bản dio
+          exception và trả về response error. Nếu các bạn có nhu cầu cần xử lý
+          cụ thể các trường hợp exception phù hợp với yc nghiệm vụ thì có thể
+          tham khảo ở phần Flutter nâng cao về dựng base.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">II.Quản lý state cơ bản</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">1.Call api lấy dữ liệu</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Xong phần xử lý cơ bản với network, giờ quay về giao diện trang chủ,
+          ta nhận thấy ở trang này có dữ liệu về danh sách các câu hỏi. Nó chính
+          là state, và để quản lý được thì Flutter có nhiều cơ chế. Mình sẽ giới
+          thiệu các bạn sử dụng Bloc Cubit, nhưng trước tiên chúng ta cứ bắt đầu
+          với quản lý state cơ bản của Flutter với StatefullWidget đã nhé.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Tại màn HomeSceen, ta chuyển về dạng StatefullWidget để thực hiện gọi
+          api lấy dữ liệu câu hỏi về và hiển thị lên.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/Vp3Xq2at-QC2F0cLbgkqXhwaA-yhISpgJmIr44kpSVpdNacdWgxyg1Ais2dv0WFdwuoSaBvcTHxpopgiLSzfh9fWq-xK-P9HcNF1N2B_2m8H61zazGh_luMUrZcGSHAWCJ_QKP_BTzwsPImA1dX510o"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/ZiWU4FC3aFsn-8vO1WuS2lhkBqBwKt_EBd8ioqZKPgPq8vxaX_oV9SbH7KxTbMzx7jAN15XeGK2rTrjrQpY7v6oWd9_icZP84WYggnJZBOWJ8XCNHAzqf2AyswLP2nLQeStUKIUATdUfepfpgpH0Nw4"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>Chạy lại project, print dữ liệu chúng ta sẽ có:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/3EAwv6veWng0CuQDLi8hx3Xn9AuBRTujYyXyE8R3fewYuUpGPKU8YSQLIp6nmOmLdXdZ1C2iO_igRYi6RinqdWVda8c1HPNPwii-1fkAjkO_RSZkSXD4xb82l3rtqQze1yvdQEo82emgHQbVMd-rV9A"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Như vậy, với trường hợp gọi api thành công, chúng ta đã có dữ liệu về
+          danh sách các câu hỏi.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">
+          2.Cast dữ liệu nhận được từ api thành object model
+        </h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Để có thể sử dụng được dữ liệu, chúng ta cần xây object model cho các
+          câu hỏi và thực hiện cast dữ liệu vừa nhận được ở trên về model đó.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/LBk9jGXo7HIhRMb17IXuAS_cV9hrTTgu2gSP1jf92lDSzvVoOsJp4AOBcHXHc-CcU9zpO4JI4VfEGfcxF5ehR919G5cR07fEdewYMuyRxAf6uHcGoDAWpP53KKPwJN-NSeTwTn6mcjETvar74HI-WyA"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Trong model chúng ta định nghĩa các giá trị như: number, result,
+          picture, suggest ứng với dữ liệu được trả ra từ Api. Các bạn cũng sẽ
+          nhìn thấy hàm fromJson đúng không, nó sẽ giúp chúng ta convert dữ liệu
+          từ json về object. Tạo model xong rồi, giờ tới việc cast dữ liệu và
+          chỉnh sửa hàm getListQuestion() nào:
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/vZN9lHrs9TF2RFLJ6xuX5NSW0bZS5JV41o7n3vr3fR3-gVAyCtGwinNZ38aOQLQ3ZYH25RaIgVRoKzguF1eEcyHUzCJXztMbINTresov4cGqNFbQj-2fhdAyaOcG93YSn82i-5-csgSBQU3T7W4yKcM"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>Tiếp theo sẽ chạy debug và kiểm tra từng giá trị ở các bước nhé:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/v-scBFu24WowkoQ7yILaqoI2tUllv9nBR74zjljgxDEMve_cwXvptraNTUkDfPdE1DBBXeGsK12wgDOqmg0wkUcbaCyEFS5G8IgRt4qo1_ahcN-MQWF4S1zg3NJt5PyExia7WgWzNgur_XDDZcIAmQE"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Kiểm tra response.data ta sẽ thấy api đã trả về 9 câu hỏi, và dữ liệu
+          đang là một List các Map, mỗi Map là dữ liệu của 1 câu hỏi
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/PlRtNT8qfV4KdVHRw_V70kWLQ87UMZfZ7w2RnaFjaPX5xQUePIUafA5pyUbjP8cfAcOkecfL22Pq52scEQAZ07s7_3EXjGDH2RIij4TH-tFTPBhYPWaDbiDJ-G6YXO7Ku0_NHWlhj7G7w0bbyiHq9uY"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Kiểm tra câu lệnh tiếp theo: ở đây chính là duyệt mảng câu hỏi phía
+          trên, thực hiện gọi QuestionModel.fromJson(json) để cast về
+          QuestionModel. Chúng ta có thể nhìn thấy, lúc này kiểu dữ liệu cho các
+          câu hỏi đã không còn là Map nữa, mà được cast về đúng QuestionModel
+          rồi.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>Như vậy đã đảm bảo việc chuyển dữ liệu về đối tượng tương ứng.</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">3.setState</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Để thông báo trạng thái của giao diện thay đổi, chúng ta sử dụng
+          setState
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Tiến hành cập lại lại danh sách câu hỏi mới load được từ api cho màn
+          HomeScreen nào:
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/wYk9RWzIaqdeFqfVoBBboxVMDtYndPXxegT8eqP9gD9jI-pX_nCf4361UHUDyu_lUbZrWhHMxpcIr4PF_C54v-8kFbMqTCwH3jxsbwSRNRDcDNgO9n3b1QTI-USvglXoY0q8Cei_fbDhgbb7eBoWjhw"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Sau khi setState lại, hàm build sẽ được gọi và tiến hành vẽ lại giao
+          diện, từ đó danh sách các câu hỏi sẽ được vẽ lên tương ứng.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">III. Tổng kết</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Qua bài này, chúng ta đã xây dựng được cấu trúc cơ bản của
+          base_network, lấy được dữ liệu từ api và chuyển đổi về dạng object
+          model có thể sử dụng trong app. Đồng thời hiểu được cách quản lý state
+          cơ bản trong Flutter
+        </p>
+        <!-- /wp:paragraph -->
+      </div>
+
+      <!-- Sidebar phải -->
+      <div class="sidebar-right">
+        <h3>Table of Contents</h3>
+        <ul>
+          <li><a href="#realtime">Realtime Database</a></li>
+          <li><a href="#auth">Authentication</a></li>
+          <li><a href="#firestore">Cloud Firestore</a></li>
+          <li><a href="#functions">Cloud Functions</a></li>
+          <li><a href="#fcm">Cloud Messaging</a></li>
+          <li><a href="#hosting">Hosting</a></li>
+          <li><a href="#storage">Cloud Storage</a></li>
+          <li><a href="#performance">Performance Monitoring</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- TOC floating button -->
+    <button class="toc-button" onclick="toggleTOC()">TOC</button>
+    <div class="toc-modal" id="tocModal">
+      <ul>
+        <li><a href="#realtime" onclick="hideTOC()">Realtime Database</a></li>
+        <li><a href="#auth" onclick="hideTOC()">Authentication</a></li>
+        <li><a href="#firestore" onclick="hideTOC()">Cloud Firestore</a></li>
+        <li><a href="#functions" onclick="hideTOC()">Cloud Functions</a></li>
+        <li><a href="#fcm" onclick="hideTOC()">Cloud Messaging</a></li>
+        <li><a href="#hosting" onclick="hideTOC()">Hosting</a></li>
+        <li><a href="#storage" onclick="hideTOC()">Cloud Storage</a></li>
+        <li>
+          <a href="#performance" onclick="hideTOC()">Performance Monitoring</a>
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      function toggleTOC() {
+        const toc = document.getElementById("tocModal");
+        toc.style.display = toc.style.display === "block" ? "none" : "block";
+      }
+      function hideTOC() {
+        document.getElementById("tocModal").style.display = "none";
+      }
+    </script>
+  </body>
+</html>

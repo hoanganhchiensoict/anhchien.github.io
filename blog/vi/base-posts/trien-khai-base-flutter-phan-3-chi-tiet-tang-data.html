@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>
+      Quản lý và tương tác giữa các nguồn dữ liệu (remote và local), cấu hình
+      nhiều môi trường khác nhau Dev -> SIT -> UAT -> Prod
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7;
+        color: #333;
+        line-height: 1.6;
+        padding: 0 1rem;
+        margin: auto;
+      }
+
+      .container {
+        display: flex;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .sidebar-left,
+      .sidebar-right {
+        width: 20%;
+        padding: 20px;
+        position: sticky;
+        top: 0;
+        height: fit-content;
+        background-color: #ffffff;
+        border-radius: 8px;
+        margin: 10px;
+        align-self: start;
+      }
+
+      .content {
+        width: 60%;
+        background-color: #fff;
+        padding: 30px;
+        margin: 10px;
+        border-radius: 8px;
+      }
+
+      h1,
+      h2 {
+        color: #2c3e50;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin: 1rem 0;
+      }
+      ul {
+        padding-left: 1.2rem;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1rem 0;
+      }
+      td,
+      th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+      td:first-child {
+        background-color: #f9f9f9;
+      }
+      h3 {
+        color: #2c3e50;
+        margin-top: 30px;
+      }
+      a {
+        color: #007acc;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .sidebar-left h3,
+      .sidebar-right h3 {
+        margin-top: 0;
+      }
+
+      .sidebar-left ul,
+      .sidebar-right ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .sidebar-left li,
+      .sidebar-right li {
+        margin-bottom: 8px;
+      }
+
+      /* TOC Button (mobile) */
+      .toc-button {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #007acc;
+        color: white;
+        padding: 10px 14px;
+        border: none;
+        border-radius: 50px;
+        font-size: 14px;
+        z-index: 1000;
+        cursor: pointer;
+      }
+
+      .toc-modal {
+        display: none;
+        position: fixed;
+        bottom: 70px;
+        right: 20px;
+        background-color: white;
+        border: 1px solid #ddd;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        padding: 10px;
+        z-index: 1000;
+        width: 250px;
+      }
+
+      .toc-modal ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .toc-modal li {
+        margin: 6px 0;
+      }
+
+      /* Responsive layout */
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+          padding: 10px;
+        }
+        .sidebar-left,
+        .sidebar-right {
+          display: none;
+        }
+        .content {
+          width: 100%;
+          margin: 0;
+        }
+        .toc-button {
+          display: block;
+        }
+      }
+      .wp-block-code {
+        background-color: #282c34;
+        color: #ffffff;
+        padding: 1em;
+        border-radius: 8px;
+        overflow-x: auto;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 0.95em;
+        line-height: 1.5;
+        margin: 1.5em 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .wp-block-code code {
+        background: none;
+        color: inherit;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar trái -->
+      <div class="sidebar-left">
+        <h3>Categories</h3>
+        <ul>
+          <li><a href="#">Firebase</a></li>
+          <li><a href="#">Authentication</a></li>
+          <li><a href="#">Database</a></li>
+          <li><a href="#">Hosting</a></li>
+          <li><a href="#">Messaging</a></li>
+        </ul>
+      </div>
+
+      <!-- Nội dung chính -->
+      <div class="content">
+        <h1>Triển khai Base Flutter - Phần 3: Chi tiết - Tầng Data</h1>
+        <img
+          src="../../../pictures/blog/flutter_base/flutter_base3.png"
+          alt="Firebase"
+        />
+        <!-- Nội dụng tiếp -->
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">I. Nhiệm vụ</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Nhiệm vụ của tầng này chính là việc quản lý và tương tác giữa các
+          nguồn dữ liệu (remote và local).
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh6.googleusercontent.com/VdVCMGn7j7KSvjdzAkTKH_A7XjTBSGObhONcK8bSEi8RceSbcYNgkrAmZJstw3ThpnPZhuG_3UO98xYaVctrVoWYh1I5co0S-xtHiaD-qIDNa8VBu4pg-hFQHTVIKBt9GTT1yalHiAZri3pa0eLfLw0"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">II. Các công việc cần xử lý</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Đi từ dưới lên trên chính là các công việc mà chúng ta phải xử lý được
+          ở tầng này:&nbsp;
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list {"ordered":true} -->
+        <ol>
+          <!-- wp:list-item -->
+          <li>
+            Triển khai được trên nhiều môi trường khác nhau Dev -&gt; SIT -&gt;
+            UAT -&gt; Prod
+          </li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>Triển khai được base network để call API</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>Tạo models có sử dụng auto generate code</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>Triển khai repositories</li>
+          <!-- /wp:list-item -->
+        </ol>
+        <!-- /wp:list -->
+
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">III. Chi tiết xử lý</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>Bắt đầu xử lý từng việc 1 thôi nhỉ:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">
+          1. Triển khai các môi trường khác nhau, đi từ DEV -&gt; SIT -&gt; UAT
+          -&gt; PROD.
+        </h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Các ứng dụng chúng ta triển khai đều đi từ các bước phát triển xong
+          rồi đẩy cho Tester kiểm thử rồi mới thực hiện Golive, tương ứng chúng
+          ta cũng sẽ có các môi trường khác nhau. Chính vì vậy, việc chuyển đổi
+          giữa các môi trường linh hoạt là điều cần thiết và trong base của dự
+          án mình xác định cần phải có.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Trên pub.dev có rất nhiều thư viện có thể hỗ trợ được việc này. Mình
+          lựa thư viện flutter_dotenv dựa theo lượt like và cách sử dụng nó cũng
+          rất đơn giản.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          <strong>Khai báo các môi trường</strong>: Mình tạo thư mục assets
+          trong root project -&gt; tạo thư mục env để quản lý các môi trường.
+          Trông sẽ như thế này:
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh4.googleusercontent.com/K5aLdIgXgBRyn2PMYFPvwvYiCFIgU7Rd7tAc0ME5NGnDWG_l43zPLrKwtDonP-hs-se26qbw4c9w05BsudrLEEYzL8vPXiW_tdsxtakNJO26FtBdgFIcjFTtIWguId6RGKBmf86uFSYZyeX2oVGpPAA"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Trong .env chỉ bao gồm 1 dòng ENV=prod. Giá trị ENV được set theo các
+          môi trường mà bạn muốn build: dev, sit, uat, prod
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh3.googleusercontent.com/Agx5CRxS-e9sKe2HE6c2DL1zTS4MECLn31UmLwErJicB4mI4we4Zbz431bIvgvVIRIsVH2nLykwbSqjU2ocdJu5X3rw8fVAdnoXzG9tCZmHdYbG190gfs0eiYao66nY4cBMQDPYornpze8KWacJc6fI"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>Còn trong các file .env.dev .env.ida .env.prod thì chứa những gì?</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh5.googleusercontent.com/Xyerkeo-W88S0JjhqABewvuyWyVMmEVscFsYe4YqDcNwMoJR5lXWUG71rSZzLUby_E2ehRLtCnqVS43BVHLtzKcHzu0hPBRZpom5RyZ1eW0X1Kh4WPFzBTlDz0raxZ7Q0X3nhX47RqtLFQtZNZleW6s"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Đó chính là các đầu domain mà ứng dụng của bạn cần kết nối với BE, ở
+          đây mình có API_AUTH, nếu có thêm nhiều BE cần kết nối thì bạn có thể
+          thêm các domain khác tương ứng ở đây.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          <strong>Lấy dữ liệu:</strong> Khai báo các môi trường xong rồi giờ là
+          tới việc lấy dữ liệu các môi trường tương ứng. Mình tạo 1 class Env
+          nằm trong utils để tiến hành việc khởi tạo trong main và truy xuất các
+          đầu domain tương ứng như sau:
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh5.googleusercontent.com/XU15H05mvS-EcpGLfFy-zRSrsBFGsdYS5Q6vioIh6lNgkHNQ8bgpWLmezI26mZkWYo3Ur3pGVwXY65ZTJ11lG0hcK3znrOTSdFbBQ8J7cU3pxPDJQAdHZpx_wbRrc1RAPb3yedSZNvTDR3ndCsUDz9s"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Và thực hiện call await Env.init() trong main là hoàn tất việc setup.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">
+          2. Triển khai base network để gọi API và tương tác với Backend
+        </h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>Để hoàn thiện được base network chúng ta cần phải:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>Lựa chọn thư viện để kết nối với BE qua API</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>
+            Triển khai BaseService bao gồm: base GET, POST, PUT, DELETE, header
+          </li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>
+            Xử lý các case error trong base service, hoàn tất việc trả data trên
+            base network&nbsp;
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Ban đầu mình sử dụng thư viện http của dart, nhưng sau đó thì chuyển
+          đổi sang dio để dùng vì tiện lợi trong việc truyền tải binary data.
+          Việc phân tách đầy đủ các lớp khiến cho việc chuyển đổi vô cùng đơn
+          giản, mình chỉ tiến hành sửa đổi 1 chút do sự khác biệt giữa 2 thư
+          viện ở trong base service mà không ảnh hưởng tới bất kỳ các tầng/lớp
+          khác.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Việc quan trọng nhất ở đây chính là triển khai được BaseService và xử
+          lý hết các exception và trả dữ liệu lên các lớp phía trên. Mình có mô
+          hình sơ bộ cho phần này như sau:
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh4.googleusercontent.com/cRfs6hIbjpKwF-Nb9MwWAidwpHhemkW9e9HGJa1W0ns-iofevFcBbA9yE6EuYsZPxysgt82WGhULpTCTP6J_LZxXl0CUdjNXVLWAFyB5ihNN6Mi6oqyYubvSEi7smUrpgoZwBN45Qp26QF1IzXVjFEU"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Như vậy, nhìn vào sơ đồ mình sẽ tạo ra class BaseService, nó sẽ chứa
+          base các method get, put, post, delete và trả về dữ liệu được mô tả
+          trong class ServiceResponse.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Dữ liệu được trả về là ServiceResponse bao gồm: Trạng thái thành
+          công/thất bại, dữ liệu khi thành công và lỗi nếu thất bại
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh5.googleusercontent.com/84Fn2RUqNK2o9bbxygtj6jJDtvo7xm_g0prpXbmBCHoKrVvuHEx5cC-08MnFPs2IlCZpJ6Db_4t1gvqmdTbrgRe7BYs6OZay9Rhge8wJpHbirXDIFWQaiyA2st3qXmPczIOgLNPe6hg_Uw4BAAi4VYQ"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Trong đó thì có chứa BaseException là các exception mà mình tự định
+          nghĩa khi call API thất bại, bao gồm: BadRequestException,
+          ForbiddenException, FetchDataException, ApiNotRespondingException,
+          UnAuthorizedException, … và có thể thêm nhiều case exception mà các
+          bạn muốn check thêm.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh4.googleusercontent.com/tCjxfUlB_lHoLGD0LIgIJXKfacloVEqvfGa-9Hd5UrA5i4fjzE7lAf1bOC67By_dJLkwZXQUD99rd8KdF4Xl7lWTBszNNBaJg3tqTItEb_n1q5_BbjEsPNeQDGqp9atsSUfEhs6rhIDtEkDmHqzon7Y"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Công tác mô tả đối tượng ServiceResponse mà BaseService trả về đã
+          xong, giờ ta tiến hành việc hoàn thiện nốt các method GET, POST, PUT,
+          DELETE và xử lý tất cả các trường hợp lỗi xảy ra nếu có thể khi gọi
+          API thôi.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh3.googleusercontent.com/2t6ayh8Q3q5zGUlYDwGIlj2SfZrcX4_aPo7IILk3k3CmgyNy9FmUB5pZsXVMzO-QtkNy2byatfOY_Aayyc2XxSEG-9AZyqTxhbljR5Fjtf8w5e7u1u2xxB6T6UOeAuPHvQdhJ0r9Tuy4F_u-EFZ-qzE"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Không biết các bạn có thắc mắc trong _handleErrorDio kia là chứa những
+          gì không? Hay là mọi người đã hình dung được đó chính là nơi mà các
+          Exception còn lại sẽ được chúng ta xử lý. Ví dụ như nếu call api bị
+          timeout thì ta sẽ trả về lỗi ApiNotRespondingException, mất kết nối
+          internet thì trả về FetchDataException, …
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh6.googleusercontent.com/s3D2a3JXLkYvkAJT05gVVx59A1r-e6HdYf9Di3Wki8Aduzt_3Z1XkBJ9LR3ZGHerqaTt4kMZtrN0tZzE2n93jJ2XZO8SR4gl7Tx-27phDkaCNkx6pSVcPDko6zy5FOm0xx0-WhzRIz5kyfrKW2xKkVA"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Triển khai xong BaseService rồi, giờ trong folder datasource_remote sẽ
+          có các service tương ứng và chỉ call api rồi trả response cho
+          repositories. Ví dụ luồng login mình có AuthService có chứa 2 api là
+          login và registerFcm:<br /><img
+            src="https://lh6.googleusercontent.com/x03LOsaePN0AMuFuZDYvdxus76WjyAYZLnKRgCrO58CZsNfVts1aZjE4W9lAwCSt2WUnW8SeUMLuzHzmzd0BSdtixBoDX52_pOeJIwkRtcSgvegQBRAIgGGOItVt3_2_7DA_D1VqsAYcv1dLVKz0sqU"
+            width="545"
+            height="201"
+          />
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">
+          3. Triển khai models có sử dụng auto generate code
+        </h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Dart là ngôn ngữ hướng đối tượng, chính vì vậy mà chúng ta cần có
+          models để mô tả cho các đối tượng request và response. Và để quá trình
+          cast dữ liệu từ API về được tự động hơn mình có sử dụng freezed để
+          generate code tương ứng cho models. Các class request và response của
+          mình sẽ tương tự như sau:
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh5.googleusercontent.com/b7SPkZ5IYgYmP15hERjqJThHBgubh28s4ZQasmOYQKatMITI9nR3VEXSLc-fzSuaT3OtPIGkq3ggBiZX9zTQpdxkDhsqQUOgLUycvn4GKw1Bi4_HLOuwg4kebcaYi16ap0dvd1ARfGVeSvd43sD89LY"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">4. Triển khai repositories implement</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Bài này đã rất dài rồi nên phần này mình để lại và xử chúng kèm với
+          interface repositories trong bài sau nha. Tại đấy mình sẽ triển khai
+          và giải thích thêm làm sao để có thể tự động cast dữ liệu về Object mà
+          mình mong muốn trong repositories
+        </p>
+        <!-- /wp:paragraph -->
+      </div>
+
+      <!-- Sidebar phải -->
+      <div class="sidebar-right">
+        <h3>Table of Contents</h3>
+        <ul>
+          <li><a href="#realtime">Realtime Database</a></li>
+          <li><a href="#auth">Authentication</a></li>
+          <li><a href="#firestore">Cloud Firestore</a></li>
+          <li><a href="#functions">Cloud Functions</a></li>
+          <li><a href="#fcm">Cloud Messaging</a></li>
+          <li><a href="#hosting">Hosting</a></li>
+          <li><a href="#storage">Cloud Storage</a></li>
+          <li><a href="#performance">Performance Monitoring</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- TOC floating button -->
+    <button class="toc-button" onclick="toggleTOC()">TOC</button>
+    <div class="toc-modal" id="tocModal">
+      <ul>
+        <li><a href="#realtime" onclick="hideTOC()">Realtime Database</a></li>
+        <li><a href="#auth" onclick="hideTOC()">Authentication</a></li>
+        <li><a href="#firestore" onclick="hideTOC()">Cloud Firestore</a></li>
+        <li><a href="#functions" onclick="hideTOC()">Cloud Functions</a></li>
+        <li><a href="#fcm" onclick="hideTOC()">Cloud Messaging</a></li>
+        <li><a href="#hosting" onclick="hideTOC()">Hosting</a></li>
+        <li><a href="#storage" onclick="hideTOC()">Cloud Storage</a></li>
+        <li>
+          <a href="#performance" onclick="hideTOC()">Performance Monitoring</a>
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      function toggleTOC() {
+        const toc = document.getElementById("tocModal");
+        toc.style.display = toc.style.display === "block" ? "none" : "block";
+      }
+      function hideTOC() {
+        document.getElementById("tocModal").style.display = "none";
+      }
+    </script>
+  </body>
+</html>

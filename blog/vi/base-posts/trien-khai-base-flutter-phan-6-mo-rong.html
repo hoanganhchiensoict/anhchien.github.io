@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>
+      Xử lý thêm các vấn đề khác như: cấu trúc firebase với nhiều môi trường,
+      Dependency injection, bảo mật cho ứng dụng, trace lỗi,...
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7;
+        color: #333;
+        line-height: 1.6;
+        padding: 0 1rem;
+        margin: auto;
+      }
+
+      .container {
+        display: flex;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .sidebar-left,
+      .sidebar-right {
+        width: 20%;
+        padding: 20px;
+        position: sticky;
+        top: 0;
+        height: fit-content;
+        background-color: #ffffff;
+        border-radius: 8px;
+        margin: 10px;
+        align-self: start;
+      }
+
+      .content {
+        width: 60%;
+        background-color: #fff;
+        padding: 30px;
+        margin: 10px;
+        border-radius: 8px;
+      }
+
+      h1,
+      h2 {
+        color: #2c3e50;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin: 1rem 0;
+      }
+      ul {
+        padding-left: 1.2rem;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1rem 0;
+      }
+      td,
+      th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+      td:first-child {
+        background-color: #f9f9f9;
+      }
+      h3 {
+        color: #2c3e50;
+        margin-top: 30px;
+      }
+      a {
+        color: #007acc;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .sidebar-left h3,
+      .sidebar-right h3 {
+        margin-top: 0;
+      }
+
+      .sidebar-left ul,
+      .sidebar-right ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .sidebar-left li,
+      .sidebar-right li {
+        margin-bottom: 8px;
+      }
+
+      /* TOC Button (mobile) */
+      .toc-button {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #007acc;
+        color: white;
+        padding: 10px 14px;
+        border: none;
+        border-radius: 50px;
+        font-size: 14px;
+        z-index: 1000;
+        cursor: pointer;
+      }
+
+      .toc-modal {
+        display: none;
+        position: fixed;
+        bottom: 70px;
+        right: 20px;
+        background-color: white;
+        border: 1px solid #ddd;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        padding: 10px;
+        z-index: 1000;
+        width: 250px;
+      }
+
+      .toc-modal ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .toc-modal li {
+        margin: 6px 0;
+      }
+
+      /* Responsive layout */
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+          padding: 10px;
+        }
+        .sidebar-left,
+        .sidebar-right {
+          display: none;
+        }
+        .content {
+          width: 100%;
+          margin: 0;
+        }
+        .toc-button {
+          display: block;
+        }
+      }
+      .wp-block-code {
+        background-color: #282c34;
+        color: #ffffff;
+        padding: 1em;
+        border-radius: 8px;
+        overflow-x: auto;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 0.95em;
+        line-height: 1.5;
+        margin: 1.5em 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .wp-block-code code {
+        background: none;
+        color: inherit;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar trái -->
+      <div class="sidebar-left">
+        <h3>Categories</h3>
+        <ul>
+          <li><a href="#">Firebase</a></li>
+          <li><a href="#">Authentication</a></li>
+          <li><a href="#">Database</a></li>
+          <li><a href="#">Hosting</a></li>
+          <li><a href="#">Messaging</a></li>
+        </ul>
+      </div>
+
+      <!-- Nội dung chính -->
+      <div class="content">
+        <h1>Triển khai Base Flutter - Phần 6: Mở rộng</h1>
+        <img
+          src="../../../pictures/blog/flutter_base/flutter_base6.png"
+          alt="Firebase"
+        />
+        <!-- Nội dụng tiếp -->
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">I. Các công việc cần xử lý</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Trải qua các phần trên chúng ta đã xây dựng được 1 base khá hoàn chỉnh
+          cho ứng dụng Flutter rồi, nhưng khi làm về Mobile chúng ta còn thường
+          xuyên gặp thêm những việc như: Notification, Analytic, Secure, … Và ở
+          phần này mình sẽ triển khai thêm 1 vài đầu việc quan trọng như:
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>Firebase và cách cấu hình với nhiều môi trường khác nhau</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>
+            Xử lý state toàn ứng dụng và triển khai Dependency injection (DI)
+          </li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>Một vài vấn đề về securities</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>Tích hợp Sentry để phát hiện lỗi dễ dàng</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>Tuân thủ lint để code sạch hơn</li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">II. Chi tiết xử lý</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">
+          1. Firebase và cách cấu hình với nhiều môi trường khác nhau
+        </h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Khi kết nối với Backend, chúng ta đã có quá nhiều môi trường rồi. Và
+          tương tự khi tích hợp Firebase vào ứng dụng, chúng ta cũng nên tách
+          biệt rõ ràng giữa môi trường prod vs dev. Ở đây mình chỉ triển khai
+          với 2 dạng build:
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>Build debug thì mặc định sẽ cấu hình sang firebase dev</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>Build release thì mặc định sẽ chuyển về firebase prod</li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Để làm được việc này tự động, chúng ta cần phải triển khai trên cả
+          Android và iOS với native code.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p><strong>Với Android:</strong></p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Để có thể chuyển đổi firebase ứng với các môi trường prod/dev, hướng
+          sử lý ở đây chính là trước khi project được build chúng ta sẽ triển
+          khai 1 task có thể copy được file google_service.json tương ứng với
+          môi trường prod/dev vào thư mục android/app/src.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>Đó là tư tưởng và hướng triển khai, cách làm cụ thể sẽ như sau:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            Copy file google_service.json tương ứng vào debug(chứa file dev) và
+            main(chứa file prod)
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh6.googleusercontent.com/Xaa_r43zNJR4x2H2djksMiW7tX8vv6K0UfU2cfkGdipVX-7AIly9oRYxYhwJN-ciZaGhknxXsidiETONhUi7yBVMQq5xTkVPzKNZo6KSHqPbnShLqI3Gwg33ORUbxQvWnIPBrEsOElgdE7f8AD-SfdA"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            Trong app/build.gradle: thêm task switchToDebug và switchToRelease
+            nhằm mục đích copy file khi ứng dụng bắt đầu build.<br /><img
+              width="483"
+              height="401"
+              src="https://lh3.googleusercontent.com/gk4sRFdUlsiurY06851cM8Kp111ZpKUoItavNfzFJJ3dSctMgnlFMhVPGFEVwglmqMkyfHQAhZFV4rV_RvLTJO_a5XS69nlXM7UVzu4BCI0hW8z2m32zzLc2WRwa-q1oVmKaxJwZGGZgN1__AePR-d0"
+            />
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>
+          <br /><strong>Với iOS:</strong><br />Cũng với tư tưởng của Android,
+          chúng ta tạo thư mục Firebase chứa GoogleService-Info.plist dev/prod
+          và copy file tương ứng với môi trường.<br /><img
+            width="298"
+            height="353"
+            src="https://lh3.googleusercontent.com/9vFAvGH4JsME2Me6CbWjwSmem3zJFWqWVIyJDeWsgyQnY-kBw-_NMrIMbn21o-MVTrGJPxAPHQGvOshU2OrbMqK52E-jSZvAYerGFM1z7zKdWR5_e9JwONcupPkfAhKrsmJtygpsR7QaVzrVvcdXfmE"
+          /><br />Trong Build Phases, mình tạo 1 Firebase setup run script và
+          kéo lên trên cho nó chạy đầu:<br /><img
+            width="538"
+            height="331"
+            src="https://lh4.googleusercontent.com/AKhQcEYhw8d6kPIDF4nnghvBNQuUHuj2CM3PO-RCWB0rfGhn-LXbFkRotcS-5AMerGjxcm_smPqA7d2UHW7vnzRutwVYo6ZdxL8LLkBTw9gHClmwu-634PRzMWbxkfV7od0F7Qje-bpYuc-7quUv5v4"
+          />
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>Nội dung chi tiết:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:code -->
+        <pre
+          class="wp-block-code"
+        ><code>if &#91; "${CONFIGURATION}" == "Release" ]; then
+cp -r "${PROJECT_DIR}/Runner/Firebase/GoogleService-Info-PROD1.plist" "${PROJECT_DIR}/Runner/GoogleService-Info.plist"
+echo "Production GoogleService-Info.plist copied"
+elif &#91; "${CONFIGURATION}" == "Debug" ]; then
+cp -r "${PROJECT_DIR}/Runner/Firebase/GoogleService-Info-IDA.plist" "${PROJECT_DIR}/Runner/GoogleService-Info.plist"
+echo "IDA GoogleService-Info.plist copied”
+fi</code></pre>
+        <!-- /wp:code -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">
+          2. Xử lý state toàn ứng dụng và triển khai Dependency injection (DI)
+        </h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Dependency Injection (DI) là một nguyên tắc trong phát triển phần mềm
+          và thiết kế kiến trúc để quản lý các phụ thuộc (dependencies) giữa các
+          thành phần trong ứng dụng một cách dễ dàng. Ở trong base mình sẽ sử
+          dụng nó để quản lý các phụ thuộc về:
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>Đối tượng về Dio</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>Các đối tượng ở tầng data: service, repositories</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>Các use cases</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>Các đối tượng global state: cubit global</li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Các đối tượng về dio, service, repositories, use case mình sử dụng DI
+          để cấu hình sự phụ thuộc và khi cần có thể truy cập được ngay để sử
+          dụng.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh6.googleusercontent.com/dULKJBLo4bpX56I-u4g2Zd43pwabRlRKae7EF8_VMeWtkQEN4KQTSUzXHbQHTV3jKEepygjkoawrK_zuqp2WX0ht63sjMKTbAtCPb1eNnQOFLHuYZwPwWDQ4-KCvBrklYGmCfJ9Unecq-QaEZl2aHfk"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Còn state toàn ứng dụng là gì? Chắc hẳn các bạn cũng đã từng gặp nhiều
+          trường hợp tương tự như thế này: Thông tin cá nhân người dùng sau khi
+          đăng nhập có tên, ngày sinh, avatar, … Phần thông tin này được hiển
+          thị ở rất nhiều nơi trên ứng dụng, nào là trang chủ hiện avatar và
+          tên, nào là trang cá nhân cũng hiện đủ thông tin,... Và chúng ta có 1
+          nút để thực hiện việc cập nhật thông tin cá nhân đó. Mặc nhiên tất cả
+          những nơi đang hiển thị dữ liệu cũng cần phải update theo phải không?
+          Và với những dữ liệu như này mình hay gọi là global state. Để có được
+          dữ liệu lưu trữ thông tin user kia, mình có 1 AuthCubit với AuthState
+          tương ứng và sử dụng DI để tạo singleton cho nó, các thành phần giao
+          diện cần sử dụng thông tin của user có thể thêm BlocProvider với value
+          chính là singleton AuthCubit.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">3. Một vài vấn đề về securities</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Vấn đề securities thì rất là rộng, nhưng khi làm App rất nhiều người
+          lưu trữ thông tin không an toàn ví dự như lưu trữ token, refresh-token
+          vào bộ nhớ SharedPreferences. Chúng ta có thể làm tốt hơn khi lưu trữ
+          các thông tin nhạy cảm vào 1 bộ nhớ được mã hóa (keystore/keychain)
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">
+          4. Tích hợp Sentry để phát hiện lỗi dễ dàng
+        </h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Ứng dụng đẩy lên prod và tiếp cận tới hàng ngàn người, lúc này có vô
+          số các bug tiềm tàng mà trong quá trình phát triển chúng ta đã bỏ qua,
+          việc tích hợp sentry để bắt được các lỗi trên là rất tiện lợi. Chúng
+          ta cũng nên chia rõ giữa sentry môi trường prod vs dev ra nhé.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">5. Tuân thủ lint để code sạch hơn</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Dự án có rất nhiều người cùng xây dựng, để thống nhất theo 1 style thì
+          việc thêm nhiều rules trong lint để mọi người cùng tuân thủ là 1 điều
+          tốt và nên làm nha.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">III. Tổng kết</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Như vậy, trải qua 4 phần chính, chúng ta đã xây được 1 base tương đối
+          hoàn thiện. Rất vui khi được các bạn đồng hành tới tận đây, mình cũng
+          mới chuyển sang làm với Flutter nên có thể còn nhiều thiếu sót, mong
+          nhận được sự góp ý từ mọi người.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          <strong><strong>Mình cảm ơn!</strong></strong>
+        </p>
+        <!-- /wp:paragraph -->
+      </div>
+
+      <!-- Sidebar phải -->
+      <div class="sidebar-right">
+        <h3>Table of Contents</h3>
+        <ul>
+          <li><a href="#realtime">Realtime Database</a></li>
+          <li><a href="#auth">Authentication</a></li>
+          <li><a href="#firestore">Cloud Firestore</a></li>
+          <li><a href="#functions">Cloud Functions</a></li>
+          <li><a href="#fcm">Cloud Messaging</a></li>
+          <li><a href="#hosting">Hosting</a></li>
+          <li><a href="#storage">Cloud Storage</a></li>
+          <li><a href="#performance">Performance Monitoring</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- TOC floating button -->
+    <button class="toc-button" onclick="toggleTOC()">TOC</button>
+    <div class="toc-modal" id="tocModal">
+      <ul>
+        <li><a href="#realtime" onclick="hideTOC()">Realtime Database</a></li>
+        <li><a href="#auth" onclick="hideTOC()">Authentication</a></li>
+        <li><a href="#firestore" onclick="hideTOC()">Cloud Firestore</a></li>
+        <li><a href="#functions" onclick="hideTOC()">Cloud Functions</a></li>
+        <li><a href="#fcm" onclick="hideTOC()">Cloud Messaging</a></li>
+        <li><a href="#hosting" onclick="hideTOC()">Hosting</a></li>
+        <li><a href="#storage" onclick="hideTOC()">Cloud Storage</a></li>
+        <li>
+          <a href="#performance" onclick="hideTOC()">Performance Monitoring</a>
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      function toggleTOC() {
+        const toc = document.getElementById("tocModal");
+        toc.style.display = toc.style.display === "block" ? "none" : "block";
+      }
+      function hideTOC() {
+        document.getElementById("tocModal").style.display = "none";
+      }
+    </script>
+  </body>
+</html>

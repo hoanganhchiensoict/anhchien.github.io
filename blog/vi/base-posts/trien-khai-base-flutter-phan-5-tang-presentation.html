@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <title>
-      Bảo mật Mượt Mà: Khám Phá Sức Mạnh của Firebase Authentication để Xác Thực
-      Người Dùng Hiệu Quả và An Toàn trong Ứng Dụng Của Bạn!
+      Tổ chức code theo feature-first, xử lý các exception, navigator trong ứng
+      dụng, triển khai đa ngôn ngữ và các base component chung
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
@@ -196,170 +196,84 @@
 
       <!-- Nội dung chính -->
       <div class="content">
-        <h1>Firebase Authentication</h1>
+        <h1>Triển khai Base Flutter - Phần 5: Tầng Presentation</h1>
         <img
-          src="../../../pictures/blog/firebase/firebase4-authentication.png"
+          src="../../../pictures/blog/flutter_base/flutter_base5.png"
           alt="Firebase"
         />
         <!-- Nội dụng tiếp -->
         <!-- wp:heading -->
-        <h2 class="wp-block-heading">I. Tổng quan</h2>
+        <h2 class="wp-block-heading">I. Nhiệm vụ</h2>
         <!-- /wp:heading -->
 
         <!-- wp:paragraph -->
         <p>
-          Firebase Authentication hoạt động theo mô hình client-server, nơi
-          người dùng truy cập và tương tác với ứng dụng của bạn là phía client,
-          và dịch vụ Firebase Authentication được triển khai trên server
-          Firebase. Dưới đây là cách Firebase Authentication hoạt động chi tiết:
+          Nhiệm vụ của tầng này là hiển thị giao diện và tương tác với người
+          dùng.&nbsp;
         </p>
         <!-- /wp:paragraph -->
 
-        <!-- wp:paragraph -->
-        <p>Đăng Ký và Đăng Nhập:</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:list -->
-        <ul>
-          <!-- wp:list-item -->
-          <li>
-            Khi người dùng muốn sử dụng ứng dụng của bạn, họ có thể đăng ký (nếu
-            chưa có tài khoản) hoặc đăng nhập (nếu đã có tài khoản).
-          </li>
-          <!-- /wp:list-item -->
-
-          <!-- wp:list-item -->
-          <li>
-            Cho phép người dùng sử dụng các phương thức đăng nhập khác nhau như
-            email/mật khẩu, số điện thoại, hoặc cả đăng nhập bằng tài khoản
-            Google, Facebook, Twitter, v.v.
-          </li>
-          <!-- /wp:list-item -->
-        </ul>
-        <!-- /wp:list -->
-
-        <!-- wp:paragraph -->
-        <p>SDK Integration:</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:list -->
-        <ul>
-          <!-- wp:list-item -->
-          <li>
-            Ứng dụng của bạn sử dụng Firebase Authentication SDK để tích hợp
-            dịch vụ xác thực vào mã nguồn.
-          </li>
-          <!-- /wp:list-item -->
-
-          <!-- wp:list-item -->
-          <li>
-            Firebase cung cấp SDK cho nhiều nền tảng như Android, iOS, và web.
-          </li>
-          <!-- /wp:list-item -->
-        </ul>
-        <!-- /wp:list -->
-
-        <!-- wp:paragraph -->
-        <p>Token-Based Authentication:</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:list -->
-        <ul>
-          <!-- wp:list-item -->
-          <li>
-            Khi người dùng đăng nhập thành công, Firebase Authentication tạo một
-            JSON Web Token (JWT) chứa thông tin về người dùng.
-          </li>
-          <!-- /wp:list-item -->
-
-          <!-- wp:list-item -->
-          <li>
-            JWT này được gửi và lưu trữ an toàn trên thiết bị người dùng và được
-            sử dụng để xác thực truy cập khi giao tiếp với các dịch vụ và tài
-            nguyên của Firebase.
-          </li>
-          <!-- /wp:list-item -->
-        </ul>
-        <!-- /wp:list -->
-
-        <!-- wp:paragraph -->
-        <p>Real-Time Authentication State:</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:list -->
-        <ul>
-          <!-- wp:list-item -->
-          <li>
-            Firebase cung cấp một cơ chế để theo dõi trạng thái xác thực người
-            dùng trong thời gian thực.
-          </li>
-          <!-- /wp:list-item -->
-
-          <!-- wp:list-item -->
-          <li>
-            Khi trạng thái xác thực thay đổi (đăng nhập hoặc đăng xuất), sự kiện
-            này được phát ra và ứng dụng có thể phản ứng tức thì.
-          </li>
-          <!-- /wp:list-item -->
-        </ul>
-        <!-- /wp:list -->
-
-        <!-- wp:paragraph -->
-        <p>
-          Firebase Authentication cung cấp một giải pháp toàn diện và dễ tích
-          hợp cho việc quản lý xác thực người dùng. Nó không chỉ giúp bảo mật
-          ứng dụng của bạn mà còn tăng cường trải nghiệm người dùng bằng cách
-          cung cấp các phương tiện đăng nhập thuận lợi và an toàn
-        </p>
-        <!-- /wp:paragraph -->
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh3.googleusercontent.com/w3C8o6OEKEoqwBqBlluAKFsB4rKW6RDeZX9pXlXQPdDKbl63l2X1kJKGCJfmi7PSPnVqMxZyqz819tVCbLQpU0xlWigyNbYYF69_mxSUJEtqapUovpKdGVusRtUIQzClSBoCH_YVImzLLbPVkT8nXkw"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
 
         <!-- wp:heading -->
-        <h2 class="wp-block-heading">II. Tích hợp với Flutter</h2>
+        <h2 class="wp-block-heading">II. Các công việc cần xử lý</h2>
         <!-- /wp:heading -->
 
         <!-- wp:paragraph -->
         <p>
-          Mình sẽ demo đơn giản luồng Authentication với email &amp;
-          password.&nbsp;
+          Ở tầng này ta sẽ tổ chức code theo feature-first, sẽ có các feature
+          bao gồm các bloc, state, widget và chúng được dựng lên thì tùy theo
+          đặc thù của mỗi dự án. Để hoàn thiện nốt base phần này chúng ta có vài
+          đầu việc cần xử lý như sau:
         </p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:paragraph -->
-        <p>
-          Vào Firebase Authentication -&gt; Sign-in method -&gt; Email/Password
-          -&gt; Enable
-        </p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:image -->
-        <figure class="wp-block-image">
-          <img
-            src="https://lh7-us.googleusercontent.com/LtJNcQas0_7T2LvvhB26dnXcqOG-As_4gNC0i90qqHpZ-zeQP4iJmr-7_0r4BWDTQjLrhYdxk1c2aTuooAP9Cl4zQxUicsvKHTEctdet-QIz4MUeqbDgA2Yls9VR-4h1JeHOa_WQGRkrwmGL5qtuAGQ"
-            alt=""
-          />
-        </figure>
-        <!-- /wp:image -->
-
-        <!-- wp:paragraph -->
-        <p>Thêm thư viện:</p>
         <!-- /wp:paragraph -->
 
         <!-- wp:list -->
         <ul>
           <!-- wp:list-item -->
-          <li>flutter pub add firebase_auth</li>
+          <li>Cấu trúc theo feature-first</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>Điều hướng giữa các màn hình</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>Show lỗi các exception (ở các tầng dưới) nếu cần trên UI</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>Triển khai đa ngôn ngữ</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>
+            Triển khai các base component (các button, text chung, …), base
+            styles
+          </li>
           <!-- /wp:list-item -->
         </ul>
         <!-- /wp:list -->
 
-        <!-- wp:paragraph -->
-        <p>Đầu tiên, chúng ta cần thêm được user, sử dụng:</p>
-        <!-- /wp:paragraph -->
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">III. Chi tiết xử lý</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">1. Cấu trúc theo feature-first</h3>
+        <!-- /wp:heading -->
 
         <!-- wp:image -->
         <figure class="wp-block-image">
           <img
-            src="https://lh7-us.googleusercontent.com/aDpsLuPf6kjRvfvj71Jjy5vTvnkuNHGZj897wEMJg7MdVUm1BPuLDhF6Zokx9q_1MiN5SskDtIFMjVM1fVyD8dFzUL9Lua2q6MTY6lsgNNOgccddcKZTBXAn_Co5-UvdEShYWG4zLY8nZTaX6ujhQzM"
+            src="https://lh4.googleusercontent.com/L7qcWgyte1ujH5O1YWHSlIE0UhvocOlELXWOzb_dzFLFRxU1rrhx6hg3GTQhbHoQ6d4_IrQlXz0HCviV3CvCdO9m0bfs12IRvRKPRRrp6DCBnhRQe-hDaLLBq6Yk8OMukU-apZFDkdFvmGANrbMNS5A"
             alt=""
           />
         </figure>
@@ -367,15 +281,32 @@
 
         <!-- wp:paragraph -->
         <p>
-          Sau khi thêm user ở Console -&gt; Authentication -&gt; Users chúng ta
-          sẽ thấy user đã được thêm thành công
+          Folder presentation chứa các feature tương ứng trong ứng dụng, trong
+          đó thì lại chứa các cấu trúc về bloc: quản lý state, components: chứa
+          các widget mà screen chia nhỏ, các screen đại diện cho các màn tương
+          ứng.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">
+          2. Show lỗi các exception (ở các tầng dưới) nếu cần trên UI
+        </h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Ở các tầng Domain/Data sau khi xử lý logic/lấy dữ liệu về tầng
+          Presentation, sẽ có những lỗi gặp phải trong quá trình xử lý này mà
+          chúng ta cần thông báo lên màn hình cho người dùng được biết. Ví dụ
+          như hiện thông báo khi api kết nối thất bại,...&nbsp;
         </p>
         <!-- /wp:paragraph -->
 
         <!-- wp:image -->
         <figure class="wp-block-image">
           <img
-            src="https://lh7-us.googleusercontent.com/EKKfrPaK5DRMMXdVvsiit2_h4V2jUlbY0ZezYe3twqA1q6SgBFxtlF7lI-2bU7O3nPR8PS0GiE8fEy-dw-BIbUEwWxbKzrd7kARxIiwly655zKsQpTr_94h78unZaQnS4dIu7NTVF7CADNGt7X3XwLQ"
+            src="https://lh6.googleusercontent.com/3xh6hDWUJMb6AULWgSyvA1l5ZK3KuI9glMUgLzckAjsMjcWIkLu_3IK7uK3Rq5hr9qVquQGbXeYlPNLxC2LDkiyrhUSpfJmypXdxsv1foqgBofORjD1A9VGxVn4XU_SyRMRVkxpbJFQGFrcHMORJcVg"
             alt=""
           />
         </figure>
@@ -383,27 +314,118 @@
 
         <!-- wp:paragraph -->
         <p>
-          User đã được tạo, giờ nếu đăng nhập cần xác thực, chúng ta sẽ sử dụng
+          Mình triển khai extension cho Future, như vậy các hàm Future trong
+          Bloc Cubit sau khi xử lý và trả về lỗi cho screen chỉ cần bắt
+          onCatchError là có thể hiển thị message lỗi tương ứng.
         </p>
         <!-- /wp:paragraph -->
 
         <!-- wp:image -->
         <figure class="wp-block-image">
           <img
-            src="https://lh7-us.googleusercontent.com/mWMTw7qlHvC69jmWOJ34_j-NUBl5smS67PHIRO-Vj8O50tuMQQqqBHRBPYIP_2Ryon4zKOjFTGCbrn9d5bNpQHtojqR7AbA33F4OKrRGkrOCaJJ4L_tozghK5ln-F8-A_mfkEvu8Mz0IXsws5na4lbU"
+            src="https://lh6.googleusercontent.com/aEv6nfZEAKkDZFxJXDy9E0deheYcrdeO3M40ENS9ovRcaQjcl22uHhGrM9492LUPPl0T79U8sbuCwkO3uqOScQOneqBg5MSydsYWKsunu-gyp-1g0_xtIJCCYuCRAe07pNrEKesYgnQPc-nB-J8tLRQ"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">3. Điều hướng giữa các màn hình</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Phần này mình sử dụng Navigator được cung cấp sẵn bởi Flutter, khá đơn
+          giản và tiện lợi khi sử dụng
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh6.googleusercontent.com/9LN-qTcyM3Ag_qialF_egVjRO7lpOpjQCJ9g21LBoYN1lIOizbIkHeJxKp2BGLMQTXGeAJj6mkhh3bGYen56GwcHirLTMdH8BpvfBWiUv-ZCFbsswXEZpGKEfij7igVMS_JKnv14BTekl4WsNazrc88"
             alt=""
           />
         </figure>
         <!-- /wp:image -->
 
         <!-- wp:paragraph -->
-        <p>Chạy debug và kiểm tra kết quả nhận được:</p>
+        <p>
+          Mình tách ra 1 class nhằm mục đích tổng hợp tất cả các màn hình mà ứng
+          dụng có như trên. Và chúng ta chỉ cần khai báo nó trong main với param
+          key onGenerateRouter.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Khi điều hướng mình chỉ chuyển tới các Screen name và params tương
+          ứng:<img
+            width="509"
+            height="53"
+            src="https://lh4.googleusercontent.com/aPT3BpSmrvkd19UkPUPBohNpRhv_-gNkFj4HiH-CxPt4o7E35_iYe0yFHinHqWdntD-jh536s95yQsnjt2BZPREsTPv7i4l6uDBfRDoy3BX93Cfqxvz7wiav9T7_SqkQv3hpszzw4atJyyOLi9Eyw88"
+          />
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">4. Triển khai đa ngôn ngữ</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Ứng dụng mobile thường cho phép chuyển đổi nhiều ngôn ngữ, nên việc
+          tính trước và implement đa ngôn ngữ trong base là cần thiết. Có rất
+          nhiều lib hỗ trợ cho việc này, cách sử dụng của chúng cũng rất đơn
+          giản và bạn chỉ việc lựa chọn sao cho phù hợp với dự án của mình.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">
+          5. Triển khai các base component (các button, text chung, …), base
+          styles
+        </h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Có rất nhiều các widget sẽ xuất hiện đi xuất hiện lại trong ứng dụng
+          của bạn, để hạn chế việc viết chúng nhiều lần thì chúng ta nên tạo
+          thành các base_components và tái sử dụng chúng. Như ở phần a, chúng ta
+          cũng có components trong các feature, khác biệt ở đây chính là
+          base_component sẽ chứa các widget được sử dụng cho toàn bộ ứng dụng,
+          còn components trong feature chỉ mục đích chia nhỏ, tái sử dụng widget
+          trong các screen độc lập.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>Còn về base styles sẽ bao gồm: colors, fonts, icons:</p>
         <!-- /wp:paragraph -->
 
         <!-- wp:image -->
         <figure class="wp-block-image">
           <img
-            src="https://lh7-us.googleusercontent.com/APyFpkjrid3wQUn_lgQV6s8SmVY9aPqnIPXYmFLRW4u4VHEdnc-mgZ-A1rVB0KqJExFKXPsWy_Q67aymhjrY0cOySHR8cHO6g07dPwHxKf11OE7FZ9NZLlwyLLibwOvQbA-x5WNWpDg3fyji5AVuSlc"
+            src="https://lh4.googleusercontent.com/aCu9By-vyyd5EckwZoSK2thQiWYVavJgiRsj86MGkzK5BfK_PC_P99a4Wfu6wvK7CcyNXlJJkjotGeH-3xtbYbHWJS1-k1jFyc-1pHvH7V8YRC7f7yoXUt268RQD_E9KMRbj0xWl4mlsv3UV8ZGTi8U"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh6.googleusercontent.com/S1p5NDcEzueeuaMmjam1LAVIs0MNNJE-PILstb3y6EP1sun5PhxOwslll76ERJEwSD2HYu0yTO3V1JE4U745CHV336dP5sq8WtCU_zQ8dzm-qnDK-TeIR52wkSpwFIrfkhDTLspEqejzj4ZwuXWO9UQ"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh4.googleusercontent.com/3M4oID3P5rpAhK3q7iokYH4-9dN4XZD4CPl7DEWbQij-2KxaEBzY-cOpXiHsvWm4CN2z1gL3U-UqebETaHt2KcPBZ1kSUc4qlAmLK30OOhchOgc2FGBfVWwD7xW1CWp09XaQoKZEYbcsCsu6aht-kDg"
             alt=""
           />
         </figure>

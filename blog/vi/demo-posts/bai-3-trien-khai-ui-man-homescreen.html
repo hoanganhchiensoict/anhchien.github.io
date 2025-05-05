@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <title>
-      Tối Ưu Hóa Triển Khai: Khám Phá Firebase App Distribution Cho Việc Phân
-      Phối Ứng Dụng Dễ Dàng
+      Phân tích giao diện và dựng lên được UI cơ bản. Học cách chia tách một
+      Widget lớn thành nhiều Widget nhỏ rồi tổng hợp lại.
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
@@ -196,105 +196,91 @@
 
       <!-- Nội dung chính -->
       <div class="content">
-        <h1>Firebase Distribution</h1>
+        <h1>Bài 3: Triển khai UI màn HomeScreen</h1>
         <img
-          src="../../../pictures/blog/firebase/firebase9-distribution.png"
+          src="../../../pictures/blog/flutter_demo/flutter_demo3.png"
           alt="Firebase"
         />
         <!-- Nội dụng tiếp -->
         <!-- wp:heading -->
-        <h2 class="wp-block-heading">I. Tổng quan</h2>
+        <h2 class="wp-block-heading">I.Phân tích giao diện</h2>
         <!-- /wp:heading -->
 
         <!-- wp:paragraph -->
         <p>
-          Firebase Distribution là một trong những tính năng mạnh mẽ của nền
-          tảng Firebase, được thiết kế để giúp các nhà phát triển quản lý và
-          phân phối ứng dụng di động của họ một cách hiệu quả và tiện lợi. Được
-          xây dựng trên cơ sở hạ tầng Firebase mạnh mẽ, Distribution mang lại
-          một loạt các tính năng và lợi ích cho quá trình triển khai ứng dụng.
-          Firebase Distribution phù hợp trong quá trình phân phối ứng dụng cho
-          đội ngũ tester nội bộ của tổ chức.
+          <img
+            src="https://lh7-us.googleusercontent.com/qCiEhIKITjiFPn-TfnuLYMdeXEYDjGwB78u4nreLtbddeOzFoQvaR7363CbpMaRbBg9eBsOommE5meVbVGfcrmomXbeyXK7MaAMgzD6vhMeHo34mioyMPEyMfpNmnY9YOgJzchzfW3Iiizzju33xKTE"
+            width="223"
+            height="369"
+          />
         </p>
         <!-- /wp:paragraph -->
 
         <!-- wp:paragraph -->
-        <p>Các lợi ích khi sử dụng:</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:paragraph -->
-        <p>Phân Phối Nhanh Chóng và Dễ Dàng</p>
+        <p>
+          Nhìn vào giao diện ta có thể tách thành các Widget tổng quan như sau:
+        </p>
         <!-- /wp:paragraph -->
 
         <!-- wp:list -->
         <ul>
           <!-- wp:list-item -->
+          <li>Hình nền background ở dưới</li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>HeaderWidget chứa Icon IQ:&nbsp;</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>Widget mũi tên thể hiện trục ngang</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>Widget mũi tên thể hiện trục dọc</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
           <li>
-            Firebase Distribution giúp bạn phân phối ứng dụng nhanh chóng đến
-            các nhóm người thử nghiệm mà không cần thông qua các cửa hàng ứng
-            dụng chính thức.
+            Widget hiển thị danh sách các câu hỏi. Mỗi câu hỏi là 1 Widget nhỏ
           </li>
           <!-- /wp:list-item -->
         </ul>
         <!-- /wp:list -->
 
         <!-- wp:paragraph -->
-        <p>Quản Lý Nhóm Người Dùng</p>
+        <p>
+          Các thành phần giao diện có đè lên nhau, để xây dựng được thì mình
+          dùng Stack Widget
+        </p>
         <!-- /wp:paragraph -->
-
-        <!-- wp:list -->
-        <ul>
-          <!-- wp:list-item -->
-          <li>
-            Tạo và quản lý các nhóm người dùng mà bạn muốn chia sẻ ứng dụng.
-            Điều này giúp kiểm soát việc phân phối và thu thập phản hồi từ những
-            người quan trọng nhất cho sản phẩm của bạn.
-          </li>
-          <!-- /wp:list-item -->
-        </ul>
-        <!-- /wp:list -->
-
-        <!-- wp:paragraph -->
-        <p>Kiểm Soát Phiên Bản</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:list -->
-        <ul>
-          <!-- wp:list-item -->
-          <li>
-            Firebase Distribution giúp bạn kiểm soát phiên bản ứng dụng được
-            phân phối, giúp đảm bảo rằng những người nhận được phiên bản phù hợp
-            và đồng đều.
-          </li>
-          <!-- /wp:list-item -->
-        </ul>
-        <!-- /wp:list -->
 
         <!-- wp:heading -->
-        <h2 class="wp-block-heading">II. Triển khai</h2>
+        <h2 class="wp-block-heading">II.Tách các Widget nhỏ</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">
+          1. Dựng background, widget header, axis
+        </h3>
         <!-- /wp:heading -->
 
         <!-- wp:paragraph -->
         <p>
-          Firebase Distribution có nhiều cách triển khai như thông qua Firebase
-          Console, Firebase CLI, fastlane, Rest API, hay với Gradle với Android.
-          Trong bài này mình hướng dẫn cách triển khai đơn giản với Firebase
-          Console.
+          Như trong ảnh ta có hàm build return Container chứa ảnh nền ở dưới
+          cùng, trong Stack chứa lần lượt các Widget: HeaderHomeWidget,
+          HomeHorizontalAxisWidget, HomeVerticalAxisWidget
         </p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:paragraph -->
-        <p>Android</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:paragraph -->
-        <p>Chạy Flutter -&gt; Build Apk</p>
         <!-- /wp:paragraph -->
 
         <!-- wp:image -->
         <figure class="wp-block-image">
           <img
-            src="https://lh7-us.googleusercontent.com/QPbOY7LXmK94xxEgEeHUQS6ZhtbhNutlf5rLQfPrJGE89mZ6uzw7JP0F-niVmVIUCVikihk7vxiKMidIN3TReROaaL7aF7JJ1YE-bY9UxRJ5eHVxKpH5_ncDFvTRQbD_hmWz7YY51yHMEEOCxQTS3og"
+            src="https://lh7-us.googleusercontent.com/xAC9L3oY7072EubnGJZrWJcP413DKrMbpFGEVwQx-U7PImMYNXyELgDToGClQpfoUHF4BG6JNI4hqRh0j49PPzqQP43Dnyje8dOwaG8SlAwIEqtJuhxtxoZVU1OzSgBoo7aVrvvSXXL9GLgiZCx9QpI"
             alt=""
           />
         </figure>
@@ -303,7 +289,125 @@
         <!-- wp:image -->
         <figure class="wp-block-image">
           <img
-            src="https://lh7-us.googleusercontent.com/908821W1Kh2Dz3zSWqxr0KXCL2V1Wh5weRON1E6W5bFxr1BFkPNfBYMIHmDQXKUMm_5ucqvdG2pn7TgTCOqFxDj8kjKpBoPCscKyCD3wggQXxrr4iioj4atq-ZPsGM6tEDZPbYCtUgKL-Ny9kwXD140"
+            src="https://lh7-us.googleusercontent.com/kHMtpf5_mmt5s7UzjAHcjln639pLfOR5eJtgzPkvbX8TlJVvBDSCt-yF92tcYh5Jg7ihYLhtCpihVJB34Ztt3CHDICnY7KSv9cAXQGPn5FDzDQBgENhOpifnGV1qx3rC-usvGrh_aNgHaw6bMH3WMCc"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>Sau khi run ta sẽ có giao diện:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          <img
+            width="187"
+            height="406"
+            src="https://lh7-us.googleusercontent.com/kzWO1xRhI-vX3OyzGKK1pK-vFOa83XviHSsgjIub5i41maSkNq9FaMXxHGgrrX_wRJJuySqOX6Bc0Gmxl6soSgFlxyUlM3Ym_TWKOmF1LlacOCzW-W9G8pEf5Y-iFpLs3uXbe9B-gJFOOvi_FDoowwo"
+          />
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">2.Danh sách câu hỏi</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Tiếp theo là Widget hiển thị danh sách các câu hỏi, trong đó có chứa
+          Widget QuestionMainWidget thể hiện cho 1 câu hỏi.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Danh sách câu hỏi sẽ cách lề trái 50, phải 40, top 90, bottom: 110. Và
+          chúng ta sẽ dùng SliverGrid để hiển thị danh sách có 3 cột:
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/cEoosr6xNwO-dCfdOcGSJ2NZJEt6DbL1D6R83cnU7HqDGkZK9As8sKEoqbVNIHx0P7WwBFnSqaSi5pp8Yt-t1EI0jxuCI1zAcvT6awv-KwIp0kwTsswuL8L8i9h0qEXQTOQRgyyskTzZZnKBgnDJ54k"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>Trong đó</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          childCount: đang tạm fake có 11 câu hỏi ứng với 11 Widget con
+          QuestionMainWidget
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          mainAxisSpacing, crossAxisSpacing: Khoảng cách giữa các
+          QuestionMainWidget theo chiều dọc, ngang.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>childAspectRatio: tỉ lệ width/height cho Widget con.</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>Mỗi thành phần con chúng ta sẽ có 2 trạng thái:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/_cmj2tqqMfTTCgR-c0JXSk2qBtVFOumpRmqt3BZeZtHqGK3splil_6vhl1YAduNtWCndzyhbynFyVLh5iAtm6K-vuuG8P8_Z7XHG21A-TZJWwPpYdfdx-959Yz1ntGkX0b3yM01N5rx9QqUP3qbKmbk"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/9VlC1xVP5MJrw4Csm9q8Gi6ECDlvUd3d0Ins_9r3U_CooFSR5GwKXyGSsGFPKnCVcq0oA17i40i13yUhBylhQtiq4M6eBIPO-aq8yNfRsCdDy6DhYPY__a-TbosLSczwj2Zc0F-a8RY6quMRCHRLKjs"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>Chúng sẽ chứa:&nbsp;</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>Ảnh nền background</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>Ảnh thumb hiển thị câu hỏi</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>Số thứ tự câu hỏi với trường hợp đã trả lời đúng</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>Icon khóa với câu hỏi chưa trả lời</li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/DWFZ0xmyuj6rydu9lAEMBGTf02HA-mxz8untZtkps5DcstrhEOsQwUwRzsKQijJftjXNzj5ItshMbwKGROAGCFI7oHLE00kVgbpsQl_frDSnwuKwi9JDJwEm5piB12Qph-LQRsrCPxnpfEu3ENFY2fg"
             alt=""
           />
         </figure>
@@ -311,66 +415,31 @@
 
         <!-- wp:paragraph -->
         <p>
-          Thêm email tester để invite (Có thể tạo 1 group các email lại và gửi
-          vào group).
+          Widget QuestionMainWidget chúng ta sẽ hoàn thiện sau khi triển khai
+          đầy đủ logic khi lấy dữ liệu từ BE, kèm theo check điều kiện câu hỏi
+          đã pass. Hiện tại chỉ hiển thị tạm thời với nền, và text.
         </p>
         <!-- /wp:paragraph -->
 
         <!-- wp:paragraph -->
-        <p>Thêm release note:</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:image -->
-        <figure class="wp-block-image">
-          <img
-            src="https://lh7-us.googleusercontent.com/uai1-X47L_nYf3OkUS5VDqxSJmXRVbkYrOLoylhbqQLBR1n21Aa9ywq3nVOzbPjxwkgLbtP-OPm8XL9pWXEg2PeP1Clc3-0fvLcKoyjQSYzuVEsjSj3nJRX4LXA8LaudV-fmeFmRIlERQ1mqYnD1U-I"
-            alt=""
-          />
-        </figure>
-        <!-- /wp:image -->
-
-        <!-- wp:image -->
-        <figure class="wp-block-image">
-          <img
-            src="https://lh7-us.googleusercontent.com/5azgFqdg6U0QrQRuUH-I8EDpYwyxoXwx3QNvt1pUIxjqdWQRL4DTjdW8VtmJXJ2I1wemMtwiZCG1geU2s6uLtfbH5PLQTbPZD1H2bU-BOSgTa756VEe1A25mp0UwtQDR9Vl_zkXH4QVrpErfoXAfm9o"
-            alt=""
-          />
-        </figure>
-        <!-- /wp:image -->
-
-        <!-- wp:paragraph -->
         <p>
-          Click Get Start để bắt đầu tải về bản cài đặt ứng dụng và tiến hành
-          kiểm thử.
+          <img
+            width="161"
+            height="349"
+            src="https://lh7-us.googleusercontent.com/3t336oV69BIcp3-LD3c8ENFj2IpLf2f-L0W2iv1jhguEN0pAHyDTX1k6f8w_6p2TuXJL3yF1vCYNvFjSAuQJ6sktI5NZYrG6J52BD7utyA2OuS0Vj1hPU2imTNbiQwl7e1l0begOcWYM2ZRZflnsBBs"
+          />
         </p>
         <!-- /wp:paragraph -->
 
-        <!-- wp:paragraph -->
-        <p>iOS:</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:paragraph -->
-        <p>Tương tự Android:</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:paragraph -->
-        <p>iOS cần build ipa và đẩy lên console tương ứng.</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:paragraph -->
-        <p>Tuy nhiên với iOS cần chú ý:</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:paragraph -->
-        <p>Cần add UDID của thiết bị vào tài khoản developer.apple.com</p>
-        <!-- /wp:paragraph -->
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">III.Tổng kết</h2>
+        <!-- /wp:heading -->
 
         <!-- wp:paragraph -->
         <p>
-          Trường hợp thiết bị chưa được add -> Khi phân phối qua email -> Người
-          dùng cần download setting và cài đặt . Lúc này sẽ có email thông báo
-          UDID cần được add, dev cần add lại và phân phối lại bản build mới cho
-          khách hàng đó.
+          Ở bài này, chúng ta đã học được cách phân tích giao diện và dựng lên
+          được UI cơ bản. Giao diện hiện tại chưa có dữ liệu thật, ở bài tiếp
+          theo chúng ta sẽ xây tiếp phần kết nối và lấy dữ liệu thật từ BE nhé.
         </p>
         <!-- /wp:paragraph -->
       </div>

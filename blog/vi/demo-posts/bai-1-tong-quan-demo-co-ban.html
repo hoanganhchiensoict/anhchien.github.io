@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <title>
-      Khám Phá Sức Mạnh của Firebase: Real-time Data, User Authentication, Cloud
-      Storage,... để Phát Triển Ứng Dụng Mượt Mà!
+      Training thực tế cho người mới hiểu và bắt đầu được một dự án Flutter: UI,
+      State management, Navigation, Networking,...
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
@@ -196,199 +196,155 @@
 
       <!-- Nội dung chính -->
       <div class="content">
-        <h1>Khám Phá Sức Mạnh của Firebase</h1>
+        <h1>Bài 1. Tổng quan demo cơ bản</h1>
         <img
-          src="../../../pictures/blog/firebase/firebase1.png"
+          src="../../../pictures/blog/flutter_demo/flutter_demo1.png"
           alt="Firebase"
         />
         <!-- Nội dụng tiếp -->
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">I. Lời nói đầu</h2>
+        <!-- /wp:heading -->
+
         <!-- wp:paragraph -->
         <p>
-          Firebase là một nền tảng đám mây của Google cung cấp nhiều dịch vụ và
-          công cụ hữu ích cho phát triển ứng dụng di động và web. Firebase giúp
-          các nhà phát triển xây dựng ứng dụng nhanh chóng và hiệu quả mà không
-          cần quá nhiều kiến thức về quản lý cơ sở dữ liệu, server, hay quản lý
-          người dùng. Dưới đây là một số dịch vụ chính mà Firebase cung cấp:
+          Mình viết serie này với mục đích training thực tế cho người mới hiểu
+          và bắt đầu được một dự án Flutter. Các kiến thức trong bài cũng là các
+          kiến thức cơ bản, đủ để cho các bạn có thể bắt đầu làm quen, cấu trúc
+          dự án một cách cơ bản nhất có thể để người mới có thể hình dung được.
         </p>
         <!-- /wp:paragraph -->
 
-        <!-- wp:heading {"level":3} -->
-        <h3 class="wp-block-heading">Firebase Realtime Database</h3>
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">II. Các kiến thức, kỹ thuật sẽ sử dụng</h2>
         <!-- /wp:heading -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">1.Kiến thức về UI</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Widget: Để thiết kế được màn hình cho App chúng ta cần hiểu về khái
+          niệm Widget. Tất cả những gì chúng ta nhìn thấy trên giao diện như 1
+          câu chữ, nút ấn, ô nhập dữ liệu,... đều là các Widget, nó có thể phân
+          nhóm thành:
+        </p>
+        <!-- /wp:paragraph -->
 
         <!-- wp:list -->
         <ul>
           <!-- wp:list-item -->
           <li>
-            Mô tả: Cơ sở dữ liệu thời gian thực, lưu trữ dữ liệu dưới dạng JSON
-            và tự động đồng bộ dữ liệu giữa các thiết bị và máy chủ.
+            Widget cơ bản (Core widget): Container, Text, Image, Icon, Button,
+            TextField, CheckBox, … Chúng được sử dụng để hiển thị nội dung cơ
+            bản và tương tác cơ bản
           </li>
           <!-- /wp:list-item -->
 
           <!-- wp:list-item -->
           <li>
-            Ứng dụng: Lưu trữ và đồng bộ dữ liệu trực tuyến, ứng dụng chat thời
-            gian thực.
-          </li>
-          <!-- /wp:list-item -->
-        </ul>
-        <!-- /wp:list -->
-
-        <!-- wp:heading {"level":3} -->
-        <h3 class="wp-block-heading">Firebase Authentication</h3>
-        <!-- /wp:heading -->
-
-        <!-- wp:list -->
-        <ul>
-          <!-- wp:list-item -->
-          <li>
-            Mô tả: Dịch vụ quản lý đăng nhập và xác thực người dùng với nhiều
-            phương thức như email/password, Google Sign-In, Facebook Login, và
-            nhiều phương tiện khác.
-          </li>
-          <!-- /wp:list-item -->
-
-          <!-- wp:list-item -->
-          <li>Ứng dụng: Quản lý người dùng, xác thực an toàn.</li>
-          <!-- /wp:list-item -->
-        </ul>
-        <!-- /wp:list -->
-
-        <!-- wp:heading {"level":3} -->
-        <h3 class="wp-block-heading">Firebase Cloud Firestore</h3>
-        <!-- /wp:heading -->
-
-        <!-- wp:list -->
-        <ul>
-          <!-- wp:list-item -->
-          <li>
-            Mô tả: Dịch vụ cơ sở dữ liệu NoSQL đám mây, dựa trên các bộ sưu tập
-            và tài liệu, hỗ trợ truy vấn mạnh mẽ.
-          </li>
-          <!-- /wp:list-item -->
-
-          <!-- wp:list-item -->
-          <li>Ứng dụng: Lưu trữ và truy xuất dữ liệu một cách linh hoạt.</li>
-          <!-- /wp:list-item -->
-        </ul>
-        <!-- /wp:list -->
-
-        <!-- wp:heading {"level":3} -->
-        <h3 class="wp-block-heading">Firebase Cloud Functions</h3>
-        <!-- /wp:heading -->
-
-        <!-- wp:list -->
-        <ul>
-          <!-- wp:list-item -->
-          <li>
-            Mô tả: Viết và triển khai mã nguồn Node.js trực tiếp từ Firebase
-            Console, kết hợp với các sự kiện của Firebase.
+            Widget sắp xếp (Layout widget): Row (sắp xếp các widget con theo
+            hàng ngang), Column (sắp xếp theo hàng dọc), Stack (cho phép các
+            widget con đè nhau), ListView (widget hiển thị danh sách), GridView,
+            … Chúng giúp bạn tạo giao diện có cấu trúc và sắp xếp các thành phần
+            theo cách tốt nhất.
           </li>
           <!-- /wp:list-item -->
 
           <!-- wp:list-item -->
           <li>
-            Ứng dụng: Xử lý các sự kiện như thay đổi cơ sở dữ liệu, đăng ký,
-            thông báo.
+            Widget khác: cuộn như SingleChildScrollView, click InkWell, … và còn
+            nhiều loại khác
           </li>
-          <!-- /wp:list-item -->
-        </ul>
-        <!-- /wp:list -->
-
-        <!-- wp:heading {"level":3} -->
-        <h3 class="wp-block-heading">Firebase Cloud Messaging (FCM)</h3>
-        <!-- /wp:heading -->
-
-        <!-- wp:list -->
-        <ul>
-          <!-- wp:list-item -->
-          <li>
-            Mô tả: Dịch vụ thông báo đám mây, hỗ trợ gửi thông báo đến các thiết
-            bị Android, iOS, và web.
-          </li>
-          <!-- /wp:list-item -->
-
-          <!-- wp:list-item -->
-          <li>Ứng dụng: Gửi thông báo đến người dùng, quảng cáo.</li>
-          <!-- /wp:list-item -->
-        </ul>
-        <!-- /wp:list -->
-
-        <!-- wp:heading {"level":3} -->
-        <h3 class="wp-block-heading">Firebase Hosting</h3>
-        <!-- /wp:heading -->
-
-        <!-- wp:list -->
-        <ul>
-          <!-- wp:list-item -->
-          <li>
-            Mô tả: Dịch vụ đám mây để triển khai và chia sẻ ứng dụng web hoặc
-            trang web tĩnh.
-          </li>
-          <!-- /wp:list-item -->
-
-          <!-- wp:list-item -->
-          <li>Ứng dụng: Triển khai ứng dụng web nhanh chóng và dễ dàng.</li>
-          <!-- /wp:list-item -->
-        </ul>
-        <!-- /wp:list -->
-
-        <!-- wp:heading {"level":3} -->
-        <h3 class="wp-block-heading">Firebase Cloud Storage</h3>
-        <!-- /wp:heading -->
-
-        <!-- wp:list -->
-        <ul>
-          <!-- wp:list-item -->
-          <li>
-            Mô tả: Lưu trữ an toàn cho dữ liệu như hình ảnh, video, và tệp tin.
-          </li>
-          <!-- /wp:list-item -->
-
-          <!-- wp:list-item -->
-          <li>Ứng dụng: Lưu trữ và quản lý tệp tin đa phương tiện.</li>
-          <!-- /wp:list-item -->
-        </ul>
-        <!-- /wp:list -->
-
-        <!-- wp:heading {"level":3} -->
-        <h3 class="wp-block-heading">Firebase Performance Monitoring</h3>
-        <!-- /wp:heading -->
-
-        <!-- wp:list -->
-        <ul>
-          <!-- wp:list-item -->
-          <li>
-            Mô tả: Theo dõi và đánh giá hiệu suất ứng dụng để tối ưu hóa trải
-            nghiệm người dùng.
-          </li>
-          <!-- /wp:list-item -->
-
-          <!-- wp:list-item -->
-          <li>Ứng dụng: Đo lường và tối ưu hóa hiệu suất ứng dụng.</li>
           <!-- /wp:list-item -->
         </ul>
         <!-- /wp:list -->
 
         <!-- wp:paragraph -->
         <p>
-          Firebase mang lại sự thuận tiện và tiết kiệm thời gian cho các nhà
-          phát triển, giúp họ tập trung vào việc xây dựng tính năng và trải
-          nghiệm người dùng thay vì lo lắng về cơ sở hạ tầng. Các dịch vụ của
-          Firebase có sẵn với mô hình trả phí sử dụng theo quy mô, và nó hỗ trợ
-          nhiều nền tảng phát triển như Android, iOS, và web.
+          Assets: Quản lý tài nguyên này đảm bảo rằng ứng dụng sẽ có giao diện
+          đẹp và đầy đủ chức năng. Cơ bản nhất mà chúng ta cần là font chữ trong
+          ứng dụng và các icon
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">2.Quản lý state</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          State là trạng thái của widget, hiểu đơn giản là các màn hình sẽ có
+          những dữ liệu tương ứng, chúng chính là state.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">3.Navigation</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>Điều hướng sang 1 màn hình mới + truyền dữ liệu qua</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">4.Networking</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>Làm việc với Api qua thư viện dio</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">
+          III. Xây dựng ứng dụng Brainstorming IQ Training
+        </h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Đây là một ứng dụng đơn giản với tính năng chính là hiển thị các câu
+          hỏi về toán học, người dùng muốn trả lời đúng cần tìm ra quy luật
+          trong các con số. Chỉ là các câu đố vui cơ bản mà thi thoảng mọi người
+          có thể đố nhau.
         </p>
         <!-- /wp:paragraph -->
 
         <!-- wp:paragraph -->
+        <p>Ứng dụng có vài màn hình như sau:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
         <p>
-          Ở trong series này, mình sẽ mô tả các bước để triển khai được một số
-          dịch vụ của Firebase như: Firebase Authentication, Firebase Cloud
-          Firestore, Firebase Cloud Messaging (FCM), Firebase Cloud Storage,
-          Firebase Remote Config, Firebase Realtime Database, Firebase
-          distribution.
+          <br />Nếu các bạn ủng hộ mình thì có thể truy cập vào link
+          <a
+            href="https://play.google.com/store/apps/details?id=com.cc.mystery.iqtest"
+            >Brainstorming - IQ Training</a
+          >
+          để trải nghiệm nha
         </p>
         <!-- /wp:paragraph -->
+
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">IV. Chuẩn bị</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>Setup môi trường</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list {"ordered":true} -->
+        <ol>
+          <!-- wp:list-item -->
+          <li>Công cụ code (IDE): Android studio</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>Môi trường code: Flutter 3.10.6</li>
+          <!-- /wp:list-item -->
+        </ol>
+        <!-- /wp:list -->
       </div>
 
       <!-- Sidebar phải -->

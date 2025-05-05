@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>
+      Hoàn thiện giao diện với dữ liệu thực tế lấy từ api. Điều hướng cơ bản qua
+      các màn hình và truyền dữ liệu cần thiết.
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7;
+        color: #333;
+        line-height: 1.6;
+        padding: 0 1rem;
+        margin: auto;
+      }
+
+      .container {
+        display: flex;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .sidebar-left,
+      .sidebar-right {
+        width: 20%;
+        padding: 20px;
+        position: sticky;
+        top: 0;
+        height: fit-content;
+        background-color: #ffffff;
+        border-radius: 8px;
+        margin: 10px;
+        align-self: start;
+      }
+
+      .content {
+        width: 60%;
+        background-color: #fff;
+        padding: 30px;
+        margin: 10px;
+        border-radius: 8px;
+      }
+
+      h1,
+      h2 {
+        color: #2c3e50;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin: 1rem 0;
+      }
+      ul {
+        padding-left: 1.2rem;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1rem 0;
+      }
+      td,
+      th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+      td:first-child {
+        background-color: #f9f9f9;
+      }
+      h3 {
+        color: #2c3e50;
+        margin-top: 30px;
+      }
+      a {
+        color: #007acc;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .sidebar-left h3,
+      .sidebar-right h3 {
+        margin-top: 0;
+      }
+
+      .sidebar-left ul,
+      .sidebar-right ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .sidebar-left li,
+      .sidebar-right li {
+        margin-bottom: 8px;
+      }
+
+      /* TOC Button (mobile) */
+      .toc-button {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #007acc;
+        color: white;
+        padding: 10px 14px;
+        border: none;
+        border-radius: 50px;
+        font-size: 14px;
+        z-index: 1000;
+        cursor: pointer;
+      }
+
+      .toc-modal {
+        display: none;
+        position: fixed;
+        bottom: 70px;
+        right: 20px;
+        background-color: white;
+        border: 1px solid #ddd;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        padding: 10px;
+        z-index: 1000;
+        width: 250px;
+      }
+
+      .toc-modal ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .toc-modal li {
+        margin: 6px 0;
+      }
+
+      /* Responsive layout */
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+          padding: 10px;
+        }
+        .sidebar-left,
+        .sidebar-right {
+          display: none;
+        }
+        .content {
+          width: 100%;
+          margin: 0;
+        }
+        .toc-button {
+          display: block;
+        }
+      }
+      .wp-block-code {
+        background-color: #282c34;
+        color: #ffffff;
+        padding: 1em;
+        border-radius: 8px;
+        overflow-x: auto;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 0.95em;
+        line-height: 1.5;
+        margin: 1.5em 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .wp-block-code code {
+        background: none;
+        color: inherit;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar trái -->
+      <div class="sidebar-left">
+        <h3>Categories</h3>
+        <ul>
+          <li><a href="#">Firebase</a></li>
+          <li><a href="#">Authentication</a></li>
+          <li><a href="#">Database</a></li>
+          <li><a href="#">Hosting</a></li>
+          <li><a href="#">Messaging</a></li>
+        </ul>
+      </div>
+
+      <!-- Nội dung chính -->
+      <div class="content">
+        <h1>Bài 5: Đổ dữ liệu thật lên giao diện</h1>
+        <img
+          src="../../../pictures/blog/flutter_demo/flutter_demo5.png"
+          alt="Firebase"
+        />
+        <!-- Nội dụng tiếp -->
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">
+          I.Hoàn thiện Widget thể hiện cho 1 câu hỏi trong danh sách
+        </h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Ở phần trước, chúng ta có Widget cho mỗi câu hỏi là
+          QuestionMainWidget, giờ chúng ta sẽ tiến hành điền đầy đủ dữ liệu cho
+          nó nào.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>Tóm tắt lại phân tích ở bài trước chúng ta có:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/_cmj2tqqMfTTCgR-c0JXSk2qBtVFOumpRmqt3BZeZtHqGK3splil_6vhl1YAduNtWCndzyhbynFyVLh5iAtm6K-vuuG8P8_Z7XHG21A-TZJWwPpYdfdx-959Yz1ntGkX0b3yM01N5rx9QqUP3qbKmbk"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/9VlC1xVP5MJrw4Csm9q8Gi6ECDlvUd3d0Ins_9r3U_CooFSR5GwKXyGSsGFPKnCVcq0oA17i40i13yUhBylhQtiq4M6eBIPO-aq8yNfRsCdDy6DhYPY__a-TbosLSczwj2Zc0F-a8RY6quMRCHRLKjs"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>QuestionMainWidget sẽ chứa:&nbsp;</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>Ảnh nền background</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>Ảnh thumb hiển thị câu hỏi</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>Số thứ tự câu hỏi với trường hợp đã trả lời đúng</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>Icon khóa với câu hỏi chưa trả lời</li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Ảnh nền, và số 1 fake tạm đã được vẽ, giờ còn hiển thị lên ảnh thumb
+          cho câu hỏi, và số thứ tự/icon khóa tương ứng. Để hiển thị đầy đủ
+          QuestionMainWidget cần nhận dữ liệu đầu vào là QuestionModel, và trạng
+          thái khóa hay không.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/3OpAHL6NM22rnxM9-4cEXC1TJjQP_aqqDjvdq1EpW1N0fwkO0JLAPf0PiJkK49cwTNrWvNKRj-X56UrbURNnb7ZcWVMVLocsuevo3Dttj-EEPoFmUVJyKi4O0NwcctT45nzA7JtiBd2LZO6lmnnaB00"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Điều chỉnh lại Widget hiển thị danh sách câu hỏi tại HomeScreen và
+          truyền vào dữ liệu tương ứng, trường isLock ta sẽ fake tạm là
+          false/true để test QuestionMainWidget. Đồng thời childCount cũng đẩy
+          đúng giá trị listQuestion.length để hiển thị đúng và đủ số câu hỏi.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/rMmJCc1XwhTo1FUZDaMxFoPHhrqEjvj4MvIwE1ak-3iWdQO5FqZQhsvY9vwcqP6ay08B_tFuWA8aPvotssItqVE2hkpgIZkz4DrDnuxVIQvY-R-O08lHYrDiOHtvkzdzheTuyNdbJxzu4yhTVev-3VQ"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Hiển thị ảnh thumb cho câu hỏi chúng ta sẽ load ảnh từ trường picture
+          trong QuestionModel với cached_network_image (<a
+            href="https://pub.dev/packages/cached_network_image"
+            >https://pub.dev/packages/cached_network_image</a
+          >
+          )&nbsp;
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/xGyB2ApjS9JZ9XsJC26wP1LHrCwCNCGRE5qyq1wyDLsZloqCzGIQ6HPAUGgBR8h2LWroOvq2FEsUNjhRZ9MYa3jITb0yWbLqbqReoNhs3D5tENFFhSXvCtSRstdpLK6n2d-nAqQxeQtCina2bdsTa8I"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Ứng với dữ liệu isLock truyền vào là fale/true chúng ta có kết quả:
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          <img
+            width="165"
+            height="359"
+            src="https://lh7-us.googleusercontent.com/YXrHR12snTF8ADYoOd8f7m3-wR5J8HSV_s3wrDjWg4KRCoHQcGGPdCkCjuXLME3EekFfmb8DiE9LFvggE1JUEnORjXPg36hHPbcs_56hVjU-DejZJf9IJ9ZJa7SxsYvRYO9FT8zQjDnMZq5_vf3vQnw"
+          />
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          <img
+            src="https://lh7-us.googleusercontent.com/rOdvylONnLJKbUJfgkyZeskLFTiaVGojMH76xvEnQZm579RcHj51CifUQhkx6D4Dj2AwbIR6hsJh3JnAMozVr7KULvg9seA5_q4_yIG5FIj8XFFQ87N1o-dL8NaG71ty8R-_iMznQvXimdLwdRN5gfQ"
+            width="162"
+            height="357"
+          />
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>Vậy là đã xong được cơ bản màn HomeScreen rồi đó.</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">
+          II.Điều hướng và truyền dữ liệu sang màn chi tiết
+        </h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Sau khi click vào 1 câu hỏi, chúng ta sẽ điều hướng vào màn chi tiết.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Màn detail đã được định nghĩa ở trong RouteGenerator, giờ chúng ta sẽ
+          điều hướng sang bằng Navigator và truyền dữ liệu câu hỏi được chọn
+          tương ứng.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>Trong DetailScreen ta thêm DetailArgs chứa QuestionModel,</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/DhAtZq2LFFTJfclfhnjr07zm5ARQcF2HnlZ8Hu7RTiXksmDC1C0nQQ8XYdqTte4rdqNmdA9wIjJIkHOSTuhqyA-52O4aPjvvxOP6to30mIpgkwFLewurebW0Wb4YztXU_OpD_oxlH9QSzVTRGQ0dqHk"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>RouteGenerator cũng bổ sung thêm args cho DetailScreen</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/VkQZYRg48aNpvPt04QHa-EyhVeYQhQhmsKgmrGc-3c_TWIhrlMOGmCNKO0XJvQw6R4VRUMML0uz_sgbWvyOoLhHFtTbr2GJHqtRb1XxI326fFkdah1lw-8RI5D77LWpsbophtw7c_AHl6l-kCOfjx7Y"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Và trong QuestionMainWidget, xử lý hàm onPressDetail() để điều hướng
+          và truyền dữ liệu sang màn mới:
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/KcTx6BBBwuwh0vS43MAI763KPuYX3XRl4I2MRh7eJDMbkV_g4eTqmzGKFAaWYFLpCNcTNkYSIqjTUyQFtiAO-2joKXkFuzfGHHH7NtkpnN4fHaFl8TuitnmgNtrYsLMqclt0rFRr229sjUPhw-ccrc4"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Như vậy là hoàn tất được quá trình điều hướng và truyền dữ liệu với
+          Navigator.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">
+          III.Phân tích giao diện màn hình chi tiết
+        </h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          <img
+            width="259"
+            height="426"
+            src="https://lh7-us.googleusercontent.com/CixT7vQIxtytUaoirzRKYLKryiB2lGkFqKTfFzXs1VZBQO_ZC1fgQNxyACcCbuUG7F75CLmrmI8b4Z5vBIf6xegE-8wQhb5BUwXaxJi_s1L76N48GbGwAm8onjRiPDh_SEzvmeEaCYt0EG-v_t67MB8"
+          />
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Nhìn vào giao diện ta có thể tách thành các Widget tổng quan như sau:
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>Hình nền background ở dưới</li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>HeaderWidget chứa Icon Back và title hiển thị câu hỏi:&nbsp;</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>Widget hiển thị bảng đen</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>Widget hiển thị câu hỏi trên bảng</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>Widget hiển thị câu trả lời, nút clear và nút kiểm tra đáp án</li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>Widget hiển thị danh sách các nút</li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Từ đây các bạn có thể tự triển khai giao diện tương ứng trong Flutter
+          dựa vào các kiến thức về UI đã có.&nbsp;
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">IV.Tổng kết</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Ở bài này, chúng ta đã hoàn thiện được giao diện tại trang HomeScreen
+          với dữ liệu thật lấy từ api. Biết được cách điều hướng cơ bản qua các
+          màn hình và truyền dữ liệu cần thiết.
+        </p>
+        <!-- /wp:paragraph -->
+      </div>
+
+      <!-- Sidebar phải -->
+      <div class="sidebar-right">
+        <h3>Table of Contents</h3>
+        <ul>
+          <li><a href="#realtime">Realtime Database</a></li>
+          <li><a href="#auth">Authentication</a></li>
+          <li><a href="#firestore">Cloud Firestore</a></li>
+          <li><a href="#functions">Cloud Functions</a></li>
+          <li><a href="#fcm">Cloud Messaging</a></li>
+          <li><a href="#hosting">Hosting</a></li>
+          <li><a href="#storage">Cloud Storage</a></li>
+          <li><a href="#performance">Performance Monitoring</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- TOC floating button -->
+    <button class="toc-button" onclick="toggleTOC()">TOC</button>
+    <div class="toc-modal" id="tocModal">
+      <ul>
+        <li><a href="#realtime" onclick="hideTOC()">Realtime Database</a></li>
+        <li><a href="#auth" onclick="hideTOC()">Authentication</a></li>
+        <li><a href="#firestore" onclick="hideTOC()">Cloud Firestore</a></li>
+        <li><a href="#functions" onclick="hideTOC()">Cloud Functions</a></li>
+        <li><a href="#fcm" onclick="hideTOC()">Cloud Messaging</a></li>
+        <li><a href="#hosting" onclick="hideTOC()">Hosting</a></li>
+        <li><a href="#storage" onclick="hideTOC()">Cloud Storage</a></li>
+        <li>
+          <a href="#performance" onclick="hideTOC()">Performance Monitoring</a>
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      function toggleTOC() {
+        const toc = document.getElementById("tocModal");
+        toc.style.display = toc.style.display === "block" ? "none" : "block";
+      }
+      function hideTOC() {
+        document.getElementById("tocModal").style.display = "none";
+      }
+    </script>
+  </body>
+</html>
