@@ -50,253 +50,295 @@
     <url>
         <loc>https://coderealities.com/blog/en/firebase-posts/exploring-the-power-of-firebase.html</loc>
         <lastmod>2025-05-06T20:55:18+00:00</lastmod>
-        
+        <xhtml:link rel="alternate" hreflang="en" href="https://coderealities.com/blog/en/firebase-posts/exploring-the-power-of-firebase.html"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://coderealities.com/blog/vi/firebase-posts/kham-pha-suc-manh-cua-firebase.html"/>
+    </url>
+
+    <url>
+        <loc>https://coderealities.com/blog/vi/firebase-posts/kham-pha-suc-manh-cua-firebase.html</loc>
+        <lastmod>2025-05-06T20:55:18+00:00</lastmod>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://coderealities.com/blog/vi/firebase-posts/kham-pha-suc-manh-cua-firebase.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://coderealities.com/blog/en/firebase-posts/exploring-the-power-of-firebase.html"/>
     </url>
 
     <url>
         <loc>https://coderealities.com/blog/en/firebase-posts/firebase-remote-config.html</loc>
         <lastmod>2025-05-06T20:55:18+00:00</lastmod>
-        
+        <xhtml:link rel="alternate" hreflang="en" href="https://coderealities.com/blog/en/firebase-posts/firebase-remote-config.html"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://coderealities.com/blog/vi/firebase-posts/firebase-remote-config.html"/>
+    </url>
+
+    <url>
+        <loc>https://coderealities.com/blog/vi/firebase-posts/firebase-remote-config.html</loc>
+        <lastmod>2025-05-06T20:55:18+00:00</lastmod>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://coderealities.com/blog/vi/firebase-posts/firebase-remote-config.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://coderealities.com/blog/en/firebase-posts/firebase-remote-config.html"/>
     </url>
 
     <url>
         <loc>https://coderealities.com/blog/en/firebase-posts/firebase-cloud-messaging.html</loc>
         <lastmod>2025-05-06T20:55:18+00:00</lastmod>
-        
+        <xhtml:link rel="alternate" hreflang="en" href="https://coderealities.com/blog/en/firebase-posts/firebase-cloud-messaging.html"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://coderealities.com/blog/vi/firebase-posts/firebase-cloud-messaging.html"/>
+    </url>
+
+    <url>
+        <loc>https://coderealities.com/blog/vi/firebase-posts/firebase-cloud-messaging.html</loc>
+        <lastmod>2025-05-06T20:55:18+00:00</lastmod>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://coderealities.com/blog/vi/firebase-posts/firebase-cloud-messaging.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://coderealities.com/blog/en/firebase-posts/firebase-cloud-messaging.html"/>
     </url>
 
     <url>
         <loc>https://coderealities.com/blog/en/firebase-posts/firebase-authentication.html</loc>
         <lastmod>2025-05-06T20:55:18+00:00</lastmod>
-        
+        <xhtml:link rel="alternate" hreflang="en" href="https://coderealities.com/blog/en/firebase-posts/firebase-authentication.html"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://coderealities.com/blog/vi/firebase-posts/firebase-authentication.html"/>
+    </url>
+
+    <url>
+        <loc>https://coderealities.com/blog/vi/firebase-posts/firebase-authentication.html</loc>
+        <lastmod>2025-05-06T20:55:18+00:00</lastmod>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://coderealities.com/blog/vi/firebase-posts/firebase-authentication.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://coderealities.com/blog/en/firebase-posts/firebase-authentication.html"/>
     </url>
 
     <url>
         <loc>https://coderealities.com/blog/en/firebase-posts/firebase-cloud-firestore.html</loc>
         <lastmod>2025-05-06T20:55:18+00:00</lastmod>
-        
+        <xhtml:link rel="alternate" hreflang="en" href="https://coderealities.com/blog/en/firebase-posts/firebase-cloud-firestore.html"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://coderealities.com/blog/vi/firebase-posts/firebase-cloud-firestore.html"/>
+    </url>
+
+    <url>
+        <loc>https://coderealities.com/blog/vi/firebase-posts/firebase-cloud-firestore.html</loc>
+        <lastmod>2025-05-06T20:55:18+00:00</lastmod>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://coderealities.com/blog/vi/firebase-posts/firebase-cloud-firestore.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://coderealities.com/blog/en/firebase-posts/firebase-cloud-firestore.html"/>
     </url>
 
     <url>
         <loc>https://coderealities.com/blog/en/firebase-posts/firebase-cloud-storage.html</loc>
         <lastmod>2025-05-06T20:55:18+00:00</lastmod>
-        
+        <xhtml:link rel="alternate" hreflang="en" href="https://coderealities.com/blog/en/firebase-posts/firebase-cloud-storage.html"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://coderealities.com/blog/vi/firebase-posts/firebase-cloud-storage.html"/>
+    </url>
+
+    <url>
+        <loc>https://coderealities.com/blog/vi/firebase-posts/firebase-cloud-storage.html</loc>
+        <lastmod>2025-05-06T20:55:18+00:00</lastmod>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://coderealities.com/blog/vi/firebase-posts/firebase-cloud-storage.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://coderealities.com/blog/en/firebase-posts/firebase-cloud-storage.html"/>
     </url>
 
     <url>
         <loc>https://coderealities.com/blog/en/firebase-posts/firebase-realtime-database.html</loc>
         <lastmod>2025-05-06T20:55:18+00:00</lastmod>
-        
+        <xhtml:link rel="alternate" hreflang="en" href="https://coderealities.com/blog/en/firebase-posts/firebase-realtime-database.html"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://coderealities.com/blog/vi/firebase-posts/firebase-realtime-database.html"/>
+    </url>
+
+    <url>
+        <loc>https://coderealities.com/blog/vi/firebase-posts/firebase-realtime-database.html</loc>
+        <lastmod>2025-05-06T20:55:18+00:00</lastmod>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://coderealities.com/blog/vi/firebase-posts/firebase-realtime-database.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://coderealities.com/blog/en/firebase-posts/firebase-realtime-database.html"/>
     </url>
 
     <url>
         <loc>https://coderealities.com/blog/en/firebase-posts/firebase-analytics.html</loc>
         <lastmod>2025-05-06T20:55:18+00:00</lastmod>
-        
+        <xhtml:link rel="alternate" hreflang="en" href="https://coderealities.com/blog/en/firebase-posts/firebase-analytics.html"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://coderealities.com/blog/vi/firebase-posts/firebase-analytics.html"/>
+    </url>
+
+    <url>
+        <loc>https://coderealities.com/blog/vi/firebase-posts/firebase-analytics.html</loc>
+        <lastmod>2025-05-06T20:55:18+00:00</lastmod>
+        <xhtml:link rel="alternate" hreflang="en" href="https://coderealities.com/blog/en/firebase-posts/firebase-analytics.html"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://coderealities.com/blog/vi/firebase-posts/firebase-analytics.html"/>
     </url>
 
     <url>
         <loc>https://coderealities.com/blog/en/firebase-posts/firebase-distribution.html</loc>
         <lastmod>2025-05-06T20:55:18+00:00</lastmod>
-        
+        <xhtml:link rel="alternate" hreflang="en" href="https://coderealities.com/blog/en/firebase-posts/firebase-distribution.html"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://coderealities.com/blog/vi/firebase-posts/firebase-distribution.html"/>
+    </url>
+
+    <url>
+        <loc>https://coderealities.com/blog/vi/firebase-posts/firebase-distribution.html</loc>
+        <lastmod>2025-05-06T20:55:18+00:00</lastmod>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://coderealities.com/blog/vi/firebase-posts/firebase-distribution.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://coderealities.com/blog/en/firebase-posts/firebase-distribution.html"/>
     </url>
 
     <url>
         <loc>https://coderealities.com/blog/en/base-posts/implementing-flutter-base-part-1-why.html</loc>
         <lastmod>2025-05-06T20:55:18+00:00</lastmod>
-        
+        <xhtml:link rel="alternate" hreflang="en" href="https://coderealities.com/blog/en/base-posts/implementing-flutter-base-part-1-why.html"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://coderealities.com/blog/vi/base-posts/trien-khai-base-flutter-phan-1-boi-canh.html"/>
+    </url>
+
+    <url>
+        <loc>https://coderealities.com/blog/vi/base-posts/trien-khai-base-flutter-phan-1-boi-canh.html</loc>
+        <lastmod>2025-05-06T20:55:18+00:00</lastmod>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://coderealities.com/blog/vi/base-posts/trien-khai-base-flutter-phan-1-boi-canh.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://coderealities.com/blog/en/base-posts/implementing-flutter-base-part-1-why.html"/>
     </url>
 
     <url>
         <loc>https://coderealities.com/blog/en/base-posts/implementing-flutter-base-part-2-overall-architecture.html</loc>
         <lastmod>2025-05-06T20:55:18+00:00</lastmod>
-        
+        <xhtml:link rel="alternate" hreflang="en" href="https://coderealities.com/blog/en/base-posts/implementing-flutter-base-part-2-overall-architecture.html"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://coderealities.com/blog/vi/base-posts/trien-khai-base-flutter-phan-2-kien-truc-tong-the.html"/>
+    </url>
+
+    <url>
+        <loc>https://coderealities.com/blog/vi/base-posts/trien-khai-base-flutter-phan-2-kien-truc-tong-the.html</loc>
+        <lastmod>2025-05-06T20:55:18+00:00</lastmod>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://coderealities.com/blog/vi/base-posts/trien-khai-base-flutter-phan-2-kien-truc-tong-the.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://coderealities.com/blog/en/base-posts/implementing-flutter-base-part-2-overall-architecture.html"/>
     </url>
 
     <url>
         <loc>https://coderealities.com/blog/en/base-posts/implementing-flutter-base-part-3-details-data-layer.html</loc>
         <lastmod>2025-05-06T20:55:18+00:00</lastmod>
-        
+        <xhtml:link rel="alternate" hreflang="en" href="https://coderealities.com/blog/en/base-posts/implementing-flutter-base-part-3-details-data-layer.html"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://coderealities.com/blog/vi/base-posts/trien-khai-base-flutter-phan-3-chi-tiet-tang-data.html"/>
+    </url>
+
+    <url>
+        <loc>https://coderealities.com/blog/vi/base-posts/trien-khai-base-flutter-phan-3-chi-tiet-tang-data.html</loc>
+        <lastmod>2025-05-06T20:55:18+00:00</lastmod>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://coderealities.com/blog/vi/base-posts/trien-khai-base-flutter-phan-3-chi-tiet-tang-data.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://coderealities.com/blog/en/base-posts/implementing-flutter-base-part-3-details-data-layer.html"/>
     </url>
 
     <url>
         <loc>https://coderealities.com/blog/en/base-posts/implementing-flutter-base-part-4-details-domain-layer.html</loc>
         <lastmod>2025-05-06T20:55:18+00:00</lastmod>
-        
+        <xhtml:link rel="alternate" hreflang="en" href="https://coderealities.com/blog/en/base-posts/implementing-flutter-base-part-4-details-domain-layer.html"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://coderealities.com/blog/vi/base-posts/trien-khai-base-flutter-phan-4-chi-tiet-tang-domain.html"/>
+    </url>
+
+    <url>
+        <loc>https://coderealities.com/blog/vi/base-posts/trien-khai-base-flutter-phan-4-chi-tiet-tang-domain.html</loc>
+        <lastmod>2025-05-06T20:55:18+00:00</lastmod>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://coderealities.com/blog/vi/base-posts/trien-khai-base-flutter-phan-4-chi-tiet-tang-domain.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://coderealities.com/blog/en/base-posts/implementing-flutter-base-part-4-details-domain-layer.html"/>
     </url>
 
     <url>
         <loc>https://coderealities.com/blog/en/base-posts/implementing-flutter-base-part-5-presentation-layer.html</loc>
         <lastmod>2025-05-06T20:55:18+00:00</lastmod>
-        
+        <xhtml:link rel="alternate" hreflang="en" href="https://coderealities.com/blog/en/base-posts/implementing-flutter-base-part-5-presentation-layer.html"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://coderealities.com/blog/vi/base-posts/trien-khai-base-flutter-phan-5-tang-presentation.html"/>
+    </url>
+
+    <url>
+        <loc>https://coderealities.com/blog/vi/base-posts/trien-khai-base-flutter-phan-5-tang-presentation.html</loc>
+        <lastmod>2025-05-06T20:55:18+00:00</lastmod>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://coderealities.com/blog/vi/base-posts/trien-khai-base-flutter-phan-5-tang-presentation.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://coderealities.com/blog/en/base-posts/implementing-flutter-base-part-5-presentation-layer.html"/>
     </url>
 
     <url>
         <loc>https://coderealities.com/blog/en/base-posts/implementing-flutter-base-part-6-extensions.html</loc>
         <lastmod>2025-05-06T20:55:18+00:00</lastmod>
-        
+        <xhtml:link rel="alternate" hreflang="en" href="https://coderealities.com/blog/en/base-posts/implementing-flutter-base-part-6-extensions.html"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://coderealities.com/blog/vi/base-posts/trien-khai-base-flutter-phan-6-mo-rong.html"/>
+    </url>
+
+    <url>
+        <loc>https://coderealities.com/blog/vi/base-posts/trien-khai-base-flutter-phan-6-mo-rong.html</loc>
+        <lastmod>2025-05-06T20:55:18+00:00</lastmod>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://coderealities.com/blog/vi/base-posts/trien-khai-base-flutter-phan-6-mo-rong.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://coderealities.com/blog/en/base-posts/implementing-flutter-base-part-6-extensions.html"/>
     </url>
 
     <url>
         <loc>https://coderealities.com/blog/en/demo-posts/part-1-overview-of-basic-demo.html</loc>
         <lastmod>2025-05-06T20:55:18+00:00</lastmod>
-        
+        <xhtml:link rel="alternate" hreflang="en" href="https://coderealities.com/blog/en/demo-posts/part-1-overview-of-basic-demo.html"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://coderealities.com/blog/vi/demo-posts/bai-1-tong-quan-demo-co-ban.html"/>
+    </url>
+
+    <url>
+        <loc>https://coderealities.com/blog/vi/demo-posts/bai-1-tong-quan-demo-co-ban.html</loc>
+        <lastmod>2025-05-06T20:55:18+00:00</lastmod>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://coderealities.com/blog/vi/demo-posts/bai-1-tong-quan-demo-co-ban.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://coderealities.com/blog/en/demo-posts/part-1-overview-of-basic-demo.html"/>
     </url>
 
     <url>
         <loc>https://coderealities.com/blog/en/demo-posts/part-2-getting-started-building-the-structure.html</loc>
         <lastmod>2025-05-06T20:55:18+00:00</lastmod>
-        
+        <xhtml:link rel="alternate" hreflang="en" href="https://coderealities.com/blog/en/demo-posts/part-2-getting-started-building-the-structure.html"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://coderealities.com/blog/vi/demo-posts/bai-2-bat-dau-xay-cau-truc.html"/>
+    </url>
+
+    <url>
+        <loc>https://coderealities.com/blog/vi/demo-posts/bai-2-bat-dau-xay-cau-truc.html</loc>
+        <lastmod>2025-05-06T20:55:18+00:00</lastmod>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://coderealities.com/blog/vi/demo-posts/bai-2-bat-dau-xay-cau-truc.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://coderealities.com/blog/en/demo-posts/part-2-getting-started-building-the-structure.html"/>
     </url>
 
     <url>
         <loc>https://coderealities.com/blog/en/demo-posts/part-3-implementing-the-ui-for-the-homescreen.html</loc>
         <lastmod>2025-05-06T20:55:18+00:00</lastmod>
-        
+        <xhtml:link rel="alternate" hreflang="en" href="https://coderealities.com/blog/en/demo-posts/part-3-implementing-the-ui-for-the-homescreen.html"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://coderealities.com/blog/vi/demo-posts/bai-3-trien-khai-ui-man-homescreen.html"/>
+    </url>
+
+    <url>
+        <loc>https://coderealities.com/blog/vi/demo-posts/bai-3-trien-khai-ui-man-homescreen.html</loc>
+        <lastmod>2025-05-06T20:55:18+00:00</lastmod>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://coderealities.com/blog/vi/demo-posts/bai-3-trien-khai-ui-man-homescreen.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://coderealities.com/blog/en/demo-posts/part-3-implementing-the-ui-for-the-homescreen.html"/>
     </url>
 
     <url>
         <loc>https://coderealities.com/blog/en/demo-posts/part-4-handling-networking-to-retrieve-real-data.html</loc>
         <lastmod>2025-05-06T20:55:18+00:00</lastmod>
-        
+        <xhtml:link rel="alternate" hreflang="en" href="https://coderealities.com/blog/en/demo-posts/part-4-handling-networking-to-retrieve-real-data.html"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://coderealities.com/blog/vi/demo-posts/bai-4-xu-ly-networking-lay-du-lieu-that.html"/>
+    </url>
+
+    <url>
+        <loc>https://coderealities.com/blog/vi/demo-posts/bai-4-xu-ly-networking-lay-du-lieu-that.html</loc>
+        <lastmod>2025-05-06T20:55:18+00:00</lastmod>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://coderealities.com/blog/vi/demo-posts/bai-4-xu-ly-networking-lay-du-lieu-that.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://coderealities.com/blog/en/demo-posts/part-4-handling-networking-to-retrieve-real-data.html"/>
     </url>
 
     <url>
         <loc>https://coderealities.com/blog/en/demo-posts/part-5-pouring-real-data-onto-the-ui.html</loc>
         <lastmod>2025-05-06T20:55:18+00:00</lastmod>
-        
+        <xhtml:link rel="alternate" hreflang="en" href="https://coderealities.com/blog/en/demo-posts/part-5-pouring-real-data-onto-the-ui.html"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://coderealities.com/blog/vi/demo-posts/bai-5-do-du-lieu-that-len-giao-dien.html"/>
+    </url>
+
+    <url>
+        <loc>https://coderealities.com/blog/vi/demo-posts/bai-5-do-du-lieu-that-len-giao-dien.html</loc>
+        <lastmod>2025-05-06T20:55:18+00:00</lastmod>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://coderealities.com/blog/vi/demo-posts/bai-5-do-du-lieu-that-len-giao-dien.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://coderealities.com/blog/en/demo-posts/part-5-pouring-real-data-onto-the-ui.html"/>
     </url>
 
     <url>
         <loc>https://coderealities.com/blog/en/demo-posts/part-6-state-management-with-cubit.html</loc>
         <lastmod>2025-05-06T20:55:18+00:00</lastmod>
-        
+        <xhtml:link rel="alternate" hreflang="en" href="https://coderealities.com/blog/en/demo-posts/part-6-state-management-with-cubit.html"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://coderealities.com/blog/vi/demo-posts/bai-6-quan-ly-state-voi-cubit.html"/>
     </url>
 
     <url>
-        <loc></loc>
+        <loc>https://coderealities.com/blog/vi/demo-posts/bai-6-quan-ly-state-voi-cubit.html</loc>
         <lastmod>2025-05-06T20:55:18+00:00</lastmod>
-        
-    </url>
-
-    <url>
-        <loc></loc>
-        <lastmod>2025-05-06T20:55:18+00:00</lastmod>
-        
-    </url>
-
-    <url>
-        <loc></loc>
-        <lastmod>2025-05-06T20:55:18+00:00</lastmod>
-        
-    </url>
-
-    <url>
-        <loc></loc>
-        <lastmod>2025-05-06T20:55:18+00:00</lastmod>
-        
-    </url>
-
-    <url>
-        <loc></loc>
-        <lastmod>2025-05-06T20:55:18+00:00</lastmod>
-        
-    </url>
-
-    <url>
-        <loc></loc>
-        <lastmod>2025-05-06T20:55:18+00:00</lastmod>
-        
-    </url>
-
-    <url>
-        <loc></loc>
-        <lastmod>2025-05-06T20:55:18+00:00</lastmod>
-        
-    </url>
-
-    <url>
-        <loc></loc>
-        <lastmod>2025-05-06T20:55:18+00:00</lastmod>
-        
-    </url>
-
-    <url>
-        <loc></loc>
-        <lastmod>2025-05-06T20:55:18+00:00</lastmod>
-        
-    </url>
-
-    <url>
-        <loc></loc>
-        <lastmod>2025-05-06T20:55:18+00:00</lastmod>
-        
-    </url>
-
-    <url>
-        <loc></loc>
-        <lastmod>2025-05-06T20:55:18+00:00</lastmod>
-        
-    </url>
-
-    <url>
-        <loc></loc>
-        <lastmod>2025-05-06T20:55:18+00:00</lastmod>
-        
-    </url>
-
-    <url>
-        <loc></loc>
-        <lastmod>2025-05-06T20:55:18+00:00</lastmod>
-        
-    </url>
-
-    <url>
-        <loc></loc>
-        <lastmod>2025-05-06T20:55:18+00:00</lastmod>
-        
-    </url>
-
-    <url>
-        <loc></loc>
-        <lastmod>2025-05-06T20:55:18+00:00</lastmod>
-        
-    </url>
-
-    <url>
-        <loc></loc>
-        <lastmod>2025-05-06T20:55:18+00:00</lastmod>
-        
-    </url>
-
-    <url>
-        <loc></loc>
-        <lastmod>2025-05-06T20:55:18+00:00</lastmod>
-        
-    </url>
-
-    <url>
-        <loc></loc>
-        <lastmod>2025-05-06T20:55:18+00:00</lastmod>
-        
-    </url>
-
-    <url>
-        <loc></loc>
-        <lastmod>2025-05-06T20:55:18+00:00</lastmod>
-        
-    </url>
-
-    <url>
-        <loc></loc>
-        <lastmod>2025-05-06T20:55:18+00:00</lastmod>
-        
-    </url>
-
-    <url>
-        <loc></loc>
-        <lastmod>2025-05-06T20:55:18+00:00</lastmod>
-        
+        <xhtml:link rel="alternate" hreflang="vi" href="https://coderealities.com/blog/vi/demo-posts/bai-6-quan-ly-state-voi-cubit.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://coderealities.com/blog/en/demo-posts/part-6-state-management-with-cubit.html"/>
     </url>
 
 </urlset>
