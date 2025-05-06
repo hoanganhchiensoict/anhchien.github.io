@@ -2,12 +2,16 @@
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
-    <title>
-      Đồng bộ dữ liệu một cách dễ dàng, chinh phục Firebase Realtime Database để
-      tối ưu hóa hiệu suất ứng dụng mượt mà
-    </title>
-    <meta name="description" content="" />
-    <link rel="icon" href="https://coderealities.com/pictures/logo.png" type="image/x-icon">
+    <title>Firebase Authentication</title>
+    <meta
+      name="description"
+      content="Bảo mật Mượt Mà: Khám Phá Sức Mạnh của Firebase Authentication để Xác Thực Người Dùng Hiệu Quả và An Toàn trong Ứng Dụng Của Bạn!"
+    />
+    <link
+      rel="icon"
+      href="https://coderealities.com/pictures/logo.png"
+      type="image/x-icon"
+    />
     <link rel="canonical" href="https://coderealities.com/" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
@@ -199,9 +203,9 @@
 
       <!-- Nội dung chính -->
       <div class="content">
-        <h1>Firebase Realtime Database</h1>
+        <h1>Firebase Authentication</h1>
         <img
-          src="../../../pictures/blog/firebase/firebase7-realtime-db.png"
+          src="../../../pictures/blog/firebase/firebase4-authentication.png"
           alt="Firebase"
         />
         <!-- Nội dụng tiếp -->
@@ -211,222 +215,158 @@
 
         <!-- wp:paragraph -->
         <p>
-          Firebase Realtime Database đóng vai trò quan trọng trong việc cung cấp
-          một giải pháp linh hoạt và mạnh mẽ cho việc lưu trữ và đồng bộ dữ liệu
-          theo thời gian thực. Firebase Realtime Database sử dụng mô hình thời
-          gian thực, cho phép dữ liệu được đồng bộ ngay lập tức khi có thay
-          đổi.&nbsp;
+          Firebase Authentication hoạt động theo mô hình client-server, nơi
+          người dùng truy cập và tương tác với ứng dụng của bạn là phía client,
+          và dịch vụ Firebase Authentication được triển khai trên server
+          Firebase. Dưới đây là cách Firebase Authentication hoạt động chi tiết:
         </p>
         <!-- /wp:paragraph -->
 
         <!-- wp:paragraph -->
+        <p>Đăng Ký và Đăng Nhập:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            Khi người dùng muốn sử dụng ứng dụng của bạn, họ có thể đăng ký (nếu
+            chưa có tài khoản) hoặc đăng nhập (nếu đã có tài khoản).
+          </li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>
+            Cho phép người dùng sử dụng các phương thức đăng nhập khác nhau như
+            email/mật khẩu, số điện thoại, hoặc cả đăng nhập bằng tài khoản
+            Google, Facebook, Twitter, v.v.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>SDK Integration:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            Ứng dụng của bạn sử dụng Firebase Authentication SDK để tích hợp
+            dịch vụ xác thực vào mã nguồn.
+          </li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>
+            Firebase cung cấp SDK cho nhiều nền tảng như Android, iOS, và web.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>Token-Based Authentication:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            Khi người dùng đăng nhập thành công, Firebase Authentication tạo một
+            JSON Web Token (JWT) chứa thông tin về người dùng.
+          </li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>
+            JWT này được gửi và lưu trữ an toàn trên thiết bị người dùng và được
+            sử dụng để xác thực truy cập khi giao tiếp với các dịch vụ và tài
+            nguyên của Firebase.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>Real-Time Authentication State:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            Firebase cung cấp một cơ chế để theo dõi trạng thái xác thực người
+            dùng trong thời gian thực.
+          </li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>
+            Khi trạng thái xác thực thay đổi (đăng nhập hoặc đăng xuất), sự kiện
+            này được phát ra và ứng dụng có thể phản ứng tức thì.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
         <p>
-          Dữ liệu trong Firebase Realtime Database được lưu trữ dưới dạng JSON,
-          tạo ra một cấu trúc linh hoạt và dễ đọc.
+          Firebase Authentication cung cấp một giải pháp toàn diện và dễ tích
+          hợp cho việc quản lý xác thực người dùng. Nó không chỉ giúp bảo mật
+          ứng dụng của bạn mà còn tăng cường trải nghiệm người dùng bằng cách
+          cung cấp các phương tiện đăng nhập thuận lợi và an toàn
         </p>
         <!-- /wp:paragraph -->
 
         <!-- wp:heading -->
-        <h2 class="wp-block-heading">II. So sánh với với Firebase Firestore</h2>
+        <h2 class="wp-block-heading">II. Tích hợp với Flutter</h2>
         <!-- /wp:heading -->
 
         <!-- wp:paragraph -->
         <p>
-          Firebase cung cấp hai cơ sở dữ liệu tài liệu dựa trên đám mây mà khách
-          hàng có thể truy cập. Firebase khuyên khách hàng mới nên bắt đầu với
-          Cloud Firestore:
+          Mình sẽ demo đơn giản luồng Authentication với email &amp;
+          password.&nbsp;
         </p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:list -->
-        <ul>
-          <!-- wp:list-item -->
-          <li>
-            <strong>Cloud Firestore</strong> là cơ sở dữ liệu tài liệu tương
-            thích JSON cấp doanh nghiệp <em>được đề xuất</em> , được hơn 250.000
-            nhà phát triển tin cậy. Nó phù hợp cho các ứng dụng có mô hình dữ
-            liệu phong phú yêu cầu khả năng truy vấn, khả năng mở rộng và tính
-            sẵn sàng cao. Nó cũng cung cấp khả năng đồng bộ hóa máy khách có độ
-            trễ thấp và truy cập dữ liệu ngoại tuyến.
-          </li>
-          <!-- /wp:list-item -->
-
-          <!-- wp:list-item -->
-          <li>
-            <strong>Realtime DB</strong> là cơ sở dữ liệu JSON của Firebase cổ
-            điển. Nó phù hợp cho các ứng dụng có mô hình dữ liệu đơn giản yêu
-            cầu tra cứu đơn giản và đồng bộ hóa có độ trễ thấp với khả năng mở
-            rộng hạn chế.
-          </li>
-          <!-- /wp:list-item -->
-        </ul>
-        <!-- /wp:list -->
-
-        <!-- wp:paragraph -->
-        <p>Mô hình dữ liệu</p>
         <!-- /wp:paragraph -->
 
         <!-- wp:paragraph -->
         <p>
-          Cả Cơ sở dữ liệu thời gian thực và Cloud Firestore đều là Cơ sở dữ
-          liệu NoSQL.
+          Vào Firebase Authentication -&gt; Sign-in method -&gt; Email/Password
+          -&gt; Enable
         </p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:table -->
-        <figure class="wp-block-table">
-          <table>
-            <tbody>
-              <tr>
-                <td>Cloud Firestore</td>
-                <td>Realtime DB</td>
-              </tr>
-              <tr>
-                <td>
-                  Lưu trữ dữ liệu dưới dạng bộ sưu tập tài liệu.Dữ liệu đơn giản
-                  dễ dàng lưu trữ trong các tài liệu, rất giống với JSON.Dữ liệu
-                  phức tạp, có thứ bậc dễ dàng tổ chức hơn trên quy mô lớn bằng
-                  cách sử dụng các bộ sưu tập con trong tài liệu.Yêu cầu ít
-                  chuẩn hóa và làm phẳng dữ liệu hơn.
-                </td>
-                <td>
-                  Lưu trữ dữ liệu dưới dạng một cây JSON lớn.Dữ liệu đơn giản
-                  rất dễ dàng để lưu trữ.Dữ liệu phức tạp, có thứ bậc khó tổ
-                  chức hơn trên quy mô lớn.
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </figure>
-        <!-- /wp:table -->
-
-        <!-- wp:paragraph -->
-        <p>
-          Ngoài ra còn nhiều yếu tố so sánh mà trang chủ Firebase cung cấp và
-          khuyến nghị sử dụng Firestore, các bạn có thể xem thêm tại:
-          <a href="https://firebase.google.com/docs/database/rtdb-vs-firestore"
-            >https://firebase.google.com/docs/database/rtdb-vs-firestore</a
-          >&nbsp;
-        </p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:heading -->
-        <h2 class="wp-block-heading">III. Chi phí</h2>
-        <!-- /wp:heading -->
-
-        <!-- wp:paragraph -->
-        <p>
-          Chi phí cho việc sử dụng Firebase Realtime Database được tính dựa trên
-          một số yếu tố chính. Dưới đây là một số điểm quan trọng mà bạn cần
-          biết:
-        </p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:paragraph -->
-        <p>Dung Lượng Dữ Liệu (Storage):</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:list -->
-        <ul>
-          <!-- wp:list-item -->
-          <li>
-            Chi phí được tính dựa trên dung lượng dữ liệu bạn lưu trữ trong
-            Firebase Realtime Database. Giá sẽ tăng theo dung lượng dữ liệu đã
-            lưu trữ.
-          </li>
-          <!-- /wp:list-item -->
-        </ul>
-        <!-- /wp:list -->
-
-        <!-- wp:paragraph -->
-        <p>Thao Tác Đọc và Ghi (Read and Write Operations):</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:list -->
-        <ul>
-          <!-- wp:list-item -->
-          <li>
-            Mỗi lần bạn đọc hoặc ghi dữ liệu, Firebase tính một số lần thao tác
-            (operations). Chi phí được tính dựa trên số lần thao tác này. Có sự
-            khác biệt trong chi phí giữa thao tác đọc và thao tác ghi.
-          </li>
-          <!-- /wp:list-item -->
-        </ul>
-        <!-- /wp:list -->
-
-        <!-- wp:paragraph -->
-        <p>Thời Gian Thực (Realtime):</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:list -->
-        <ul>
-          <!-- wp:list-item -->
-          <li>
-            Firebase Realtime Database cung cấp khả năng đồng bộ thời gian thực.
-            Việc sử dụng tính năng này có thể ảnh hưởng đến chi phí do sự tăng
-            của số lần đồng bộ dữ liệu trong thời gian thực.
-          </li>
-          <!-- /wp:list-item -->
-        </ul>
-        <!-- /wp:list -->
-
-        <!-- wp:paragraph -->
-        <p>Vùng Địa Lý (Geo-location):</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:list -->
-        <ul>
-          <!-- wp:list-item -->
-          <li>
-            Giá có thể thay đổi tùy thuộc vào vùng địa lý mà bạn đang sử dụng
-            Firebase Realtime Database.
-          </li>
-          <!-- /wp:list-item -->
-        </ul>
-        <!-- /wp:list -->
-
-        <!-- wp:paragraph -->
-        <p>Loại Dịch Vụ Mạng (Network Service Tiers):</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:list -->
-        <ul>
-          <!-- wp:list-item -->
-          <li>
-            Firebase cung cấp các loại dịch vụ mạng khác nhau với giá khác nhau.
-            Chi phí có thể thay đổi tùy thuộc vào loại dịch vụ mạng bạn chọn.
-          </li>
-          <!-- /wp:list-item -->
-        </ul>
-        <!-- /wp:list -->
-
-        <!-- wp:paragraph -->
-        <p>Giảm Giá theo Quy Mô (Volume Discounts):</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:list -->
-        <ul>
-          <!-- wp:list-item -->
-          <li>
-            Nếu bạn có lượng lớn dữ liệu và hoạt động, có thể có các chương
-            trình giảm giá theo quy mô.
-          </li>
-          <!-- /wp:list-item -->
-        </ul>
-        <!-- /wp:list -->
-
-        <!-- wp:heading -->
-        <h2 class="wp-block-heading">IV. Triển khai với Flutter</h2>
-        <!-- /wp:heading -->
-
-        <!-- wp:paragraph -->
-        <p>Create database</p>
         <!-- /wp:paragraph -->
 
         <!-- wp:image -->
         <figure class="wp-block-image">
           <img
-            src="https://lh7-us.googleusercontent.com/8KEOC3IIt4fWZahYb-Z5mB4IHuMTEQIUJ0RuGEeY1ydGs6IZgOhg2eBYhGq2cs76exfgdLaJOA1seuH2HqOpgbyjdEiIULAfZ2HmGoBm1A97zehad9FiZtIdYVY7wcnROwBukZDpyVG5oMG0sD9PuK0"
+            src="https://lh7-us.googleusercontent.com/LtJNcQas0_7T2LvvhB26dnXcqOG-As_4gNC0i90qqHpZ-zeQP4iJmr-7_0r4BWDTQjLrhYdxk1c2aTuooAP9Cl4zQxUicsvKHTEctdet-QIz4MUeqbDgA2Yls9VR-4h1JeHOa_WQGRkrwmGL5qtuAGQ"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>Thêm thư viện:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>flutter pub add firebase_auth</li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>Đầu tiên, chúng ta cần thêm được user, sử dụng:</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/aDpsLuPf6kjRvfvj71Jjy5vTvnkuNHGZj897wEMJg7MdVUm1BPuLDhF6Zokx9q_1MiN5SskDtIFMjVM1fVyD8dFzUL9Lua2q6MTY6lsgNNOgccddcKZTBXAn_Co5-UvdEShYWG4zLY8nZTaX6ujhQzM"
             alt=""
           />
         </figure>
@@ -434,15 +374,15 @@
 
         <!-- wp:paragraph -->
         <p>
-          Tạm thời để allow read, write là true để cho phép đọc và ghi. Ở bài
-          Securities Rule mình sẽ nói chi tiết hơn
+          Sau khi thêm user ở Console -&gt; Authentication -&gt; Users chúng ta
+          sẽ thấy user đã được thêm thành công
         </p>
         <!-- /wp:paragraph -->
 
         <!-- wp:image -->
         <figure class="wp-block-image">
           <img
-            src="https://lh7-us.googleusercontent.com/6W74rOr_cggp9EPRSidNcoC4VEwrANWMR40E4iWGNIfcB2RBO8XrhxmD5a_SiEgwjzFHzHG9n9wAYJ_DjYIFWARbPWQOII5YNYBVpl631DgIJH-LtpJ58BALVCvd_XdHkuFXk8NbrCTOe4Ipi9_z2ZQ"
+            src="https://lh7-us.googleusercontent.com/EKKfrPaK5DRMMXdVvsiit2_h4V2jUlbY0ZezYe3twqA1q6SgBFxtlF7lI-2bU7O3nPR8PS0GiE8fEy-dw-BIbUEwWxbKzrd7kARxIiwly655zKsQpTr_94h78unZaQnS4dIu7NTVF7CADNGt7X3XwLQ"
             alt=""
           />
         </figure>
@@ -450,57 +390,27 @@
 
         <!-- wp:paragraph -->
         <p>
-          Vào Project Settings download lại file google-service.json,
-          GoogleService-Info.plist copy lại vào project
+          User đã được tạo, giờ nếu đăng nhập cần xác thực, chúng ta sẽ sử dụng
         </p>
         <!-- /wp:paragraph -->
 
-        <!-- wp:paragraph -->
-        <p>Thêm lib:</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:list -->
-        <ul>
-          <!-- wp:list-item -->
-          <li>flutter pub add firebase_database</li>
-          <!-- /wp:list-item -->
-        </ul>
-        <!-- /wp:list -->
-
-        <!-- wp:paragraph -->
-        <p>Ghi dữ liệu vào db:</p>
-        <!-- /wp:paragraph -->
-
         <!-- wp:image -->
         <figure class="wp-block-image">
           <img
-            src="https://lh7-us.googleusercontent.com/XHZZW4l_ju1ja6tYX9AqiLhSZbYqk_3yQ35R4mGPW9hq768cy7a1UZqOQr-OS-rX4LSkn9qA8NN-moFdSyUSqPsf2iAWqQSXdm4JrcNZUa2qtb-6VpUx8H5vKg2T4yHWMgkJw2X-C7bS2UmzlXeUx3s"
+            src="https://lh7-us.googleusercontent.com/mWMTw7qlHvC69jmWOJ34_j-NUBl5smS67PHIRO-Vj8O50tuMQQqqBHRBPYIP_2Ryon4zKOjFTGCbrn9d5bNpQHtojqR7AbA33F4OKrRGkrOCaJJ4L_tozghK5ln-F8-A_mfkEvu8Mz0IXsws5na4lbU"
             alt=""
           />
         </figure>
         <!-- /wp:image -->
 
         <!-- wp:paragraph -->
-        <p>Kết quả trên console:</p>
+        <p>Chạy debug và kiểm tra kết quả nhận được:</p>
         <!-- /wp:paragraph -->
 
         <!-- wp:image -->
         <figure class="wp-block-image">
           <img
-            src="https://lh7-us.googleusercontent.com/ll8dX9bJ_OpcSFreZS82TcBUDKafpOWy7FFzFUpeE0JRr8WT4ii9bkEisuN3FHiQEUw-FC1XNfWTLUP91dZ2RWeCKSLhM0VfmHHFdVG3QCJQIUCsb0t9-qJHvHR26l8b81dpReVqtvAL_1tLCip4KPQ"
-            alt=""
-          />
-        </figure>
-        <!-- /wp:image -->
-
-        <!-- wp:paragraph -->
-        <p>Lấy dữ liệu</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:image -->
-        <figure class="wp-block-image">
-          <img
-            src="https://lh7-us.googleusercontent.com/yOkRni4zvRaI8A7fELAi1E2Zv1lIoJoCWVnQUfA-J9tDRysMeYdSgcrI3azJmaECLZHcsipV8_hKWrU5Uzfs1FKzJ78FYsOs1wIZqUMCuO6eCZz91AhqhNvnztCFN_WVvGnPaXFMvQcKNftVCuNtdSk"
+            src="https://lh7-us.googleusercontent.com/APyFpkjrid3wQUn_lgQV6s8SmVY9aPqnIPXYmFLRW4u4VHEdnc-mgZ-A1rVB0KqJExFKXPsWy_Q67aymhjrY0cOySHR8cHO6g07dPwHxKf11OE7FZ9NZLlwyLLibwOvQbA-x5WNWpDg3fyji5AVuSlc"
             alt=""
           />
         </figure>

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
   <head>
     <meta charset="UTF-8" />
-    <title>Firebase Cloud Storage</title>
+    <title>Firebase Realtime Database</title>
     <meta
       name="description"
-      content="Unleash the Power of Firebase Cloud Storage: Seamlessly Store and Manage Your Data!"
+      content="Đồng bộ dữ liệu một cách dễ dàng, chinh phục Firebase Realtime Database để tối ưu hóa hiệu suất ứng dụng mượt mà"
     />
     <link
       rel="icon"
@@ -168,7 +168,6 @@
           display: block;
         }
       }
-
       .wp-block-code {
         background-color: #282c34;
         color: #ffffff;
@@ -181,7 +180,6 @@
         margin: 1.5em 0;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       }
-
       .wp-block-code code {
         background: none;
         color: inherit;
@@ -205,224 +203,234 @@
 
       <!-- Nội dung chính -->
       <div class="content">
-        <h1>Firebase Cloud Storage</h1>
+        <h1>Firebase Realtime Database</h1>
         <img
-          src="../../../pictures/blog/firebase/firebase6-cloud-storage.png"
+          src="../../../pictures/blog/firebase/firebase7-realtime-db.png"
           alt="Firebase"
         />
         <!-- Nội dụng tiếp -->
         <!-- wp:heading -->
-        <h2 class="wp-block-heading">I. Overview</h2>
+        <h2 class="wp-block-heading">I. Tổng quan</h2>
         <!-- /wp:heading -->
 
         <!-- wp:paragraph -->
         <p>
-          Firebase Cloud Storage is a cloud storage service by Google, tightly
-          integrated with the Firebase platform. In this blog, we will explore
-          all the features and benefits that Firebase Cloud Storage brings to
-          developers and businesses:
+          Firebase Realtime Database đóng vai trò quan trọng trong việc cung cấp
+          một giải pháp linh hoạt và mạnh mẽ cho việc lưu trữ và đồng bộ dữ liệu
+          theo thời gian thực. Firebase Realtime Database sử dụng mô hình thời
+          gian thực, cho phép dữ liệu được đồng bộ ngay lập tức khi có thay
+          đổi.&nbsp;
         </p>
         <!-- /wp:paragraph -->
 
         <!-- wp:paragraph -->
-        <p>Easy Integration with Firebase</p>
+        <p>
+          Dữ liệu trong Firebase Realtime Database được lưu trữ dưới dạng JSON,
+          tạo ra một cấu trúc linh hoạt và dễ đọc.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">II. So sánh với với Firebase Firestore</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Firebase cung cấp hai cơ sở dữ liệu tài liệu dựa trên đám mây mà khách
+          hàng có thể truy cập. Firebase khuyên khách hàng mới nên bắt đầu với
+          Cloud Firestore:
+        </p>
         <!-- /wp:paragraph -->
 
         <!-- wp:list -->
         <ul>
           <!-- wp:list-item -->
           <li>
-            Firebase Cloud Storage is part of the Firebase ecosystem, making the
-            integration and management of data simple and efficient.
+            <strong>Cloud Firestore</strong> là cơ sở dữ liệu tài liệu tương
+            thích JSON cấp doanh nghiệp <em>được đề xuất</em> , được hơn 250.000
+            nhà phát triển tin cậy. Nó phù hợp cho các ứng dụng có mô hình dữ
+            liệu phong phú yêu cầu khả năng truy vấn, khả năng mở rộng và tính
+            sẵn sàng cao. Nó cũng cung cấp khả năng đồng bộ hóa máy khách có độ
+            trễ thấp và truy cập dữ liệu ngoại tuyến.
+          </li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>
+            <strong>Realtime DB</strong> là cơ sở dữ liệu JSON của Firebase cổ
+            điển. Nó phù hợp cho các ứng dụng có mô hình dữ liệu đơn giản yêu
+            cầu tra cứu đơn giản và đồng bộ hóa có độ trễ thấp với khả năng mở
+            rộng hạn chế.
           </li>
           <!-- /wp:list-item -->
         </ul>
         <!-- /wp:list -->
 
         <!-- wp:paragraph -->
-        <p>Safety and Security</p>
+        <p>Mô hình dữ liệu</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Cả Cơ sở dữ liệu thời gian thực và Cloud Firestore đều là Cơ sở dữ
+          liệu NoSQL.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:table -->
+        <figure class="wp-block-table">
+          <table>
+            <tbody>
+              <tr>
+                <td>Cloud Firestore</td>
+                <td>Realtime DB</td>
+              </tr>
+              <tr>
+                <td>
+                  Lưu trữ dữ liệu dưới dạng bộ sưu tập tài liệu.Dữ liệu đơn giản
+                  dễ dàng lưu trữ trong các tài liệu, rất giống với JSON.Dữ liệu
+                  phức tạp, có thứ bậc dễ dàng tổ chức hơn trên quy mô lớn bằng
+                  cách sử dụng các bộ sưu tập con trong tài liệu.Yêu cầu ít
+                  chuẩn hóa và làm phẳng dữ liệu hơn.
+                </td>
+                <td>
+                  Lưu trữ dữ liệu dưới dạng một cây JSON lớn.Dữ liệu đơn giản
+                  rất dễ dàng để lưu trữ.Dữ liệu phức tạp, có thứ bậc khó tổ
+                  chức hơn trên quy mô lớn.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </figure>
+        <!-- /wp:table -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Ngoài ra còn nhiều yếu tố so sánh mà trang chủ Firebase cung cấp và
+          khuyến nghị sử dụng Firestore, các bạn có thể xem thêm tại:
+          <a href="https://firebase.google.com/docs/database/rtdb-vs-firestore"
+            >https://firebase.google.com/docs/database/rtdb-vs-firestore</a
+          >&nbsp;
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">III. Chi phí</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>
+          Chi phí cho việc sử dụng Firebase Realtime Database được tính dựa trên
+          một số yếu tố chính. Dưới đây là một số điểm quan trọng mà bạn cần
+          biết:
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>Dung Lượng Dữ Liệu (Storage):</p>
         <!-- /wp:paragraph -->
 
         <!-- wp:list -->
         <ul>
           <!-- wp:list-item -->
           <li>
-            With Google's security infrastructure, Firebase Cloud Storage
-            ensures absolute safety for your data. Access control features help
-            you manage who can access and modify the data.
+            Chi phí được tính dựa trên dung lượng dữ liệu bạn lưu trữ trong
+            Firebase Realtime Database. Giá sẽ tăng theo dung lượng dữ liệu đã
+            lưu trữ.
           </li>
           <!-- /wp:list-item -->
         </ul>
         <!-- /wp:list -->
 
         <!-- wp:paragraph -->
-        <p>Flexible Scalability</p>
+        <p>Thao Tác Đọc và Ghi (Read and Write Operations):</p>
         <!-- /wp:paragraph -->
 
         <!-- wp:list -->
         <ul>
           <!-- wp:list-item -->
           <li>
-            This service supports flexible scalability, ensuring that you can
-            quickly adapt to sudden increases in data without compromising
-            performance.
+            Mỗi lần bạn đọc hoặc ghi dữ liệu, Firebase tính một số lần thao tác
+            (operations). Chi phí được tính dựa trên số lần thao tác này. Có sự
+            khác biệt trong chi phí giữa thao tác đọc và thao tác ghi.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>Thời Gian Thực (Realtime):</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            Firebase Realtime Database cung cấp khả năng đồng bộ thời gian thực.
+            Việc sử dụng tính năng này có thể ảnh hưởng đến chi phí do sự tăng
+            của số lần đồng bộ dữ liệu trong thời gian thực.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>Vùng Địa Lý (Geo-location):</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            Giá có thể thay đổi tùy thuộc vào vùng địa lý mà bạn đang sử dụng
+            Firebase Realtime Database.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>Loại Dịch Vụ Mạng (Network Service Tiers):</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            Firebase cung cấp các loại dịch vụ mạng khác nhau với giá khác nhau.
+            Chi phí có thể thay đổi tùy thuộc vào loại dịch vụ mạng bạn chọn.
+          </li>
+          <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+
+        <!-- wp:paragraph -->
+        <p>Giảm Giá theo Quy Mô (Volume Discounts):</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:list -->
+        <ul>
+          <!-- wp:list-item -->
+          <li>
+            Nếu bạn có lượng lớn dữ liệu và hoạt động, có thể có các chương
+            trình giảm giá theo quy mô.
           </li>
           <!-- /wp:list-item -->
         </ul>
         <!-- /wp:list -->
 
         <!-- wp:heading -->
-        <h2 class="wp-block-heading">II. Pricing</h2>
+        <h2 class="wp-block-heading">IV. Triển khai với Flutter</h2>
         <!-- /wp:heading -->
 
         <!-- wp:paragraph -->
-        <p>
-          The cost for Firebase Cloud Storage is calculated based on several
-          different factors. Here are some key factors:
-        </p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:paragraph -->
-        <p>Storage:</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:list -->
-        <ul>
-          <!-- wp:list-item -->
-          <li>
-            This cost depends on the amount of data you store in Firebase Cloud
-            Storage. The pricing is calculated with discounts based on the
-            amount of stored data.
-          </li>
-          <!-- /wp:list-item -->
-        </ul>
-        <!-- /wp:list -->
-
-        <!-- wp:paragraph -->
-        <p>Data Transfer:</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:list -->
-        <ul>
-          <!-- wp:list-item -->
-          <li>
-            This cost is related to accessing and downloading data from Firebase
-            Cloud Storage. It is calculated based on the amount of data
-            transferred over the network.
-          </li>
-          <!-- /wp:list-item -->
-        </ul>
-        <!-- /wp:list -->
-
-        <!-- wp:paragraph -->
-        <p>Operations:</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:list -->
-        <ul>
-          <!-- wp:list-item -->
-          <li>
-            Each time you perform operations such as reading, writing, deleting,
-            or searching for data, you will incur operation costs. Different
-            types of operations have different costs.
-          </li>
-          <!-- /wp:list-item -->
-        </ul>
-        <!-- /wp:list -->
-
-        <!-- wp:paragraph -->
-        <p>Composite Operations:</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:list -->
-        <ul>
-          <!-- wp:list-item -->
-          <li></li>
-          <!-- /wp:list-item -->
-
-          <!-- wp:list-item -->
-          <li>
-            Some types of operations, such as Copy or Rewrite, may involve
-            multiple sub-operations and have a higher aggregate cost.
-          </li>
-          <!-- /wp:list-item -->
-        </ul>
-        <!-- /wp:list -->
-
-        <!-- wp:paragraph -->
-        <p>Backup Storage:</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:list -->
-        <ul>
-          <!-- wp:list-item -->
-          <li>
-            If you use the backup storage feature, there is a cost associated
-            with the amount of data stored in the backup.
-          </li>
-          <!-- /wp:list-item -->
-        </ul>
-        <!-- /wp:list -->
-
-        <!-- wp:paragraph -->
-        <p>Storage Class:</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:list -->
-        <ul>
-          <!-- wp:list-item -->
-          <li>
-            Firebase Cloud Storage offers various types of storage with
-            different pricing. For example: standard storage, high-speed
-            storage, long-term storage, and backup storage have different
-            prices.
-          </li>
-          <!-- /wp:list-item -->
-        </ul>
-        <!-- /wp:list -->
-
-        <!-- wp:paragraph -->
-        <p>Volume Discounts:</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:list -->
-        <ul>
-          <!-- wp:list-item -->
-          <li>
-            If you store a large amount of data, Firebase may provide
-            scale-based discounts.
-          </li>
-          <!-- /wp:list-item -->
-        </ul>
-        <!-- /wp:list -->
-
-        <!-- wp:paragraph -->
-        <p>Network Service Tiers:</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:list -->
-        <ul>
-          <!-- wp:list-item -->
-          <li>
-            Costs may vary depending on the type of network service you choose
-            (e.g., standard network, accelerated network).
-          </li>
-          <!-- /wp:list-item -->
-        </ul>
-        <!-- /wp:list -->
-
-        <!-- wp:heading -->
-        <h2 class="wp-block-heading">III. Demo</h2>
-        <!-- /wp:heading -->
-
-        <!-- wp:paragraph -->
-        <p>Setup storage</p>
+        <p>Create database</p>
         <!-- /wp:paragraph -->
 
         <!-- wp:image -->
         <figure class="wp-block-image">
           <img
-            src="https://lh7-us.googleusercontent.com/xqiHB7bIKLvjkJvjp66reUOIPSqyaJnslfBYhqSET4_jLH18SUIL0YN_icfyatVZf-E1asLu1uDYArgURfnOuoLmNhKKMer0_X85j4cYzSrP3vl8MoSmZdl_H0UGBehx3kbdCHUSng_NhRuX_XcbWmk"
+            src="https://lh7-us.googleusercontent.com/8KEOC3IIt4fWZahYb-Z5mB4IHuMTEQIUJ0RuGEeY1ydGs6IZgOhg2eBYhGq2cs76exfgdLaJOA1seuH2HqOpgbyjdEiIULAfZ2HmGoBm1A97zehad9FiZtIdYVY7wcnROwBukZDpyVG5oMG0sD9PuK0"
             alt=""
           />
         </figure>
@@ -430,60 +438,73 @@
 
         <!-- wp:paragraph -->
         <p>
-          Temporarily set allow read, write to true to allow reading and writing
-          to Cloud Storage.
+          Tạm thời để allow read, write là true để cho phép đọc và ghi. Ở bài
+          Securities Rule mình sẽ nói chi tiết hơn
         </p>
         <!-- /wp:paragraph -->
 
         <!-- wp:image -->
         <figure class="wp-block-image">
           <img
-            src="https://lh7-us.googleusercontent.com/pcZV2hlMKr2meXc0OvVYB8qOZaLa0sfqSaChHgJremoZLkE2ocq6bHOpex6lzXH536oJdGyhAEl5VZaIhjzefYdp5a0WevcqVgVUUtmb9pm_D6rkBLgswXkvCXcPVzgiNhIMhIWF0LJvelhTVoINY2o"
+            src="https://lh7-us.googleusercontent.com/6W74rOr_cggp9EPRSidNcoC4VEwrANWMR40E4iWGNIfcB2RBO8XrhxmD5a_SiEgwjzFHzHG9n9wAYJ_DjYIFWARbPWQOII5YNYBVpl631DgIJH-LtpJ58BALVCvd_XdHkuFXk8NbrCTOe4Ipi9_z2ZQ"
             alt=""
           />
         </figure>
         <!-- /wp:image -->
 
         <!-- wp:paragraph -->
-        <p>Add lib:</p>
+        <p>
+          Vào Project Settings download lại file google-service.json,
+          GoogleService-Info.plist copy lại vào project
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>Thêm lib:</p>
         <!-- /wp:paragraph -->
 
         <!-- wp:list -->
         <ul>
           <!-- wp:list-item -->
-          <li>flutter pub add firebase_storage</li>
-          <!-- /wp:list-item -->
-
-          <!-- wp:list-item -->
-          <li>
-            flutter pub add image_picker:&nbsp; //Added to use to pick images
-            and upload to storage
-          </li>
+          <li>flutter pub add firebase_database</li>
           <!-- /wp:list-item -->
         </ul>
         <!-- /wp:list -->
 
         <!-- wp:paragraph -->
-        <p>Pick image from gallery and push to storage</p>
+        <p>Ghi dữ liệu vào db:</p>
         <!-- /wp:paragraph -->
 
         <!-- wp:image -->
         <figure class="wp-block-image">
           <img
-            src="https://lh7-us.googleusercontent.com/vJMUS49PuuIJrBH6OL5W197VPwfUg3KccHM8OZtDtKe4DHLEFDkcBSNjriyvbdZ-w6PJEqu-1yf0qyH1M8UJABDV2Akqn6NphY3faPTuv2WpbEWtH1Qd_q3Kd_DYUBRqOdm09Lpe-s90GZYOu0J1RcQ"
+            src="https://lh7-us.googleusercontent.com/XHZZW4l_ju1ja6tYX9AqiLhSZbYqk_3yQ35R4mGPW9hq768cy7a1UZqOQr-OS-rX4LSkn9qA8NN-moFdSyUSqPsf2iAWqQSXdm4JrcNZUa2qtb-6VpUx8H5vKg2T4yHWMgkJw2X-C7bS2UmzlXeUx3s"
             alt=""
           />
         </figure>
         <!-- /wp:image -->
 
         <!-- wp:paragraph -->
-        <p>Check on the console we have:</p>
+        <p>Kết quả trên console:</p>
         <!-- /wp:paragraph -->
 
         <!-- wp:image -->
         <figure class="wp-block-image">
           <img
-            src="https://lh7-us.googleusercontent.com/TiHsXwJlIRJoDkQgnQlPY_IfNgLYWIBJq_FCkpXklHPpwbSemgYYijEwdyqE8NXkK4mP2dj56OX0y7QHnwS-SQXlKdYQd4YN7Vhhh1bLRAzpuV2BJZOujWOCaStJDwbyKjF_FFWWpu-GPPvF2Yqe_Nc"
+            src="https://lh7-us.googleusercontent.com/ll8dX9bJ_OpcSFreZS82TcBUDKafpOWy7FFzFUpeE0JRr8WT4ii9bkEisuN3FHiQEUw-FC1XNfWTLUP91dZ2RWeCKSLhM0VfmHHFdVG3QCJQIUCsb0t9-qJHvHR26l8b81dpReVqtvAL_1tLCip4KPQ"
+            alt=""
+          />
+        </figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph -->
+        <p>Lấy dữ liệu</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:image -->
+        <figure class="wp-block-image">
+          <img
+            src="https://lh7-us.googleusercontent.com/yOkRni4zvRaI8A7fELAi1E2Zv1lIoJoCWVnQUfA-J9tDRysMeYdSgcrI3azJmaECLZHcsipV8_hKWrU5Uzfs1FKzJ78FYsOs1wIZqUMCuO6eCZz91AhqhNvnztCFN_WVvGnPaXFMvQcKNftVCuNtdSk"
             alt=""
           />
         </figure>
