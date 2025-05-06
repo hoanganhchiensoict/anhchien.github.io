@@ -48,10 +48,24 @@
       }
 
       header {
-        background-color: #0d47a1;
+        background-color: #2f80ed;
+      }
+
+      .lang-wapper {
         color: white;
-        padding: 20px;
-        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 30px;
+        max-width: 1200px;
+        margin: auto;
+      }
+
+      .lang-switcher a {
+        margin-left: 10px;
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
       }
 
       .category {
@@ -105,7 +119,13 @@
   </head>
   <body>
     <header>
-      <h1>Mobile App</h1>
+      <div class="lang-wapper">
+        <h1>CodeRealities</h1>
+        <div class="lang-switcher">
+          <a href="https://coderealities.com/blog/en/index.html">EN</a> |
+          <a href="https://coderealities.com/blog/vi/index.html">VI</a>
+        </div>
+      </div>
     </header>
 
     <!-- Danh mục 1: Firebase -->

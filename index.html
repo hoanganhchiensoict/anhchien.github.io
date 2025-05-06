@@ -3,126 +3,414 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BrainIQ - Enhance Your Mind</title>
+    <title>Code Realities Blog</title>
+    <meta
+      name="description"
+      content="Hands-on Mobile Programming with Flutter. In-depth guidance from basics to advanced, techniques, and strategies for effective app development."
+    />
+    <link
+      rel="icon"
+      href="https://coderealities.com/pictures/logo.png"
+      type="image/x-icon"
+    />
+    <link rel="canonical" href="https://coderealities.com/blog/en/index.html" />
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="https://coderealities.com/blog/en/index.html"
+    />
+    <link
+      rel="alternate"
+      hreflang="vi"
+      href="https://coderealities.com/blog/vi/index.html"
+    />
+
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-F50VBRS84C"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-F50VBRS84C");
+    </script>
+
     <style>
       body {
+        font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
-        font-family: Arial, sans-serif;
-        color: #fff;
-        background-image: url("assets/brainiq_bg.png"); /* Đặt đường dẫn ảnh nền */
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-        height: 100vh;
+        background: #f5f5f5;
       }
 
       header {
-        text-align: center;
-        padding-top: 50px;
+        background-color: #2f80ed;
       }
 
-      .logo {
-        width: 150px;
-        height: auto;
-      }
-
-      .hero-section {
-        text-align: center;
-        margin-top: 20px;
-        padding: 0 20px;
-      }
-
-      .hero-section h1 {
-        font-size: 2.6em;
-        margin-bottom: 20px;
-      }
-
-      .hero-section p {
-        font-size: 1.1em;
-        color: #ddd;
-        margin-bottom: 30px;
-      }
-
-      .cta-buttons {
+      .lang-wapper {
+        color: white;
         display: flex;
-        justify-content: center; /* Căn giữa các nút */
-        gap: 20px; /* Khoảng cách giữa các nút */
-        margin-top: 30px;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 30px;
+        max-width: 1200px;
+        margin: auto;
       }
 
-      .cta-buttons a {
-        display: flex;
-        align-items: center; /* Căn giữa icon và văn bản */
+      .lang-switcher a {
+        margin-left: 10px;
         text-decoration: none;
-        background-color: #000;
-        border-radius: 8px;
-        padding: 8px 16px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease;
-      }
-
-      .cta-buttons a:hover {
-        transform: scale(1.05);
-      }
-
-      .cta-buttons img {
-        width: 24px;
-        height: 24px;
-        margin-right: 5px; /* Khoảng cách giữa icon và văn bản */
-      }
-
-      .cta-buttons span {
-        font-size: 1em;
         color: #fff;
+        font-weight: bold;
       }
 
-      footer {
-        position: absolute;
-        bottom: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 0.9em;
-        color: #ddd;
-        text-align: center;
+      .category {
+        padding: 30px;
+        max-width: 1200px;
+        margin: auto;
+      }
+
+      .category h2 {
+        border-left: 5px solid #2196f3;
+        padding-left: 10px;
+        color: #333;
+      }
+
+      .posts {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: 20px;
+      }
+
+      .post {
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s;
+      }
+
+      .post:hover {
+        transform: translateY(-5px);
+      }
+
+      .post img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+      }
+
+      .post-title {
+        padding: 15px;
+        font-weight: bold;
+        font-size: 16px;
+        color: #333;
+      }
+      a {
+        color: #007acc;
+        text-decoration: none;
       }
     </style>
   </head>
   <body>
     <header>
-      <img src="assets/brainiqv2_logo.png" alt="BrainIQ Logo" class="logo" />
+      <div class="lang-wapper">
+        <h1>CodeRealities</h1>
+        <div class="lang-switcher">
+          <a href="https://coderealities.com/blog/en/index.html">EN</a> |
+          <a href="https://coderealities.com/blog/vi/index.html">VI</a>
+        </div>
+      </div>
     </header>
 
-    <div class="hero-section">
-      <h1>Welcome to BrainIQv2</h1>
-      <p>
-        Challenge your mind with fun and interactive brain games. Enhance your
-        cognitive skills with our scientifically designed exercises.
-      </p>
-
-      <div class="cta-buttons">
-        <!-- Apple Store Button -->
+    <!-- Danh mục 1: Firebase -->
+    <section class="category">
+      <h2>Firebase</h2>
+      <div class="posts">
         <a
-          href="https://apps.apple.com/vn/app/brainiq-knowledge-journey/id6502863695"
-          target="_blank"
+          href="https://coderealities.com/blog/en/firebase-posts/exploring-the-power-of-firebase.html"
         >
-          <img src="assets/ic_apple.png" alt="Apple Store" />
-          <span>App Store</span>
+          <div class="post">
+            <img
+              src="https://coderealities.com/pictures/blog/firebase/firebase1.png"
+              alt="Firebase"
+            />
+            <div class="post-title">Exploring the Power of Firebase</div>
+          </div>
+        </a>
+        <a
+          href="https://coderealities.com/blog/en/firebase-posts/firebase-remote-config.html"
+        >
+          <div class="post">
+            <img
+              src="https://coderealities.com/pictures/blog/firebase/firebase2-remote-config.png"
+              alt="remote-config"
+            />
+            <div class="post-title">Firebase Remote Config</div>
+          </div>
+        </a>
+        <a
+          href="https://coderealities.com/blog/en/firebase-posts/firebase-cloud-messaging.html"
+        >
+          <div class="post">
+            <img
+              src="https://coderealities.com/pictures/blog/firebase/firebase3-fcm.png"
+              alt="fcm"
+            />
+            <div class="post-title">Firebase Cloud Messaging</div>
+          </div>
         </a>
 
-        <!-- Google Play Button -->
         <a
-          href="https://play.google.com/store/apps/details?id=com.cc.brainiq"
-          target="_blank"
+          href="https://coderealities.com/blog/en/firebase-posts/firebase-authentication.html"
         >
-          <img src="assets/ic_play_store.png" alt="Google Play" />
-          <span>Google Play</span>
+          <div class="post">
+            <img
+              src="https://coderealities.com/pictures/blog/firebase/firebase4-authentication.png"
+              alt="firebase-authentication"
+            />
+            <div class="post-title">Firebase Authentication</div>
+          </div>
+        </a>
+
+        <a
+          href="https://coderealities.com/blog/en/firebase-posts/firebase-cloud-firestore.html"
+        >
+          <div class="post">
+            <img
+              src="https://coderealities.com/pictures/blog/firebase/firebase5-cloud-firestore.png"
+              alt="cloud-firestore"
+            />
+            <div class="post-title">Firebase Cloud FireStore</div>
+          </div>
+        </a>
+
+        <a
+          href="https://coderealities.com/blog/en/firebase-posts/firebase-cloud-storage.html"
+        >
+          <div class="post">
+            <img
+              src="https://coderealities.com/pictures/blog/firebase/firebase6-cloud-storage.png"
+              alt="cloud-storage"
+            />
+            <div class="post-title">Cloud Storage</div>
+          </div>
+        </a>
+
+        <a
+          href="https://coderealities.com/blog/en/firebase-posts/firebase-realtime-database.html"
+        >
+          <div class="post">
+            <img
+              src="https://coderealities.com/pictures/blog/firebase/firebase7-realtime-db.png"
+              alt="realtime-db"
+            />
+            <div class="post-title">Firebase Realtime Database</div>
+          </div>
+        </a>
+
+        <a
+          href="https://coderealities.com/blog/en/firebase-posts/firebase-analytics.html"
+        >
+          <div class="post">
+            <img
+              src="https://coderealities.com/pictures/blog/firebase/firebase8-analytics.png"
+              alt="analytics"
+            />
+            <div class="post-title">Firebase Analytics</div>
+          </div>
+        </a>
+
+        <a
+          href="https://coderealities.com/blog/en/firebase-posts/firebase-distribution.html"
+        >
+          <div class="post">
+            <img
+              src="https://coderealities.com/pictures/blog/firebase/firebase9-distribution.png"
+              alt="distribution"
+            />
+            <div class="post-title">Firebase Distribution</div>
+          </div>
         </a>
       </div>
-    </div>
+    </section>
 
-    <footer>
-      <p>&copy; 2024 BrainIQ. All rights reserved.</p>
-    </footer>
+    <!-- Danh mục 2: Flutter base -->
+    <section class="category">
+      <h2>Flutter Base</h2>
+      <div class="posts">
+        <a
+          href="https://coderealities.com/blog/en/base-posts/implementing-flutter-base-part-1-why.html"
+        >
+          <div class="post">
+            <img
+              src="https://coderealities.com/pictures/blog/flutter_base/flutter_base1.png"
+              alt="Flutter Base"
+            />
+            <div class="post-title">
+              Implementing Flutter Base - Part 1: Why?
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="https://coderealities.com/blog/en/base-posts/implementing-flutter-base-part-2-overall-architecture.html"
+        >
+          <div class="post">
+            <img
+              src="https://coderealities.com/pictures/blog/flutter_base/flutter_base2.png"
+              alt="Overall Architecture"
+            />
+            <div class="post-title">
+              Implementing Flutter Base - Part 2: Overall Architecture
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="https://coderealities.com/blog/en/base-posts/implementing-flutter-base-part-3-details-data-layer.html"
+        >
+          <div class="post">
+            <img
+              src="https://coderealities.com/pictures/blog/flutter_base/flutter_base3.png"
+              alt="Data Layer"
+            />
+            <div class="post-title">
+              Implementing Flutter Base - Part 3: Details - Data Layer
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="https://coderealities.com/blog/en/base-posts/implementing-flutter-base-part-4-details-domain-layer.html"
+        >
+          <div class="post">
+            <img
+              src="https://coderealities.com/pictures/blog/flutter_base/flutter_base4.png"
+              alt="Domain Layer"
+            />
+            <div class="post-title">
+              Implementing Flutter Base - Part 4: Details - Domain Layer
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="https://coderealities.com/blog/en/base-posts/implementing-flutter-base-part-5-presentation-layer.html"
+        >
+          <div class="post">
+            <img
+              src="https://coderealities.com/pictures/blog/flutter_base/flutter_base5.png"
+              alt="Presentation Layer"
+            />
+            <div class="post-title">
+              Implementing Flutter Base - Part 5: Presentation Layer
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="https://coderealities.com/blog/en/base-posts/implementing-flutter-base-part-6-extensions.html"
+        >
+          <div class="post">
+            <img
+              src="https://coderealities.com/pictures/blog/flutter_base/flutter_base6.png"
+              alt="Extensions"
+            />
+            <div class="post-title">
+              Implementing Flutter Base - Part 6: Extensions
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Danh mục 3: Flutter demo -->
+    <section class="category">
+      <h2>Flutter Demo</h2>
+      <div class="posts">
+        <a
+          href="https://coderealities.com/blog/en/demo-posts/part-1-overview-of-basic-demo.html"
+        >
+          <div class="post">
+            <img
+              src="https://coderealities.com/pictures/blog/flutter_demo/flutter_demo1.png"
+              alt="Basic Demo"
+            />
+            <div class="post-title">Part 1. Overview of Basic Demo</div>
+          </div>
+        </a>
+
+        <a
+          href="https://coderealities.com/blog/en/demo-posts/part-2-getting-started-building-the-structure.html"
+        >
+          <div class="post">
+            <img
+              src="https://coderealities.com/pictures/blog/flutter_demo/flutter_demo2.png"
+              alt="Structure"
+            />
+            <div class="post-title">
+              Part 2. Getting Started - Building the Structure
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="https://coderealities.com/blog/en/demo-posts/part-3-implementing-the-ui-for-the-homescreen.html"
+        >
+          <div class="post">
+            <img
+              src="https://coderealities.com/pictures/blog/flutter_demo/flutter_demo3.png"
+              alt="HomeScreen"
+            />
+            <div class="post-title">
+              Part 3: Implementing the UI for the HomeScreen
+            </div>
+          </div>
+        </a>
+        <a
+          href="https://coderealities.com/blog/en/demo-posts/part-4-handling-networking-to-retrieve-real-data.html"
+        >
+          <div class="post">
+            <img
+              src="https://coderealities.com/pictures/blog/flutter_demo/flutter_demo4.png"
+              alt="Networking"
+            />
+            <div class="post-title">
+              Part 4. Handling Networking to Retrieve Real Data
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="https://coderealities.com/blog/en/demo-posts/part-5-pouring-real-data-onto-the-ui.html"
+        >
+          <div class="post">
+            <img
+              src="https://coderealities.com/pictures/blog/flutter_demo/flutter_demo5.png"
+              alt="Real Data"
+            />
+            <div class="post-title">Part 5: Display Real Data on the UI</div>
+          </div>
+        </a>
+
+        <a
+          href="https://coderealities.com/blog/en/demo-posts/part-6-state-management-with-cubit.html"
+        >
+          <div class="post">
+            <img
+              src="https://coderealities.com/pictures/blog/flutter_demo/flutter_demo6.png"
+              alt="Cubit"
+            />
+            <div class="post-title">Part 6: State management with Cubit</div>
+          </div>
+        </a>
+      </div>
+    </section>
   </body>
 </html>
