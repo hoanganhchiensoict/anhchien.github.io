@@ -12,10 +12,36 @@
       href="https://coderealities.com/pictures/logo.png"
       type="image/x-icon"
     />
-    <link rel="canonical" href="https://coderealities.com/blog/en/demo-posts/part-4-handling-networking-to-retrieve-real-data.html" />
-    <link rel="alternate" hreflang="en" href="https://coderealities.com/blog/en/demo-posts/part-4-handling-networking-to-retrieve-real-data.html" />
-    <link rel="alternate" hreflang="vi" href="https://coderealities.com/blog/vi/demo-posts/bai-4-xu-ly-networking-lay-du-lieu-that.html" />
+    <link
+      rel="canonical"
+      href="https://coderealities.com/blog/en/demo-posts/part-4-handling-networking-to-retrieve-real-data.html"
+    />
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="https://coderealities.com/blog/en/demo-posts/part-4-handling-networking-to-retrieve-real-data.html"
+    />
+    <link
+      rel="alternate"
+      hreflang="vi"
+      href="https://coderealities.com/blog/vi/demo-posts/bai-4-xu-ly-networking-lay-du-lieu-that.html"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-F50VBRS84C"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-F50VBRS84C");
+    </script>
+
     <style>
       * {
         box-sizing: border-box;
@@ -195,12 +221,42 @@
       <div class="sidebar-left">
         <h3>Flutter Demo</h3>
         <ul>
-          <li><a href="https://coderealities.com/blog/en/demo-posts/part-1-overview-of-basic-demo.html">Part 1. Overview of Basic Demo</a></li>
-          <li><a href="https://coderealities.com/blog/en/demo-posts/part-2-getting-started-building-the-structure.html">Part 2. Getting Started - Building the Structure</a></li>
-          <li><a href="https://coderealities.com/blog/en/demo-posts/part-3-implementing-the-ui-for-the-homescreen.html">Part 3: Implementing the UI for the HomeScreen</a></li>
-          <li><a href="https://coderealities.com/blog/en/demo-posts/part-4-handling-networking-to-retrieve-real-data.html">Part 4. Handling Networking to Retrieve Real Data</a></li>
-          <li><a href="https://coderealities.com/blog/en/demo-posts/part-5-pouring-real-data-onto-the-ui.html">Part 5: Display Real Data on the UI</a></li>
-          <li><a href="https://coderealities.com/blog/en/demo-posts/part-6-state-management-with-cubit.html">Part 6: State management with Cubit</a></li>
+          <li>
+            <a
+              href="https://coderealities.com/blog/en/demo-posts/part-1-overview-of-basic-demo.html"
+              >Part 1. Overview of Basic Demo</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://coderealities.com/blog/en/demo-posts/part-2-getting-started-building-the-structure.html"
+              >Part 2. Getting Started - Building the Structure</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://coderealities.com/blog/en/demo-posts/part-3-implementing-the-ui-for-the-homescreen.html"
+              >Part 3: Implementing the UI for the HomeScreen</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://coderealities.com/blog/en/demo-posts/part-4-handling-networking-to-retrieve-real-data.html"
+              >Part 4. Handling Networking to Retrieve Real Data</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://coderealities.com/blog/en/demo-posts/part-5-pouring-real-data-onto-the-ui.html"
+              >Part 5: Display Real Data on the UI</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://coderealities.com/blog/en/demo-posts/part-6-state-management-with-cubit.html"
+              >Part 6: State management with Cubit</a
+            >
+          </li>
         </ul>
       </div>
 
@@ -538,12 +594,20 @@
         <h3>Table of Contents</h3>
         <ul>
           <li><a href="">I.Reorganizing the REST API Library</a></li>
-          <li><a href="">1.Creating a Demo API to Return Data with Express.js Server</a></li>
+          <li>
+            <a href=""
+              >1.Creating a Demo API to Return Data with Express.js Server</a
+            >
+          </li>
           <li><a href="">2. Define the Basic Response</a></li>
           <li><a href="">3. Wrapping the REST API Calling Library</a></li>
           <li><a href="">II.Basic State Management</a></li>
           <li><a href="">1.Calling API to Fetch Data</a></li>
-          <li><a href="">2.Casting the data received from the API into an object model</a></li>
+          <li>
+            <a href=""
+              >2.Casting the data received from the API into an object model</a
+            >
+          </li>
           <li><a href="">3.setState</a></li>
           <li><a href="">III. Summary</a></li>
         </ul>
@@ -554,13 +618,27 @@
     <button class="toc-button" onclick="toggleTOC()">TOC</button>
     <div class="toc-modal" id="tocModal">
       <ul>
-        <li><a href="" onclick="hideTOC()">I.Reorganizing the REST API Library</a></li>
-        <li><a href="" onclick="hideTOC()">1.Creating a Demo API to Return Data with Express.js Server</a></li>
+        <li>
+          <a href="" onclick="hideTOC()">I.Reorganizing the REST API Library</a>
+        </li>
+        <li>
+          <a href="" onclick="hideTOC()"
+            >1.Creating a Demo API to Return Data with Express.js Server</a
+          >
+        </li>
         <li><a href="" onclick="hideTOC()">2. Define the Basic Response</a></li>
-        <li><a href="" onclick="hideTOC()">3. Wrapping the REST API Calling Library</a></li>
+        <li>
+          <a href="" onclick="hideTOC()"
+            >3. Wrapping the REST API Calling Library</a
+          >
+        </li>
         <li><a href="" onclick="hideTOC()">II.Basic State Management</a></li>
         <li><a href="" onclick="hideTOC()">1.Calling API to Fetch Data</a></li>
-        <li><a href="" onclick="hideTOC()">2.Casting the data received from the API into an object model</a></li>
+        <li>
+          <a href="" onclick="hideTOC()"
+            >2.Casting the data received from the API into an object model</a
+          >
+        </li>
         <li>
           <a href="" onclick="hideTOC()">3.setState</a>
         </li>

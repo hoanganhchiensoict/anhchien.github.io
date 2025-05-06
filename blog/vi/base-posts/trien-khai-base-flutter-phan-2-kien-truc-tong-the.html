@@ -12,10 +12,36 @@
       href="https://coderealities.com/pictures/logo.png"
       type="image/x-icon"
     />
-    <link rel="canonical" href="https://coderealities.com/blog/vi/base-posts/trien-khai-base-flutter-phan-2-kien-truc-tong-the.html" />
-    <link rel="alternate" hreflang="vi" href="https://coderealities.com/blog/vi/base-posts/trien-khai-base-flutter-phan-2-kien-truc-tong-the.html" />
-    <link rel="alternate" hreflang="en" href="https://coderealities.com/blog/en/base-posts/implementing-flutter-base-part-2-overall-architecture.html" />
+    <link
+      rel="canonical"
+      href="https://coderealities.com/blog/vi/base-posts/trien-khai-base-flutter-phan-2-kien-truc-tong-the.html"
+    />
+    <link
+      rel="alternate"
+      hreflang="vi"
+      href="https://coderealities.com/blog/vi/base-posts/trien-khai-base-flutter-phan-2-kien-truc-tong-the.html"
+    />
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="https://coderealities.com/blog/en/base-posts/implementing-flutter-base-part-2-overall-architecture.html"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-F50VBRS84C"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-F50VBRS84C");
+    </script>
+
     <style>
       * {
         box-sizing: border-box;
@@ -195,12 +221,42 @@
       <div class="sidebar-left">
         <h3>Flutter Base</h3>
         <ul>
-          <li><a href="https://coderealities.com/blog/vi/base-posts/trien-khai-base-flutter-phan-1-boi-canh.html">Phần 1: Bối cảnh</a></li>
-          <li><a href="https://coderealities.com/blog/vi/base-posts/trien-khai-base-flutter-phan-2-kien-truc-tong-the.html">Phần 2: Kiến trúc tổng thể</a></li>
-          <li><a href="https://coderealities.com/blog/vi/base-posts/trien-khai-base-flutter-phan-3-chi-tiet-tang-data.html">Phần 3: Chi tiết - Tầng Data</a></li>
-          <li><a href="https://coderealities.com/blog/vi/base-posts/trien-khai-base-flutter-phan-4-chi-tiet-tang-domain.html">Phần 4: Chi tiết - Tầng Domain</a></li>
-          <li><a href="https://coderealities.com/blog/vi/base-posts/trien-khai-base-flutter-phan-5-tang-presentation.html">Phần 5: Tầng Presentation</a></li>
-          <li><a href="https://coderealities.com/blog/vi/base-posts/trien-khai-base-flutter-phan-6-mo-rong.html">Phần 6: Mở rộng</a></li>
+          <li>
+            <a
+              href="https://coderealities.com/blog/vi/base-posts/trien-khai-base-flutter-phan-1-boi-canh.html"
+              >Phần 1: Bối cảnh</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://coderealities.com/blog/vi/base-posts/trien-khai-base-flutter-phan-2-kien-truc-tong-the.html"
+              >Phần 2: Kiến trúc tổng thể</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://coderealities.com/blog/vi/base-posts/trien-khai-base-flutter-phan-3-chi-tiet-tang-data.html"
+              >Phần 3: Chi tiết - Tầng Data</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://coderealities.com/blog/vi/base-posts/trien-khai-base-flutter-phan-4-chi-tiet-tang-domain.html"
+              >Phần 4: Chi tiết - Tầng Domain</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://coderealities.com/blog/vi/base-posts/trien-khai-base-flutter-phan-5-tang-presentation.html"
+              >Phần 5: Tầng Presentation</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://coderealities.com/blog/vi/base-posts/trien-khai-base-flutter-phan-6-mo-rong.html"
+              >Phần 6: Mở rộng</a
+            >
+          </li>
         </ul>
       </div>
 
@@ -449,7 +505,12 @@
           <li><a href="">I. Giải quyết bài toán kiến trúc tổng thể</a></li>
           <li><a href="">1. Kiến trúc theo Clean Architecture</a></li>
           <li><a href="">2. Quản lý state với Bloc Cubit</a></li>
-          <li><a href="">3. Kết hợp giữa Feature-first với Layer-first để tối ưu trong việc tổ chức code</a></li>
+          <li>
+            <a href=""
+              >3. Kết hợp giữa Feature-first với Layer-first để tối ưu trong
+              việc tổ chức code</a
+            >
+          </li>
           <li><a href="">II. Cấu trúc dự án</a></li>
         </ul>
       </div>
@@ -459,10 +520,25 @@
     <button class="toc-button" onclick="toggleTOC()">TOC</button>
     <div class="toc-modal" id="tocModal">
       <ul>
-        <li><a href="" onclick="hideTOC()">I. Giải quyết bài toán kiến trúc tổng thể</a></li>
-        <li><a href="" onclick="hideTOC()">1. Kiến trúc theo Clean Architecture</a></li>
-        <li><a href="" onclick="hideTOC()">2. Quản lý state với Bloc Cubit</a></li>
-        <li><a href="" onclick="hideTOC()">3. Kết hợp giữa Feature-first với Layer-first để tối ưu trong việc tổ chức code</a></li>
+        <li>
+          <a href="" onclick="hideTOC()"
+            >I. Giải quyết bài toán kiến trúc tổng thể</a
+          >
+        </li>
+        <li>
+          <a href="" onclick="hideTOC()"
+            >1. Kiến trúc theo Clean Architecture</a
+          >
+        </li>
+        <li>
+          <a href="" onclick="hideTOC()">2. Quản lý state với Bloc Cubit</a>
+        </li>
+        <li>
+          <a href="" onclick="hideTOC()"
+            >3. Kết hợp giữa Feature-first với Layer-first để tối ưu trong việc
+            tổ chức code</a
+          >
+        </li>
         <li><a href="" onclick="hideTOC()">II. Cấu trúc dự án</a></li>
       </ul>
     </div>

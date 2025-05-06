@@ -27,6 +27,21 @@
       href="https://coderealities.com/blog/en/firebase-posts/firebase-remote-config.html"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-F50VBRS84C"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-F50VBRS84C");
+    </script>
+
     <style>
       * {
         box-sizing: border-box;
@@ -786,7 +801,9 @@
         <h3>Table of Contents</h3>
         <ul>
           <li><a href="">I. Tổng quan</a></li>
-          <li><a href="">II. Firebase remote config hoạt động như thế nào?</a></li>
+          <li>
+            <a href="">II. Firebase remote config hoạt động như thế nào?</a>
+          </li>
           <li><a href="">1. Cơ chế Fetch và Active</a></li>
           <li><a href="">2. Cấu hình theo thời gian thực</a></li>
           <li><a href="">III. Tích hợp với Flutter</a></li>
@@ -799,9 +816,15 @@
     <div class="toc-modal" id="tocModal">
       <ul>
         <li><a href="" onclick="hideTOC()">I. Tổng quan</a></li>
-        <li><a href="" onclick="hideTOC()">II. Firebase remote config hoạt động như thế nào?</a></li>
+        <li>
+          <a href="" onclick="hideTOC()"
+            >II. Firebase remote config hoạt động như thế nào?</a
+          >
+        </li>
         <li><a href="" onclick="hideTOC()">1. Cơ chế Fetch và Active</a></li>
-        <li><a href="" onclick="hideTOC()">2. Cấu hình theo thời gian thực</a></li>
+        <li>
+          <a href="" onclick="hideTOC()">2. Cấu hình theo thời gian thực</a>
+        </li>
         <li><a href="" onclick="hideTOC()">III. Tích hợp với Flutter</a></li>
       </ul>
     </div>

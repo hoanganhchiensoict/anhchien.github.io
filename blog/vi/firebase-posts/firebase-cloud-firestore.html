@@ -27,6 +27,21 @@
       href="https://coderealities.com/blog/en/firebase-posts/firebase-cloud-firestore.html"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-F50VBRS84C"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-F50VBRS84C");
+    </script>
+
     <style>
       * {
         box-sizing: border-box;
@@ -724,28 +739,28 @@ var stream = collectionRef.snapshots();
       <!-- Sidebar phải -->
       <div class="sidebar-right">
         <h3>Table of Contents</h3>
-          <ul>
-              <li><a href="">I. Tổng quan</a></li>
-              <li><a href="">II. Chi phí</a></li>
-              <li><a href="">1. Document writes</a></li>
-              <li><a href="">2. Document deletes</a></li>
-              <li><a href="">3. Document reads</a></li>
-              <li><a href="">III. Demo với Flutter</a></li>
-          </ul>
+        <ul>
+          <li><a href="">I. Tổng quan</a></li>
+          <li><a href="">II. Chi phí</a></li>
+          <li><a href="">1. Document writes</a></li>
+          <li><a href="">2. Document deletes</a></li>
+          <li><a href="">3. Document reads</a></li>
+          <li><a href="">III. Demo với Flutter</a></li>
+        </ul>
       </div>
     </div>
 
     <!-- TOC floating button -->
     <button class="toc-button" onclick="toggleTOC()">TOC</button>
     <div class="toc-modal" id="tocModal">
-        <ul>
-            <li><a href="" onclick="hideTOC()">I. Tổng quan</a></li>
-            <li><a href="" onclick="hideTOC()">II. Chi phí</a></li>
-            <li><a href="" onclick="hideTOC()">1. Document writes</a></li>
-            <li><a href="" onclick="hideTOC()">2. Document deletes</a></li>
-            <li><a href="" onclick="hideTOC()">3. Document reads</a></li>
-            <li><a href="" onclick="hideTOC()">III. Demo với Flutter</a></li>
-        </ul>
+      <ul>
+        <li><a href="" onclick="hideTOC()">I. Tổng quan</a></li>
+        <li><a href="" onclick="hideTOC()">II. Chi phí</a></li>
+        <li><a href="" onclick="hideTOC()">1. Document writes</a></li>
+        <li><a href="" onclick="hideTOC()">2. Document deletes</a></li>
+        <li><a href="" onclick="hideTOC()">3. Document reads</a></li>
+        <li><a href="" onclick="hideTOC()">III. Demo với Flutter</a></li>
+      </ul>
     </div>
 
     <script>
