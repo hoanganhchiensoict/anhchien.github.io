@@ -1,196 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+    <meta charset="UTF-8"/>
     <title>
-      Effective Connectivity: A Guide to Using Firebase Cloud Messaging (FCM) to
-      Optimize Sending and Receiving Notifications in Your App!
+        Effective Connectivity: A Guide to Using Firebase Cloud Messaging (FCM) to
+        Optimize Sending and Receiving Notifications in Your App!
     </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content=""/>
+    <link rel="icon" href="https://coderealities.com/pictures/logo.png" type="image/x-icon">
+    <link rel="canonical" href="https://coderealities.com/"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <style>
-      * {
-        box-sizing: border-box;
-      }
-      body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background-color: #f7f7f7;
-        color: #333;
-        line-height: 1.6;
-        padding: 0 1rem;
-        margin: auto;
-      }
-
-      .container {
-        display: flex;
-        max-width: 1400px;
-        margin: 0 auto;
-        padding: 20px;
-      }
-
-      .sidebar-left,
-      .sidebar-right {
-        width: 20%;
-        padding: 20px;
-        position: sticky;
-        top: 0;
-        height: fit-content;
-        background-color: #ffffff;
-        border-radius: 8px;
-        margin: 10px;
-        align-self: start;
-      }
-
-      .content {
-        width: 60%;
-        background-color: #fff;
-        padding: 30px;
-        margin: 10px;
-        border-radius: 8px;
-      }
-
-      h1,
-      h2 {
-        color: #2c3e50;
-      }
-      img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 8px;
-        margin: 1rem 0;
-      }
-      ul {
-        padding-left: 1.2rem;
-      }
-      table {
-        width: 100%;
-        border-collapse: collapse;
-        margin: 1rem 0;
-      }
-      td,
-      th {
-        border: 1px solid #ddd;
-        padding: 8px;
-      }
-      td:first-child {
-        background-color: #f9f9f9;
-      }
-      h3 {
-        color: #2c3e50;
-        margin-top: 30px;
-      }
-      a {
-        color: #007acc;
-        text-decoration: none;
-      }
-      a:hover {
-        text-decoration: underline;
-      }
-
-      .sidebar-left h3,
-      .sidebar-right h3 {
-        margin-top: 0;
-      }
-
-      .sidebar-left ul,
-      .sidebar-right ul {
-        list-style: none;
-        padding-left: 0;
-      }
-
-      .sidebar-left li,
-      .sidebar-right li {
-        margin-bottom: 8px;
-      }
-
-      /* TOC Button (mobile) */
-      .toc-button {
-        display: none;
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background-color: #007acc;
-        color: white;
-        padding: 10px 14px;
-        border: none;
-        border-radius: 50px;
-        font-size: 14px;
-        z-index: 1000;
-        cursor: pointer;
-      }
-
-      .toc-modal {
-        display: none;
-        position: fixed;
-        bottom: 70px;
-        right: 20px;
-        background-color: white;
-        border: 1px solid #ddd;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-        padding: 10px;
-        z-index: 1000;
-        width: 250px;
-      }
-
-      .toc-modal ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-      }
-
-      .toc-modal li {
-        margin: 6px 0;
-      }
-
-      /* Responsive layout */
-      @media (max-width: 768px) {
-        .container {
-          flex-direction: column;
-          padding: 10px;
+        * {
+          box-sizing: border-box;
         }
+        body {
+          margin: 0;
+          font-family: Arial, sans-serif;
+          background-color: #f7f7f7;
+          color: #333;
+          line-height: 1.6;
+          padding: 0 1rem;
+          margin: auto;
+        }
+
+        .container {
+          display: flex;
+          max-width: 1400px;
+          margin: 0 auto;
+          padding: 20px;
+        }
+
         .sidebar-left,
         .sidebar-right {
-          display: none;
+          width: 20%;
+          padding: 20px;
+          position: sticky;
+          top: 0;
+          height: fit-content;
+          background-color: #ffffff;
+          border-radius: 8px;
+          margin: 10px;
+          align-self: start;
         }
+
         .content {
+          width: 60%;
+          background-color: #fff;
+          padding: 30px;
+          margin: 10px;
+          border-radius: 8px;
+        }
+
+        h1,
+        h2 {
+          color: #2c3e50;
+        }
+        img {
+          max-width: 100%;
+          height: auto;
+          border-radius: 8px;
+          margin: 1rem 0;
+        }
+        ul {
+          padding-left: 1.2rem;
+        }
+        table {
           width: 100%;
-          margin: 0;
+          border-collapse: collapse;
+          margin: 1rem 0;
         }
+        td,
+        th {
+          border: 1px solid #ddd;
+          padding: 8px;
+        }
+        td:first-child {
+          background-color: #f9f9f9;
+        }
+        h3 {
+          color: #2c3e50;
+          margin-top: 30px;
+        }
+        a {
+          color: #007acc;
+          text-decoration: none;
+        }
+        a:hover {
+          text-decoration: underline;
+        }
+
+        .sidebar-left h3,
+        .sidebar-right h3 {
+          margin-top: 0;
+        }
+
+        .sidebar-left ul,
+        .sidebar-right ul {
+          list-style: none;
+          padding-left: 0;
+        }
+
+        .sidebar-left li,
+        .sidebar-right li {
+          margin-bottom: 8px;
+        }
+
+        /* TOC Button (mobile) */
         .toc-button {
-          display: block;
+          display: none;
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          background-color: #007acc;
+          color: white;
+          padding: 10px 14px;
+          border: none;
+          border-radius: 50px;
+          font-size: 14px;
+          z-index: 1000;
+          cursor: pointer;
         }
-      }
+
+        .toc-modal {
+          display: none;
+          position: fixed;
+          bottom: 70px;
+          right: 20px;
+          background-color: white;
+          border: 1px solid #ddd;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          border-radius: 8px;
+          padding: 10px;
+          z-index: 1000;
+          width: 250px;
+        }
+
+        .toc-modal ul {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+        }
+
+        .toc-modal li {
+          margin: 6px 0;
+        }
+
+        /* Responsive layout */
+        @media (max-width: 768px) {
+          .container {
+            flex-direction: column;
+            padding: 10px;
+          }
+          .sidebar-left,
+          .sidebar-right {
+            display: none;
+          }
+          .content {
+            width: 100%;
+            margin: 0;
+          }
+          .toc-button {
+            display: block;
+          }
+        }
     </style>
-  </head>
-  <body>
-    <div class="container">
-      <!-- Sidebar trái -->
-      <div class="sidebar-left">
+</head>
+<body>
+<div class="container">
+    <!-- Sidebar trái -->
+    <div class="sidebar-left">
         <h3>Categories</h3>
         <ul>
-          <li><a href="#">Firebase</a></li>
-          <li><a href="#">Authentication</a></li>
-          <li><a href="#">Database</a></li>
-          <li><a href="#">Hosting</a></li>
-          <li><a href="#">Messaging</a></li>
+            <li><a href="#">Firebase</a></li>
+            <li><a href="#">Authentication</a></li>
+            <li><a href="#">Database</a></li>
+            <li><a href="#">Hosting</a></li>
+            <li><a href="#">Messaging</a></li>
         </ul>
-      </div>
+    </div>
 
-      <!-- Nội dung chính -->
-      <div class="content">
+    <!-- Nội dung chính -->
+    <div class="content">
         <h1>Firebase Cloud Messaging</h1>
         <img
-          src="../../../pictures/blog/firebase/firebase3-fcm.png"
-          alt="Firebase"
+                src="../../../pictures/blog/firebase/firebase3-fcm.png"
+                alt="Firebase"
         />
         <!-- Nội dụng tiếp -->
         <!-- wp:paragraph -->
         <p>
-          Firebase Cloud Messaging (FCM) is a service provided by Google as part
-          of Firebase to facilitate the sending of notifications and messages
-          from the server to mobile devices, web applications, and other
-          devices.
+            Firebase Cloud Messaging (FCM) is a service provided by Google as part
+            of Firebase to facilitate the sending of notifications and messages
+            from the server to mobile devices, web applications, and other
+            devices.
         </p>
         <!-- /wp:paragraph -->
 
@@ -200,11 +203,11 @@
 
         <!-- wp:paragraph -->
         <p>
-          <img
-            width="624"
-            height="351"
-            src="https://lh7-us.googleusercontent.com/N6YdBC0A1Y82DNBwuACo7QLZE7g-MfFqLcdKu4kssDO6wtFPZkkqpJ-eTnA9T7fxi36VR5jtexIKxJEn7pLg4dAE7itaGeD6Sj8q7N5dyntA80J3oNZS8ida2FbR7Swhk2raLs1n2QR-9xrFdUf6jPw"
-          />
+            <img
+                    width="624"
+                    height="351"
+                    src="https://lh7-us.googleusercontent.com/N6YdBC0A1Y82DNBwuACo7QLZE7g-MfFqLcdKu4kssDO6wtFPZkkqpJ-eTnA9T7fxi36VR5jtexIKxJEn7pLg4dAE7itaGeD6Sj8q7N5dyntA80J3oNZS8ida2FbR7Swhk2raLs1n2QR-9xrFdUf6jPw"
+            />
         </p>
         <!-- /wp:paragraph -->
 
@@ -214,11 +217,11 @@
 
         <!-- wp:paragraph -->
         <p>
-          <img
-            width="624"
-            height="451"
-            src="https://lh7-us.googleusercontent.com/edwfermwlDj2cK2H5ScDGY2ERdlaxftFQ-1eiVtBOdzy2GrdiPWdgYr1luJqvAfBk-yPC4tDszz5lAUhUiH8NTLP98ukXYTkSJaOdMqn5xofmrz9385fwLHYBLu5FMC2m655p0kP9ZvCoc54m32XGkY"
-          />
+            <img
+                    width="624"
+                    height="451"
+                    src="https://lh7-us.googleusercontent.com/edwfermwlDj2cK2H5ScDGY2ERdlaxftFQ-1eiVtBOdzy2GrdiPWdgYr1luJqvAfBk-yPC4tDszz5lAUhUiH8NTLP98ukXYTkSJaOdMqn5xofmrz9385fwLHYBLu5FMC2m655p0kP9ZvCoc54m32XGkY"
+            />
         </p>
         <!-- /wp:paragraph -->
 
@@ -228,19 +231,19 @@
 
         <!-- wp:list -->
         <ul>
-          <!-- wp:list-item -->
-          <li>
-            When users install an application with the Firebase SDK on their
-            mobile device or website, the device will register with FCM.
-          </li>
-          <!-- /wp:list-item -->
+            <!-- wp:list-item -->
+            <li>
+                When users install an application with the Firebase SDK on their
+                mobile device or website, the device will register with FCM.
+            </li>
+            <!-- /wp:list-item -->
 
-          <!-- wp:list-item -->
-          <li>
-            Firebase will generate a unique identification token for this
-            device.
-          </li>
-          <!-- /wp:list-item -->
+            <!-- wp:list-item -->
+            <li>
+                Firebase will generate a unique identification token for this
+                device.
+            </li>
+            <!-- /wp:list-item -->
         </ul>
         <!-- /wp:list -->
 
@@ -250,12 +253,12 @@
 
         <!-- wp:list -->
         <ul>
-          <!-- wp:list-item -->
-          <li>
-            The token is sent from the device to the application's server, where
-            it is stored for future use.
-          </li>
-          <!-- /wp:list-item -->
+            <!-- wp:list-item -->
+            <li>
+                The token is sent from the device to the application's server, where
+                it is stored for future use.
+            </li>
+            <!-- /wp:list-item -->
         </ul>
         <!-- /wp:list -->
 
@@ -265,13 +268,13 @@
 
         <!-- wp:list -->
         <ul>
-          <!-- wp:list-item -->
-          <li>
-            When the server application wants to send a notification to
-            registered devices, it uses FCM's API to send the message along with
-            a list of target device tokens.
-          </li>
-          <!-- /wp:list-item -->
+            <!-- wp:list-item -->
+            <li>
+                When the server application wants to send a notification to
+                registered devices, it uses FCM's API to send the message along with
+                a list of target device tokens.
+            </li>
+            <!-- /wp:list-item -->
         </ul>
         <!-- /wp:list -->
 
@@ -281,12 +284,12 @@
 
         <!-- wp:list -->
         <ul>
-          <!-- wp:list-item -->
-          <li>
-            FCM will receive the message from the server and deliver it to all
-            registered devices.
-          </li>
-          <!-- /wp:list-item -->
+            <!-- wp:list-item -->
+            <li>
+                FCM will receive the message from the server and deliver it to all
+                registered devices.
+            </li>
+            <!-- /wp:list-item -->
         </ul>
         <!-- /wp:list -->
 
@@ -296,44 +299,44 @@
 
         <!-- wp:list -->
         <ul>
-          <!-- wp:list-item -->
-          <li>
-            The device that receives a notification from FCM displays it to the
-            user.
-          </li>
-          <!-- /wp:list-item -->
+            <!-- wp:list-item -->
+            <li>
+                The device that receives a notification from FCM displays it to the
+                user.
+            </li>
+            <!-- /wp:list-item -->
         </ul>
         <!-- /wp:list -->
 
         <!-- wp:paragraph -->
         <p>
-          FCM applications are not just limited to sending notifications, but
-          can also be integrated to perform tasks such as data synchronization,
-          user authentication, and many other features to improve user
-          experience. used on diverse platforms.
+            FCM applications are not just limited to sending notifications, but
+            can also be integrated to perform tasks such as data synchronization,
+            user authentication, and many other features to improve user
+            experience. used on diverse platforms.
         </p>
         <!-- /wp:paragraph -->
 
         <!-- wp:paragraph -->
         <p>
-          Pay attention in managing FCM tokens, it will change in the following
-          cases:
+            Pay attention in managing FCM tokens, it will change in the following
+            cases:
         </p>
         <!-- /wp:paragraph -->
 
         <!-- wp:list -->
         <ul>
-          <!-- wp:list-item -->
-          <li>The app is restored on the new device</li>
-          <!-- /wp:list-item -->
+            <!-- wp:list-item -->
+            <li>The app is restored on the new device</li>
+            <!-- /wp:list-item -->
 
-          <!-- wp:list-item -->
-          <li>App is removed/reinstalled</li>
-          <!-- /wp:list-item -->
+            <!-- wp:list-item -->
+            <li>App is removed/reinstalled</li>
+            <!-- /wp:list-item -->
 
-          <!-- wp:list-item -->
-          <li>User actively deletes app data</li>
-          <!-- /wp:list-item -->
+            <!-- wp:list-item -->
+            <li>User actively deletes app data</li>
+            <!-- /wp:list-item -->
         </ul>
         <!-- /wp:list -->
 
@@ -343,16 +346,16 @@
 
         <!-- wp:paragraph -->
         <p>
-          Continuing with the demo project from the previous tutorial, let's add
-          the library to the Flutter project:
+            Continuing with the demo project from the previous tutorial, let's add
+            the library to the Flutter project:
         </p>
         <!-- /wp:paragraph -->
 
         <!-- wp:list -->
         <ul>
-          <!-- wp:list-item -->
-          <li>flutter pub add firebase_messaging</li>
-          <!-- /wp:list-item -->
+            <!-- wp:list-item -->
+            <li>flutter pub add firebase_messaging</li>
+            <!-- /wp:list-item -->
         </ul>
         <!-- /wp:list -->
 
@@ -362,14 +365,14 @@
 
         <!-- wp:paragraph -->
         <p>
-          Open a notification requesting permission to receive notifications
-          when a user opens the app:
+            Open a notification requesting permission to receive notifications
+            when a user opens the app:
         </p>
         <!-- /wp:paragraph -->
 
         <!-- wp:code -->
         <pre
-          class="wp-block-code"
+                class="wp-block-code"
         ><code>FirebaseMessaging messaging = FirebaseMessaging.instance;
 
 NotificationSettings settings = await messaging.requestPermission(
@@ -395,8 +398,8 @@ print('User granted permission: ${settings.authorizationStatus}');</code></pre>
 
         <!-- wp:paragraph -->
         <p>
-          After the customer grants permission to receive notifications, the
-          application can handle messages sent with cases such as the following:
+            After the customer grants permission to receive notifications, the
+            application can handle messages sent with cases such as the following:
         </p>
         <!-- /wp:paragraph -->
 
@@ -406,15 +409,15 @@ print('User granted permission: ${settings.authorizationStatus}');</code></pre>
 
         <!-- wp:paragraph -->
         <p>
-          Forground is the state when the application is open, and the user is
-          actively viewing or using it. To listen to messages while your app is
-          in the foreground, listen for onMessage:
+            Forground is the state when the application is open, and the user is
+            actively viewing or using it. To listen to messages while your app is
+            in the foreground, listen for onMessage:
         </p>
         <!-- /wp:paragraph -->
 
         <!-- wp:code -->
         <pre
-          class="wp-block-code"
+                class="wp-block-code"
         ><code>FirebaseMessaging.onMessage.listen((RemoteMessage message) {
 
   print('Got a message whilst in the foreground!');
@@ -432,33 +435,33 @@ print('User granted permission: ${settings.authorizationStatus}');</code></pre>
 
         <!-- wp:paragraph -->
         <p>
-          Access the console -&gt; Go to Messaging -&gt; Create a test message
-          as follows:
+            Access the console -&gt; Go to Messaging -&gt; Create a test message
+            as follows:
         </p>
         <!-- /wp:paragraph -->
 
         <!-- wp:image -->
         <figure class="wp-block-image">
-          <img
-            src="https://lh7-us.googleusercontent.com/UskLknIvMUkmrlNAtIoimP5pq7rv-7wPQJKMoqr9FfoZPGuqR46xzNiQ346cdumykHE4tOP2yI-dV8OhV1FOsWlmiwWfUtayqfpAOaulv0DnXOYRWh4QNdUKDe_NPDOYXdw3Aqo6ul1nThuOVVoApbA"
-            alt=""
-          />
+            <img
+                    src="https://lh7-us.googleusercontent.com/UskLknIvMUkmrlNAtIoimP5pq7rv-7wPQJKMoqr9FfoZPGuqR46xzNiQ346cdumykHE4tOP2yI-dV8OhV1FOsWlmiwWfUtayqfpAOaulv0DnXOYRWh4QNdUKDe_NPDOYXdw3Aqo6ul1nThuOVVoApbA"
+                    alt=""
+            />
         </figure>
         <!-- /wp:image -->
 
         <!-- wp:paragraph -->
         <p>
-          When sent notification to the device, we will receive the
-          corresponding data in the onMessage method.
+            When sent notification to the device, we will receive the
+            corresponding data in the onMessage method.
         </p>
         <!-- /wp:paragraph -->
 
         <!-- wp:image -->
         <figure class="wp-block-image">
-          <img
-            src="https://lh7-us.googleusercontent.com/lkXyfw1pOIvx19ycdLpv2DQd7sJRmoqjShK0wmal0iXorEYKfz1WjjSKbxkCX5lybne8fY7HqwdAFtIAC6lmudUSTjBVF2D9aH4DcA2X03k9KEselnWQ0Ua0MCulz4BSwJv-Ch2P1ifl6B37kFInqXM"
-            alt=""
-          />
+            <img
+                    src="https://lh7-us.googleusercontent.com/lkXyfw1pOIvx19ycdLpv2DQd7sJRmoqjShK0wmal0iXorEYKfz1WjjSKbxkCX5lybne8fY7HqwdAFtIAC6lmudUSTjBVF2D9aH4DcA2X03k9KEselnWQ0Ua0MCulz4BSwJv-Ch2P1ifl6B37kFInqXM"
+                    alt=""
+            />
         </figure>
         <!-- /wp:image -->
 
@@ -468,42 +471,42 @@ print('User granted permission: ${settings.authorizationStatus}');</code></pre>
 
         <!-- wp:paragraph -->
         <p>
-          This is the state when the application is in the background (when the
-          app is being used, and the user presses the home button or switches to
-          another app). Use onBackgroundMessage to receive messages in this
-          case:
+            This is the state when the application is in the background (when the
+            app is being used, and the user presses the home button or switches to
+            another app). Use onBackgroundMessage to receive messages in this
+            case:
         </p>
         <!-- /wp:paragraph -->
 
         <!-- wp:image -->
         <figure class="wp-block-image">
-          <img
-            src="https://lh7-us.googleusercontent.com/SVSq821v_1lzIgFWZl0-CjxzbAPUQxZh1j6nFzw9_bAgzlEUp3hCXDwM-8WEn_hhZQ6etY-C0LP14BYGW-awDJOq8dwupMy0tgswzak4zlPkHN1SL99wNq9Vjsd-PuCr0kbr87e0BuDJ1sksN_8jPnE"
-            alt=""
-          />
+            <img
+                    src="https://lh7-us.googleusercontent.com/SVSq821v_1lzIgFWZl0-CjxzbAPUQxZh1j6nFzw9_bAgzlEUp3hCXDwM-8WEn_hhZQ6etY-C0LP14BYGW-awDJOq8dwupMy0tgswzak4zlPkHN1SL99wNq9Vjsd-PuCr0kbr87e0BuDJ1sksN_8jPnE"
+                    alt=""
+            />
         </figure>
         <!-- /wp:image -->
 
         <!-- wp:code -->
         <pre
-          class="wp-block-code"
+                class="wp-block-code"
         ><code>FirebaseMessaging.<em>onBackgroundMessage</em>(FCM.<em>firebaseMessagingBackgroundHandler</em>);</code></pre>
         <!-- /wp:code -->
 
         <!-- wp:paragraph -->
         <p>
-          When the app is minimized to the background, and a notification is
-          sent from the console, we receive the notification successfully with
-          the following log:
+            When the app is minimized to the background, and a notification is
+            sent from the console, we receive the notification successfully with
+            the following log:
         </p>
         <!-- /wp:paragraph -->
 
         <!-- wp:image -->
         <figure class="wp-block-image">
-          <img
-            src="https://lh7-us.googleusercontent.com/eo-t46G1qwrqc0kXFilvkXLGf_ts1cCkJmbe5NL6DP2J3bAJsD6xKhdjgT6u8UJI_I5bawA91ji9TQqBBWTl4HhuXTlXJeBd5mhqjHNgSX-88cpxpIdAgBPn9C-TPBc7FJEqTCrRrENHE5edRnOcBP8"
-            alt=""
-          />
+            <img
+                    src="https://lh7-us.googleusercontent.com/eo-t46G1qwrqc0kXFilvkXLGf_ts1cCkJmbe5NL6DP2J3bAJsD6xKhdjgT6u8UJI_I5bawA91ji9TQqBBWTl4HhuXTlXJeBd5mhqjHNgSX-88cpxpIdAgBPn9C-TPBc7FJEqTCrRrENHE5edRnOcBP8"
+                    alt=""
+            />
         </figure>
         <!-- /wp:image -->
 
@@ -513,43 +516,43 @@ print('User granted permission: ${settings.authorizationStatus}');</code></pre>
 
         <!-- wp:paragraph -->
         <p>
-          When the app is killed, we cannot observe logs like in the two
-          previous cases. Instead, the notification will be displayed directly
-          in the device's notification center as follows:
+            When the app is killed, we cannot observe logs like in the two
+            previous cases. Instead, the notification will be displayed directly
+            in the device's notification center as follows:
         </p>
         <!-- /wp:paragraph -->
 
         <!-- wp:image -->
         <figure class="wp-block-image">
-          <img
-            src="https://lh7-us.googleusercontent.com/ICJfEPgL37Gj7XTxVjI3GzBiXC17ljDAXwn3E4zEP_Do3t-nBCXpbWqtISRVUIcaDMyIKFxHErinKPZySq0Fs0hmEMlCRP1u6JAcom9nAXJpHJUU4QUECt8Uqc1aiH5ObsVe-BEV3bOqgDzthliX5DM"
-            alt=""
-          />
+            <img
+                    src="https://lh7-us.googleusercontent.com/ICJfEPgL37Gj7XTxVjI3GzBiXC17ljDAXwn3E4zEP_Do3t-nBCXpbWqtISRVUIcaDMyIKFxHErinKPZySq0Fs0hmEMlCRP1u6JAcom9nAXJpHJUU4QUECt8Uqc1aiH5ObsVe-BEV3bOqgDzthliX5DM"
+                    alt=""
+            />
         </figure>
         <!-- /wp:image -->
 
         <!-- wp:paragraph -->
         <p>
-          In the case of not receiving notifications during debugging when the
-          app is killed, you can access and further check according to the
-          instructions:
+            In the case of not receiving notifications during debugging when the
+            app is killed, you can access and further check according to the
+            instructions:
         </p>
         <!-- /wp:paragraph -->
 
         <!-- wp:paragraph -->
         <p>
-          <a
-            href="https://stackoverflow.com/questions/57054706/flutter-fcm-is-not-working-when-app-is-closed"
+            <a
+                    href="https://stackoverflow.com/questions/57054706/flutter-fcm-is-not-working-when-app-is-closed"
             >https://stackoverflow.com/questions/57054706/flutter-fcm-is-not-working-when-app-is-closed</a
-          >
+            >
         </p>
         <!-- /wp:paragraph -->
 
         <!-- wp:paragraph -->
         <p>
-          <a href="https://github.com/firebase/flutterfire/issues/9685"
+            <a href="https://github.com/firebase/flutterfire/issues/9685"
             >https://github.com/firebase/flutterfire/issues/9685</a
-          >
+            >
         </p>
         <!-- /wp:paragraph -->
 
@@ -559,34 +562,34 @@ print('User granted permission: ${settings.authorizationStatus}');</code></pre>
 
         <!-- wp:paragraph -->
         <p>
-          For iOS, access Project Settings -&gt; Choose Cloud Messaging -&gt;
-          Upload APNs certificates so that the application can receive
-          notifications. Additionally, notifications are only received on real
-          devices.
+            For iOS, access Project Settings -&gt; Choose Cloud Messaging -&gt;
+            Upload APNs certificates so that the application can receive
+            notifications. Additionally, notifications are only received on real
+            devices.
         </p>
         <!-- /wp:paragraph -->
-      </div>
-
-      <!-- Sidebar phải -->
-      <div class="sidebar-right">
-        <h3>Table of Contents</h3>
-        <ul>
-          <li><a href="#realtime">Realtime Database</a></li>
-          <li><a href="#auth">Authentication</a></li>
-          <li><a href="#firestore">Cloud Firestore</a></li>
-          <li><a href="#functions">Cloud Functions</a></li>
-          <li><a href="#fcm">Cloud Messaging</a></li>
-          <li><a href="#hosting">Hosting</a></li>
-          <li><a href="#storage">Cloud Storage</a></li>
-          <li><a href="#performance">Performance Monitoring</a></li>
-        </ul>
-      </div>
     </div>
 
-    <!-- TOC floating button -->
-    <button class="toc-button" onclick="toggleTOC()">TOC</button>
-    <div class="toc-modal" id="tocModal">
-      <ul>
+    <!-- Sidebar phải -->
+    <div class="sidebar-right">
+        <h3>Table of Contents</h3>
+        <ul>
+            <li><a href="#realtime">Realtime Database</a></li>
+            <li><a href="#auth">Authentication</a></li>
+            <li><a href="#firestore">Cloud Firestore</a></li>
+            <li><a href="#functions">Cloud Functions</a></li>
+            <li><a href="#fcm">Cloud Messaging</a></li>
+            <li><a href="#hosting">Hosting</a></li>
+            <li><a href="#storage">Cloud Storage</a></li>
+            <li><a href="#performance">Performance Monitoring</a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- TOC floating button -->
+<button class="toc-button" onclick="toggleTOC()">TOC</button>
+<div class="toc-modal" id="tocModal">
+    <ul>
         <li><a href="#realtime" onclick="hideTOC()">Realtime Database</a></li>
         <li><a href="#auth" onclick="hideTOC()">Authentication</a></li>
         <li><a href="#firestore" onclick="hideTOC()">Cloud Firestore</a></li>
@@ -595,19 +598,19 @@ print('User granted permission: ${settings.authorizationStatus}');</code></pre>
         <li><a href="#hosting" onclick="hideTOC()">Hosting</a></li>
         <li><a href="#storage" onclick="hideTOC()">Cloud Storage</a></li>
         <li>
-          <a href="#performance" onclick="hideTOC()">Performance Monitoring</a>
+            <a href="#performance" onclick="hideTOC()">Performance Monitoring</a>
         </li>
-      </ul>
-    </div>
+    </ul>
+</div>
 
-    <script>
-      function toggleTOC() {
-        const toc = document.getElementById("tocModal");
-        toc.style.display = toc.style.display === "block" ? "none" : "block";
-      }
-      function hideTOC() {
-        document.getElementById("tocModal").style.display = "none";
-      }
-    </script>
-  </body>
+<script>
+    function toggleTOC() {
+      const toc = document.getElementById("tocModal");
+      toc.style.display = toc.style.display === "block" ? "none" : "block";
+    }
+    function hideTOC() {
+      document.getElementById("tocModal").style.display = "none";
+    }
+</script>
+</body>
 </html>
